@@ -1,6 +1,6 @@
 # TGROWLeR
 TGROWLeR system abstracts general patterns from workflow sequences previously extracted from texts. 
-It comprises two modules –a workflow extractor and a pattern miner– both relying on a specific domain ontology.
+It comprises two modules –a workflow extractor and a pattern miner– both relying on a specific domain ontology. 
 
 ## Prerequisites
 * JAVA 1.8: <span style="color: #0000ff;"><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" download="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></span>
@@ -14,7 +14,7 @@ It comprises two modules –a workflow extractor and a pattern miner– both rel
 <H3>WfExtractor_1.0: Worklflow Extractor on Gate 8.1</H3>
 
 <p>
-The <b>WfExtractor_1.0</b> tool annotates text corpus with its phylgoenetic analyses workflows.
+The <b>WfExtractor_1.0</b> tool annotates a text corpus with its phylgoenetic analyses workflows.
 Some of the features of <b>WfExtractor_1.0</b> are:
 <ul>
 <li>Extract workflow components (programs, parameters, data and metadata) from texts</li>
