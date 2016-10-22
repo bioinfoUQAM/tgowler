@@ -1,0 +1,123 @@
+<gate.util.persistence.GateApplication>
+  <urlList class="gate.util.persistence.CollectionPersistence">
+    <localList>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$..</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$../../ANNIE</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$../../Tools</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+    </localList>
+    <collectionType>java.util.ArrayList</collectionType>
+  </urlList>
+  <application class="gate.util.persistence.SerialAnalyserControllerPersistence">
+    <prList class="gate.util.persistence.CollectionPersistence">
+      <localList>
+        <gate.util.persistence.LanguageAnalyserPersistence>
+          <runtimeParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>document</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>gazetteer</string>
+                <gate.util.persistence.LanguageAnalyserPersistence>
+                  <runtimeParams class="gate.util.persistence.MapPersistence">
+                    <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                    <localMap>
+                      <entry>
+                        <string>document</string>
+                        <null/>
+                      </entry>
+                      <entry>
+                        <string>annotationSetName</string>
+                        <null/>
+                      </entry>
+                    </localMap>
+                  </runtimeParams>
+                  <resourceType>gate.creole.gazetteer.DefaultGazetteer</resourceType>
+                  <resourceName>inferred arabic gazetteer</resourceName>
+                  <initParams class="gate.util.persistence.MapPersistence">
+                    <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                    <localMap>
+                      <entry>
+                        <string>wholeWordsOnly</string>
+                        <boolean>true</boolean>
+                      </entry>
+                      <entry>
+                        <string>caseSensitive</string>
+                        <boolean>true</boolean>
+                      </entry>
+                      <entry>
+                        <string>encoding</string>
+                        <string>UTF-8</string>
+                      </entry>
+                      <entry>
+                        <string>listsURL</string>
+                        <gate.util.persistence.PersistenceManager-URLHolder>
+                          <urlString>$relpath$inferred-gazetteer/lists.def</urlString>
+                        </gate.util.persistence.PersistenceManager-URLHolder>
+                      </entry>
+                    </localMap>
+                  </initParams>
+                  <features class="gate.util.persistence.MapPersistence">
+                    <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                    <localMap/>
+                  </features>
+                </gate.util.persistence.LanguageAnalyserPersistence>
+              </entry>
+              <entry>
+                <string>markupASName</string>
+                <string>Key</string>
+              </entry>
+              <entry>
+                <string>theLanguage</string>
+                <string>arabic</string>
+              </entry>
+              <entry>
+                <string>annotationTypes</string>
+                <gate.util.persistence.CollectionPersistence>
+                  <localList>
+                    <string>Per</string>
+                    <string>Fac</string>
+                    <string>Org</string>
+                    <string>GPE</string>
+                    <string>Loc</string>
+                  </localList>
+                  <collectionType>java.util.ArrayList</collectionType>
+                </gate.util.persistence.CollectionPersistence>
+              </entry>
+            </localMap>
+          </runtimeParams>
+          <resourceType>gate.creole.GazetteerListsCollector</resourceType>
+          <resourceName>arabic list collector</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </initParams>
+          <features class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap/>
+          </features>
+        </gate.util.persistence.LanguageAnalyserPersistence>
+        <gate.util.persistence.LanguageAnalyserPersistence reference="../gate.util.persistence.LanguageAnalyserPersistence/runtimeParams/localMap/entry[2]/gate.util.persistence.LanguageAnalyserPersistence"/>
+      </localList>
+      <collectionType>java.util.ArrayList</collectionType>
+    </prList>
+    <resourceType>gate.creole.SerialAnalyserController</resourceType>
+    <resourceName>Arabic Gazetteer Collector</resourceName>
+    <initParams class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </initParams>
+    <features class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </features>
+  </application>
+</gate.util.persistence.GateApplication>

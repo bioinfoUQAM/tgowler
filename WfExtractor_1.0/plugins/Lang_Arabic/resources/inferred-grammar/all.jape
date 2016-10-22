@@ -1,0 +1,94 @@
+/*
+*  trained.jape
+*
+* Copyright (c) 1998-2001, The University of Sheffield.
+*
+*  This file is part of GATE (see http://gate.ac.uk/), and is free
+*  software, licenced under the GNU Library General Public License,
+*  Version 2, June 1991 (in the distribution as file licence.html,
+*  and also available at http://gate.ac.uk/gate/licence.html).
+*
+*  Diana Maynard, 10 Sep 2001
+* 
+*  $Id $
+*/
+
+
+Phase:	Trained
+Input: Lookup Token
+Options: control = appelt debug = false
+
+Rule: DateInferred
+Priority:300
+(
+ {Lookup.majorType == Date, Lookup.minorType == inferred}
+ ({Lookup.majorType == Date, Lookup.minorType == inferred})*
+ ):tag
+ -->
+:tag.Date = {kind = inferred, rule = "DateInferred"}
+
+Rule: Money
+Priority:300
+(
+ {Lookup.majorType == Money, Lookup.minorType == inferred}
+ ({Lookup.majorType == Money, Lookup.minorType == inferred})*
+ ):tag
+ -->
+:tag.Money = {kind = inferred, rule = "MoneyInferred"}
+
+Rule: Percent
+Priority:300
+(
+ {Lookup.majorType == Percent, Lookup.minorType == inferred}
+ ):tag
+ -->
+:tag.Percent = {kind = inferred, rule = "PercentInferred"}
+
+
+Rule: LocInferred
+Priority:200
+(
+ {Lookup.majorType == Location, Lookup.minorType == inferred}
+ ):tag
+ -->
+:tag.Location = {kind = inferred, rule = "LocInferred"}
+
+
+Rule: GPEInferred
+Priority:250
+(
+ {Lookup.majorType == Gpe, Lookup.minorType == inferred}
+ ):tag
+ -->
+:tag.Gpe = {kind = inferred, rule = "GPEInferred"}
+
+
+Rule: OrgInferred
+Priority:100
+
+(
+ {Lookup.majorType == Organization, Lookup.minorType == inferred}
+ ):loc
+ -->
+:loc.Organization = {kind = inferred, rule = "OrgInferred"}
+
+
+Rule: FacInferred
+Priority:150
+
+(
+ {Lookup.majorType == Fac, Lookup.minorType == inferred}
+ ):loc
+ -->
+:loc.Fac = {kind = inferred, rule = "FacInferred"}
+
+Rule: PersonInferred
+Priority:150
+
+(
+ {Lookup.majorType == Person, Lookup.minorType == inferred}
+ ({Lookup.majorType == Person, Lookup.minorType == inferred})*
+ ):tag
+ -->
+:tag.Person = {kind = inferred, rule = "PersonInferred"}
+

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<ML-CONFIG>
+   <VERBOSITY level="2"/>
+   <SURROUND value="false"/>
+   <FILTERING ratio="0.0" dis="near"/>
+
+   <PARAMETER name="thresholdProbabilityClassification" value="0.5"/>
+
+   <multiClassification2Binary method="one-vs-others"/>
+
+   <!-- Evaluation : how to split the corpus into test and learn? -->
+   <EVALUATION method="kfold" runs="10" />
+
+   <ENGINE nickname="SVM" implementationName="SVMLibSvmJava" 
+         options=" -c 0.7 -t 0 -m 100 -tau 0.6"/>
+
+   <DATASET>
+     <INSTANCE-TYPE>RelationInstance</INSTANCE-TYPE>
+     <INSTANCE-ARG1>org-id</INSTANCE-ARG1>
+     <INSTANCE-ARG2>pers-id</INSTANCE-ARG2>
+
+     <FEATURES-ARG1>
+       <ARG>
+        <NAME>ARG1</NAME>
+        <SEMTYPE>NOMINAL</SEMTYPE>
+  <TYPE>Organization</TYPE>
+  <FEATURE>id</FEATURE>
+       </ARG>
+       <ATTRIBUTE>
+         <NAME>Form</NAME>
+         <SEMTYPE>NOMINAL</SEMTYPE>
+         <TYPE>Token</TYPE>
+         <FEATURE>string</FEATURE>
+         <POSITION>0</POSITION>
+       </ATTRIBUTE>
+
+       <ATTRIBUTE>
+         <NAME>POS</NAME>
+         <SEMTYPE>NOMINAL</SEMTYPE>
+   <TYPE>Token</TYPE>
+   <FEATURE>category</FEATURE>
+         <POSITION>0</POSITION>
+       </ATTRIBUTE>
+       </FEATURES-ARG1>
+
+       <FEATURES-ARG2>
+        <ARG>
+          <NAME>ARG2</NAME>
+          <SEMTYPE>NOMINAL</SEMTYPE>
+    <TYPE>Person</TYPE>
+    <FEATURE>id</FEATURE>
+        </ARG>
+        <ATTRIBUTE>
+          <NAME>Form</NAME>
+          <SEMTYPE>NOMINAL</SEMTYPE>
+    <TYPE>Token</TYPE>
+    <FEATURE>string</FEATURE>
+          <POSITION>0</POSITION>
+        </ATTRIBUTE>
+
+        <ATTRIBUTE>
+          <NAME>POS</NAME>
+          <SEMTYPE>NOMINAL</SEMTYPE>
+    <TYPE>Token</TYPE>
+    <FEATURE>category</FEATURE>
+          <POSITION>0</POSITION>
+        </ATTRIBUTE>
+      </FEATURES-ARG2>
+
+
+    <ATTRIBUTE_REL>
+      <NAME>Class</NAME>
+      <SEMTYPE>NOMINAL</SEMTYPE>
+      <TYPE>RelationClass</TYPE>
+      <ARG1>org-id</ARG1>
+      <ARG2>pers-id</ARG2>
+      <FEATURE>rel-type</FEATURE>
+      <CLASS/>
+    </ATTRIBUTE_REL>
+ </DATASET>
+
+</ML-CONFIG>
+

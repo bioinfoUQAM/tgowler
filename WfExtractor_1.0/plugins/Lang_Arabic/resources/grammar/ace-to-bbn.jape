@@ -1,0 +1,32 @@
+
+Phase:	AcetoBBN
+Input: Per Org Date Time Money Percent Fac GPE Loc
+Options: control = appelt debug = false
+
+Rule: Person
+(
+ {Per}
+)+:tag
+-->
+:tag.Person = {}
+
+Rule: Org
+(
+ {Org}
+)+:tag
+-->
+:tag.Organization = {}
+
+Rule: Loc
+(
+ {Loc}
+)+:tag
+-->
+:tag.Location = {}
+
+Rule: Gpe
+(
+ {GPE}
+ )+:tag
+ -->
+ :tag.Gpe = {}

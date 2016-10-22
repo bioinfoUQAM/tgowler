@@ -1,0 +1,55 @@
+Phase:createParams
+Input: Token
+Options: control = appelt
+
+Rule: Bootstraps
+(
+    ({Token.category == "CD"}{Token.string == ","})?
+    :token01
+    
+    ({Token.category == "CD"})+
+    :token1
+    
+//     ( {Token.kind=="number"})?:token01
+//    	({Token.string==","}|{Token.string=="."})?:numSeparator
+//    	({Token.kind=="number"})+:token1
+
+    ({Token.root ==~ "bootstrap"} | {Token.root ==~ "replicate"} | 
+    {Token.string ==~ "pseudo-replicate(s)"} | {Token.string ==~ "replications"} |
+    {Token.string ==~ "pseudoreplicates"} )+
+    :token2
+):bootstraps
+-->
+{
+	// FIRST NUMBER 
+    AnnotationSet matchedAnns = bindings.get("bootstraps");
+    
+    AnnotationSet matchedAnns1 = bindings.get("token1");
+	
+	String newString = "";
+      Long o00Start = matchedAnns.firstNode().getOffset();
+      Long o00End = matchedAnns1.lastNode().getOffset();
+      AnnotationSet toks = inputAS.get("Token", o00Start, o00End);
+      List<Annotation> orderedToks = gate.Utils.inDocumentOrder(toks);
+      for(Annotation a : orderedToks)
+      	newString=newString+a.getFeatures().get("string")+" ";
+         
+      newString=newString.substring(0, newString.length()-1);
+         
+      String nbBoots=newString.replace(" ","");
+   	  
+   	  nbBoots=nbBoots.replace(",","");
+   	  
+//    	  System.out.println(nbBoots);
+   	  
+		
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.put("Number of booststraps", nbBoots);
+
+    Integer id;
+//     if (firstNumber=="")
+        id = outputAS.add(matchedAnns.firstNode(), matchedAnns1.lastNode(), "BootstrapsParms", features);
+//     else id = outputAS.add(matchedAnns01.firstNode(), matchedAnns1.lastNode(), "BootstrapsParms", features);
+
+    
+}

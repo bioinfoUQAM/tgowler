@@ -1,0 +1,89 @@
+<?xml version="1.0"?>  
+<ML-CONFIG>  
+  <VERBOSITY level="1"/>
+  <SURROUND value="true"/>  
+  <PARAMETER name="thresholdProbabilityEntity" value="0.2"/>  
+  <PARAMETER name="thresholdProbabilityBoundary" value="0.4"/>  
+
+  <multiClassification2Binary method="one-vs-others"/>  
+
+  <EVALUATION method="kfold" 
+	      runs="4"/>  
+
+  <ENGINE nickname="PAUM" implementationName="PAUM"  
+	  options="-p 50 -n 5 -optB 0.3"/>  
+
+  <DATASET>
+
+    <INSTANCE-TYPE>Token</INSTANCE-TYPE>
+
+    <!-- <NGRAM>
+        <NAME>onegram</NAME>
+        <NUMBER>1</NUMBER>
+        <CONSNUM>1</CONSNUM>
+        <CONS-1>
+            <TYPE>Token</TYPE>
+            <FEATURE>string</FEATURE>
+         </CONS-1>
+        <WEIGHT>1.0</WEIGHT>
+     </NGRAM>
+     <NGRAM>
+        <NAME>bigram</NAME>
+        <NUMBER>2</NUMBER>
+        <CONSNUM>1</CONSNUM>
+        <CONS-1>
+            <TYPE>Token</TYPE>
+            <FEATURE>string</FEATURE>
+         </CONS-1>
+        <WEIGHT>1.0</WEIGHT>
+     </NGRAM>
+
+     <NGRAM>
+        <NAME>trigram</NAME>
+        <NUMBER>3</NUMBER>
+        <CONSNUM>1</CONSNUM>
+        <CONS-1>
+            <TYPE>Token</TYPE>
+            <FEATURE>string</FEATURE>
+         </CONS-1>
+        <WEIGHT>1.0</WEIGHT>
+     </NGRAM>-->
+
+    <!-- 1=binary, 2=tf, 3=tf/idf 
+    <ValueTypeNgram>3</ValueTypeNgram>-->
+
+    <!--<ATTRIBUTELIST>  
+      <NAME>String</NAME>  
+      <SEMTYPE>NOMINAL</SEMTYPE>  
+      <TYPE>Token</TYPE>  
+      <FEATURE>string</FEATURE>
+      <RANGE from="-3" to="3"/>  
+    </ATTRIBUTELIST>--> 
+
+    <ATTRIBUTELIST>  
+      <NAME>POSC</NAME>  
+      <SEMTYPE>NOMINAL</SEMTYPE>  
+      <TYPE>Token</TYPE>  
+      <FEATURE>category</FEATURE>  
+      <RANGE from="-3" to="3"/>  
+    </ATTRIBUTELIST>  
+
+    <ATTRIBUTELIST>  
+      <NAME>ClassC</NAME>  
+      <SEMTYPE>NOMINAL</SEMTYPE>  
+      <TYPE>Mention</TYPE>  
+      <FEATURE>type</FEATURE>
+      <RANGE from="-3" to="3"/>  
+    </ATTRIBUTELIST>
+
+    <ATTRIBUTE>
+      <NAME>Class</NAME>
+      <SEMTYPE>NOMINAL</SEMTYPE>
+      <TYPE>Mention</TYPE>
+      <FEATURE>type</FEATURE>
+      <POSITION>0</POSITION>
+      <CLASS/>
+    </ATTRIBUTE>
+
+  </DATASET>  
+</ML-CONFIG> 

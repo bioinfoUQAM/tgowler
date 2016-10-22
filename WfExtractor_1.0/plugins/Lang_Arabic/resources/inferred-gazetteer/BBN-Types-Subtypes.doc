@@ -1,0 +1,817 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033
+{\fonttbl
+{\f0\fnil\fcharset0\fprq0\fttruetype Helvetica;}
+{\f1\fnil\fcharset0\fprq0\fttruetype NULL;}
+{\f2\fnil\fcharset0\fprq0\fttruetype Symbol;}
+{\f3\fnil\fcharset0\fprq0\fttruetype Nimbus Roman;}
+{\f4\fnil\fcharset0\fprq0\fttruetype Dingbats;}
+{\f5\fnil\fcharset0\fprq0\fttruetype Arial;}
+{\f6\fnil\fcharset0\fprq0\fttruetype Nimbus Sans;}
+{\f7\fnil\fcharset0\fprq0\fttruetype Nimbus Mono;}}
+{\colortbl
+\red0\green0\blue0;
+\red255\green255\blue255;}
+{\stylesheet
+{\s5\fi-431\li720 Dashed List;}
+{\s2\fi-431\li720 Box List;}
+{\s21\tx1584\sbasedon16\snext15 Section Heading;}
+{\s17\tx431\sbasedon9\snext15 Numbered Heading 2;}
+{\s20\f7\sbasedon15 Plain Text;}
+{\s12\fi-431\li720 Implies List;}
+{\s26\fi-431\li720\sbasedon19 Upper Case List;}
+{\s7\fi-431\li720 Hand List;}
+{\s27\fi-431\li720\sbasedon19 Upper Roman List;}
+{\s15\f3\fs24 Normal;}
+{\s1\li1440\ri1440\sa120\sbasedon15 Block Text;}
+{\s14\fi-431\li720\sbasedon15 Lower Roman List;}
+{\s11\fi-431\li720 Heart List;}
+{\s13\fi-431\li720\sbasedon19 Lower Case List;}
+{\s24\fi-431\li720 Tick List;}
+{\s8\sb440\sa60\f6\fs34\b\sbasedon15\snext15 Heading 1;}
+{\s9\sb440\sa60\f6\fs28\b\sbasedon15\snext15 Heading 2;}
+{\s10\sb440\sa60\f6\fs24\b\sbasedon15\snext15 Heading 3;}
+{\s19\fi-431\li720 Numbered List;}
+{\s23\fi-431\li720 Star List;}
+{\s16\tx431\sbasedon8\snext15 Numbered Heading 1;}
+{\s6\fi-431\li720 Diamond List;}
+{\s18\tx431\sbasedon10\snext15 Numbered Heading 3;}
+{\s4\tx1584\sbasedon16\snext15 Chapter Heading;}
+{\s22\fi-431\li720 Square List;}
+{\s25\fi-431\li720 Triangle List;}
+{\s3\fi-431\li720 Bullet List;}}
+{\*\listtable
+{\list\listtemplateid855891673{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat0\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid719018337}
+{\list\listtemplateid1562541491{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}\listid2050494716}
+{\list\listtemplateid1437046010\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid2130270990}
+{\list\listtemplateid1999741049\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid256864140}
+{\list\listtemplateid1048887186\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1022248248}
+{\list\listtemplateid947622541\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid127743354}
+{\list\listtemplateid514171229\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid2098673070}
+{\list\listtemplateid1629581194\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1344669292}
+{\list\listtemplateid410072292\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid611009771}
+{\list\listtemplateid2104753678\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid617101999}
+{\list\listtemplateid106551015\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1251036948}
+{\list\listtemplateid983640615\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid448663921}
+{\list\listtemplateid483835554\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid2018532703}
+{\list\listtemplateid36541480\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1814567172}
+{\list\listtemplateid1948093992\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid719981179}
+{\list\listtemplateid466510864\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1666543094}
+{\list\listtemplateid1619532347\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid66733274}
+{\list\listtemplateid322126084\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1624143870}
+{\list\listtemplateid1965407487\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1425880091}
+{\list\listtemplateid83732967\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1416198356}
+{\list\listtemplateid1109855459\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid2120374534}
+{\list\listtemplateid571231210\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid771898620}
+{\list\listtemplateid1081791997\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid654066993}
+{\list\listtemplateid1610149614\listsimple{\listlevel\levelnfc23\levelstartat0\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid719018338}
+{\list\listtemplateid1924600964\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1680035363}
+{\list\listtemplateid1830479940\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1915240598}
+{\list\listtemplateid1690432404\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1203714955}
+{\list\listtemplateid2139941387\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid953292764}
+{\list\listtemplateid1923324910\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid419182259}
+{\list\listtemplateid1573898338\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid551312601}
+{\list\listtemplateid79122514\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid2079477559}
+{\list\listtemplateid631732936\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid1573587668}
+{\list\listtemplateid988956181\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid102380367}
+{\list\listtemplateid1516168525\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid28534736}
+{\list\listtemplateid483990337\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2}\listid122695772}}
+{\*\listoverridetable
+{\listoverride\listoverridecount0\listid2130270990\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls1}
+{\listoverride\listoverridecount0\listid256864140\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls2}
+{\listoverride\listoverridecount0\listid1022248248\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls3}
+{\listoverride\listoverridecount0\listid127743354\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls4}
+{\listoverride\listoverridecount0\listid2098673070\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls5}
+{\listoverride\listoverridecount0\listid1344669292\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls6}
+{\listoverride\listoverridecount0\listid611009771\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls7}
+{\listoverride\listoverridecount0\listid617101999\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls8}
+{\listoverride\listoverridecount0\listid1251036948\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls9}
+{\listoverride\listoverridecount0\listid448663921\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls10}
+{\listoverride\listoverridecount0\listid2018532703\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls11}
+{\listoverride\listoverridecount0\listid1814567172\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls12}
+{\listoverride\listoverridecount0\listid719981179\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls13}
+{\listoverride\listoverridecount0\listid1666543094\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls14}
+{\listoverride\listoverridecount0\listid66733274\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls15}
+{\listoverride\listoverridecount0\listid1624143870\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls16}
+{\listoverride\listoverridecount0\listid1425880091\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls17}
+{\listoverride\listoverridecount0\listid1416198356\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls18}
+{\listoverride\listoverridecount0\listid2120374534\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls19}
+{\listoverride\listoverridecount0\listid771898620\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls20}
+{\listoverride\listoverridecount0\listid719018337\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls21}
+{\listoverride\listoverridecount0\listid719018337\levelnfc23\levelstartat0\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls22}
+{\listoverride\listoverridecount0\listid719018337\levelnfc23\levelstartat0\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls23}
+{\listoverride\listoverridecount0\listid719018337\levelnfc23\levelstartat0\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls24}
+{\listoverride\listoverridecount0\listid654066993\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls25}
+{\listoverride\listoverridecount0\listid719018338\levelnfc23\levelstartat0\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls26}
+{\listoverride\listoverridecount0\listid1680035363\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls27}
+{\listoverride\listoverridecount0\listid1915240598\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls28}
+{\listoverride\listoverridecount0\listid1203714955\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls29}
+{\listoverride\listoverridecount0\listid953292764\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls30}
+{\listoverride\listoverridecount0\listid419182259\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls31}
+{\listoverride\listoverridecount0\listid551312601\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls32}
+{\listoverride\listoverridecount0\listid2079477559\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls33}
+{\listoverride\listoverridecount0\listid1573587668\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls34}
+{\listoverride\listoverridecount0\listid102380367\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls35}
+{\listoverride\listoverridecount0\listid28534736\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls36}
+{\listoverride\listoverridecount0\listid122695772\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls37}
+{\listoverride\listoverridecount0\listid2050494716\levelnfc0\levelstartat1\levelspace0\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\ls38}
+{\listoverride\listoverridecount0\listid2050494716\levelnfc23\levelstartat1\levelspace0\levelfollow0{\leveltext\'01\'b7 ;}{\levelnumbers;}\f2\ls39}}
+
+\kerning0\cf0\viewkind1\paperw12240\paperh15840\margl1440\margr1440\widowctl
+\sectd\sbknone\colsx360\margtsxn1080\margbsxn1080\marglsxn1080\margrsxn1080\pgncont\ltrsect
+\pard\plain\ltrpar{\f0\fs22\lang2057{\*\listtag0}
+\par}\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}ANNOTATION GUIDELINES FOR ANSWER TYPES}
+\par\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}BBN TECHNOLOGIES}
+\par\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Ada Brunstein}
+\par\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}8/03/02}
+\par\pard\plain\qc\ltrpar{\f0\fs22\lang1033{\*\listtag0}\'a9 Copyright BBN Technologies 2002}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Below are annotation categories and guidelines assembled by BBN for the Question Answering task.  The 29 types represent answer categories and are described in the table below.  Following the table are brief annotation guidelines.   }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}The description column in the table includes a general description of a category, some examples, and the sgml string that was used in annotation.  For types that have subtypes, the subtype column includes examples of each of the subtypes for that particular type and shows only the markable entity for that type and subtype in <>.  The SGML string for that subtype is also given.  Most examples come from the WSJ Treebank data.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}These 29 categories include the five EDT types, Person, Organization, Location, GPE, Facility, with some minor modification to those guidelines.  For example, under EDT guidelines museums are facilities whereas here they are organizations.  They also include the MUC categories Money, Percent, Time and Date, again with some modifications.  For example, in the classification below Date includes durations, dates (relative and absolute) and age, each of which is identified as a subtype in the annotation.   }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}The remaining categories were determined in part based on categories found in literature on the question answering task and in part based on BBN\'92s own examination of the data.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}BBN\'92s PROPOSED ANSWER CATEGORIES FOR QUESTION ANSWERING}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Type}
+\par\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Brief Description}
+\par\pard\plain\qc\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Person }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Proper names of people, including the following: fictional people, first names, last names, individual or family names, unique nicknames.  Generational markers such as Jr. and IV, are included (Ray Garrett Jr., Henry IV). }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="PERSON">Michael Henderson</ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Person }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Descriptor}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Any head word of a common noun referring to a person or group of people.  Any occupational title in modifier position.  For example, for \'91President Bush\'92 we have a descriptor (\'91president\'92) and a name (\'91Bush\'92).   }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Unmarkable:  Honorific titles such as Mr., Mrs., Sir, etc.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Examples:  (note, only descriptor annotation is indicated)}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}his top <aides> }
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}die-hard <fans>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}<analysts> said}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}State court <Judge>  Richard Curry}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}The <owner> , who begs anonymity}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Chief Executive>  Sir   Christopher   Hogg}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2130270990\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls1\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Chairman> Jay B. Langner}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:   <ENAMEX TYPE="PER_DESC"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}NORP}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}This type is named after its subtypes, nationality, other, religion, political.  The distinction between NORP and other types is morphological.  American and Americans is a nationality, while America and US are GPEs, regardless of context.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Adjectival forms of GPE names and Location names (such as American).  Adjectival forms of named religions, heritage and political affiliation (such as Democratic, Chinese-American, and Jewish).  Head words which refer to people using the name of an entity they are affiliated with, often GPE, Location, or Organization.  For example, the three Democrats, the Muslims, etc.   [See subtypes for more examples.]}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Nationality}{\f0\fs22\lang1033{\*\listtag0}: Adjectival form of GPE/Location modifier,  (an American, Chinese soil, European organization, etc.) or head word referring to a person by the name of the GPE or Location they are from.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Brazilian> development}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}<European> euphoria}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}twice as many  Nobel  science prizes as the <Japanese>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Dutch> publishing group}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}a fellow <Texan>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}a conservative <Californian>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Irish-American>  (note that this is marked as one entity, not two)}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Religion}{\f0\fs22\lang1033{\*\listtag0}: Any adjectival form of a religion, regardless of context.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}Mr. Sohmer , who is <Jewish>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}a devout <Catholic>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}The <Hindu> newspaper}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Political: }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid256864140\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls2\ilvl0{\f0\fs22\lang1033{\*\listtag0}Some <Democrats>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}a <Communist> official}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}France's <Socialist> government}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other:}{\f0\fs22\lang1033{\*\listtag0}\tab }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid127743354\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls4\ilvl0{\f0\fs22\lang1033{\*\listtag0}<African-American> activist}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Arab> uprising}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Francophone>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1022248248\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls3\ilvl0{\f0\fs22\lang1033{\*\listtag0}< Mafioso>}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Facility Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Names of man-made structures, including infrastructure, buildings, monuments, etc.}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}See subtypes for examples.}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Building: }{\f0\fs22\lang1033{\*\listtag0}buildings, cathedrals, laboratories, monasteries, plants, refineries, stadiums, synagogues, towers, vineyards, etc.}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Bridge}{\f0\fs22\lang1033{\*\listtag0}: bridges}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2098673070\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls5\ilvl0{\f0\fs22\lang1033{\*\listtag0}<G Street Bridge>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2098673070\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls5\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Golden Gate>}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Airport: }{\f0\fs22\lang1033{\*\listtag0}airports}{\f0\fs22\b\lang1033{\*\listtag0}, }{\f0\fs22\lang1033{\*\listtag0}parts of an airport including terminals, runways, and towers, air force bases}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Highway_Street}{\f0\fs22\lang1033{\*\listtag0}: avenues, boardwalks, highways, plazas, streets, exits}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1344669292\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls6\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Interstate 64>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1344669292\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls6\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Madison Avenue>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1344669292\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls6\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Exit 10>}
+\par}\pard\plain\qc\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Attraction}{\f0\fs22\lang1033{\*\listtag0}: amusement parks, tourist attractions, aquariums}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid611009771\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls7\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Statue of Liberty>}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other: }{\f0\fs22\lang1033{\*\listtag0} courtyards,  farms,  (gas) stations, Space Centers, (Labor) camps, mines, oil fields, ports, (subway) stations, golf courses}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Facility }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Descriptor}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head of }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head noun of a noun phrase describing buildings, bridges, airports, highways, attractions\'85}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}(Same categories as for Facility Name, but with different examples)}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Building: }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0\keepn{\f0\fs22\lang1033{\*\listtag0}the <plant> 's construction cost}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0{\f0\fs22\lang1033{\*\listtag0}spending on single-family <homes>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0{\f0\fs22\lang1033{\*\listtag0}built in a <garage>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0{\f0\fs22\lang1033{\*\listtag0}a new computer <lab>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0{\f0\fs22\lang1033{\*\listtag0}The entire second <floor>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0{\f0\fs22\lang1033{\*\listtag0}a third <room>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid617101999\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls8\ilvl0{\f0\fs22\lang1033{\*\listtag0}Westinghouse would own 70 % of the <facility>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Bridge}{\f0\fs22\lang1033{\*\listtag0}: bridges}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2098673070\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls5\ilvl0{\f0\fs22\lang1033{\*\listtag0}the collapsed Route 880 <overpass>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2098673070\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls5\ilvl0{\f0\fs22\lang1033{\*\listtag0}Roads and <bridges> in the Bay area}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Airport: }{\f0\fs22\lang1033{\*\listtag0}airports}{\f0\fs22\b\lang1033{\*\listtag0}, }{\f0\fs22\lang1033{\*\listtag0}parts of an airport including terminals, runways, and towers, air force bases}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1251036948\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls9\ilvl0{\f0\fs22\lang1033{\*\listtag0}build a cargo <terminal>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1251036948\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls9\ilvl0{\f0\fs22\lang1033{\*\listtag0}travelers stuck at some <airports>}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Highway_Street}{\f0\fs22\lang1033{\*\listtag0}: avenues, boardwalks, highways, plazas, streets, exits}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid448663921\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls10\ilvl0\keepn{\f0\fs22\lang1033{\*\listtag0}looking for an <interstate>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid448663921\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls10\ilvl0{\f0\fs22\lang1033{\*\listtag0}tiny shops and twisted <alleys>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid448663921\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls10\ilvl0{\f0\fs22\lang1033{\*\listtag0}traffic <intersections>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Attraction}{\f0\fs22\lang1033{\*\listtag0}: amusement parks, tourist attractions, aquariums}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2018532703\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls11\ilvl0\keepn{\f0\fs22\lang1033{\*\listtag0}1.5 million-gallon saltwater <aquarium>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other: }{\f0\fs22\lang1033{\*\listtag0} courtyards,  farms,  (gas) stations, Space Centers, (Labor) camps, mines, oil fields, parks, ports, (subway) stations, }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2018532703\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls11\ilvl0{\f0\fs22\lang1033{\*\listtag0}space <station>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2018532703\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls11\ilvl0{\f0\fs22\lang1033{\*\listtag0}six <mines>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2018532703\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls11\ilvl0{\f0\fs22\lang1033{\*\listtag0}<junkyard>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2018532703\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls11\ilvl0{\f0\fs22\lang1033{\*\listtag0}The <dam>}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Organization }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Names of companies, government agencies, educational institutions and other institutions:  sport teams, hospitals, museums, and libraries.  White House, Pentagon, Kremlin are ORG names as is Capitol Hill.  Adjectival forms of organization names are also included:  Congressional efforts, etc.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Newspaper names should be marked as ORG names regardless of whether they refer to the artifact or the organization.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Organization names also include products that are referred to by their manufacturer\'92s name (as in \'93I bought a Buick\'94).  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Annotators will have to determine whether groups, teams, forces, etc. refer to people or organizations.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Unmarked: organized crime}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Government}{\f0\fs22\lang1033{\*\listtag0}: }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Names: government organizations (State Department, SEC, military, etc.), American [FBI] \'96 nationality before an abbreviation is marked separately, Attorney General\'92s Office, Capitol Hill, City Hall, European Union, EU, European Community, EC, Interpol, Minfin, NATO, NYPD, OPEC, Parliament, Prosecutor's Office, Russian Interior Ministry / Russian ministry of the interior, State Duma, United Nations, UNESCO, US Army, US Embassy }
+\par\pard\plain\fi720\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Descriptors: GPE governments, administration (i.e. Clinton/US administration), jury, militia, police department \'96 only \'93department\'94 is marked when the Dept name is not given, Regulators, state - when used to refer to the gov\'92t (if it refers to the State Department then it is marked ORG Name.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Corporation}{\f0\fs22\lang1033{\*\listtag0}: Big Board, boards of private organizations, casinos, daily/weekly if used to describe a newspaper or magazine, divisions of private organizations, media organizations (TV, radio, newspapers, magazines), private organizations, shops, stock exchanges, sometimes ventures }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}\tab \tab }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="ORGANIZATION:CORPORATION"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Educational}{\f0\fs22\lang1033{\*\listtag0}: schools, universities}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="ORG_DESC:EDUCATIONAL">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Religious}{\f0\fs22\lang1033{\*\listtag0}: churches, mosques, etc.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORGANIZATION:RELIGIOUS"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Political}{\f0\fs22\lang1033{\*\listtag0}: political parties: Contra(s), Democratic Party, PLO, Sandanista, Taliban\tab }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORGANIZATION:POLITICAL">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Museum}{\f0\fs22\lang1033{\*\listtag0}: museums}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORGANIZATION:MUSEUM"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Hotel}{\f0\fs22\lang1033{\*\listtag0}: hotels, resorts}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORGANIZATION:HOTEL">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Hospital}{\f0\fs22\lang1033{\*\listtag0}: hospitals}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORGANIZATION:HOSPITAL">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other}{\f0\fs22\lang1033{\*\listtag0}: libraries, unions, environmental agencies, professional associations, health associations (Planned Parenthood), musical groups}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Names: city or country name refering to a sports team, i.e. \'93<}{\f0\fs22\i\lang1033{\*\listtag0}Boston> shortstop Nomar Garciapara}{\f0\fs22\lang1033{\*\listtag0}\'94, IMF, National Sports Fund, Planned Parenthood, Professional Organizations (Health Ins. Association of America, etc.), Red Sox, (city names preceding teams are considered part of the team name, as in New York Yankees), World Bank, Yankees}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORGANIZATION:OTHER">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Organization Descriptor}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Heads of descriptors of companies, governments, government agencies, educational institutions and other institutions:  sport teams, hospitals, museums, and libraries.  In \'93I bought the newspaper\'94, \'93the newspaper\'94 is not an organization descriptor so it is unmarkable.  References to \'93offices\'94 should be marked organization descriptor.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ORG_DESC:SUBTYPE">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}See Organization name for subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}GPE }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Names of countries, cities, states, provinces, municipalities.  In cases like \'93southern California\'94, California\'94 is marked as a GPE name and there is no other markup.}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Country}{\f0\fs22\lang1033{\*\listtag0}: countries, nations}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="GPE_DESC:COUNTRY">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}City}{\f0\fs22\lang1033{\*\listtag0}: cities, towns, villages, Washington & DC are tagged separately}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="GPE:CITY">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}State/province}{\f0\fs22\lang1033{\*\listtag0}: states, provinces}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="GPE:STATE_PROVINCE"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other:}{\f0\fs22\lang1033{\*\listtag0} Boroughs, islands that have governments}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="GPE:OTHER">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}GPE Descriptor}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Heads of descriptors of countries, cities, states, provinces, municipalities}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="GPE_DESC:SUBTYPE">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}See GPE Name for subtypes.}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Location}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Names of locations other than GPE\'92s, e.g. mountain ranges, coasts, borders, planets, geocoordinates, bodies of water.  Also included in this category are named regions such as the Middle East, areas, neighborhoods, continents and regions of continents such as Eastern Europe.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Unmarkable: Do not mark deictics or other non-proper nouns; here, there, everywhere, etc.  Directional modifiers such as western are not marked.}
+\par\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}River}{\f0\fs22\lang1033{\*\listtag0}: rivers}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LOCATION:RIVER"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Lake}{\f0\fs22\lang1033{\*\listtag0}_}{\f0\fs22\b\lang1033{\*\listtag0}Sea}{\f0\fs22\lang1033{\*\listtag0}_}{\f0\fs22\b\lang1033{\*\listtag0}Ocean}{\f0\fs22\lang1033{\*\listtag0}:}{\f0\fs22\b\lang1033{\*\listtag0} }{\f0\fs22\lang1033{\*\listtag0}Bay, Gulf, }
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LOCATION:LAKE_SEA_OCEAN"> </ENAMEX>}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Border}{\f0\fs22\lang1033{\*\listtag0}: named border regions}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1814567172\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls12\ilvl0\keepn{\f0\fs22\lang1033{\*\listtag0}the famous <Four Corners> intersection}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LOCATION:BORDER">  </ENAMEX> }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Region: }{\f0\fs22\lang1033{\*\listtag0}Named areas larger than a city; Baltic, Bay Area, Bekka Valley, Benelux, Central America, East bloc, Indochina, Latin America, Long Island, Scandinavia, Silicon Valley, Urals,Western Hemisphere}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1814567172\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls12\ilvl0{\f0\fs22\lang1033{\*\listtag0}<New England>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1814567172\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls12\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Central America>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1814567172\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls12\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Northeast>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML}{\f0\fs22\b\lang1033{\*\listtag0}:  }{\f0\fs22\lang1033{\*\listtag0}the <ENAMEX TYPE="LOCATION:REGION">  </ENAMEX>}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Latitude-Longitude}{\f0\fs22\lang1033{\*\listtag0}:}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Continent}{\f0\fs22\lang1033{\*\listtag0}: continents}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LOCATION:CONTINENT"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other:  }{\f0\fs22\lang1033{\*\listtag0}Brighton Beach, Micro-rayon, Named districts of a city, School district}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0\keepn{\f0\fs22\lang1033{\*\listtag0}<Earth>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LOCATION:OTHER">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Product Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Name of any product (but does NOT include the manufacturer), e.g., \'91Ford Taurus\'92 is an organization name followed by a product name.  This category covers any product name.  Product names of foods should be marked Product, not substance.  Products that are referred to using their manufacturer\'92s name (as in \'93I bought a Buick\'94), should be marked ORG name, not Product.  Services and financial plans are not markable.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Unmarkable:  credit cards, checking accounts, CDs, credit plans}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Weapon}{\f0\fs22\lang1033{\*\listtag0}: Missiles, guns, bombs, etc.  Often what precedes a weapon-desc will be an org-name rather than a weapon name.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="PRODUCT:WEAPON">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Vehicle}{\f0\fs22\lang1033{\*\listtag0}: Name of make, ex. (Subaru) Legacy}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="PRODUCT:VEHICLE"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other}{\f0\fs22\lang1033{\*\listtag0}:}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="PRODUCT:OTHER"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Product}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Descriptor}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Descriptions of weapons and vehicles only.  Cars, buses, machine guns, bombs, missiles, bullets, etc. }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="PRODUCT_DESC:SUBTYPE"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0} See Product Name for subtypes.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Date }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Used to classify a reference to a date or period.  Ex:  November 2 2001, January, Monday, 60\'92s, 1940\'92s, several years.  Ex:  two months, 4 months, last week, last year, yesterday, tomorrow, spring, summer, fall, winter, fourth quarter, first quarter, today, etc.  Age also falls under this category, even when it\'92s a noun phrase referring to a person:  the 5-year-old, 5 years old, Jane Doe, 5, etc.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Unmarkable: Dates that are part of rate expressions such as per/a day or per/a year should not be marked.}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Date}{\f0\fs22\lang1033{\*\listtag0}: answers the question \'93when\'94 and includes absolute dates (March 1), relative dates that are not durations (last week, 3 years ago, 3 months ended Oct 1, first quarter), other examples: }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<the quarter ending March 30>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<June>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<the previous quarter>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<a year ago>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<summer>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<1960s>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<20 years earlier>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<a couple of years ago>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}<the quarter ending March 30>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Phrases with modifers like \'93before\'94, \'93after\'94 \'93later\'94 (these modifiers are included), 1990-1995, these days, today, yesterday, tomorrow, Tuesday, February 3, 2002}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Conjoined dates, like \'93eight and ninth centuries,\'94 or \'9323, 24, and 28 January,\'94 or \'93May 3, 4, 10, and 11,\'94 are markable as one entity.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <TIMEX TYPE="DATE:DATE">  </TIMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Duration}{\f0\fs22\lang1033{\*\listtag0}: answers the question \'93how long\'94 and includes a period of time (2 years, centuries, 16 weeks, less than 2 years, 6 months, 52-week).}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <TIMEX TYPE="DATE:DURATION">  </TIMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Age}{\f0\fs22\lang1033{\*\listtag0}:  }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}Rudolph Agnew , <55 years old> }
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719981179\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls13\ilvl0{\f0\fs22\lang1033{\*\listtag0}Neil Davenport, <47>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <TIMEX TYPE="DATE:AGE">  </TIMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other}{\f0\fs22\lang1033{\*\listtag0}: periodic dates (weekly, annually), terms indicating that something occurs repeatedly/habitually, (over) the years, every day}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <TIMEX TYPE="DATE:OTHER"> </TIMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Unmarked: }{\f0\fs22\lang1033{\*\listtag0}nowadays, now, past / future, for now / until now, earlier, all the time / at the same time}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Time}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Any time ending with A.M. or P.M.  The a.m. and p.m. must be tagged along with the numbers.   Other times of day (units smaller than a day) and time durations may be marked:  morning, noon, night, 3 hours.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <TIMEX TYPE="TIME"> </TIMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Percent}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Any percent.  Percent symbol or the actual word percent must be explicit and included in the extent.  Ex:  50%}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="PERCENT"> </NUMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Money}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Any monetary value including all monetary denominations.  The monetary unit must be explicit and included in the tagging.  Examples:  50 yen, one million dollars, 17,000 pounds, $10.20.  Only values should be tagged, generic references to money should not.  For example, in \'93money invested in\'85\'94, there is no markup for \'93money\'94.  In rate expressions such as $ per unit, the unit should not be included in the extent.  For example, in \'93$3 per share\'94, the extent is <$3>.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="MONEY\'94>  </NUMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Quantity}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Used to classify measurements.  Ex:  4 miles, 4 grams, 4 degrees, 4 pounds, 4 ounces.}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}1d:}{\f0\fs22\lang1033{\*\listtag0} length, distance (3 miles, 2 feet, etc.)}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1666543094\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls14\ilvl0{\f0\fs22\lang1033{\*\listtag0}<about 60 miles>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1666543094\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls14\ilvl0{\f0\fs22\lang1033{\*\listtag0}<six-inch> concrete walls}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1666543094\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls14\ilvl0{\f0\fs22\lang1033{\*\listtag0}<100-mile> race}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="QUANTITY:1D">  </NUMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}2d:}{\f0\fs22\lang1033{\*\listtag0} area (2 square feet)}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid66733274\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls15\ilvl0{\f0\fs22\lang1033{\*\listtag0}<250,000-square-foot> building}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid66733274\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls15\ilvl0{\f0\fs22\lang1033{\*\listtag0}a <132-acre> tract}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid66733274\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls15\ilvl0{\f0\fs22\lang1033{\*\listtag0}<more than four acres>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="QUANTITY:2D">  </NUMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}3d:}{\f0\fs22\lang1033{\*\listtag0} volume (3 cubic meters, etc.)}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1624143870\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls16\ilvl0{\f0\fs22\lang1033{\*\listtag0}a <1.5 million-gallon> saltwater aquarium}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1624143870\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls16\ilvl0{\f0\fs22\lang1033{\*\listtag0}<1,296,800 barrels> of crude oil}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML}{\f0\fs22\b\lang1033{\*\listtag0}:  }{\f0\fs22\lang1033{\*\listtag0}<NUMEX TYPE="QUANTITY:3D">  </NUMEX>}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Energy:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1425880091\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls17\ilvl0{\f0\fs22\lang1033{\*\listtag0}<250-megawatt> phase of the project}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML}{\f0\fs22\b\lang1033{\*\listtag0}:  }{\f0\fs22\lang1033{\*\listtag0}<NUMEX TYPE="QUANTITY:ENERGY">   </NUMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Speed:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1425880091\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls17\ilvl0{\f0\fs22\lang1033{\*\listtag0}<65 miles an hour>}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML}{\f0\fs22\b\lang1033{\*\listtag0}:  }{\f0\fs22\lang1033{\*\listtag0}<NUMEX TYPE="QUANTITY:SPEED">  </NUMEX>}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Temperature:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1425880091\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls17\ilvl0\keepn{\f0\fs22\lang1033{\*\listtag0}<minus 321 degrees Fahrenheit>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML}{\f0\fs22\b\lang1033{\*\listtag0}:  }{\f0\fs22\lang1033{\*\listtag0}<NUMEX TYPE="QUANTITY:TEMPERATURE"> </NUMEX>}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Acceleration:}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Weight: }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1425880091\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls17\ilvl0{\f0\fs22\lang1033{\*\listtag0}<30,537 metric tons>}
+\par}\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}SGML}{\f0\fs22\b\lang1033{\*\listtag0}:  }{\f0\fs22\lang1033{\*\listtag0}<NUMEX TYPE="QUANTITY:WEIGHT">  </NUMEX>}
+\par\pard\plain\ltrpar\keepn{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Other:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1425880091\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls17\ilvl0{\f0\fs22\lang1033{\*\listtag0}<40 megabyte> hard drives}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1425880091\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls17\ilvl0{\f0\fs22\lang1033{\*\listtag0}<32-bit> chips}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="QUANTITY:OTHER">  </NUMEX>  }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Ordinal}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  All ordinal numbers.  Ex:  First, fourth, second}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="ORDINAL">  </NUMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Cardinal}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Numerals that provide a count or quantity and do not fall under a unit of measurement, money, percent, date or time.  Whole numbers, decimals and fractions are included.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Ex:  half, hundreds, one-third, four, 4534.  Ex:  Nasdaq composite fill 1.39 to 451.37 - the decimals are cardinals because there is no monetary unit.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Headless numerical phrases are also covered in this category.  Ex: \'91reducing employment from 18,000 to 16,000\'92.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Numbers identifying list items should also be included.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <NUMEX TYPE="CARDINAL"></NUMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Events}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Named hurricanes, battles, wars, sports events, and other named events. Ex:  WWI, WWII, New York City Marathon, Oklahoma City bombing, etc.}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}War}{\f0\fs22\lang1033{\*\listtag0}:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Mexican Revolution>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Vietnam War>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="EVENT:WAR">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Hurricane}{\f0\fs22\lang1033{\*\listtag0}:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Hurricane Hugo>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="EVENT:HURRICANE">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other:  }{\f0\fs22\lang1033{\*\listtag0}sports events, other named events}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}the official <Indianapolis 500> announcer}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}A <World Series> telecast}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Senior Olympic games>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Koreagate> scandal}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1416198356\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls18\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Tokyo Motor Show>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="EVENT:OTHER">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Plant}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name or Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Any plant, flower, tree, etc.  Black eyed Susan, Peonies, Joshua Tree, cactus, grass, etc.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2120374534\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls19\ilvl0{\f0\fs22\lang1033{\*\listtag0}1989-90 <crop>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2120374534\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls19\ilvl0{\f0\fs22\lang1033{\*\listtag0}hybrid <plants>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2120374534\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls19\ilvl0{\f0\fs22\lang1033{\*\listtag0}an annual <herb> , <Plantago ovata>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2120374534\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls19\ilvl0{\f0\fs22\lang1033{\*\listtag0}selling <flowers>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2120374534\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls19\ilvl0{\f0\fs22\lang1033{\*\listtag0}pussy-willow <buds>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2120374534\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls19\ilvl0{\f0\fs22\lang1033{\*\listtag0}The <grapevine>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="PLANT">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Animal}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name or Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Any animal class or proper name of an animal, real or fictional.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid771898620\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls20\ilvl0{\f0\fs22\lang1033{\*\listtag0}an elusive <sheep>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid771898620\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls20\ilvl0{\f0\fs22\lang1033{\*\listtag0}a docile <butterfly>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid771898620\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls20\ilvl0{\f0\fs22\lang1033{\*\listtag0}<animals> and beneficial <insects>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid771898620\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls20\ilvl0{\f0\fs22\lang1033{\*\listtag0}his <cuckoo> 's egg}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid771898620\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls20\ilvl0{\f0\fs22\lang1033{\*\listtag0}Could be <Cuddles>, Mrs. Stinnett's <dog>.}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid771898620\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls20\ilvl0{\f0\fs22\lang1033{\*\listtag0}keep the <worm> from the apple}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="ANIMAL">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Substance}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name or Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Any chemicals, elements, drugs, and foods.  Ex:  boron, penicillin, plutonium, bananas etc. Also other materials.  Both names and descriptors are markable.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}This category in particular has been difficult to define and may overlap with other categories.   See subtypes section for possible ambiguities and more examples.}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Food}{\f0\fs22\lang1033{\*\listtag0}: food and drinks }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Possible ambiguities:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018337\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls21\ilvl0{\f0\fs22\lang1033{\*\listtag0}Food vs Animal \'96 Refence to the animal is markable as Animal but reference to the food is Substance:Food}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018339\abilistparentid719018337\abilistlevel2\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls22\ilvl1{\f0\fs22\lang1033{\*\listtag0}<beef> (marked Substance:Food)}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018339\abilistparentid719018337\abilistlevel2\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls22\ilvl1{\f0\fs22\lang1033{\*\listtag0}<cow> (marked Animal)}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018337\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls21\ilvl0{\f0\fs22\lang1033{\*\listtag0}Food vs Product - Product names for foods are markable as Product, not Substance, but references to the foods themselves are Substance:Food}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018340\abilistparentid719018337\abilistlevel2\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls23\ilvl1{\f0\fs22\lang1033{\*\listtag0}their breakfast <cereals> (marked Substance:Food)}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018340\abilistparentid719018337\abilistlevel2\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls23\ilvl1{\f0\fs22\lang1033{\*\listtag0}<Corn Flakes> (marked Product)}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018337\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls21\ilvl0{\f0\fs22\lang1033{\*\listtag0}Food vs Plant - }
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018341\abilistparentid719018337\abilistlevel2\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls24\ilvl1{\f0\fs22\lang1033{\*\listtag0}20 more <corn> than naturally pollinated plants (marked Plant)}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018341\abilistparentid719018337\abilistlevel2\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls24\ilvl1{\f0\fs22\lang1033{\*\listtag0}$ 2.15 a bushel for <corn>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid654066993\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls25\ilvl0{\f0\fs22\lang1033{\*\listtag0}Other Examples}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018338\abilistparentid0\abilistlevel1\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls26\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Champagne> and <dessert> followed}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018338\abilistparentid0\abilistlevel1\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls26\ilvl0{\f0\fs22\lang1033{\*\listtag0}<food> and <drinks> are banned}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018338\abilistparentid0\abilistlevel1\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls26\ilvl0{\f0\fs22\lang1033{\*\listtag0}duckling <mousseline>, lobster <consomme>, veal <mignon>       }
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid719018338\abilistparentid0\abilistlevel1\abistartat0{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart0\pnlvlblt{\pntxtb\bullet}}\ls26\ilvl0{\f0\fs22\lang1033{\*\listtag0}chocolate <terrine> with a raspberry <sauce>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="SUBSTANCE:FOOD">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Drug}{\f0\fs22\lang1033{\*\listtag0}: medicines, narcotics, etc.}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid654066993\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls25\ilvl0{\f0\fs22\lang1033{\*\listtag0}approval for a new <drug>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid654066993\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls25\ilvl0{\f0\fs22\lang1033{\*\listtag0}The <drug> , called <adenocard>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid654066993\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls25\ilvl0{\f0\fs22\lang1033{\*\listtag0}the antibiotic <products>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid654066993\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls25\ilvl0{\f0\fs22\lang1033{\*\listtag0}trade some of it for <cocaine>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0} SGML: <ENAMEX TYPE="SUBSTANCE:DRUG">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Nuclear}{\f0\fs22\lang1033{\*\listtag0}: nuclear material}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1680035363\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls27\ilvl0{\f0\fs22\lang1033{\*\listtag0}<titanium>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1680035363\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls27\ilvl0{\f0\fs22\lang1033{\*\listtag0}<plutonium>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="SUBSTANCE:NUCLEAR">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Chemical}{\f0\fs22\lang1033{\*\listtag0}: Copper, elements from the periodic table, gold, silver}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1915240598\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls28\ilvl0{\f0\fs22\lang1033{\*\listtag0}class of <asbestos> including <crocidolite>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1915240598\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls28\ilvl0{\f0\fs22\lang1033{\*\listtag0}<copper>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1915240598\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls28\ilvl0{\f0\fs22\lang1033{\*\listtag0}10 drop in <ozone>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1915240598\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls28\ilvl0{\f0\fs22\lang1033{\*\listtag0}products derived from <salt> , such as <chlorine> and caustic <soda>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1915240598\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls28\ilvl0{\f0\fs22\lang1033{\*\listtag0}<chemicals> }
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="SUBSTANCE:CHEMICAL">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other}{\f0\fs22\lang1033{\*\listtag0}:\tab blood, cholesterol, gas, lipoproteins, oil, pulp, water (not intended for drinking), tobacco, butterfat, dna, plastics, coal, ice, toxins, stones, diamonds, etc.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="SUBSTANCE:OTHER">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Disease}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name or Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Any disease or medical condition, Ex:  Hodgkin\'92s disease, AIDS, cancer, malaria, acne.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1203714955\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls29\ilvl0{\f0\fs22\lang1033{\*\listtag0}18 deaths from malignant "<mesothelioma>, lung <cancer> and <asbestosis>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1203714955\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls29\ilvl0{\f0\fs22\lang1033{\*\listtag0}asbestos-related <diseases>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1203714955\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls29\ilvl0{\f0\fs22\lang1033{\*\listtag0}help treat juvenile <diabetes>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1203714955\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls29\ilvl0{\f0\fs22\lang1033{\*\listtag0}suffered from <malnutrition>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1203714955\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls29\ilvl0{\f0\fs22\lang1033{\*\listtag0}died after a <stroke>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1203714955\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls29\ilvl0{\f0\fs22\lang1033{\*\listtag0}suffering from <depression>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}For this category, both names and heads of descriptors are markable.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="DISEASE"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Work of Art}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Titles of books, songs, and other creations.  Usually surrounded by quotation marks in the article (though the quotations are not included in the annotation).  Ex:  Empire Strikes Back, The Bible, Blue Moon.  Also includes awards.  Nobel Peace Prize, Emmy, Oscar. }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Only names are markable in this category.}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Newspaper headlines should only be marked if they are referential.  In other words the headline of the article being annotated should not be marked but if in the body of the text here is a reference to an article, then it is markable as a work of art.}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Book: }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid953292764\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls30\ilvl0{\f0\fs22\lang1033{\*\listtag0}Dashiell Hammett, who wrote `` <The Maltese Falcon>}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="WORK_OF_ART:BOOK">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar\keepn{\f0\fs22\b\lang1033{\*\listtag0}Play:}{\f0\fs22\lang1033{\*\listtag0} }
+\par\pard\plain\li360\ltrpar\keepn{\f0\fs22\lang1033{\*\listtag0}Operas, musicals, plays}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="WORK_OF_ART:PLAY">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Song:}{\f0\fs22\lang1033{\*\listtag0} }
+\par\pard\plain\li360\ltrpar{\f0\fs22\lang1033{\*\listtag0}Songs, instrumental music}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="WORK_OF_ART:SONG">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Painting:  }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid953292764\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls30\ilvl0{\f0\fs22\lang1033{\*\listtag0}Vincent van Gogh's `` <Irises>}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="WORK_OF_ART:PAINTING">  </ENAMEX>}
+\par\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Sculpture:  }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="WORK_OF_ART:SCULPTURE ">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Other}{\f0\fs22\lang1033{\*\listtag0}: TV shows, movies, awards }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid419182259\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls31\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Nobel Prize>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid419182259\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls31\ilvl0{\f0\fs22\lang1033{\*\listtag0}a spin-off of `` <Cosby> }
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="WORK_OF_ART:OTHER">   </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Law}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Any document that has been made into a law.  Ex:  Bill of Rights, Equal Rights Amendments, IRS code 4.  The law must be named.  Legal documents and sections and chapters of legal documents. Treaties.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Examples:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid551312601\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls32\ilvl0{\f0\fs22\lang1033{\*\listtag0}The <1988 trade act>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid551312601\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls32\ilvl0{\f0\fs22\lang1033{\*\listtag0}the so-called special <301 provision> of the act}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid551312601\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls32\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Johnson Act>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid551312601\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls32\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Article II of the Constitution>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid551312601\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls32\ilvl0{\f0\fs22\lang1033{\*\listtag0}the <Warsaw Pact>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LAW">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Language}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable:  Any named language.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Examples:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2079477559\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls33\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Latin> liturgy}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2079477559\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls33\ilvl0{\f0\fs22\lang1033{\*\listtag0}novelistic tradition in <Arabic>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2079477559\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls33\ilvl0{\f0\fs22\lang1033{\*\listtag0}speaking <Filipino>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML:  <ENAMEX TYPE="LANGUAGE">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Contact info}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Address, email, phone #, URL.}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}See subtypes for examples.}
+\par\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Address: }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid1573587668\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls34\ilvl0{\f0\fs22\lang1033{\*\listtag0}<153 East 53rd St.>}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="CONTACT_INFO:ADDRESS">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Email: }
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="CONTACT_INFO:EMAIL">  </ENAMEX>}
+\par\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}Phone #:  }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid102380367\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls35\ilvl0{\f0\fs22\lang1033{\*\listtag0}<extension 29>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid102380367\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls35\ilvl0{\f0\fs22\lang1033{\*\listtag0}<900-TELELAW>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid102380367\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls35\ilvl0{\f0\fs22\lang1033{\*\listtag0}<800-462-9029>}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="CONTACT_INFO:PHONE"> </ENAMEX>}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\b\lang1033{\*\listtag0}URL:  }
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid28534736\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls36\ilvl0{\f0\fs22\lang1033{\*\listtag0}<www.usabanc.com>}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="CONTACT_INFO:url">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Game}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Name or}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Head of Descriptor}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Markable: Any named game such as a board game, any descriptor head, or any game type such as \'93baseball\'94.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Examples:}
+\par{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid122695772\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls37\ilvl0{\f0\fs22\lang1033{\*\listtag0}<tennis>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid122695772\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls37\ilvl0{\f0\fs22\lang1033{\*\listtag0}<football>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid122695772\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls37\ilvl0{\f0\fs22\lang1033{\*\listtag0}<poker>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid122695772\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls37\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Pachinko>, a kind of <pinball>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid122695772\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls37\ilvl0{\f0\fs22\lang1033{\*\listtag0}<paddleball>}
+\par}{\listtext\pard\bullet 	}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid122695772\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls37\ilvl0{\f0\fs22\lang1033{\*\listtag0}<Pool>}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}SGML: <ENAMEX TYPE="GAME">  </ENAMEX>}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}No Subtypes}
+\par\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}GENERAL GUIDELINES}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard 1.	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494716\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Nimbus Roman}{\abilistdecimal .}{\abilistdelim %L.}{\abiliststyle Numbered List}}{\*\pn\pnql\pnstart1\pnlvlbody\pndec{\pntxtb }{\pntxta .}}\ls38\ilvl0{\f0\fs22\lang1033{\*\listtag0}Markables/Extents}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Mark head words for descriptor categories and full name for name name categories.  For time and number categories, mark the full time, date, or quantity expression, regardless of context.  The following examples should be marked in their entirety:  2 feet, 3 hours, 5 days ago, etc.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}For descriptors we generally mark only one head word.  But there are cases in which the head is not sufficient.  The marked head should convey the meaning of the phrase so that it captures the difference between \'93vice president\'94 and \'93president\'94 for example. In these cases, the head should include the information necessary to distinguish its meaning.  So in the above example, <vice president> (rather than just \'93president\'94) is markable as the head of \'93vice president of accounting\'94 because a vice president and a president are not equivalent.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}In the case of conjunctions, mark one entity per head word.  However, in the case of range expressions for times, dates and numerical categories (like \'93between two and 3 weeks\'94), mark the entire expression.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Proper premodifiers are markable.  Some non-proper premodifiers are markable.  See section 2 for clarification.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard 2.	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494716\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Nimbus Roman}{\abilistdecimal .}{\abilistdelim %L.}{\abiliststyle Numbered List}}{\*\pn\pnql\pnstart1\pnlvlbody\pndec{\pntxtb }{\pntxta .}}\ls38\ilvl0{\f0\fs22\lang1033{\*\listtag0}Non-proper Premodifiers}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}When a premodifier is a common noun, it should generally not be marked.  The exceptions are as follows:}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494742\abilistparentid2050494716\abilistlevel2\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls39\ilvl1{\f0\fs22\lang1033{\*\listtag0}Occupational titles as in \'93president Bush\'94, \'93co-founder Gates\'94, \'93 senator Bentsen\'94, etc.  Do not include modifiers of those occupational premodifiers in the extent.  For example, in \'93Bankruptcy Judge Jones\'92, only the extents \'93Judge\'94 and \'93Jones\'94 are markable as person descriptor and person name, respectively.}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494742\abilistparentid2050494716\abilistlevel2\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls39\ilvl1{\f0\fs22\lang1033{\*\listtag0}Nominalizations of clause-like structures whose object is a category of interest.  For example, \'93heroin smuggler\'94 is a nominalization of X smuggles heroin.  In this case we would want to mark \'93heroin\'94.  On the other hand, \'93company funds\'94 is not a nominalization of X funds company, so we do not mark \'93company\'94.}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494742\abilistparentid2050494716\abilistlevel2\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls39\ilvl1{\f0\fs22\lang1033{\*\listtag0}Timex and Numex expressions in premodifier position should also be marked.}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard\bullet 	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494742\abilistparentid2050494716\abilistlevel2\abistartat1{\abifieldfont Symbol}{\abilistdecimal .}{\abilistdelim %L}{\abiliststyle Bullet List}}{\*\pn\pnql\pnstart1\pnlvlblt{\pntxtb\bullet}}\ls39\ilvl1{\f0\fs22\lang1033{\*\listtag0}Possessives should be marked in premodifier position:  in \'93the company\'92s meeting\'94, \'93the company\'94 should be marked}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\li720\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par{\listtext\pard 3.	}}\pard\plain{\ltrpar\f3\fs24\lang1033{\*\listtag0}{\*\abilist\abilistid2050494716\abilistparentid0\abilistlevel1\abistartat1{\abifieldfont Nimbus Roman}{\abilistdecimal .}{\abilistdelim %L.}{\abiliststyle Numbered List}}{\*\pn\pnql\pnstart1\pnlvlbody\pndec{\pntxtb }{\pntxta .}}\ls38\ilvl0{\f0\fs22\lang1033{\*\listtag0}Unmarkables}
+\par}\pard\plain\li360\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Pronouns and pronominal elements like anaphoric \'93one\'94, \'93someone\'94, \'93everyone\'94, \'93others\'94, etc. are not markable.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Headless entities with no clear reference like \'93the best\'94 are not markable.  }
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f0\fs22\lang1033{\*\listtag0}Names embedded in atomic names are not markable.  Ex:  no markup for Dow Jones in \'93Dow Jones Industrial Average\'94}
+\par\pard\plain\qj\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\qj\ltrpar{\f0\fs22\lang1033{\*\listtag0}Generics and specifics are not distinguished.  All references should be marked.  For example, in \'93scientists often say\'85,\'94 \'93scientists\'94 is markable even though it is generic.}
+\par\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}
+\par}\pard\plain\ltrpar{\f3\fs24\lang1033{\*\listtag0}}}
