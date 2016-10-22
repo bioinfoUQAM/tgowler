@@ -9,6 +9,11 @@ It comprises two modules –a workflow extractor and a pattern miner– both rel
 * SESAME OpenRDF 2.7.16 <span style="color: #0000ff;"><a href="https://sourceforge.net/projects/sesame/files/Sesame%202/2.7.16/" download="https://sourceforge.net/projects/sesame/files/Sesame%202/2.7.16/">https://sourceforge.net/projects/sesame/files/Sesame%202/2.7.16</a></span>
 * GATE 8.1 <span style="color: #0000ff;"><a href="https://gate.ac.uk/download/" download="https://gate.ac.uk/download/">https://gate.ac.uk/download/</a></span></H5>
 
+<H2>Input/output data</H2>
+
+* The phylogenetic ontology PHAGE is available in: http://bioportal.bioontology.org/ontologies/PHAGE
+* Texts, extracted workflows and generated patterns are available in: http://labo.bioinfo.uqam.ca/index.php?action=tgrowler
+
 <H2>Tools</H2>
 
 <H3>WfExtractor_1.0: Worklflow Extractor on Gate 8.1</H3>
@@ -23,9 +28,6 @@ Some of the features of <b>WfExtractor_1.0</b> are:
 <li>Export Gate Inline XML corpus.</li>
 </ul>
 </p>
-
-
-See: http://labo.bioinfo.uqam.ca/index.php?action=tgrowler to download input/output resource data.
 
 <H4>Installation:</H4>
 1. Unzip the <b>WfExtractor_1.0.zip</b> file.
