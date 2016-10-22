@@ -11,7 +11,7 @@ It comprises two modules –a workflow extractor and a pattern miner– both rel
 
 <H2>Tools</H2>
 
-<H3>WfExtractor_1.0: Worklflow Extractor on Gate</H3>
+<H3>WfExtractor_1.0: Worklflow Extractor on Gate 8.1</H3>
 
 <p>
 The <b>WfExtractor_1.0</b> tool annotates text corpus with its phylgoenetic analyses workflows.
