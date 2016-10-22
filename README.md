@@ -1,6 +1,6 @@
-# tgrowler
-
-In many technical domains, the generic problem solving knowledge is scarce even though a large number of concrete resolutions exist and are well documented. This makes the machine learning from resolution traces approach facing a number of challenges, not least among them the complexity of the underlying domain (concepts, relationships, events, processes, etc.) and the machine-readability of the documented resolution. We tackle here the acquisition of expertise in phylogeny, which is a notoriously rich and prolific field where hundreds, if not thousands, concrete cases are reported in the literature, yet tools to assist the phylogenist in analyzing a new dataset are virtually absent. Thus, we propose an approach that amounts to ontology-based workflow mining: Our T-GROWLer system abstracts general patterns from event sequences previously extracted from texts. It comprises two modules –a workflow extractor and a pattern miner– both relying on a specific domain ontology.
+# TGROWLeR
+TGROWLeR system abstracts general patterns from workflow sequences previously extracted from texts. 
+It comprises two modules –a workflow extractor and a pattern miner– both relying on a specific domain ontology.
 
 ## Prerequisites
 * JAVA 1.8: <span style="color: #0000ff;"><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" download="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></span>
