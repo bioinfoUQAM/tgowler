@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<CREOLE-DIRECTORY>
+  <!-- Processing Resources -->
+  <CREOLE>    
+    <!-- creole.xml for the Learning PR -->
+    <RESOURCE>
+      <NAME>Annotation Merging PR</NAME>
+      <COMMENT>Merge Annotations from different annotators.</COMMENT>
+		<HELPURL>http://gate.ac.uk/userguide/sec:misc-creole:merging</HELPURL>
+      <CLASS>gate.merger.AnnotationMergingMain</CLASS>
+      <JAR>annotationMerging.jar</JAR>
+
+      <PARAMETER NAME="annSetsForMerging"
+        COMMENT="Annotation sets names used for merging. Example: 'as1;as2;as3'.
+If not defined, use all the annotation sets but the default annotation set."
+        RUNTIME="true"
+        OPTIONAL="true">java.lang.String</PARAMETER>
+
+       <PARAMETER NAME="annTypesAndFeats"
+        COMMENT="Annotation types names and optionally features used for
+merging. Example: 'Location;Organisation->type'."
+        RUNTIME="true" OPTIONAL="true">java.lang.String</PARAMETER>
+
+      <PARAMETER NAME="annSetOutput"
+        COMMENT="Annotation set name used for storing the merged annotations"
+        RUNTIME="true" OPTIONAL="false">java.lang.String</PARAMETER>
+
+      <PARAMETER NAME="document" COMMENT="Document to be processed"
+        RUNTIME="true" OPTIONAL="false">gate.Document</PARAMETER>
+
+      <PARAMETER NAME="mergingMethod"
+        COMMENT="MergingByAnnotatorNum selects the annotation on which at least
+minimalAnnNum annotators agree and MajorityVoting selects the
+annotation that the majority of annotators support."
+        RUNTIME="true" DEFAULT="MajorityVoting"
+        OPTIONAL="false">gate.merger.MergingMethodsEnum</PARAMETER>
+
+      <PARAMETER NAME="minimalAnnNum"
+        COMMENT="Minimal number of annotators who must agree to merge
+the annotation with MergingByAnnotatorNum mergingMethod"
+         RUNTIME="true" DEFAULT="1" OPTIONAL="true">java.lang.String</PARAMETER>
+
+      <PARAMETER NAME="keepSourceForMergedAnnotations" DEFAULT="true"
+        COMMENT="Should source annotations be kept when merged?"
+        RUNTIME="true" OPTIONAL="false">
+        java.lang.Boolean
+      </PARAMETER>
+     </RESOURCE>
+     
+  </CREOLE>
+  
+  
+</CREOLE-DIRECTORY>
+

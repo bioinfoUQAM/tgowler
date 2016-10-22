@@ -1,0 +1,17 @@
+Per.lst:Person:inferred:arabic
+Org.lst:Organization:inferred:arabic
+Loc.lst:Location:inferred:arabic
+GPE.lst:Gpe:inferred:arabic
+Fac.lst:Fac:inferred:arabic
+Date.lst:Date:inferred:arabic
+Cardinal.lst:Cardinal:inferred:arabic
+Ordinal.lst:Ordinal:inferred:arabic
+Money.lst:Money:inferred:arabic
+Quantity.lst:Quantity:inferred:arabic
+Substance.lst:Substance:inferred:arabic
+Gpe_desc.lst:Gpe_desc:inferred:arabic
+Per_desc.lst:Per_desc:inferred:arabic
+Product_desc.lst:Product_desc:inferred:arabic
+Fac_desc.lst:Fac_desc:inferred:arabic
+Nationality.lst:Nationality:inferred:arabic
+Percent.lst:Percent:inferred:arabic

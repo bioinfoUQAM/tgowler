@@ -1,0 +1,277 @@
+Phase:resolveMultipleConceptsAnnotations
+Input: DistanceBasedProgram ClusterAnalysisDistanceBasedProgram  MinimumEvolutionDistanceBasedProgram  NeighborJoiningDistanceBasedProgram  OtherDistancesBasedProgram 
+CharacterBasedProgram BayesianProgram InformationTheoryBasedProgram MaximumLikelihoodProgram MaximumParsimonyProgram GuessedGeneralPackagesCategories
+Options: control = all
+
+Rule: GuessedGeneralPackagesCategories(
+{GuessedGeneralPackagesCategories}
+):guessedGeneralPackagesCategories
+-->
+{
+	
+	AnnotationSet matchedAnns = bindings.get("guessedGeneralPackagesCategories");
+    Annotation p = matchedAnns.get("GuessedGeneralPackagesCategories").iterator().next();
+	
+	if ( p.getFeatures().get("class-DataCollectionProgram").toString()=="true"){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="DataCollectionProgram";
+			String lookupString=p.getFeatures().get("lookupString").toString();
+			String inst=p.getFeatures().get("inst").toString();
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",lookupString);
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+inst);
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+			
+
+      if ( p.getFeatures().get("class-SequenceAlignmentProgram").toString()=="true"){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="SequenceAlignmentProgram";
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",p.getFeatures().get("lookupString").toString());
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+p.getFeatures().get("inst").toString());
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+
+      if ( p.getFeatures().get("class-ModelProgram").toString()=="true" ){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="ModelSelectionProgram";
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",p.getFeatures().get("lookupString").toString());
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+p.getFeatures().get("inst").toString());
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+
+      if ( p.getFeatures().get("class-PhylogeneticInferenceProgram").toString()=="true"){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="PhylogeneticInferenceProgram";
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",p.getFeatures().get("lookupString").toString());
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+p.getFeatures().get("inst").toString());
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+
+      if ( p.getFeatures().get("class-HypothesisValidationProgram").toString()=="true"){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="HypothesisValidationProgram";
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",p.getFeatures().get("lookupString").toString());
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+p.getFeatures().get("inst").toString());
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+
+      if ( p.getFeatures().get("class-TreeAnalysisProgram").toString()=="true"){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="TreeAnalysisProgram";
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",p.getFeatures().get("lookupString").toString());
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+p.getFeatures().get("inst").toString());
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+
+      if ( p.getFeatures().get("class-TreeVisualizationProgram").toString()=="true"){
+			FeatureMap pojemFeatures = p.getFeatures();
+			gate.FeatureMap features = Factory.newFeatureMap();
+			String classString="TreeVisualizationProgram";
+			features.put("class",classString);
+			features.put("lookupId",p.getId());
+			features.put("lookupString",p.getFeatures().get("lookupString").toString());
+			features.put("inst","http://www.co-ode.org/ontologies/ont.owl#"+p.getFeatures().get("inst").toString());
+			Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), classString, features);
+		}
+
+    
+    
+}
+
+Rule: CharacterBasedProgram(
+{CharacterBasedProgram}
+):characterBasedProgram
+-->
+{
+    // System.out.println("==========="+doc.getName()+" ===========");
+
+    AnnotationSet matchedAnns = bindings.get("characterBasedProgram");
+    Annotation ann = matchedAnns.get("CharacterBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: BayesianProgram(
+{BayesianProgram}
+):bayesianProgram
+-->
+{
+    // System.out.println("==========="+doc.getName()+" ===========");
+
+    AnnotationSet matchedAnns = bindings.get("bayesianProgram");
+    Annotation ann = matchedAnns.get("BayesianProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: InformationTheoryBasedProgram(
+{InformationTheoryBasedProgram}
+):informationTheoryBasedProgram
+-->
+{
+    // System.out.println("==========="+doc.getName()+" ===========");
+
+    AnnotationSet matchedAnns = bindings.get("informationTheoryBasedProgram");
+    Annotation ann = matchedAnns.get("InformationTheoryBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: MaximumLikelihoodProgram(
+{MaximumLikelihoodProgram}
+):maximumLikelihoodProgram
+-->
+{
+    // System.out.println("==========="+doc.getName()+" ===========");
+
+    AnnotationSet matchedAnns = bindings.get("maximumLikelihoodProgram");
+    Annotation ann = matchedAnns.get("MaximumLikelihoodProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: MaximumParsimonyProgram(
+{MaximumParsimonyProgram}
+):maximumParsimonyProgram
+-->
+{
+    // System.out.println("==========="+doc.getName()+" ===========");
+
+    AnnotationSet matchedAnns = bindings.get("maximumParsimonyProgram");
+    Annotation ann = matchedAnns.get("MaximumParsimonyProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: DistanceBasedProgram(
+{DistanceBasedProgram}
+):distanceBasedProgram
+-->
+{
+    AnnotationSet matchedAnns = bindings.get("distanceBasedProgram");
+    Annotation ann = matchedAnns.get("DistanceBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: ClusterAnalysisDistanceBasedProgram(
+{ClusterAnalysisDistanceBasedProgram}
+):clusterAnalysisDistanceBasedProgram
+-->
+{
+    AnnotationSet matchedAnns = bindings.get("clusterAnalysisDistanceBasedProgram");
+    Annotation ann = matchedAnns.get("ClusterAnalysisDistanceBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: MinimumEvolutionDistanceBasedProgram(
+{MinimumEvolutionDistanceBasedProgram}
+):minimumEvolutionDistanceBasedProgram
+-->
+{
+    AnnotationSet matchedAnns = bindings.get("minimumEvolutionDistanceBasedProgram");
+    Annotation ann = matchedAnns.get("MinimumEvolutionDistanceBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: NeighborJoiningDistanceBasedProgram(
+{NeighborJoiningDistanceBasedProgram}
+):neighborJoiningDistanceBasedProgram
+-->
+{
+    AnnotationSet matchedAnns = bindings.get("neighborJoiningDistanceBasedProgram");
+    Annotation ann = matchedAnns.get("NeighborJoiningDistanceBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}
+
+Rule: OtherDistancesBasedProgram(
+{OtherDistancesBasedProgram}
+):otherDistancesBasedProgram
+-->
+{
+    AnnotationSet matchedAnns = bindings.get("otherDistancesBasedProgram");
+    Annotation ann = matchedAnns.get("OtherDistancesBasedProgram").iterator().next(); 
+    // System.out.println(ann) ; 
+    FeatureMap theFeatures = ann.getFeatures();
+
+    FeatureMap pojemFeatures = ann.getFeatures();
+    gate.FeatureMap features = Factory.newFeatureMap();
+    features.putAll(pojemFeatures);
+    Integer id = outputAS.add(matchedAnns.firstNode(), matchedAnns.lastNode(), "PhylogeneticInferenceProgram", features);
+    
+}

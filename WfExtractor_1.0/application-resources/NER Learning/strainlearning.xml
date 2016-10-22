@@ -1,0 +1,46 @@
+<?xml version="1.0"?>  
+<ML-CONFIG>  
+  <SURROUND value="false"/>
+  <IS-LABEL-UPDATABLE value="true"/>  
+  <IS-NLPFEATURELIST-UPDATABLE value="true"/>  
+  <PARAMETER name="thresholdProbabilityEntity" value="0.2"/>  
+  <PARAMETER name="thresholdProbabilityBoundary" value="0.42"/>  
+  <PARAMETER name="thresholdProbabilityClassification" value="0.5"/>  
+  <EVALUATION method="kfold" runs="10" />  
+  <ENGINE nickname="SVM" implementationName="SVMLibSvmJava"  
+        options=" -c 0.7 -t 0 -m 200 -tau 0.4  "/>  
+  <DATASET>  
+    <INSTANCE-TYPE>possibleStrain</INSTANCE-TYPE>  
+    <ATTRIBUTELIST>
+	     <NAME>Word</NAME>
+      	<SEMTYPE>NOMINAL</SEMTYPE>
+      	<TYPE>possibleStrain</TYPE>
+      	<FEATURE>string</FEATURE>
+        <RANGE from="0" to="1"/>  
+     </ATTRIBUTELIST>
+     <ATTRIBUTE>  
+       <NAME>Species</NAME>  
+       <SEMTYPE>NOMINAL</SEMTYPE>  
+       <TYPE>TaxonomicUnit</TYPE>  
+       <FEATURE>class</FEATURE>  
+       <POSITION>-1</POSITION> 
+       <WEIGHT>20.0</WEIGHT>  
+    </ATTRIBUTE>  
+    <ATTRIBUTE>  
+       <NAME>Genus</NAME>  
+       <SEMTYPE>NOMINAL</SEMTYPE>  
+       <TYPE>TaxonomicUnit</TYPE>  
+       <FEATURE>class</FEATURE>  
+       <POSITION>-2</POSITION>  
+       <WEIGHT>20.0</WEIGHT> 
+    </ATTRIBUTE>  
+     <ATTRIBUTE>  
+        <NAME>strain</NAME>  
+        <SEMTYPE>NOMINAL</SEMTYPE>  
+        <TYPE>possibleStrain</TYPE>  
+        <FEATURE>Strain</FEATURE>  
+        <POSITION>0</POSITION>  
+        <CLASS/>  
+     </ATTRIBUTE>  
+   </DATASET>  
+</ML-CONFIG> 

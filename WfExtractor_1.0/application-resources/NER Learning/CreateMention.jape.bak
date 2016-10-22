@@ -1,0 +1,46 @@
+Phase:firstpass
+Input: Person Percent Date Organization Money Location
+Options: control = brill
+
+Rule: Person
+(
+{Person}
+):person
+-->
+ :person.Mention = {type="person"}
+
+Rule: Percent
+(
+{Percent}
+):percent
+-->
+ :percent.Mention = {type="percent"}
+
+Rule: Date
+(
+{Date}
+):date
+-->
+ :date.Mention = {type="date"}
+
+Rule: Organization
+(
+{Organization}
+):organization
+-->
+ :organization.Mention = {type="organization"}
+
+Rule: Money
+(
+{Money}
+):money
+-->
+ :money.Mention = {type="money"}
+
+Rule: Location
+(
+{Location}
+):location
+-->
+ :location.Mention = {type="location"}
+

@@ -1,0 +1,961 @@
+
+Phase: workflowConstruction
+
+Input: article p
+
+Options: control = all
+
+
+Rule: pair
+({article}):art
+-->
+{   
+
+   // Get the article section
+   Annotation artToDelete = ((AnnotationSet)bindings.get("art")).iterator().next();
+
+   // Get all Organizations and Persons in this sentence
+   Long parStart = artToDelete.getStartNode().getOffset();
+   Long parEnd = artToDelete.getEndNode().getOffset();
+   //System.out.println("paragraph limits: StartsWiths: "+parStart+"EndsWith: "+parEnd);
+
+   // RELATION PART
+   AnnotationSet rel = inputAS.get("RelationClass", parStart, parEnd);
+   List<Annotation> relationList = gate.Utils.inDocumentOrder(rel);
+   Boolean ve=rel==null;
+
+   // MORE SPECFIC ANNOTATIONS (for statistics)
+   // AnnotationSet sc0 = inputAS.get("DNASequence", parStart, parEnd);
+   // List<Annotation> scList0 = gate.Utils.inDocumentOrder(sc0);
+
+   // AnnotationSet sc1 = inputAS.get("ProteinSequence", parStart, parEnd);
+   // List<Annotation> scList1 = gate.Utils.inDocumentOrder(sc1);
+
+   
+   // AnnotationSet sc2 = inputAS.get("GlobalMSAProgram", parStart, parEnd);
+   // List<Annotation> scList2 = gate.Utils.inDocumentOrder(sc2);
+
+   // AnnotationSet sc3 = inputAS.get("LocalMSAProgram", parStart, parEnd);
+   // List<Annotation> scList3 = gate.Utils.inDocumentOrder(sc3);
+
+  
+   // AnnotationSet sc4 = inputAS.get("JTT", parStart, parEnd);
+   // List<Annotation> scList4 = gate.Utils.inDocumentOrder(sc4);
+
+   // AnnotationSet sc5 = inputAS.get("Jones", parStart, parEnd);
+   // List<Annotation> scList5 = gate.Utils.inDocumentOrder(sc5);
+
+
+   // AnnotationSet sc6 = inputAS.get("BayesianProgram", parStart, parEnd);
+   // List<Annotation> scList6 = gate.Utils.inDocumentOrder(sc6);
+
+   // AnnotationSet sc7 = inputAS.get("MaximumParsimonyProgram", parStart, parEnd);
+   // List<Annotation> scList7 = gate.Utils.inDocumentOrder(sc7);
+
+   // AnnotationSet sc8 = inputAS.get("MaximumLikelihoodProgram", parStart, parEnd);
+   // List<Annotation> scList8 = gate.Utils.inDocumentOrder(sc8);
+
+   // AnnotationSet sc9 = inputAS.get("NeighborJoiningDistanceBasedProgram", parStart, parEnd);
+   // List<Annotation> scList9 = gate.Utils.inDocumentOrder(sc9);
+
+   // AnnotationSet sc10 = inputAS.get("BootstrappingProgram", parStart, parEnd);
+   // List<Annotation> scList10 = gate.Utils.inDocumentOrder(sc10);
+
+   // AnnotationSet sc11 = inputAS.get("ConsensusTreesProgram", parStart, parEnd);
+   // List<Annotation> scList11 = gate.Utils.inDocumentOrder(sc11);
+
+
+   //Annotations that could serve to create relations
+   AnnotationSet org00 = inputAS.get("Lookup", parStart, parEnd);
+   List<Annotation> dataList00 = gate.Utils.inDocumentOrder(org00);
+
+
+   //FIRST PART OF THE GENERIC PATTERN ANNOTATIONS (workflow annotations on DataTypes)
+   AnnotationSet org0 = inputAS.get("DataType", parStart, parEnd);
+   List<Annotation> dataList0 = gate.Utils.inDocumentOrder(org0);
+
+   AnnotationSet org1 = inputAS.get("GeneOntology", parStart, parEnd);
+   List<Annotation> dataList1 = gate.Utils.inDocumentOrder(org1);
+
+   AnnotationSet org2 = inputAS.get("DataBase", parStart, parEnd);
+   List<Annotation> dataList2 = gate.Utils.inDocumentOrder(org2);
+
+   AnnotationSet org3 = inputAS.get("DataFormat", parStart, parEnd);
+   List<Annotation> dataList3 = gate.Utils.inDocumentOrder(org3);
+
+   AnnotationSet org4 = inputAS.get("SourceTaxon", parStart, parEnd);
+   List<Annotation> dataList4 = gate.Utils.inDocumentOrder(org4);
+
+   //SECOND PART OF THE GENERIC PATTERN ANNOTATIONS (workflow program sequence)
+   AnnotationSet pers = inputAS.get("GuessedGeneralPackagesCategories", parStart, parEnd);
+   List<Annotation> progsList = gate.Utils.inDocumentOrder(pers);
+
+   AnnotationSet pers0 = inputAS.get("DataCollectionProgram", parStart, parEnd);
+   List<Annotation> progs0List = gate.Utils.inDocumentOrder(pers0);
+
+   AnnotationSet pers1 = inputAS.get("SequenceAlignmentProgram", parStart, parEnd);
+   List<Annotation> progs1List = gate.Utils.inDocumentOrder(pers1);
+
+   AnnotationSet pers2 = inputAS.get("ModelSelectionProgram", parStart, parEnd);
+   List<Annotation> progs2List = gate.Utils.inDocumentOrder(pers2);
+
+   AnnotationSet pers3 = inputAS.get("Models", parStart, parEnd);
+   List<Annotation> progs3List = gate.Utils.inDocumentOrder(pers3);
+
+   AnnotationSet pers4 = inputAS.get("PhylogeneticInferenceProgram", parStart, parEnd);
+   List<Annotation> progs4List = gate.Utils.inDocumentOrder(pers4);
+
+   AnnotationSet pers5 = inputAS.get("Method", parStart, parEnd);
+   List<Annotation> progs5List = gate.Utils.inDocumentOrder(pers5);
+
+   AnnotationSet pers6 = inputAS.get("HypothesisValidationProgram", parStart, parEnd);
+   List<Annotation> progs6List = gate.Utils.inDocumentOrder(pers6);
+
+   AnnotationSet pers7 = inputAS.get("BootstrapsParms", parStart, parEnd);
+   List<Annotation> progs7List = gate.Utils.inDocumentOrder(pers7);
+ 
+   AnnotationSet pers8 = inputAS.get("TreeAnalysisProgram", parStart, parEnd);
+   List<Annotation> progs8List = gate.Utils.inDocumentOrder(pers8);
+
+   AnnotationSet pers9 = inputAS.get("TreeVisualizationProgram", parStart, parEnd);
+   List<Annotation> progs9List = gate.Utils.inDocumentOrder(pers9);
+   
+   List<String>myPatternConcepts = new ArrayList<String>();
+   List<String>myPatternRelations = new ArrayList<String>();
+   //myPattern.add("GuessedGeneralPackagesCategories");
+   myPatternConcepts.add("DataType");
+   myPatternConcepts.add("GeneOntology");
+   myPatternConcepts.add("DataBase");
+   myPatternConcepts.add("DataFormat");
+   myPatternConcepts.add("SourceTaxon");
+
+   myPatternConcepts.add("DataCollectionProgram");
+   myPatternConcepts.add("SequenceAlignmentProgram");
+   myPatternConcepts.add("ModelSelectionProgram");
+   myPatternConcepts.add("ModelProgramParameters");
+   myPatternConcepts.add("PhylogeneticInferenceProgram");
+   myPatternConcepts.add("PhylogeneticInferenceMethod");
+   myPatternConcepts.add("HypothesisValidationProgram");
+   myPatternConcepts.add("HypothesisValidationParameters");
+   myPatternConcepts.add("TreeAnalysisProgram");
+   myPatternConcepts.add("TreeVisualizationProgram");
+
+   //System.out.println(myPattern);
+
+   gate.FeatureMap fm = gate.Factory.newFeatureMap();
+
+   //String of concept instances
+   ArrayList<String> LookupString = new ArrayList<String>();
+   ArrayList<String> DataTypeString = new ArrayList<String>();
+   ArrayList<String> GeneOntologyString = new ArrayList<String>();
+   ArrayList<String> DataBaseString = new ArrayList<String>();
+   ArrayList<String> DataFormatString = new ArrayList<String>();
+   ArrayList<String> SourceTaxonString = new ArrayList<String>();
+
+   ArrayList<String> DataCollectionProgramString = new ArrayList<String>();
+   ArrayList<String> SequenceAlignmentProgramString = new ArrayList<String>();
+   ArrayList<String> ModelProgramString = new ArrayList<String>();
+   ArrayList<String> ModelProgramParametersString = new ArrayList<String>();
+   ArrayList<String> PhylogeneticInferenceProgramString = new ArrayList<String>();
+   ArrayList<String> PhylogeneticInferenceMethodString = new ArrayList<String>();
+   ArrayList<String> HypothesisValidationProgramString = new ArrayList<String>();
+   ArrayList<String> HypothesisValidationParametersString = new ArrayList<String>();
+   ArrayList<String> TreeAnalysisProgramString = new ArrayList<String>();
+   ArrayList<String> TreeVisualizationProgramString = new ArrayList<String>();
+
+   //Ids of concept instances
+   ArrayList<String> DataTypeInst = new ArrayList<String>();
+   ArrayList<String> LookupInst = new ArrayList<String>();
+   ArrayList<String> GeneOntologyInst = new ArrayList<String>();
+   ArrayList<String> DataBaseInst = new ArrayList<String>();
+   ArrayList<String> DataFormatInst = new ArrayList<String>();
+   ArrayList<String> SourceTaxonInst = new ArrayList<String>();
+   
+   ArrayList<String> DataCollectionProgramInst = new ArrayList<String>();
+   ArrayList<String> SequenceAlignmentProgramInst = new ArrayList<String>();
+   ArrayList<String> ModelProgramInst = new ArrayList<String>();
+   ArrayList<String> ModelProgramParametersInst = new ArrayList<String>();
+   ArrayList<String> PhylogeneticInferenceProgramInst = new ArrayList<String>();
+   ArrayList<String> PhylogeneticInferenceMethodInst = new ArrayList<String>();
+   ArrayList<String> HypothesisValidationProgramInst = new ArrayList<String>();
+   ArrayList<String> HypothesisValidationParametersInst = new ArrayList<String>();
+   ArrayList<String> TreeAnalysisProgramInst = new ArrayList<String>();
+   ArrayList<String> TreeVisualizationProgramInst = new ArrayList<String>();
+
+   int i0=0, i1=0, i2=0, i3=0, i4=0, i5=0, i6=0, i7=0, i8=0, i9=0, i10=0, i11=0, i12=0, i13=0;
+   if (ve == false) {
+      for(Annotation r : relationList) {
+         String relType = new String (r.getFeatures().get("rel-type").toString());
+         if ( relType.contains("has_AlignedBy") )
+            i0++ ;
+         if ( relType.contains("has_CollectedBy") )
+            i1++ ;
+         if ( relType.contains("has_DataFormat") )
+            i2++ ;
+         if ( relType.contains("has_EvolutionaryModel") )
+            i3++ ;
+         if ( relType.contains("has_GeneOntologyAnnotation") )
+            i4++ ;
+         if ( relType.contains("has_HypothesisValidatedBy") )
+            i5++;
+         if ( relType.contains("has_InferredBy") )
+            i6++ ;
+         if ( relType.contains("has_ModeledBy") )
+            i7++ ;
+         if ( relType.contains("has_NbBootstraps") )
+            i8++ ;
+         if ( relType.contains("has_OrganismDivision") )
+            i9++ ;
+         if ( relType.contains("has_PhylogeneticMethod") )
+            i10++ ;
+         if ( relType.contains("has_RetrievedInDataBase") )
+            i11++ ;
+         if ( relType.contains("has_TreeAnalyzedBy") )
+            i12++ ;
+         if ( relType.contains("has_TreeVisualizedBy") )
+            i13++ ;
+      }
+   }
+   
+
+   // Fillup the pattern concepts with their annotations from the texts
+   for(Annotation o00 : dataList00) {
+         String newString = "";
+         Long o00Start = o00.getStartNode().getOffset();
+         Long o00End = o00.getEndNode().getOffset();
+         AnnotationSet toks = inputAS.get("Token", o00Start, o00End);
+         List<Annotation> orderedToks = gate.Utils.inDocumentOrder(toks);
+         for(Annotation a : orderedToks)
+            newString=newString+a.getFeatures().get("string");
+         
+         String newInst = new String (o00.getFeatures().get("inst").toString());
+         
+         if ( ! LookupString.toString().contains(newString) )
+            LookupString.add(newString) ;
+
+         if( ! LookupInst.contains(newInst) )
+            LookupInst.add(newInst);
+   }
+
+   for(Annotation o0 : dataList0) {
+         String newString = new String (o0.getFeatures().get("lookupString").toString());
+         String newInst = new String (o0.getFeatures().get("inst").toString());
+         if ( ! DataTypeString.contains(newString.toLowerCase()) )
+            DataTypeString.add(newString) ;
+         if( ! DataTypeInst.contains(newInst.split("#")[1]) )
+            // System.out.println(newInst.split("#")[1]);
+            DataTypeInst.add(newInst.split("#")[1]);
+   }
+
+
+   for(Annotation o1 : dataList1) {
+         String newString = "";
+         Long o1Start = o1.getStartNode().getOffset();
+         Long o1End = o1.getEndNode().getOffset();
+         AnnotationSet toks = inputAS.get("Token", o1Start, o1End);
+         List<Annotation> orderedToks = gate.Utils.inDocumentOrder(toks);
+         for(Annotation a : orderedToks)
+            newString=newString+a.getFeatures().get("string");
+
+         String newInst = "GO_"+o1.getFeatures().get("majorType").toString();
+
+         if ( ! GeneOntologyString.contains(newString.toLowerCase()) )
+            GeneOntologyString.add(newString) ;
+         if( ! GeneOntologyInst.contains(newInst) )
+            GeneOntologyInst.add(newInst) ;
+      }
+
+   for(Annotation o2 : dataList2) {
+         String newString = new String (o2.getFeatures().get("lookupString").toString());
+         String newInst = new String (o2.getFeatures().get("inst").toString());
+         if ( ! DataBaseString.contains(newString.toLowerCase()) )
+            DataBaseString.add(newString) ;
+         if( ! DataBaseInst.contains(newInst.split("#")[1]) )
+            DataBaseInst.add(newInst.split("#")[1]);
+      }
+
+   for(Annotation o3 : dataList3) {
+         String newString = new String (o3.getFeatures().get("lookupString").toString());
+         String newInst = new String (o3.getFeatures().get("inst").toString());
+         if ( ! DataFormatString.contains(newString.toLowerCase()) )
+            DataFormatString.add(newString) ;
+         if( ! DataFormatInst.contains(newInst.split("#")[1]) )
+            DataFormatInst.add(newInst.split("#")[1]);
+      }
+
+   for(Annotation o4 : dataList4) {
+         String newString = new String (o4.getFeatures().get("lookupString").toString());
+         String newInst = new String (o4.getFeatures().get("inst").toString());
+         if ( ! SourceTaxonString.contains(newString.toLowerCase()) )
+            SourceTaxonString.add(newString) ;
+         if( ! SourceTaxonInst.contains(newInst.split("#")[1]) )
+            SourceTaxonInst.add(newInst.split("#")[1]);
+      }
+
+
+   // for each Person, consider each Organization
+   for(Annotation p : progsList) {
+      String newString = new String (p.getFeatures().get("lookupString").toString());
+      String newInst = new String (p.getFeatures().get("inst").toString());
+      if ( p.getFeatures().get("class-DataCollectionProgram").toString()=="true" && ! DataCollectionProgramString.contains(newString.toLowerCase()))
+         DataCollectionProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-DataCollectionProgram").toString()=="true" && ! DataCollectionProgramInst.contains(newInst) )
+         DataCollectionProgramInst.add(newInst);
+
+      if ( p.getFeatures().get("class-SequenceAlignmentProgram").toString()=="true" && ! SequenceAlignmentProgramString.contains(newString.toLowerCase()))
+         SequenceAlignmentProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-SequenceAlignmentProgram").toString()=="true" && ! SequenceAlignmentProgramInst.contains(newInst) )
+         SequenceAlignmentProgramInst.add(newInst);
+
+      if ( p.getFeatures().get("class-ModelProgram").toString()=="true" && ! ModelProgramString.contains(newString.toLowerCase()))
+         ModelProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-ModelProgram").toString()=="true" && ! ModelProgramInst.contains(newInst) )
+         ModelProgramInst.add(newInst);
+
+      if ( p.getFeatures().get("class-PhylogeneticInferenceProgram").toString()=="true" && ! PhylogeneticInferenceProgramString.contains(newString.toLowerCase()))
+         PhylogeneticInferenceProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-PhylogeneticInferenceProgram").toString()=="true" && ! PhylogeneticInferenceProgramInst.contains(newInst) )
+         PhylogeneticInferenceProgramInst.add(newInst);
+
+      if ( p.getFeatures().get("class-HypothesisValidationProgram").toString()=="true" && ! HypothesisValidationProgramString.contains(newString.toLowerCase()))
+         HypothesisValidationProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-HypothesisValidationProgram").toString()=="true" && ! HypothesisValidationProgramInst.contains(newInst) )
+         HypothesisValidationProgramInst.add(newInst);
+
+      if ( p.getFeatures().get("class-TreeAnalysisProgram").toString()=="true" && ! TreeAnalysisProgramString.contains(newString.toLowerCase()))
+         TreeAnalysisProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-TreeAnalysisProgram").toString()=="true" && ! TreeAnalysisProgramInst.contains(newInst) )
+         TreeAnalysisProgramInst.add(newInst);
+
+      if ( p.getFeatures().get("class-TreeVisualizationProgram").toString()=="true" && ! TreeVisualizationProgramString.contains(newString.toLowerCase()))
+         TreeVisualizationProgramString.add(newString) ;
+      if ( p.getFeatures().get("class-TreeVisualizationProgram").toString()=="true" && ! TreeVisualizationProgramInst.contains(newInst) )
+         TreeVisualizationProgramInst.add(newInst);
+   }
+
+   for(Annotation p0 : progs0List) {
+      String newString = new String (p0.getFeatures().get("lookupString").toString());
+      String newInst = new String (p0.getFeatures().get("inst").toString());
+      if ( ! DataCollectionProgramString.contains(newString.toLowerCase()) )
+         DataCollectionProgramString.add(newString) ;
+      if( ! DataCollectionProgramInst.contains(newInst.split("#")[1]) )
+         DataCollectionProgramInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p1 : progs1List) {
+      String newString = new String (p1.getFeatures().get("lookupString").toString());
+      String newInst = new String (p1.getFeatures().get("inst").toString());
+      if ( ! SequenceAlignmentProgramString.contains(newString.toLowerCase()) )
+         SequenceAlignmentProgramString.add(newString) ;
+      if( ! SequenceAlignmentProgramInst.contains(newInst.split("#")[1]) )
+         SequenceAlignmentProgramInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p2 : progs2List) {
+      String newString = new String (p2.getFeatures().get("lookupString").toString());
+      String newInst = new String (p2.getFeatures().get("inst").toString());
+      if ( ! ModelProgramString.contains(newString.toLowerCase()) )
+         ModelProgramString.add(newString) ;
+      if( ! ModelProgramInst.contains(newInst.split("#")[1]) )
+         ModelProgramInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p3 : progs3List) {
+      String newString = new String ( p3.getFeatures().get("lookupString").toString());
+      String newInst = new String (p3.getFeatures().get("inst").toString());
+      if ( ! ModelProgramParametersString.contains(newString.toLowerCase()) )
+         ModelProgramParametersString.add(newString) ;
+      if( ! ModelProgramParametersInst.contains(newInst.split("#")[1]) )
+         ModelProgramParametersInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p4 : progs4List) {
+      String newString = new String (p4.getFeatures().get("lookupString").toString());
+      String newInst = new String (p4.getFeatures().get("inst").toString());
+      if ( ! PhylogeneticInferenceProgramString.contains(newString.toLowerCase()) )
+         PhylogeneticInferenceProgramString.add(newString) ;
+      if( ! PhylogeneticInferenceProgramInst.contains(newInst.split("#")[1]) )
+         PhylogeneticInferenceProgramInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p5 : progs5List) {
+      String newString = new String (p5.getFeatures().get("lookupString").toString());
+      String newInst = new String (p5.getFeatures().get("inst").toString());
+      if ( ! PhylogeneticInferenceMethodString.contains(newString.toLowerCase()) )
+         PhylogeneticInferenceMethodString.add(newString) ;
+      if( ! PhylogeneticInferenceMethodInst.contains(newInst.split("#")[1]) )
+         PhylogeneticInferenceMethodInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p6 : progs6List) {
+      String newString = new String (p6.getFeatures().get("lookupString").toString());
+      String newInst = new String (p6.getFeatures().get("inst").toString());
+      if ( ! HypothesisValidationProgramString.contains(newString.toLowerCase()) )
+         HypothesisValidationProgramString.add(newString) ;
+      if( ! HypothesisValidationProgramInst.contains(newInst.split("#")[1]) )
+         HypothesisValidationProgramInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p7 : progs7List) {
+   	  
+   	  String nbBoots=p7.getFeatures().get("Number of booststraps").toString().replace(" ","");
+   	  nbBoots=nbBoots.replace(",","");
+      String newString = new String (nbBoots);
+      
+      if (newString.toLowerCase().equals("one"))
+      	nbBoots="1";
+      if (newString.toLowerCase().equals("two"))
+      	nbBoots="2";
+      if (newString.toLowerCase().equals("three"))
+      	nbBoots="3";
+      if (newString.toLowerCase().equals("four"))
+      	nbBoots="4";
+      if (newString.toLowerCase().equals("five"))
+      	nbBoots="5";
+      if (newString.toLowerCase().equals("six"))
+      	nbBoots="6";
+      if (newString.toLowerCase().equals("seven"))
+      	nbBoots="7";
+      if (newString.toLowerCase().equals("eight"))
+      	nbBoots="8";
+      if (newString.toLowerCase().equals("nine"))
+      	nbBoots="9";
+      if (newString.toLowerCase().equals("hundred"))
+      	nbBoots="100";
+      if (newString.toLowerCase().equals("onehundred"))
+      	nbBoots="100";
+      if (newString.toLowerCase().equals("thousand"))
+      	nbBoots="1000";
+      if (newString.toLowerCase().equals("onethousand"))
+      	nbBoots="1000";
+      if (newString.toLowerCase().equals("twothousand"))
+      	nbBoots="2000";
+      if (newString.toLowerCase().equals("fivehundred"))
+      	nbBoots="500";
+      
+      boolean parsable = true;
+    	try{
+        	Integer.parseInt(nbBoots);
+	    }catch(NumberFormatException e){
+    	    parsable = false;
+      }
+      if (parsable==false)
+      	nbBoots="0";
+      
+      int newInst = Integer.parseInt(nbBoots);
+      
+      if ( ! HypothesisValidationParametersString.contains(newString.toLowerCase()) )
+         HypothesisValidationParametersString.add(newString) ;
+      if( ! HypothesisValidationParametersInst.contains(newInst) ) {
+      		if (newInst >=0 && newInst<=50)
+      			HypothesisValidationParametersInst.add("Boots_Inf_50");
+      		if (newInst >50 && newInst<=1000)
+      			HypothesisValidationParametersInst.add("Boots_50_1000");
+      		if (newInst >1000 && newInst<=10000)
+      			HypothesisValidationParametersInst.add("Boots_1000_10000");
+      		if (newInst >10000 && newInst<=1000000)
+      			HypothesisValidationParametersInst.add("Boots_10000_1000000");
+      		if (newInst >1000000)
+      			HypothesisValidationParametersInst.add("Boots_1000000_Inf");
+      }
+         
+   }
+
+   for(Annotation p8 : progs8List) {
+      String newString = new String (p8.getFeatures().get("lookupString").toString());
+      String newInst = new String (p8.getFeatures().get("inst").toString());
+      if ( ! TreeAnalysisProgramString.contains(newString.toLowerCase()) )
+         TreeAnalysisProgramString.add(newString) ;
+      if( ! TreeAnalysisProgramInst.contains(newInst.split("#")[1]) )
+         TreeAnalysisProgramInst.add(newInst.split("#")[1]);
+   }
+
+   for(Annotation p9 : progs9List) {
+      String newString = new String (p9.getFeatures().get("lookupString").toString());
+      String newInst = new String (p9.getFeatures().get("inst").toString());
+      if ( ! TreeVisualizationProgramString.contains(newString.toLowerCase()) )
+         TreeVisualizationProgramString.add(newString) ;
+      if( ! TreeVisualizationProgramInst.contains(newInst.split("#")[1]) )
+         TreeVisualizationProgramInst.add(newInst.split("#")[1]);
+   }
+
+
+   // ------------------   CREATE WORKFLOWS STRING AND INST ------------------------ \\
+
+   // Create workflowString11
+   ArrayList<ArrayList<String>> workflowString11 = new ArrayList<ArrayList<String>>();
+   ArrayList<String> spaces1 = new ArrayList<String>();
+   // spaces1.add("{");
+   // ArrayList<String> spaces2 = new ArrayList<String>();
+   // spaces2.add("}");
+   // ArrayList<String> spaces3 = new ArrayList<String>();
+   // spaces2.add(", ");
+   // ArrayList<String> spaces4 = new ArrayList<String>();
+   // spaces2.add("<");
+   // ArrayList<String> spaces5 = new ArrayList<String>();
+   // spaces2.add(">");
+
+   // workflowString11.add(spaces1);
+   workflowString11.add(DataTypeString);
+   workflowString11.add(GeneOntologyString);
+   workflowString11.add(DataBaseString);
+   workflowString11.add(DataFormatString);
+   workflowString11.add(SourceTaxonString);
+   // workflowString11.add(spaces2);
+   // workflowString11.add(spaces3);
+   // workflowString11.add(spaces4);
+   workflowString11.add(DataCollectionProgramString);
+   workflowString11.add(SequenceAlignmentProgramString);
+   workflowString11.add(ModelProgramString);
+   workflowString11.add(ModelProgramParametersString);
+   workflowString11.add(PhylogeneticInferenceProgramString);
+   workflowString11.add(PhylogeneticInferenceMethodString);
+   workflowString11.add(HypothesisValidationProgramString);
+   workflowString11.add(HypothesisValidationParametersString);
+   workflowString11.add(TreeAnalysisProgramString);
+   workflowString11.add(TreeVisualizationProgramString);
+   // workflowString11.add(spaces5);
+
+   // create workflowInst11
+   ArrayList<ArrayList<String>> workflowInst11 = new ArrayList<ArrayList<String>>();
+
+   // workflowInst11.add(spaces1);
+   workflowInst11.add(DataTypeInst);
+   workflowInst11.add(GeneOntologyInst);
+   workflowInst11.add(DataBaseInst);
+   workflowInst11.add(DataFormatInst);
+   workflowInst11.add(SourceTaxonInst);
+   // workflowInst11.add(spaces2);
+   // workflowInst11.add(spaces3);
+   // workflowInst11.add(spaces4);
+   workflowInst11.add(DataCollectionProgramInst);
+   workflowInst11.add(SequenceAlignmentProgramInst);
+   workflowInst11.add(ModelProgramInst);
+   workflowInst11.add(ModelProgramParametersInst);
+   workflowInst11.add(PhylogeneticInferenceProgramInst);
+   workflowInst11.add(PhylogeneticInferenceMethodInst);
+   workflowInst11.add(HypothesisValidationProgramInst);
+   workflowInst11.add(HypothesisValidationParametersInst);
+   workflowInst11.add(TreeAnalysisProgramInst);
+   workflowInst11.add(TreeVisualizationProgramInst);
+   // workflowInst11.add(spaces5);
+
+
+   // Create workflowString12
+   ArrayList<String> workflowString12 = new ArrayList<String>();
+   for(Annotation r : relationList) {
+      String relType = new String (r.getFeatures().get("rel-type").toString());
+
+      // System.out.println(relType);
+      
+      if ( relType.contains("has_AlignedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_CollectedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_DataFormat") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_EvolutionaryModel") ){
+         // System.out.println(r.getFeatures().get("ModelSelectionProgram-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_GeneOntologyAnnotation") ) {
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+
+      if ( relType.contains("has_HypothesisValidatedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_InferredBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_ModeledBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_NbBootstraps") ){
+         // System.out.println(r.getFeatures().get("BootstrappingProgram-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_OrganismDivision") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+
+      }
+         
+      if ( relType.contains("has_PhylogeneticMethod") ){
+         // System.out.println(r.getFeatures().get("PhylogeneticInferenceProgram-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+
+      }
+         
+      if ( relType.contains("has_RetrievedInDataBase") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+      if ( relType.contains("has_TreeAnalyzedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";workflowString12.add(relation);
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+
+      }
+         
+      if ( relType.contains("has_TreeVisualizedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+         if (! workflowString12.contains(relation))
+            workflowString12.add(relation);
+      }
+         
+   }
+
+
+   // Create workflowInst12
+   ArrayList<String> workflowInst12 = new ArrayList<String>();
+   for(Annotation r : relationList) {
+      String relType = new String (r.getFeatures().get("rel-type").toString());
+
+      // System.out.println(relType);
+      
+      if ( relType.contains("has_AlignedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_CollectedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_DataFormat") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_EvolutionaryModel") ){
+         // System.out.println(r.getFeatures().get("ModelSelectionProgram-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_GeneOntologyAnnotation") ) {
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString()+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+
+      if ( relType.contains("has_HypothesisValidatedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_InferredBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_ModeledBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_NbBootstraps") ){
+         // System.out.println(r.getFeatures().get("BootstrappingProgram-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_OrganismDivision") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_PhylogeneticMethod") ){
+         // System.out.println(r.getFeatures().get("PhylogeneticInferenceProgram-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_RetrievedInDataBase") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_TreeAnalyzedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+      if ( relType.contains("has_TreeVisualizedBy") ){
+         // System.out.println(r.getFeatures().get("DataType-id").toString());
+         String relation="( "+r.getFeatures().get("Domain-inst").toString().split("#")[1]+", "+relType+", "+r.getFeatures().get("Range-inst").toString().split("#")[1]+" )";
+         if (! workflowInst12.contains(relation))
+            workflowInst12.add(relation);
+      }
+         
+   }
+   
+
+   // Build The finalSequences of String from workflow String, workflow String11 and workflow String12
+
+   // StringBuilder builder = new StringBuilder();
+//    for (ArrayList<String> value : workflowString) {
+//       for (String value1 : value) {
+//          builder.append(value1);
+//          builder.append(", ");
+//       }
+//    }
+
+   StringBuilder builder11 = new StringBuilder();
+   for (ArrayList<String> value : workflowString11) {
+      for (String value1 : value) {
+         builder11.append(value1);
+         builder11.append(", ");
+      }
+   }
+
+   // String finalSequenceString = builder.toString();
+//    if (finalSequenceString.length()>2)
+//       finalSequenceString = finalSequenceString.substring(0,finalSequenceString.length()-2);
+   
+   String finalSequenceString11 = builder11.toString();
+   if (finalSequenceString11.length()>2)
+      finalSequenceString11 = finalSequenceString11.substring(0,finalSequenceString11.length()-2);
+   
+   int sizefinalSequenceString12=workflowString12.size()-1;
+   String finalSequenceString12="";
+   if (sizefinalSequenceString12+1>3)
+      finalSequenceString12 = workflowString12.toString().substring(1,sizefinalSequenceString12);
+   finalSequenceString12 = workflowString12.toString();
+
+//    Build The sequences of Inst from workflowInst, workflowInst11 and workflowInst12
+   // StringBuilder builderInst = new StringBuilder();
+//    for (ArrayList<String> value : workflowInst) {
+//       for (String value1 : value) {
+//          if (value1.contains("#"))
+//             builderInst.append(value1.split("#")[1]);
+//          else builderInst.append(value1);
+//          builderInst.append(", ");
+//       }
+//    }
+   StringBuilder builderInst11 = new StringBuilder();
+   for (ArrayList<String> value : workflowInst11) {
+      for (String value1 : value) {
+         // System.out.println("Instance: ");
+         if (value1.contains("#"))
+            builderInst11.append(value1.split("#")[1]);
+         else builderInst11.append(value1);
+         builderInst11.append(", ");
+      }
+   }
+
+   // String finalSequenceInst = builderInst.toString();
+//    if (finalSequenceInst.length()>2)
+//       finalSequenceInst = finalSequenceInst.substring(0,finalSequenceInst.length()-2);
+   
+   String finalSequenceInst11 = builderInst11.toString();
+   if (finalSequenceInst11.length()>2)
+      finalSequenceInst11 = finalSequenceInst11.substring(0,finalSequenceInst11.length()-2);
+   
+   int sizefinalSequenceInst12=workflowInst12.size()-1;
+   String finalSequenceInst12="";
+   if (sizefinalSequenceInst12+1>3)
+      finalSequenceInst12 = workflowInst12.toString().substring(1,sizefinalSequenceInst12);
+   finalSequenceInst12 = workflowInst12.toString();
+
+   // if (finalSequence12.contains(", ")) {
+   if (  DataTypeInst.size() >0 &&  PhylogeneticInferenceProgramInst.size() >0) {
+   	
+   	 System.out.println("=========== Workflow"+doc.getName()+" ===========");
+//       System.out.println("===========================================");
+//       System.out.pri ntln("A. DataTypeInst: "+DataTypeInst);
+//       System.out.println("B. GeneOntologyInst: "+GeneOntologyInst);
+//       System.out.println("C. DataFormatInst: "+DataFormatInst);
+//       System.out.println("D. SourceTaxonInst: "+SourceTaxonInst);
+//       System.out.println("E. DataCollectionProgramInst: "+DataCollectionProgramInst);
+//       System.out.println("0. SequenceAlignmentProgramInst: "+SequenceAlignmentProgramInst);
+//       System.out.println("1. ModelProgramInst: "+ModelProgramInst);
+//       System.out.println("2. ModelProgramParametersInst: "+ModelProgramParametersInst);
+//       System.out.println("3. PhylogeneticInferenceProgramInst: "+PhylogeneticInferenceProgramInst);
+//       System.out.println("4. PhylogeneticInferenceMethodInst: "+PhylogeneticInferenceMethodInst);
+//       System.out.println("5. HypothesisValidationProgramInst: "+HypothesisValidationProgramInst);
+//       System.out.println("6. HypothesisValidationParametersInst: "+HypothesisValidationParametersInst);
+//       System.out.println("7. TreeAnalysisProgramInst: "+TreeAnalysisProgramInst);
+//       System.out.println("8. TreeVisualizationProgramInst: "+TreeVisualizationProgramInst);
+		 
+      
+//       System.out.println("WORKFLOW STRING VERSION:");
+// 
+      String finalSequence="[<"+finalSequenceString11+">, { "+finalSequenceString12+" }]";
+//       System.out.println(finalSequence);
+//       System.out.println();
+// 
+      System.out.println("WORKFLOW ENCODED VERSION:");
+      String finalSequenceInst="[<"+finalSequenceInst11+">, { "+finalSequenceInst12+" }]";
+      System.out.println(finalSequenceInst);
+      System.out.println();
+      
+      fm.put("pmcid",artToDelete.getFeatures().toString().substring(1,artToDelete.getFeatures().toString().length()-2));
+	  
+	  // HashSet<String> setDataTypeString = new HashSet<>(DataTypeString);
+//       ArrayList<String> resultDataTypeString = new ArrayList<>(setDataTypeString);
+//       
+//       HashSet<String> setGeneOntologyString = new HashSet<>(GeneOntologyString);
+//       ArrayList<String> resultGeneOntologyString = new ArrayList<>(setGeneOntologyString);
+//      
+//       HashSet<String> setDataBaseString = new HashSet<>(DataBaseString);
+//       ArrayList<String> resultDataBaseString = new ArrayList<>(setDataBaseString);
+//       
+//       HashSet<String> setSourceTaxonString = new HashSet<>(SourceTaxonString);
+//       ArrayList<String> resultSourceTaxonString = new ArrayList<>(setSourceTaxonString);
+//       
+//       
+//       
+//       HashSet<String> setDataCollectionProgramString = new HashSet<>(DataCollectionProgramString);
+//       ArrayList<String> resultDataCollectionProgramString = new ArrayList<>(setDataCollectionProgramString);
+//       
+//       HashSet<String> setSequenceAlignmentProgramString = new HashSet<>(SequenceAlignmentProgramString);
+//       ArrayList<String> resultSequenceAlignmentProgramString = new ArrayList<>(setSequenceAlignmentProgramString);
+//       
+//       HashSet<String> setModelProgramString = new HashSet<>(ModelProgramString);
+//       ArrayList<String> resultModelProgramString = new ArrayList<>(setModelProgramString);
+//       
+//       HashSet<String> setModelProgramParametersString = new HashSet<>(ModelProgramParametersString);
+//       ArrayList<String> resultModelProgramParametersString = new ArrayList<>(setModelProgramParametersString);
+//       
+//       HashSet<String> setPhylogeneticInferenceProgramString = new HashSet<>(PhylogeneticInferenceProgramString);
+//       ArrayList<String> resultPhylogeneticInferenceProgramString = new ArrayList<>(setPhylogeneticInferenceProgramString);
+//       
+//       HashSet<String> setPhylogeneticInferenceMethodString = new HashSet<>(PhylogeneticInferenceMethodString);
+//       ArrayList<String> resultPhylogeneticInferenceMethodString = new ArrayList<>(setPhylogeneticInferenceMethodString);
+//       
+//       HashSet<String> setHypothesisValidationProgramString = new HashSet<>(HypothesisValidationProgramString);
+//       ArrayList<String> resultHypothesisValidationProgramString = new ArrayList<>(setHypothesisValidationProgramString);
+//       
+//       HashSet<String> setHypothesisValidationParametersString = new HashSet<>(HypothesisValidationParametersString);
+//       ArrayList<String> resultHypothesisValidationParametersString = new ArrayList<>(setHypothesisValidationParametersString);
+//       
+//       HashSet<String> setTreeAnalysisProgramString = new HashSet<>(TreeAnalysisProgramString);
+//       ArrayList<String> resultTreeAnalysisProgramString = new ArrayList<>(setTreeAnalysisProgramString);
+//       
+//       HashSet<String> setTreeVisualizationProgramString = new HashSet<>(TreeVisualizationProgramString);
+//       ArrayList<String> resultTreeVisualizationProgramString = new ArrayList<>(setTreeVisualizationProgramString);
+      
+      fm.put("list-DataType",DataTypeInst);
+      fm.put("list-GeneOntology",GeneOntologyInst);
+      fm.put("list-DataBase",DataBaseInst);
+      fm.put("list-SourceTaxon",SourceTaxonInst);
+      
+      fm.put("list-DataCollectionProgram",DataCollectionProgramInst);
+      fm.put("list-SequenceAlignmentProgram",SequenceAlignmentProgramInst);
+      fm.put("list-ModelSelectionProgram",ModelProgramInst);
+      fm.put("list-ModelProgramParameters",ModelProgramParametersInst);
+      fm.put("list-PhylogeneticInferenceProgram",PhylogeneticInferenceProgramInst);
+      fm.put("list-PhylogeneticInferenceMethod",PhylogeneticInferenceMethodInst);
+      fm.put("list-HypothesisValidationProgram",HypothesisValidationProgramInst);
+      fm.put("list-HypothesisValidationParameters",HypothesisValidationParametersInst);
+      fm.put("list-TreeAnalysisProgram",TreeAnalysisProgramInst);
+      fm.put("list-TreeVisualizationProgram",TreeVisualizationProgramInst);
+
+      fm.put("list-Relations",finalSequenceInst12);
+      
+      fm.put("list-workflow-mapped",finalSequenceInst);
+      
+//       workflowInst12: #links , workflowInst11size: #objects
+	   
+	   // int workflowInst11size = DataTypeInst.size()+GeneOntologyInst.size()+DataBaseInst.size()+SourceTaxonInst.size()+
+// 	   DataCollectionProgramInst.size()+SequenceAlignmentProgramInst.size()+ModelProgramInst.size()+ModelProgramParametersInst.size()+
+// 	   PhylogeneticInferenceProgramInst.size()+PhylogeneticInferenceMethodInst.size()+HypothesisValidationProgramInst.size()+
+// 	   HypothesisValidationParametersInst.size()+TreeAnalysisProgramInst.size()+TreeVisualizationProgramInst.size();
+// 	   
+// 	   int workflowInst12size = workflowInst12.size();
+
+	   // int workflowInst11size = DataTypeInst.size()+DataBaseInst.size()+
+// 	   DataCollectionProgramInst.size()+SequenceAlignmentProgramInst.size()+ModelProgramInst.size()+ModelProgramParametersInst.size()+
+// 	   PhylogeneticInferenceProgramInst.size()+PhylogeneticInferenceMethodInst.size()+HypothesisValidationProgramInst.size()+
+// 	   HypothesisValidationParametersInst.size()+TreeAnalysisProgramInst.size()+TreeVisualizationProgramInst.size();
+// 	   
+// 	   int workflowInst12size = workflowInst12.size();
+// 	   
+// 	   
+//        System.out.println(workflowInst11size+"\t"+workflowInst12size);
+      
+//       System.out.println(finalSequenceInst12);
+//       fm.put("list-workflow",finalSequence);
+   
+   }
+
+
+   try{
+       //System.out.println("One relation is discovered");
+       outputAS.add(parStart, parEnd, "Workflow", fm);
+      }
+      catch(Exception e){
+      }
+   inputAS.remove(artToDelete);
+
+}

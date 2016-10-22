@@ -1,0 +1,75 @@
+/*
+*  trained.jape
+*
+* Copyright (c) 1998-2001, The University of Sheffield.
+*
+*  This file is part of GATE (see http://gate.ac.uk/), and is free
+*  software, licenced under the GNU Library General Public License,
+*  Version 2, June 1991 (in the distribution as file licence.html,
+*  and also available at http://gate.ac.uk/gate/licence.html).
+*
+*  Diana Maynard, 10 Sep 2001
+* 
+*  $Id $
+*/
+
+
+Phase:	Trained
+Input: Lookup Token
+Options: control = appelt debug = false
+
+
+Rule: DateGaz
+Priority: 100
+
+(
+ ({Lookup.majorType == date}|
+ {Lookup.majorType == time})+
+ ):tag
+ -->
+ :tag.Date = {kind = gaz, rule = DateGaz}
+
+
+Rule: LocGaz
+Priority:150
+(
+ {Lookup.majorType == location, Lookup.minorType == other}|
+ {Lookup.majorType == location, Lookup.minorType == mountain}|
+ {Lookup.majorType == location, Lookup.minorType == river}
+ ):tag
+ -->
+:tag.Loc = {kind = gaz, rule = "LocGaz"}
+
+
+Rule:GpeGaz
+Priority:200
+(
+ {Lookup.majorType == location, Lookup.minorType == city}|
+ {Lookup.majorType == location, Lookup.minorType == country}
+ ):tag
+ -->
+ :tag.GPE = {kind = gaz, rule = "GpeGaz"}
+ 
+
+Rule: OrgGaz
+Priority:75
+
+(
+ {Lookup.majorType == organisation}
+ ):loc
+ -->
+:loc.Org  = {kind = gaz, rule = "OrgGaz"}
+
+
+Rule: PersonGaz
+Priority:150
+
+(
+(
+ ({Lookup.minorType == male}|{Lookup.minorType == female})
+ ({Lookup.minorType == surname})
+ )+
+ ):tag
+ -->
+:tag.Per  = {kind = gaz, rule = "PersonGaz"}
+

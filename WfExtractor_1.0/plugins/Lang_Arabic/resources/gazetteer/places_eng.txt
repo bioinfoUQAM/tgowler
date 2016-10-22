@@ -1,0 +1,70 @@
+﻿bank
+market
+super market
+department store
+bridge
+tower
+hospital
+university
+college
+institute
+school
+headquarter
+air base
+naval base
+camp
+settlement
+palace
+centre
+ministry
+institution
+body
+authority
+directorate
+council
+the Commons
+the Lords
+the Senates
+House of Representative
+The Congress
+National Council
+Al-Fatwa Council
+Shura Council
+Judicial Council
+the Parliment
+the Duma (Russian Parliament)
+White House
+Unknown Soldier
+The Cabinet
+newspaper
+magazine
+committee
+diwaniyah (public meeting place)
+airport
+station
+port
+road
+channel
+motorway
+Street
+Alley
+close
+square
+roundabout
+mountain
+mountains 
+hill
+shrines
+holy shrines
+The Holy Mosque of Jerusalem
+The Holy Mosque of Mecca
+Kaaba
+Stadium
+Republic
+Kingdom
+Emirate
+Municipality
+city
+village
+Governorate
+

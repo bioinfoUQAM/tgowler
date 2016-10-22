@@ -1,0 +1,18 @@
+Phase: Entity
+Input: Gpe Organization Person Location Date Facility Percent Money
+Options: control = appelt debug = false
+
+Rule: Entity
+(
+ {Gpe}|
+ {Organization}|
+ {Person}|
+ {Location}|
+ {Facility}|
+ {Date}|
+ {Percent}|
+ {Money}
+):tag
+-->
+:tag.Entity = {}
+

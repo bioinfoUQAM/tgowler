@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- $Id: creole.xml 16183 2012-10-29 18:43:19Z markagreenwood $ -->
+<CREOLE-DIRECTORY>
+  <JAR SCAN="true">arabic.jar</JAR>   
+</CREOLE-DIRECTORY>

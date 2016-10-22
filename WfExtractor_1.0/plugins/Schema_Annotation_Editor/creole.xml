@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!-- creole.xml directory file for Schema-restricted annotation editor -->
+<CREOLE-DIRECTORY>
+  <!-- creole.xml for Visual Resources -->
+  <CREOLE>
+    <RESOURCE>
+      <NAME>Schema Annotations Editor</NAME>
+      <CLASS>gate.gui.annedit.SchemaAnnotationEditor</CLASS>
+      <COMMENT>An annotation editor restricted by schemas.</COMMENT>
+      <HELPURL>http://gate.ac.uk/userguide/sec:corpora:schemas</HELPURL>
+    </RESOURCE>
+  </CREOLE>
+</CREOLE-DIRECTORY>

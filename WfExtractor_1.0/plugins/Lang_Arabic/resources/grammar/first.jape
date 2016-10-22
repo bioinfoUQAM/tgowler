@@ -1,0 +1,37 @@
+/*
+*  first.jape
+*  $Id $
+*/
+
+
+Phase:	First
+Input: Lookup Token
+Options: control = appelt debug = false
+
+Rule: Spurious
+Priority:100
+
+(
+ {Lookup.majorType == stop_word}
+ ):loc
+ -->
+{
+  gate.AnnotationSet locSet = (gate.AnnotationSet)bindings.get("loc");
+  gate.Annotation ann = (gate.Annotation) locSet.iterator().next();
+
+  gate.AnnotationSet lookups = inputAS.get("Lookup", ann.getStartNode().getOffset(),
+	ann.getEndNode().getOffset());
+
+  if (lookups.size() <= 1)
+    return;
+
+  List annots = new ArrayList();
+  Iterator iter = lookups.iterator();
+  while (iter.hasNext()) {
+    gate.Annotation annot = (gate.Annotation) iter.next();
+    if (! annot.getFeatures().get("majorType").equals("stop_word"))
+      annots.add(annot);
+  }
+  inputAS.removeAll(annots);
+}
+

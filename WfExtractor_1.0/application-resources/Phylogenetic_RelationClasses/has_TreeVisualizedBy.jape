@@ -1,0 +1,113 @@
+
+Phase: has_TreeVisualizedBy
+
+Input: Sentence
+
+Options: control = all
+
+
+Rule: pair
+({Sentence}):s
+-->
+{
+
+   // Get the sentence
+   Annotation sent = ((AnnotationSet)bindings.get("s")).iterator().next();
+
+   // Get all Organizations and Persons in this sentence
+   Long sentStart = sent.getStartNode().getOffset();
+   Long sentEnd = sent.getEndNode().getOffset();
+   AnnotationSet pers = inputAS.get("DataType", sentStart, sentEnd);
+   AnnotationSet orgs = inputAS.get("TreeVisualizationProgram", sentStart, sentEnd);
+
+   // for each Person, consider each Organization
+   for(Annotation p : pers) {
+     for(Annotation o : orgs) {
+
+       gate.FeatureMap fm = gate.Factory.newFeatureMap();
+
+       // Find the left and right boundaries of the instance
+       Long pStart = p.getStartNode().getOffset();
+       Long oStart = o.getStartNode().getOffset();
+       Long pEnd = p.getEndNode().getOffset();
+       Long oEnd = o.getEndNode().getOffset();
+       Long left = (pStart < oStart) ? pStart : oStart; 
+       Long right = (pEnd > oEnd) ? pEnd : oEnd;
+
+if (pStart != oStart && pEnd<oStart) {
+	     // order feature
+	     String order = (pStart < oStart) ? "DataType-TreeVisualizationProgram" : "TreeVisualizationProgram-DataType";
+	     fm.put("order",order);
+
+	     //System.out.println(pStart+" - "+oStart);
+
+	     // Get the tokens between the arguments, for other features
+	     Long posListLeft = (pStart < oStart) ? pEnd : oEnd; 
+	     Long posListRight = (pEnd > oEnd) ? pStart : oStart; 
+	     AnnotationSet toks = inputAS.get("Token", posListLeft, posListRight);
+	     List<Annotation> orderedToks = gate.Utils.inDocumentOrder(toks);
+
+	     // Distance feature
+	     fm.put("distance",orderedToks.size());
+
+	     // POS list feature and generalised POS list feature
+	     String posString = "";
+	     String genposString = "";
+	     String verbString = "";
+	     for(Annotation a : orderedToks){
+	       if(!posString.equals("")) posString = posString + "-";
+	       if(!verbString.equals("")) verbString = verbString + "-";
+	       if(!genposString.equals("")) genposString = genposString + "-";
+	       posString = posString + a.getFeatures().get("category");
+
+	       //System.out.println("token category:\""+a.getFeatures().get("category").toString()+"\"");
+
+	        if(org.apache.commons.lang.StringUtils.substring(
+	             a.getFeatures().get("category").toString(),0,2).equals("VB")) {
+	        	verbString = verbString + a.getFeatures().get("string");
+	        //System.out.println("True");
+	        } 
+
+	       genposString = genposString
+	         + org.apache.commons.lang.StringUtils.substring(
+	             a.getFeatures().get("category").toString(),0,2);
+	       }
+
+	       fm.put("poslist",posString);
+	       fm.put("genposlist",genposString);
+	       fm.put("verbString",verbString);
+	       fm.put("rel-type","has_TreeVisualizedBy");
+	       fm.put("Domain-string",p.getFeatures().get("lookupString").toString());
+	       fm.put("Domain-inst",p.getFeatures().get("inst").toString());
+	       fm.put("Range-string",o.getFeatures().get("lookupString").toString());
+	       fm.put("Range-inst",o.getFeatures().get("inst").toString());
+	       fm.put("Domain-id",p.getId());
+	       fm.put("Range-id",o.getId());
+		   
+		   Boolean testEqualityString = false ;
+       		if ( p.getFeatures().get("lookupString") != o.getFeatures().get("lookupString") ) {
+       			testEqualityString = true ;
+       		}
+       	   Boolean testVerbString = false ;
+	       	if ( verbString.toLowerCase().matches("^-*[a-zA-Z0-9\\-]+-*$") ) {
+	       		//System.out.println(doc.getName());
+	       		//System.out.println(verbString);
+	       		testVerbString = true ;
+	       		//System.out.println();
+	       	}
+	       try{
+	       	if ( 
+	       		!verbString.isEmpty() && 
+// 	       		testEqualityString) {
+	       		testVerbString) {
+// 	       		order.equals("DataType-Method") ) {
+	         		outputAS.add(left, right, "RelationClass", fm);
+	     		}
+	       }catch(Exception e){
+	    
+	       }
+       }
+     }
+   }
+
+}
