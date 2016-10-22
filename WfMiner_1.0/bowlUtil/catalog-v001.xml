@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1467062058828" name="http://purl.obolibrary.org/obo/go.owl" uri="go.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1467062058828" name="duplicate:http://www.co-ode.org/ontologies/ont.owl" uri="phylOntology_v51_small_final.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1467062058828" name="duplicate:http://www.co-ode.org/ontologies/ont.owl" uri="phylOntology_v51_small_test.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1467062058828" name="http://www.semanticweb.org/ahmedhalioui/ontologies/2016/5/untitled-ontology-56" uri="example_1.owl"/>
-    </group>
-</catalog>
