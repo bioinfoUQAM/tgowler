@@ -11,11 +11,11 @@ JAR files manifest file (MANIFEST.MF).
 To run the project from the command line, go to the dist folder and
 type the following (replace[PATH_TO] with appropriate directory data):
 
-java -jar java -jar[PATH_TO]/OntoPattern16.jar “[minSupp]” "[PATH_TO]/[bowl_file]” "[PATH_TO]/[train_set]" “[namespace]” "[PATH_TO]/[test_set]" “[topkItems]” "[topnRules]” “[min)ontology_level]”
+java -jar java -jar[PATH_TO]/OntoPattern16.jar "[minSupp]" "[PATH_TO]/[bowl_file]" "[PATH_TO]/[train_set]" "[namespace]" "[PATH_TO]/[test_set]" "[topkItems]" "[topnRules]" "[min)ontology_level]"
 
 
 For example:
-java -jar java -jar./OntoPattern16.jar "0.1" “./phylOntology_v51_small_final.bowl" “./WD-Phy-extracted-1/WD-Phy-extracted-1_2783_0.xml" "http://www.co-ode.org/ontologies/ont.owl#" “./WD-Phy-gold-1.xml" "10" "50" "2"
+java -jar java -jar./OntoPattern16.jar "0.1" "./phylOntology_v51_small_final.bowl" "./WD-Phy-extracted-1/WD-Phy-extracted-1_2783_0.xml" "http://www.co-ode.org/ontologies/ont.owl#" "./WD-Phy-gold-1.xml" "10" "50" "2"
 
 
 
