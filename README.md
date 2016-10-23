@@ -46,7 +46,7 @@ rdfs:label "[YOUR_REPOSITORY_LABEL]"```
 <H3>WfMiner_1.1: Worklflow Pattern Miner and Rule Recommender</H3>
 
 <p>
-<b>WfMiner_1.0</b> mines abstract closed patterns and generate associations from XML worklfow sequence files and a specific domain ontology.
+<b>WfMiner_1.1</b> mines abstract closed patterns and generate associations from XML worklfow sequence files and a specific domain ontology.
 </p>
 
 <H4>Installation:</H4>
