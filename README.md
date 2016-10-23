@@ -43,17 +43,17 @@ rdfs:label "[YOUR_REPOSITORY_LABEL]"```
 7. Run the application (see <span style="color: #0000ff;"><a href="https://gate.ac.uk/releases/gate-8.1-build5169-ALL/doc/tao/splitch3.html" download="https://gate.ac.uk/releases/gate-8.1-build5169-ALL/doc/tao/splitch3.html">Gate 8.1 Developer Guide</a></span>).
 
 
-<H3>WfMiner_1.0: Worklflow Pattern Miner</H3>
+<H3>WfMiner_1.1: Worklflow Pattern Miner and Rule Recommender</H3>
 
 <p>
-<b>WfMiner_1.0</b> mines abstract patterns from XML event files and a specific domain ontology.
+<b>WfMiner_1.0</b> mines abstract closed patterns and generate associations from XML worklfow sequence files and a specific domain ontology.
 </p>
 
 <H4>Installation:</H4>
 
 1. Launch the <b>bowlUtil_0.5</b> tool and transform the OWL ontology into a binary one (see the README file in $WFMINER_HOME/bowlUtil/). Bowl tranformation is used to speed up the mining process and load a lighter version of the ontology. <b>Note:</b> <i>please use the bowl version of the ontology from the input data (above) to skip this step and don't forget to download the Gene Ontology (owl version)</i>
 2. Unzip the <b>WfMiner_1.0.zip</b> file Launch the WfMiner miner using the following code on your shell (see the README file in WFMINER_HOME/):```
-java -jar $WFMINER_HOME/WfMiner_1.0.jar [minSupp] [BOWL_ONTOLOGY] [XML_WORKFLOW] [ONTOLOGY_NAMESPACE]```
+java -jar java -jar[PATH_TO]/OntoPattern16.jar "[minSupp]" "[PATH_TO]/[bowl_file]" "[PATH_TO]/[train_set]" "[namespace]" "[PATH_TO]/[test_set]" "[topkItems]" "[topnRules]" "[min)ontology_level]"```
 
 <H3>Other T-GROWLer tools</H3>
 
