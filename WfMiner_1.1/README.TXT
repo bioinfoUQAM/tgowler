@@ -9,10 +9,9 @@ also adds each of the JAR files to the Class-Path element in the application
 JAR files manifest file (MANIFEST.MF).
 
 To run the project from the command line, go to the dist folder and
-type the following:
+type the following (replace[PATH_TO] with appropriate directory data):
 
-java -jar java -jar /Users/ahmedhalioui/NetBeansProjects/OntoPattern16/dist/OntoPattern16.jar "0.7" "phylOntology_v51_small_final.bowl" "WD-Phy-extracted-1/WD-Phy-extracted-1.xml" "http://www.co-ode.org/ontologies/ont.owl#"
-
+java -jar java -jar[PATH_TO]/OntoPattern16.jar "0.1" "[PATH_TO]/phylOntology_v51_small_final.bowl" "[PATH_TO]/WD-Phy-extracted-1/WD-Phy-extracted-1_2783_0.xml" "http://www.co-ode.org/ontologies/ont.owl#" "[PATH_TO]/WD-Phy-gold-1.xml" "10" "50"
 
 To distribute this project, zip up the dist folder (including the lib folder)
 and distribute the ZIP file.
