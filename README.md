@@ -1,5 +1,5 @@
-# TGROWLeR
-TGROWLeR system abstracts general patterns from workflow sequences previously extracted from texts. 
+# TGOWLeR
+TGOWLeR system abstracts general patterns from workflow sequences previously extracted from texts. 
 It comprises two modules –a workflow extractor and a pattern miner– both relying on a specific domain ontology. 
 
 ## Prerequisites
@@ -12,7 +12,7 @@ It comprises two modules –a workflow extractor and a pattern miner– both rel
 <H2>Input/output data</H2>
 
 * The phylogenetic ontology PHAGE is available in: http://bioportal.bioontology.org/ontologies/PHAGE
-* Texts, extracted workflows and generated patterns are available in: http://labo.bioinfo.uqam.ca/index.php?action=tgrowler
+* Texts, extracted workflows and generated patterns are available in: http://labo.bioinfo.uqam.ca/tgowler
 
 <H2>Tools</H2>
 
