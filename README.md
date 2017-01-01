@@ -55,7 +55,7 @@ rdfs:label "[YOUR_REPOSITORY_LABEL]"```
 2. Launch the WfMiner miner using the following code on your shell (see the README file in WFMINER_HOME/):```
 java -jar java -jar[PATH_TO]/OntoPattern16.jar "[minSupp]" "[PATH_TO]/[bowl_file]" "[PATH_TO]/[train_set]" "[namespace]" "[PATH_TO]/[test_set]" "[topkItems]" "[topnRules]" "[min)ontology_level]"```
 
-<H3>Other T-GROWLer tools</H3>
+<H3>Other T-GOWLer tools</H3>
 
 <H4>WfTransformer_1.0: </H4>
 <p>
