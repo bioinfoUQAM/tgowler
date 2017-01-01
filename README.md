@@ -72,4 +72,5 @@ This tool simulates phylogenetic workflows using instances encoded in the ontolo
 <H2>Contact</H2>
 <p>
 For any technical issues, please e-mail admin: <a href="mailto:halioui.ahmed@uqam.ca?Subject=Technical issue" target="_top">halioui.ahmed@uqam.ca</a>
+<p align="right"> http://labo.bioinfo.uqam.ca/halioui.php </p>
 </p>
