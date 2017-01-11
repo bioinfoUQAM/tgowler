@@ -53,7 +53,7 @@ rdfs:label "[YOUR_REPOSITORY_LABEL]"```
 
 1. Launch the <b>bowlUtil_0.5</b> tool and transform the OWL ontology into a binary one (see the README file in $WFMINER_HOME/bowlUtil/). Bowl tranformation is used to speed up the mining process and load a lighter version of the ontology. <b>Note:</b> <i>please use the bowl version of the ontology from the input data (above) to skip this step and don't forget to download the Gene Ontology (owl version)</i>
 2. Launch the WfMiner miner using the following code on your shell (see the README file in WFMINER_HOME/):```
-java -jar java -jar[PATH_TO]/OntoPattern16.jar "[minSupp]" "[PATH_TO]/[bowl_file]" "[PATH_TO]/[train_set]" "[namespace]" "[PATH_TO]/[test_set]" "[topkItems]" "[topnRules]" "[min)ontology_level]"```
+java -jar java -jar[PATH_TO]/OntoPattern16.jar "[minSupp]" "[PATH_TO]/[bowl_file]" "[PATH_TO]/[train_set]" "[namespace]" "[PATH_TO]/[test_set]" "[topkItems]" "[topnRules]" "[min_ontology_level]"```
 
 <H3>Other T-GOWLer tools</H3>
 
