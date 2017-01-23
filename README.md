@@ -59,7 +59,7 @@ java -jar java -jar[PATH_TO]/OntoPattern16.jar "[minSupp]" "[PATH_TO]/[bowl_file
 
 <H4>WfTransformer_1.0: </H4>
 <p>
-This tool transforms the Gate inline XML into sequences of events (encoded in a simple XML tree).
+This tool transforms the Gate inline XML workflows into sequences of events (encoded in a simple XML tree).
 </p>
 
 <H4>WfSimulator_1.0: </H4>
