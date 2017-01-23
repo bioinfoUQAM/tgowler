@@ -1,6 +1,7 @@
+# WfMiner 1.1
 For software installation guide and more input/output data please visit the root project in: https://github.com/bioinfoUQAM/tgowler
 
-# BUILD OUTPUT DESCRIPTION
+## BUILD OUTPUT DESCRIPTION
 
 When you build an Java application project that has a main class, the IDE
 automatically copies all of the JAR
