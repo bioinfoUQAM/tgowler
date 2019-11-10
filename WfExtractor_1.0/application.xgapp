@@ -33,7 +33,7 @@
     <corpus class="gate.util.persistence.CorpusPersistence">
       <dsData class="gate.util.persistence.DSPersistence">
         <className>gate.persist.SerialDataStore</className>
-        <storageUrlString>file:/Users/ahmedhalioui/Dropbox/Workflow%20Extraction%20Gate/_Data/Corpora/Datastores/Datastore_gold/</storageUrlString>
+        <storageUrlString>file:/Users/ahmedhalioui/Downloads/Datastore_gold/</storageUrlString>
         <storageUrl class="gate.util.persistence.PersistenceManager$URLHolder">
           <urlString>$relpath$application-resources/Datastore_gold/</urlString>
         </storageUrl>

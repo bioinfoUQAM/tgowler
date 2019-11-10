@@ -16,7 +16,7 @@
       rep:repositoryType "openrdf:HTTPRepository" ;
 	  
 	  # This URL is a public limitted SPARQL endpoint. All queries are truncated to 10000 results.
-	  hr:repositoryURL <http://localhost:8080/openrdf-sesame/repositories/PO52>
+	  hr:repositoryURL <http://localhost:8080/openrdf-sesame/repositories/phage11>
 	  
 	  # This URL points to the unlimitted password-protected factforge endpoint.
 	  # Ontotext partners can contact info@factforge.net to request credentials. 
@@ -26,8 +26,8 @@
 	  
 	  
    ];
-   rep:repositoryID "PO52" ;
-   rdfs:label "Phylontology full" .
+   rep:repositoryID "phage11" ;
+   rdfs:label "PHAGE_1.1" .
    
 # The gazetteer-specific options follow.
 lkbg:DictionaryConfiguration 

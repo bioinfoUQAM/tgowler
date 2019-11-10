@@ -11,8 +11,8 @@ It comprises two modules –a workflow extractor and a pattern miner– both rel
 
 <H2>Input/output data</H2>
 
+* Texts, extracted workflows and generated patterns are available in: https://figshare.com/articles/datastore_2018_2019_zip/10246952
 * The phylogenetic ontology PHAGE is available in: http://bioportal.bioontology.org/ontologies/PHAGE
-* Texts, extracted workflows and generated patterns are available in: http://labo.bioinfo.uqam.ca/index.php?action=tgrowler
 
 <H2>Tools</H2>
 
