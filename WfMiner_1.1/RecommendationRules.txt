@@ -1,0 +1,32 @@
+Ontology: phylOntology_v51_small_final2.bowl
+Train set: WD-Phy-extracted-1/WD-Phy-extracted-1_2783_0.xml
+Test set: WD-Phy-gold-1.xml
+Top items: 10
+Top rules: 50
+min_supp: 0.1
+min_ontology_level: 2
+
+Rules: 
+[NucleicAcidSequence, GeneralMSAProgram] => GeneralPurposePackagesProgram, {} (confidence: 98.68913%) (support: 18.9364%) (MPR: 0.0)
+[ProteinSequence, MultipleSequenceAlignmentProgram, ProteinModel] => GeneralPurposePackagesProgram, {(1,2)=has_AlignedBy} (confidence: 98.095245%) (support: 11.103127%) (MPR: 8.0)
+[GeneralMSAProgram, DNAModel] => GeneralPurposePackagesProgram, {} (confidence: 98.72123%) (support: 13.869925%) (MPR: 21.437689)
+[GTR, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram] => CharacterBasedMethod, {} (confidence: 93.13985%) (support: 12.6841545%) (MPR: 26.99186)
+[NucleicAcidSequence, MultipleSequenceAlignmentProgram] => GeneralPurposePackagesProgram, {(1,2)=has_AlignedBy} (confidence: 98.67675%) (support: 18.756737%) (MPR: 29.816372)
+[ProteinSequence, GeneralMSAProgram, ProteinModel] => GeneralPurposePackagesProgram, {} (confidence: 98.095245%) (support: 11.103127%) (MPR: 41.525257)
+[SequenceManagementProgram] => GeneralPurposePackagesProgram, {} (confidence: 98.6532%) (support: 10.528207%) (MPR: 42.666668)
+[NucleicAcidSequence, DNAModel, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram] => CharacterBasedMethod, {} (confidence: 85.0%) (support: 10.995329%) (MPR: 47.4026)
+[GeneralPurposePackagesProgram, DNAModel, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram] => CharacterBasedMethod, {} (confidence: 82.96703%) (support: 10.8516%) (MPR: 59.535202)
+[GlobalPWAProgram, GeneralMSAProgram] => GeneralPurposePackagesProgram, {} (confidence: 97.560974%) (support: 11.498383%) (MPR: 70.08049)
+[SequenceAlignment, ProteinModel] => GeneralPurposePackagesProgram, {} (confidence: 97.90419%) (support: 11.749909%) (MPR: 72.404045)
+[ProteinSequence, SequenceAlignment, MultipleSequenceAlignmentProgram] => GeneralPurposePackagesProgram, {(1,3)=has_AlignedBy(2,3)=has_AlignedBy} (confidence: 97.493034%) (support: 12.576357%) (MPR: 82.3052)
+[DNAModel, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram] => CharacterBasedMethod, {} (confidence: 82.38095%) (support: 12.432627%) (MPR: 83.04629)
+[GenomeSequence, MultipleSequenceAlignmentProgram] => GeneralPurposePackagesProgram, {(1,2)=has_AlignedBy} (confidence: 95.95376%) (support: 11.929572%) (MPR: 83.99621)
+[CharacterBasedProgram] => CharacterBasedMethod, {} (confidence: 84.375%) (support: 10.671937%) (MPR: 89.58333)
+[SequenceAlignment, DNAModel, GeneralPurposePackagesProgram] => CharacterBasedMethod, {} (confidence: 81.14285%) (support: 10.204815%) (MPR: 95.216446)
+[NucleicAcidSequence, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram] => CharacterBasedMethod, {} (confidence: 80.79096%) (support: 10.27668%) (MPR: 100.0)
+
+MAP: 82.47308%
+Recall1: 98.93617%
+Recall2: 74.46808%
+Recall: 86.702126%
+FMeasure: 85.51727%

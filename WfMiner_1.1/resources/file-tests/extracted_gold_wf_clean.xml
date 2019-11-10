@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sequences>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_8</individual>
+   <individual>databaseID_3</individual>
+   <individual>programID_3613</individual>
+   <individual>programID_3373</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_98</individual>
+   <individual>taxonomyID_45202</individual>
+   <individual>taxonomyID_56271</individual>
+   <individual>taxonomyID_120793</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_62</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3527</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_348367</individual>
+   <individual>taxonomyID_222544</individual>
+   <individual>taxonomyID_175946</individual>
+   <individual>taxonomyID_5125</individual>
+   <individual>taxonomyID_337941</individual>
+   <individual>taxonomyID_147551</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>programID_3509</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_241727</individual>
+   <individual>taxonomyID_1213591</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3722</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_120793</individual>
+   <individual>taxonomyID_5506</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_7</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3510</individual>
+   <individual>programID_3400</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3438</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>GO_0000271</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_378280</individual>
+   <individual>taxonomyID_38811</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>ModelID_4</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3400</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3546</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_13</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>databaseID_98</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3572</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_105905</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_9</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3527</individual>
+   <individual>programID_3370</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3234</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_62</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>programID_3438</individual>
+   <individual>methodID_60</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>GO_0055114</individual>
+   <individual>GO_0030435</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_13809</individual>
+   <individual>taxonomyID_3146</individual>
+   <individual>taxonomyID_3193</individual>
+   <individual>alignmentProgramID_77</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>ModelID_7</individual>
+   <individual>ModelID_4</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3392</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>taxonomyID_195</individual>
+   <individual>ModelID_13</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3312</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3312</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_4890</individual>
+   <individual>taxonomyID_78060</individual>
+   <individual>ModelID_7</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3233</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3392</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_55824</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_62</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>ModelID_19</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3572</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_63</individual>
+   <individual>methodID_64</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_10407</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_13</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>taxonomyID_36184</individual>
+   <individual>taxonomyID_8015</individual>
+   <individual>taxonomyID_152839</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3322</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_60</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3572</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3322</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>GO_0019012</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_120510</individual>
+   <individual>programID_3613</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_59</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_182040</individual>
+   <individual>taxonomyID_50970</individual>
+   <individual>programID_3449</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3438</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_126</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_97</individual>
+   <individual>alignmentProgramID_107</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3470</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_62</individual>
+   <individual>programID_3470</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>databaseID_2</individual>
+   <individual>taxonomyID_1109758</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_23</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3470</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_new_itol</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_15</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>GO_0005622</individual>
+   <individual>GO_0060359</individual>
+   <individual>GO_0015630</individual>
+   <individual>GO_0031982</individual>
+   <individual>GO_0005886</individual>
+   <individual>GO_0044281</individual>
+   <individual>GO_0050821</individual>
+   <individual>GO_0000302</individual>
+   <individual>GO_0016020</individual>
+   <individual>GO_0006417</individual>
+   <individual>GO_0030100</individual>
+   <individual>GO_0005829</individual>
+   <individual>GO_0036156</individual>
+   <individual>GO_0030050</individual>
+   <individual>GO_0000011</individual>
+   <individual>GO_0030435</individual>
+   <individual>GO_0005887</individual>
+   <individual>GO_0035840</individual>
+   <individual>GO_0042144</individual>
+   <individual>GO_0031013</individual>
+   <individual>GO_0021762</individual>
+   <individual>GO_0032880</individual>
+   <individual>GO_0005102</individual>
+   <individual>GO_0031800</individual>
+   <individual>GO_0043581</individual>
+   <individual>GO_0019899</individual>
+   <individual>GO_0009847</individual>
+   <individual>GO_0000922</individual>
+   <individual>GO_0005739</individual>
+   <individual>GO_0009749</individual>
+   <individual>GO_0005791</individual>
+   <individual>GO_0034399</individual>
+   <individual>GO_0005634</individual>
+   <individual>GO_0004356</individual>
+   <individual>GO_0006807</individual>
+   <individual>GO_0006542</individual>
+   <individual>GO_0019740</individual>
+   <individual>GO_0007268</individual>
+   <individual>databaseID_3</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_322741</individual>
+   <individual>taxonomyID_5455</individual>
+   <individual>taxonomyID_593267</individual>
+   <individual>alignmentProgramID_98</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3400</individual>
+   <individual>programID_3284</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_64</individual>
+   <individual>methodID_58</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_Inf_50</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3400</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_8</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_319042</individual>
+   <individual>taxonomyID_319066</individual>
+   <individual>taxonomyID_319073</individual>
+   <individual>taxonomyID_319070</individual>
+   <individual>taxonomyID_319067</individual>
+   <individual>taxonomyID_319057</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3706</individual>
+   <individual>programID_3546</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3438</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_1000_10000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>taxonomyID_112509</individual>
+   <individual>taxonomyID_4530</individual>
+   <individual>taxonomyID_381124</individual>
+   <individual>alignmentProgramID_97</individual>
+   <individual>ModelID_19</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_59</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_1109758</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>alignmentProgramID_29</individual>
+   <individual>ModelID_19</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3490</individual>
+   <individual>programID_3217</individual>
+   <individual>programID_3722</individual>
+   <individual>programID_3723</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_118559</individual>
+   <individual>taxonomyID_337343</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3328</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3328</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_109899</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>alignmentProgramID_22</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3438</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_98</individual>
+   <individual>taxonomyID_183925</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>databaseID_3</individual>
+   <individual>alignmentProgramID_98</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_60</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_8</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>programID_3310</individual>
+   <individual>programID_3569</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_60</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_10239</individual>
+   <individual>taxonomyID_542836</individual>
+   <individual>taxonomyID_10744</individual>
+   <individual>taxonomyID_38018</individual>
+   <individual>taxonomyID_352476</individual>
+   <individual>taxonomyID_10508</individual>
+   <individual>programID_3312</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_9685</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3569</individual>
+   <individual>programID_3217</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_59</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_6359</individual>
+   <individual>taxonomyID_225164</individual>
+   <individual>taxonomyID_283909</individual>
+   <individual>taxonomyID_45351</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>programID_3490</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3470</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_191797</individual>
+   <individual>taxonomyID_6524</individual>
+   <individual>taxonomyID_157969</individual>
+   <individual>taxonomyID_159021</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_62</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_8782</individual>
+   <individual>taxonomyID_9606</individual>
+   <individual>taxonomyID_1294634</individual>
+   <individual>taxonomyID_8459</individual>
+   <individual>taxonomyID_8504</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_19</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3490</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3490</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3292</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_9694</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3509</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_183341</individual>
+   <individual>taxonomyID_7041</individual>
+   <individual>taxonomyID_107769</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3233</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3572</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3438</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>taxonomyID_766</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3383</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>taxonomyID_145557</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3392</individual>
+   <individual>programID_3722</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_2</individual>
+   <individual>taxonomyID_443529</individual>
+   <individual>taxonomyID_120793</individual>
+   <individual>taxonomyID_3750</individual>
+   <individual>alignmentProgramID_101</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3438</individual>
+   <individual>methodID_60</individual>
+   <individual>programID_3723</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_86930</individual>
+   <individual>programID_3583</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3564</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_124939</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>programID_3613</individual>
+   <individual>ModelID_4</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3510</individual>
+   <individual>programID_3393</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3392</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_6324</individual>
+   <individual>taxonomyID_388329</individual>
+   <individual>taxonomyID_4751</individual>
+   <individual>taxonomyID_269771</individual>
+   <individual>taxonomyID_2</individual>
+   <individual>taxonomyID_333870</individual>
+   <individual>taxonomyID_6231</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_6</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3490</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>taxonomyID_37965</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3586</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_5693</individual>
+   <individual>alignmentProgramID_22</individual>
+   <individual>programID_3490</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_634722</individual>
+   <individual>taxonomyID_69548</individual>
+   <individual>ModelID_7</individual>
+   <individual>programID_3233</individual>
+   <individual>programID_3572</individual>
+   <individual>methodID_58</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>GO_0001205</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3295</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3438</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3438</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3509</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_1000_10000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>taxonomyID_3035</individual>
+   <individual>taxonomyID_156230</individual>
+   <individual>taxonomyID_44055</individual>
+   <individual>taxonomyID_35143</individual>
+   <individual>taxonomyID_77156</individual>
+   <individual>taxonomyID_4235</individual>
+   <individual>taxonomyID_5721</individual>
+   <individual>taxonomyID_561</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3490</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3274</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3490</individual>
+   <individual>Boots_Inf_50</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_Inf_50</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3603</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>GO_0005759</individual>
+   <individual>ModelID_7</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3572</individual>
+   <individual>programID_3233</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_64</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3392</individual>
+   <individual>programID_3572</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_183362</individual>
+   <individual>taxonomyID_107863</individual>
+   <individual>taxonomyID_107862</individual>
+   <individual>taxonomyID_183357</individual>
+   <individual>taxonomyID_183338</individual>
+   <individual>taxonomyID_183333</individual>
+   <individual>taxonomyID_183336</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3572</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_30352</individual>
+   <individual>taxonomyID_165819</individual>
+   <individual>taxonomyID_111092</individual>
+   <individual>taxonomyID_110124</individual>
+   <individual>taxonomyID_685130</individual>
+   <individual>taxonomyID_1191377</individual>
+   <individual>taxonomyID_1191376</individual>
+   <individual>taxonomyID_685124</individual>
+   <individual>taxonomyID_685128</individual>
+   <individual>taxonomyID_685134</individual>
+   <individual>taxonomyID_685120</individual>
+   <individual>taxonomyID_685122</individual>
+   <individual>taxonomyID_43512</individual>
+   <individual>taxonomyID_8397</individual>
+   <individual>taxonomyID_27577</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3455</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_new_itol</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>GO_0002128</individual>
+   <individual>GO_0052905</individual>
+   <individual>GO_0016300</individual>
+   <individual>GO_0002098</individual>
+   <individual>GO_0000049</individual>
+   <individual>GO_0031515</individual>
+   <individual>GO_0016765</individual>
+   <individual>GO_0008175</individual>
+   <individual>GO_0005739</individual>
+   <individual>GO_0002132</individual>
+   <individual>GO_0030697</individual>
+   <individual>GO_0009020</individual>
+   <individual>GO_0043527</individual>
+   <individual>GO_0052906</individual>
+   <individual>GO_0044822</individual>
+   <individual>GO_0008033</individual>
+   <individual>GO_0030488</individual>
+   <individual>GO_0008176</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_27434</individual>
+   <individual>taxonomyID_7504</individual>
+   <individual>taxonomyID_192413</individual>
+   <individual>taxonomyID_30265</individual>
+   <individual>taxonomyID_50657</individual>
+   <individual>taxonomyID_58557</individual>
+   <individual>taxonomyID_1266065</individual>
+   <individual>taxonomyID_85823</individual>
+   <individual>taxonomyID_7020</individual>
+   <individual>taxonomyID_7499</individual>
+   <individual>taxonomyID_6993</individual>
+   <individual>taxonomyID_30264</individual>
+   <individual>taxonomyID_29994</individual>
+   <individual>taxonomyID_30073</individual>
+   <individual>taxonomyID_6961</individual>
+   <individual>taxonomyID_152839</individual>
+   <individual>taxonomyID_50557</individual>
+   <individual>taxonomyID_33392</individual>
+   <individual>taxonomyID_7399</individual>
+   <individual>taxonomyID_30261</individual>
+   <individual>taxonomyID_30259</individual>
+   <individual>taxonomyID_85819</individual>
+   <individual>taxonomyID_30262</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3455</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_Inf_50</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_new_itol</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>databaseID_126</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3527</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3470</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_10088</individual>
+   <individual>taxonomyID_9913</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3284</individual>
+   <individual>methodID_62</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_13</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_30259</individual>
+   <individual>taxonomyID_85819</individual>
+   <individual>taxonomyID_7227</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_6</individual>
+   <individual>ModelID_25</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3272</individual>
+   <individual>programID_3490</individual>
+   <individual>programID_3470</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3723</individual>
+   <individual>programID_3722</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>programID_3381</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_62</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_129337</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_22</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3217</individual>
+   <individual>methodID_62</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_7091</individual>
+   <individual>taxonomyID_5722</individual>
+   <individual>alignmentProgramID_97</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3392</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_9682</individual>
+   <individual>taxonomyID_810</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3470</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_430998</individual>
+   <individual>taxonomyID_100027</individual>
+   <individual>taxonomyID_330741</individual>
+   <individual>taxonomyID_5180</individual>
+   <individual>taxonomyID_39416</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3490</individual>
+   <individual>programID_3470</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_23211</individual>
+   <individual>taxonomyID_3750</individual>
+   <individual>taxonomyID_3760</individual>
+   <individual>taxonomyID_3747</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>ModelID_6</individual>
+   <individual>programID_3455</individual>
+   <individual>programID_3509</individual>
+   <individual>methodID_58</individual>
+   <individual>programID_3509</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_1176649</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3452</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_2</individual>
+   <individual>programID_3381</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_24</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3490</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>GO_0009405</individual>
+   <individual>databaseID_3</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_19</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3396</individual>
+   <individual>programID_3570</individual>
+   <individual>programID_3546</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3470</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_3</individual>
+   <individual>taxonomyID_171627</individual>
+   <individual>alignmentProgramID_19</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_58</individual>
+   <individual>methodID_64</individual>
+   <individual>programID_3392</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_57667</individual>
+   <individual>taxonomyID_11709</individual>
+   <individual>taxonomyID_35274</individual>
+   <individual>taxonomyID_11676</individual>
+   <individual>taxonomyID_12721</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>alignmentProgramID_22</individual>
+   <individual>ModelID_13</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3537</individual>
+   <individual>methodID_62</individual>
+   <individual>programID_3381</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>taxonomyID_57667</individual>
+   <individual>taxonomyID_11676</individual>
+   <individual>taxonomyID_11709</individual>
+   <individual>taxonomyID_12721</individual>
+   <individual>taxonomyID_35274</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3393</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3392</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>databaseID_98</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>programID_3381</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_62</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3381</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>GO_0008134</individual>
+   <individual>taxonomyID_75966</individual>
+   <individual>taxonomyID_3077</individual>
+   <individual>taxonomyID_554065</individual>
+   <individual>taxonomyID_3074</individual>
+   <individual>taxonomyID_574566</individual>
+   <individual>taxonomyID_120749</individual>
+   <individual>taxonomyID_1208065</individual>
+   <individual>taxonomyID_145474</individual>
+   <individual>taxonomyID_357427</individual>
+   <individual>taxonomyID_3111</individual>
+   <individual>taxonomyID_131213</individual>
+   <individual>taxonomyID_3052</individual>
+   <individual>taxonomyID_33096</individual>
+   <individual>taxonomyID_3046</individual>
+   <individual>taxonomyID_3088</individual>
+   <individual>programID_3438</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>GO_0001077</individual>
+   <individual>databaseID_44</individual>
+   <individual>databaseID_3</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_3701</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_60</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>taxonomyID_4081</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_23</individual>
+   <individual>ModelID_19</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_62</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>databaseID_40</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3452</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>programID_3328</individual>
+   <individual>programID_3452</individual>
+   <individual>programID_3509</individual>
+   <individual>programID_3234</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3509</individual>
+   <individual>Boots_1000000_Inf</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_15</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>taxonomyID_3193</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_107</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3391</individual>
+   <individual>programID_3470</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_59</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3417</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>databaseID_126</individual>
+   <individual>taxonomyID_3702</individual>
+   <individual>taxonomyID_3701</individual>
+   <individual>taxonomyID_29760</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_97</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>alignmentProgramID_17</individual>
+   <individual>programID_3328</individual>
+   <individual>methodID_62</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>sequence</individual>
+   <individual>GO_0005802</individual>
+   <individual>databaseID_2</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>ModelID_19</individual>
+   <individual>programID_3381</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_62</individual>
+   <individual>methodID_60</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_new_itol</individual>
+</Sequence>
+<Sequence>
+   <individual>dataStructureID_15</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_13</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>sequence</individual>
+   <individual>taxonomyID_9685</individual>
+   <individual>taxonomyID_13442</individual>
+   <individual>alignmentProgramID_44</individual>
+   <individual>programID_3490</individual>
+   <individual>methodID_63</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>taxonomyID_3701</individual>
+   <individual>taxonomyID_4527</individual>
+   <individual>taxonomyID_71274</individual>
+   <individual>taxonomyID_73258</individual>
+   <individual>taxonomyID_4053</individual>
+   <individual>taxonomyID_4442</individual>
+   <individual>taxonomyID_678541</individual>
+   <individual>taxonomyID_35608</individual>
+   <individual>alignmentProgramID_96</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>alignmentProgramID_38</individual>
+   <individual>ModelID_6</individual>
+   <individual>ModelID_19</individual>
+   <individual>programID_3302</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3391</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3438</individual>
+   <individual>methodID_60</individual>
+   <individual>methodID_59</individual>
+   <individual>programID_3392</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>Boots_50_1000</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>dataStructureID_4</individual>
+   <individual>GO_0001077</individual>
+   <individual>GO_0001227</individual>
+   <individual>taxonomyID_6358</individual>
+   <individual>taxonomyID_7955</individual>
+   <individual>taxonomyID_225164</individual>
+   <individual>programID_3237</individual>
+   <individual>alignmentProgramID_26</individual>
+   <individual>ModelID_24</individual>
+   <individual>ModelID_21</individual>
+   <individual>WAG</individual>
+   <individual>programID_3470</individual>
+   <individual>programID_3396</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_58</individual>
+   <individual>Boots_50_1000</individual>
+   <individual>programID_3313</individual>
+</Sequence>
+<Sequence>
+   <individual>sequence</individual>
+   <individual>dataStructureID_12</individual>
+   <individual>dataStructureID_2</individual>
+   <individual>dataStructureID_1</individual>
+   <individual>taxonomyID_3166</individual>
+   <individual>taxonomyID_75966</individual>
+   <individual>taxonomyID_31301</individual>
+   <individual>alignmentProgramID_98</individual>
+   <individual>alignmentProgramID_8</individual>
+   <individual>programID_3438</individual>
+   <individual>programID_3381</individual>
+   <individual>programID_3393</individual>
+   <individual>programID_3706</individual>
+   <individual>methodID_59</individual>
+   <individual>methodID_62</individual>
+   <individual>programID_3392</individual>
+</Sequence>
