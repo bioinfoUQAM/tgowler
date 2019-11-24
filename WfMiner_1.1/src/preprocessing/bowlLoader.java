@@ -50,10 +50,8 @@ public class bowlLoader {
                         currSeq.objects.add(((Instance)get).index);
                     }
                     else{
-//                        System.out.println(">>>"+indv);
-//                        System.out.println(""+Arrays.toString(indv.toCharArray()));
-//                        System.out.println(""+Arrays.toString("DNA".toCharArray()));
-//                        System.out.println("no trouve...");
+                        System.out.println(">>>"+indv);
+                        System.out.println("is not in the ontology...");
                         /*Object get1 = ontology.index_instances_by_name.get("http://www.semanticweb.org/ahmedhalioui/ontologies/2015/7/untitled-ontology-8#DNA", 
                                 ontology.index_concepts_by_name.root);
 //                        System.out.println(""+get1);*/

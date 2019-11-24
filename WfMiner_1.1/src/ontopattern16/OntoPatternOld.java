@@ -137,212 +137,217 @@ public class OntoPatternOld {
             System.out.println("no valid namespace");
             return;
         }
-        else {
+        else {  
             // Training set
+//            System.out.println("Reading the Training set " + parametres.get(mode)[1] + " ...");
             loadRawSequences(rawUserSequences, userSequences, ontology, rawSequences, localNameNode);
+            System.out.print("Mining " + rawUserSequences.size());
             // test set
+//            System.out.println("Reading the Test set " + parametres.get(mode)[3] + " ...");
             loadRawSequences(rawUserGoldSequences, userGoldSequences, ontology, rawGoldSequences, localNameNode);
+            System.out.println("/" + rawUserGoldSequences.size() + " workflows (Train/Test)");
         }
         
         long startTime = System.nanoTime();
         
-//        // ****************************
-//        // MINING GENERALIZED WORKFLOWS
-//        // ****************************
-//        ArrayList<Motif> patterns = Miner.findFrequentPatternsDF(userSequences, thresold_supp, ontology, Integer.parseInt(args[7]) );
-//        
-//        ArrayList<String> exportP = new ArrayList<String>();
-//        ArrayList<String> exportR = new ArrayList<String>();
-//        
-//        // **********************
-//        // PRUNING WORKFLOW RULES
-//        // **********************
-//        System.out.println("============== First elimination ==============");
-////        for (IfThenRule ruleb : Miner.bannedRules.values()){
-////            System.out.println(ruleb.toString());
-////        }
-//        System.out.println(Miner.bannedRules.size()+" first banned rules");
-//        
-//        System.out.println();
-//        System.out.println("============== final elimination ==============");
-//        Miner.bannedRules.putAll(secondElimination(Miner.rules)) ;
-////        for (IfThenRule ruleb : Miner.bannedRules.values()){
-////            System.out.println(ruleb.toString());
-////        }
-//        System.out.println(Miner.bannedRules.size()+" banned rules");
-//        
-//        System.out.println();
-////        System.out.println("============== Rules from the closed set ==============");
-////        for (IfThenRule rule : Miner.rules.values()){
-////            System.out.println(rule.toString());
-////        }
-//        System.out.println(Miner.rules.size()+ " remaining rules.");
-//       
-//        // ****************
-//        // PRINT OUT RULES
-//        // ****************
-//        System.out.println();
-//        System.out.println("============== Statistics about the average of Top"+topNrules+" rules ==============");
-//        
-//        System.out.println("Confidence \t Support \t Depth \t FreqSteps \t FreqData \t FreqMetaData \t FreqProgs \t freqRel");
-////      confidence, support, generality, steps, freqData, freqMetaData, freqProgs, freqRel
-////        applyRules1(Miner.rules, userGoldSequences, ontology);
-//        String statistics = applyRules2(Miner.rules, userGoldSequences, ontology, topNrules, topKitems);
-//        
-//        File fRules = new File("./RecommendationRules.txt");
-//        File fPatterns = new File("./patterns.txt");
-//        
-//       // tests if file exists
-//        boolean boolR = fRules.exists();
-//        boolean boolP = fPatterns.exists();
-//        
-//        if(boolR == true)
-//         {
-//            // delete() invoked
-//            fRules.delete();
-//            fRules.createNewFile();
-////            System.out.println("delete() invoked");
-//         }
-//        else
-//            fRules.createNewFile();
-//        
-//        if(boolP == true)
-//         {
-//            // delete() invoked
-//            fPatterns.delete();
-//            fPatterns.createNewFile();
-////            System.out.println("delete() invoked");
-//         }
-//        else
-//            fPatterns.createNewFile();
-//        
-//        String headLines="Ontology: "+args[1]+"\n";
-//        headLines=headLines+"Train set: "+args[2]+"\n";
-//        headLines=headLines+"Test set: "+args[4]+"\n";
-//        headLines=headLines+"Top items: "+args[5]+"\n";
-//        headLines=headLines+"Top rules: "+args[6]+"\n";
-//        headLines=headLines+"min_supp: "+args[0]+"\n";
-//        headLines=headLines+"min_ontology_level: "+args[7]+"\n";
-//        headLines=headLines+"\n";
-//        Files.write(Paths.get(fRules.getPath()), headLines.getBytes(), StandardOpenOption.APPEND);
-//        
-//        Files.write(Paths.get(fRules.getPath()), "Rules: \n".getBytes(), StandardOpenOption.APPEND);
-//        
-//        // *************
-//        // RANKING RULES
-//        // *************
-//        HashMap<IfThenRule, Float> rulesToSort = new HashMap();
-//        ArrayList<IfThenRule> rulesBySequence=new ArrayList();
-//        
-//        for(IfThenRule r : Miner.rules.values()){
-//            rulesToSort.put(r, (float)r.getRank()/(float)r.getUtility());
-//            rulesBySequence.add(r);
+        // ****************************
+        // MINING GENERALIZED WORKFLOWS
+        // ****************************
+        System.out.println("Mining Generalized Workflows ...");
+        ArrayList<Motif> patterns = Miner.findFrequentPatternsDF(userSequences, thresold_supp, ontology, Integer.parseInt(args[7]) );
+        
+        ArrayList<String> exportP = new ArrayList<String>();
+        ArrayList<String> exportR = new ArrayList<String>();
+        
+        // **********************
+        // PRUNING WORKFLOW RULES
+        // **********************
+        System.out.println("============== First elimination ==============");
+        for (IfThenRule ruleb : Miner.bannedRules.values()){
+            System.out.println(ruleb.toString());
+        }
+        System.out.println(Miner.bannedRules.size()+" first banned rules");
+        
+        System.out.println();
+        System.out.println("============== final elimination ==============");
+        Miner.bannedRules.putAll(secondElimination(Miner.rules)) ;
+//        for (IfThenRule ruleb : Miner.bannedRules.values()){
+//            System.out.println(ruleb.toString());
 //        }
-//        
-//        // Rank final rules !
-//        Map<IfThenRule, Float> map = sortByValues(rulesToSort);
-//        Iterator iterator2 = map.entrySet().iterator();
-////            System.out.println("###### SORTED RULES:");
-//        System.out.println();
-//        int cout=0;
-//        while(iterator2.hasNext() && cout<topNrules) {
-//            Map.Entry me2 = (Map.Entry)iterator2.next();
-//            StringBuilder b = new StringBuilder();
-//            for (IfThenRule rs:rulesBySequence){
-//                if (me2.getKey().toString().equals(rs.toString())){
-//                    b.append(rs.toString())
-//                    .append(" (MPR: ").append((float)rs.getRank()/(float)rs.getUtility()).append(")");
-//                    exportR.add(b.toString()) ;
-//                    break;
-//                }
-//            }
-//            cout++;
+        System.out.println(Miner.bannedRules.size()+" banned rules");
+        
+        System.out.println();
+//        System.out.println("============== Rules from the closed set ==============");
+//        for (IfThenRule rule : Miner.rules.values()){
+//            System.out.println(rule.toString());
 //        }
-//        
-//        for(Motif m : patterns){
-//            StringBuilder b = new StringBuilder();
-//            // motif support
-//            b.append("[BaseSequence( support: ").append((m.support/(float)Library.getNbUserSequences())*100).append(", ")
-//            .append("steps: ").append(m.getSuppConcepts(ontology)).append(", ")
-//            .append("relations: ").append(m.getSuppRelations(ontology)).append(", ")
-//            .append("specilization: ").append(m.getGenerality(ontology)).append(", ")
-//            .append("data: ").append(m.getSuppData(ontology)).append(", ")
-//            .append("metadata: ").append(m.getSuppMetadata(ontology)).append(", ")
-//            .append("program: ").append(m.getSuppProgram(ontology)).append(",")
-//            
-//            .append(" [concepts=[");
-////                b.append("[BaseSequence").append(" [concepts=[");
-//            for(Integer c : m.concepts){
-//                    String uri = ontology.getConcept(c).getName();
-////                    String uriStep = ontology.getConceptByLevel(ontology.getConcept(c), 0).getName().split("#")[1];
-//                    b.append(uri.substring(uri.indexOf("#")+1));
-////                    b.append(":");
-////                    b.append(uriStep);
-//                    b.append(", ");
-//            }
-//            b.append("], properties=");
-//            for(Integer[] r : m.relations){
-//                b.append("{(");
-//                b.append(r[1]).append(",").append(r[2]);
-//                b.append(")=");
-//                String uri = ontology.getRelation(r[0]).getName();
-//                b.append(uri.substring(uri.indexOf("#")+1));
-//                b.append("}");
-//                }
-//            b.append("], ");
-////            System.out.println(b.toString());
-//            exportP.add(b.toString()) ;
-//        }
-//        
-//        
-//        for (String p : exportR) {
-//            String line = "\n";
-//            line=p+line;
-//        
-//            try {
-//            
-//            Files.write(Paths.get(fRules.toPath().toString()), line.getBytes(), StandardOpenOption.APPEND);
-//            }catch (IOException e) {
-//                //exception handling left as an exercise for the reader
-//            }
-//        }
-//        Files.write(Paths.get(fRules.toPath().toString()), statistics.getBytes(), StandardOpenOption.APPEND);
-//        
-//        
-//        String headLinesP="Ontology: "+args[1]+"\n";
-//        headLinesP=headLinesP+"Train set: "+args[2]+"\n";
-//        headLinesP=headLinesP+"min_supp: "+args[0]+"\n";
-//        headLinesP=headLinesP+"min_ontology_level: "+args[7]+"\n";
-//        headLinesP=headLinesP+"\n";
-//        Files.write(Paths.get(fPatterns.getPath()), headLinesP.getBytes(), StandardOpenOption.APPEND);
-//        
-//        
-//        Files.write(Paths.get(fPatterns.toPath().toString()), "Patterns: \n".getBytes(), StandardOpenOption.APPEND);
-//        for (String p : exportP) {
-//            String line = "\n";
-//            line=p+line;
-//        
-//            try {
-//            
-//            Files.write(Paths.get(fPatterns.toPath().toString()), line.getBytes(), StandardOpenOption.APPEND);
-//            }catch (IOException e) {
-//                //exception handling left as an exercise for the reader
-//            }
-//        }
-//        String statisticsP =patterns.size()+"\n patterns";
-//        Files.write(Paths.get(fPatterns.toPath().toString()), statisticsP.getBytes(), StandardOpenOption.APPEND);
-//        
-//        
-////        ArrayList<Rule> rules;
-////        generateRules (patterns, ontology);
-//        
-//        long endTime = System.nanoTime();
-//        long duration = (endTime - startTime)/1000000;
-//        System.out.println(Miner.allRules.size()+"\t generated rules");
-//        System.out.println(Miner.allRules.size()+"\t generated patterns");
-//        System.out.println(Miner.rules.size()+"\t closure rules");
-////        System.out.println(exportP.size()+"\t patterns");
-//        System.out.println(duration+"\t ms");
+        System.out.println(Miner.rules.size()+ " remaining rules.");
+       
+        // ****************
+        // PRINT OUT RULES
+        // ****************
+        System.out.println();
+        System.out.println("============== Statistics about the average of Top"+topNrules+" rules ==============");
+        
+        System.out.println("Confidence \t Support \t Depth \t FreqSteps \t FreqData \t FreqMetaData \t FreqProgs \t freqRel");
+//      confidence, support, generality, steps, freqData, freqMetaData, freqProgs, freqRel
+//        applyRules1(Miner.rules, userGoldSequences, ontology);
+        String statistics = applyRules2(Miner.rules, userGoldSequences, ontology, topNrules, topKitems);
+        
+        File fRules = new File("./RecommendationRules.txt");
+        File fPatterns = new File("./patterns.txt");
+        
+       // tests if file exists
+        boolean boolR = fRules.exists();
+        boolean boolP = fPatterns.exists();
+        
+        if(boolR == true)
+         {
+            // delete() invoked
+            fRules.delete();
+            fRules.createNewFile();
+//            System.out.println("delete() invoked");
+         }
+        else
+            fRules.createNewFile();
+        
+        if(boolP == true)
+         {
+            // delete() invoked
+            fPatterns.delete();
+            fPatterns.createNewFile();
+//            System.out.println("delete() invoked");
+         }
+        else
+            fPatterns.createNewFile();
+        
+        String headLines="Ontology: "+args[1]+"\n";
+        headLines=headLines+"Train set: "+args[2]+"\n";
+        headLines=headLines+"Test set: "+args[4]+"\n";
+        headLines=headLines+"Top items: "+args[5]+"\n";
+        headLines=headLines+"Top rules: "+args[6]+"\n";
+        headLines=headLines+"min_supp: "+args[0]+"\n";
+        headLines=headLines+"min_ontology_level: "+args[7]+"\n";
+        headLines=headLines+"\n";
+        Files.write(Paths.get(fRules.getPath()), headLines.getBytes(), StandardOpenOption.APPEND);
+        
+        Files.write(Paths.get(fRules.getPath()), "Rules: \n".getBytes(), StandardOpenOption.APPEND);
+        
+        // *************
+        // RANKING RULES
+        // *************
+        HashMap<IfThenRule, Float> rulesToSort = new HashMap();
+        ArrayList<IfThenRule> rulesBySequence=new ArrayList();
+        
+        for(IfThenRule r : Miner.rules.values()){
+            rulesToSort.put(r, (float)r.getRank()/(float)r.getUtility());
+            rulesBySequence.add(r);
+        }
+        
+        // Rank final rules !
+        Map<IfThenRule, Float> map = sortByValues(rulesToSort);
+        Iterator iterator2 = map.entrySet().iterator();
+//            System.out.println("###### SORTED RULES:");
+        System.out.println();
+        int cout=0;
+        while(iterator2.hasNext() && cout<topNrules) {
+            Map.Entry me2 = (Map.Entry)iterator2.next();
+            StringBuilder b = new StringBuilder();
+            for (IfThenRule rs:rulesBySequence){
+                if (me2.getKey().toString().equals(rs.toString())){
+                    b.append(rs.toString())
+                    .append(" (MPR: ").append((float)rs.getRank()/(float)rs.getUtility()).append(")");
+                    exportR.add(b.toString()) ;
+                    break;
+                }
+            }
+            cout++;
+        }
+        
+        for(Motif m : patterns){
+            StringBuilder b = new StringBuilder();
+            // motif support
+            b.append("[BaseSequence( support: ").append((m.support/(float)Library.getNbUserSequences())*100).append(", ")
+            .append("steps: ").append(m.getSuppConcepts(ontology)).append(", ")
+            .append("relations: ").append(m.getSuppRelations(ontology)).append(", ")
+            .append("specilization: ").append(m.getGenerality(ontology)).append(", ")
+            .append("data: ").append(m.getSuppData(ontology)).append(", ")
+            .append("metadata: ").append(m.getSuppMetadata(ontology)).append(", ")
+            .append("program: ").append(m.getSuppProgram(ontology)).append(",")
+            
+            .append(" [concepts=[");
+//                b.append("[BaseSequence").append(" [concepts=[");
+            for(Integer c : m.concepts){
+                    String uri = ontology.getConcept(c).getName();
+//                    String uriStep = ontology.getConceptByLevel(ontology.getConcept(c), 0).getName().split("#")[1];
+                    b.append(uri.substring(uri.indexOf("#")+1));
+//                    b.append(":");
+//                    b.append(uriStep);
+                    b.append(", ");
+            }
+            b.append("], properties=");
+            for(Integer[] r : m.relations){
+                b.append("{(");
+                b.append(r[1]).append(",").append(r[2]);
+                b.append(")=");
+                String uri = ontology.getRelation(r[0]).getName();
+                b.append(uri.substring(uri.indexOf("#")+1));
+                b.append("}");
+                }
+            b.append("], ");
+//            System.out.println(b.toString());
+            exportP.add(b.toString()) ;
+        }
+        
+        
+        for (String p : exportR) {
+            String line = "\n";
+            line=p+line;
+        
+            try {
+            
+            Files.write(Paths.get(fRules.toPath().toString()), line.getBytes(), StandardOpenOption.APPEND);
+            }catch (IOException e) {
+                //exception handling left as an exercise for the reader
+            }
+        }
+        Files.write(Paths.get(fRules.toPath().toString()), statistics.getBytes(), StandardOpenOption.APPEND);
+        
+        
+        String headLinesP="Ontology: "+args[1]+"\n";
+        headLinesP=headLinesP+"Train set: "+args[2]+"\n";
+        headLinesP=headLinesP+"min_supp: "+args[0]+"\n";
+        headLinesP=headLinesP+"min_ontology_level: "+args[7]+"\n";
+        headLinesP=headLinesP+"\n";
+        Files.write(Paths.get(fPatterns.getPath()), headLinesP.getBytes(), StandardOpenOption.APPEND);
+        
+        
+        Files.write(Paths.get(fPatterns.toPath().toString()), "Patterns: \n".getBytes(), StandardOpenOption.APPEND);
+        for (String p : exportP) {
+            String line = "\n";
+            line=p+line;
+        
+            try {
+            
+            Files.write(Paths.get(fPatterns.toPath().toString()), line.getBytes(), StandardOpenOption.APPEND);
+            }catch (IOException e) {
+                //exception handling left as an exercise for the reader
+            }
+        }
+        String statisticsP =patterns.size()+"\n patterns";
+        Files.write(Paths.get(fPatterns.toPath().toString()), statisticsP.getBytes(), StandardOpenOption.APPEND);
+        
+        
+//        ArrayList<Rule> rules;
+//        generateRules (patterns, ontology);
+        
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime)/1000000;
+        System.out.println(Miner.allRules.size()+"\t generated rules");
+        System.out.println(Miner.allRules.size()+"\t generated patterns");
+        System.out.println(Miner.rules.size()+"\t closure rules");
+//        System.out.println(exportP.size()+"\t patterns");
+        System.out.println(duration+"\t ms");
 
     }
     
