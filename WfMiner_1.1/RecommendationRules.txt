@@ -1,0 +1,16 @@
+Ontology: phylOntology_v51_small_final2.bowl
+Train set: WFMiner_WF_2018_2019.xml
+Test set: WFMiner_WF_gold_100.xml
+Top items: 10
+Top rules: 50
+min_supp: 0.5
+min_ontology_level: 2
+
+Rules: 
+[GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, CharacterBasedMethod] => GeneralPurposePackagesProgram, {} (confidence: 82.85714%) (support: 60.416668%) (MPR: 100.0)
+
+MAP: 36.363636%
+Recall1: 100.0%
+Recall2: 12.121212%
+Recall: 56.060608%
+FMeasure: 53.582424%

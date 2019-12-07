@@ -1,0 +1,407 @@
+<?xml version="1.0" ?>
+<WORKFLOWS>
+   <WORKFLOW file="seg-1.xml_00018" pmcid="6724401">
+      <TRANSACTION>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>databaseID_3</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3527</ITEM>
+         <ITEM>programID_3527</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>ModelID_6</ITEM>
+         <ITEM>ModelID_4</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3527</ITEM>
+         <ITEM>programID_3262</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3509</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3527</ITEM>
+         <ITEM>programID_3262</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3509</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3217</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>methodID_62</ITEM>
+         <ITEM>methodID_62</ITEM>
+         <ITEM>methodID_59</ITEM>
+         <ITEM>methodID_59</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3509</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3509</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRIPLET>0, has_RetrievedInDataBase, 38</TRIPLET>
+      <TRIPLET>0, has_InferredBy, 85</TRIPLET>
+      <TRIPLET>1, has_OrganismDivision, 39</TRIPLET>
+      <TRIPLET>1, has_AlignedBy, 76</TRIPLET>
+      <TRIPLET>1, has_InferredBy, 86</TRIPLET>
+      <TRIPLET>2, has_AlignedBy, 76</TRIPLET>
+      <TRIPLET>2, has_InferredBy, 86</TRIPLET>
+      <TRIPLET>11, has_HypothesisValidatedBy, 107</TRIPLET>
+      <TRIPLET>11, has_InferredBy, 89</TRIPLET>
+      <TRIPLET>11, has_HypothesisValidatedBy, 108</TRIPLET>
+      <TRIPLET>11, has_InferredBy, 90</TRIPLET>
+      <TRIPLET>12, has_HypothesisValidatedBy, 108</TRIPLET>
+      <TRIPLET>12, has_InferredBy, 90</TRIPLET>
+      <TRIPLET>13, has_InferredBy, 91</TRIPLET>
+      <TRIPLET>24, has_OrganismDivision, 57</TRIPLET>
+      <TRIPLET>35, has_OrganismDivision, 74</TRIPLET>
+   </WORKFLOW>
+   <WORKFLOW file="seg-10.xml_00019" pmcid="6736286">
+      <TRANSACTION>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>ModelID_6</ITEM>
+         <ITEM>ModelID_6</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3509</ITEM>
+         <ITEM>programID_3396</ITEM>
+         <ITEM>programID_3572</ITEM>
+         <ITEM>programID_3217</ITEM>
+         <ITEM>programID_3569</ITEM>
+         <ITEM>programID_3569</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3509</ITEM>
+         <ITEM>programID_3396</ITEM>
+         <ITEM>programID_3572</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>methodID_59</ITEM>
+         <ITEM>methodID_58</ITEM>
+         <ITEM>methodID_60</ITEM>
+         <ITEM>methodID_59</ITEM>
+         <ITEM>methodID_60</ITEM>
+         <ITEM>methodID_58</ITEM>
+         <ITEM>methodID_58</ITEM>
+         <ITEM>methodID_60</ITEM>
+         <ITEM>methodID_59</ITEM>
+         <ITEM>methodID_58</ITEM>
+         <ITEM>methodID_60</ITEM>
+         <ITEM>methodID_60</ITEM>
+         <ITEM>methodID_58</ITEM>
+         <ITEM>methodID_59</ITEM>
+         <ITEM>methodID_58</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>Boots_50_1000</ITEM>
+      </TRANSACTION>
+   </WORKFLOW>
+   <WORKFLOW file="seg-100.xml_0001A" pmcid="6281673">
+      <TRANSACTION>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_13</ITEM>
+         <ITEM>dataStructureID_2</ITEM>
+         <ITEM>dataStructureID_2</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_2</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>databaseID_3</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>Boots_50_1000</ITEM>
+      </TRANSACTION>
+      <TRIPLET>0, has_OrganismDivision, 18</TRIPLET>
+      <TRIPLET>1, has_OrganismDivision, 19</TRIPLET>
+      <TRIPLET>3, has_OrganismDivision, 20</TRIPLET>
+      <TRIPLET>4, has_OrganismDivision, 20</TRIPLET>
+      <TRIPLET>8, has_OrganismDivision, 21</TRIPLET>
+      <TRIPLET>9, has_OrganismDivision, 22</TRIPLET>
+      <TRIPLET>9, has_OrganismDivision, 23</TRIPLET>
+      <TRIPLET>10, has_OrganismDivision, 23</TRIPLET>
+      <TRIPLET>11, has_OrganismDivision, 24</TRIPLET>
+      <TRIPLET>11, has_OrganismDivision, 25</TRIPLET>
+      <TRIPLET>12, has_HypothesisValidatedBy, 37</TRIPLET>
+      <TRIPLET>12, has_InferredBy, 34</TRIPLET>
+      <TRIPLET>12, has_InferredBy, 35</TRIPLET>
+      <TRIPLET>13, has_HypothesisValidatedBy, 37</TRIPLET>
+      <TRIPLET>13, has_InferredBy, 34</TRIPLET>
+      <TRIPLET>13, has_InferredBy, 35</TRIPLET>
+   </WORKFLOW>
+   <WORKFLOW file="seg-1000.xml_0001B" pmcid="6350457">
+      <TRANSACTION>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_2</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>databaseID_3</ITEM>
+         <ITEM>databaseID_3</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>alignmentProgramID_8</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3358</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3704</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>methodID_59</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>Boots_50_1000</ITEM>
+      </TRANSACTION>
+      <TRIPLET>0, has_OrganismDivision, 15</TRIPLET>
+      <TRIPLET>0, has_OrganismDivision, 16</TRIPLET>
+      <TRIPLET>1, has_RetrievedInDataBase, 12</TRIPLET>
+      <TRIPLET>1, has_AlignedBy, 22</TRIPLET>
+      <TRIPLET>1, has_AlignedBy, 23</TRIPLET>
+      <TRIPLET>1, has_InferredBy, 29</TRIPLET>
+      <TRIPLET>1, has_OrganismDivision, 18</TRIPLET>
+      <TRIPLET>1, has_OrganismDivision, 19</TRIPLET>
+      <TRIPLET>2, has_AlignedBy, 22</TRIPLET>
+      <TRIPLET>2, has_AlignedBy, 23</TRIPLET>
+      <TRIPLET>2, has_InferredBy, 29</TRIPLET>
+      <TRIPLET>2, has_OrganismDivision, 18</TRIPLET>
+      <TRIPLET>2, has_OrganismDivision, 19</TRIPLET>
+      <TRIPLET>3, has_HypothesisValidatedBy, 34</TRIPLET>
+      <TRIPLET>3, has_InferredBy, 30</TRIPLET>
+      <TRIPLET>3, has_InferredBy, 31</TRIPLET>
+      <TRIPLET>3, has_OrganismDivision, 20</TRIPLET>
+      <TRIPLET>4, has_OrganismDivision, 20</TRIPLET>
+   </WORKFLOW>
+   <WORKFLOW file="seg-1001.xml_0001C" pmcid="6455141">
+      <TRANSACTION>
+         <ITEM>dataStructureID_13</ITEM>
+         <ITEM>dataStructureID_13</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_13</ITEM>
+         <ITEM>dataStructureID_12</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>databaseID_3</ITEM>
+         <ITEM>databaseID_3</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3470</ITEM>
+         <ITEM>programID_3470</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3470</ITEM>
+         <ITEM>programID_3470</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>Boots_50_1000</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3313</ITEM>
+      </TRANSACTION>
+      <TRIPLET>1, has_OrganismDivision, 8</TRIPLET>
+      <TRIPLET>2, has_OrganismDivision, 10</TRIPLET>
+      <TRIPLET>2, has_RetrievedInDataBase, 6</TRIPLET>
+      <TRIPLET>2, has_HypothesisValidatedBy, 14</TRIPLET>
+      <TRIPLET>2, has_InferredBy, 12</TRIPLET>
+      <TRIPLET>2, has_TreeVisualizedBy, 16</TRIPLET>
+      <TRIPLET>3, has_OrganismDivision, 10</TRIPLET>
+      <TRIPLET>3, has_HypothesisValidatedBy, 14</TRIPLET>
+      <TRIPLET>3, has_InferredBy, 12</TRIPLET>
+      <TRIPLET>3, has_TreeVisualizedBy, 16</TRIPLET>
+      <TRIPLET>4, has_HypothesisValidatedBy, 14</TRIPLET>
+      <TRIPLET>4, has_InferredBy, 12</TRIPLET>
+      <TRIPLET>4, has_TreeVisualizedBy, 16</TRIPLET>
+      <TRIPLET>5, has_TreeVisualizedBy, 16</TRIPLET>
+   </WORKFLOW>
+   <WORKFLOW file="seg-1002.xml_0001D" pmcid="6414313">
+      <TRANSACTION>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_8</ITEM>
+         <ITEM>dataStructureID_12</ITEM>
+         <ITEM>dataStructureID_4</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>sequence</ITEM>
+         <ITEM>dataStructureID_1</ITEM>
+         <ITEM>dataStructureID_2</ITEM>
+         <ITEM>dataStructureID_8</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3700</ITEM>
+         <ITEM>programID_3716</ITEM>
+         <ITEM>programID_3711</ITEM>
+         <ITEM>alignmentProgramID_98</ITEM>
+         <ITEM>programID_3688</ITEM>
+         <ITEM>programID_3711</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>alignmentProgramID_26</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>ModelID_23</ITEM>
+         <ITEM>ModelID_23</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3701</ITEM>
+         <ITEM>programID_3701</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3701</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3452</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>methodID_59</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3381</ITEM>
+         <ITEM>programID_3452</ITEM>
+         <ITEM>programID_3381</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>Boots_50_1000</ITEM>
+      </TRANSACTION>
+      <TRANSACTION>
+         <ITEM>programID_3684</ITEM>
+      </TRANSACTION>
+      <TRIPLET>1, has_HypothesisValidatedBy, 46</TRIPLET>
+      <TRIPLET>1, has_InferredBy, 35</TRIPLET>
+      <TRIPLET>2, has_HypothesisValidatedBy, 46</TRIPLET>
+      <TRIPLET>2, has_InferredBy, 35</TRIPLET>
+      <TRIPLET>3, has_HypothesisValidatedBy, 46</TRIPLET>
+      <TRIPLET>3, has_InferredBy, 35</TRIPLET>
+      <TRIPLET>26, has_EvolutionaryModel, 28</TRIPLET>
+      <TRIPLET>6, has_InferredBy, 39</TRIPLET>
+      <TRIPLET>10, has_InferredBy, 40</TRIPLET>
+      <TRIPLET>10, has_InferredBy, 41</TRIPLET>
+      <TRIPLET>10, has_CollectedBy, 22</TRIPLET>
+      <TRIPLET>10, has_CollectedBy, 23</TRIPLET>
+      <TRIPLET>11, has_InferredBy, 41</TRIPLET>
+      <TRIPLET>11, has_InferredBy, 40</TRIPLET>
+      <TRIPLET>11, has_CollectedBy, 22</TRIPLET>
+      <TRIPLET>11, has_CollectedBy, 23</TRIPLET>
+   </WORKFLOW>
+</WORKFLOWS>
