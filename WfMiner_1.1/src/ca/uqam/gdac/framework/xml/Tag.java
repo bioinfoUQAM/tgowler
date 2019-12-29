@@ -5,7 +5,6 @@ enum Tag
 	//---------------------------------------------------------------- XML Tags
 	TRANSACTION("TRANSACTION" ),
         TRIPLET( "TRIPLET" ),
-        ITEM( "ITEM" ),
 	NAMESPACE( "NAMESPACE" ),
 	WORKFLOWS( "WORKFLOWS" ),
 	WORKFLOW( "WORKFLOW" );

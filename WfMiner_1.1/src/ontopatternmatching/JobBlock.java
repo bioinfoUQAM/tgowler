@@ -76,7 +76,7 @@ public class JobBlock {
      * @param m
      * @return 
      */
-    public int doJobs2(Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m){
+    public int doJobs2(Workflow sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m){
         //int res = -1;
         return this.jobs[0].doJob(this, sequence, appariement, modifications, ontology, m);
         /*
@@ -100,7 +100,7 @@ public class JobBlock {
      * @param info
      * @return 
      */
-    public int doJobs_with_output(Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m, String[] info){
+    public int doJobs_with_output(Workflow sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m, String[] info){
         return this.jobs[0].doJob_with_output(this, sequence, appariement, modifications, ontology, m, info);
     }
     

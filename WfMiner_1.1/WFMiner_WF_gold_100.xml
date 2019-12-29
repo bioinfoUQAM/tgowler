@@ -1,43 +1,7 @@
 <?xml version="1.0" ?>
 <Workflows>
    <Workflow file="seg124.xml_00063" pmcid="4237157">
-      <Transaction>
-         <Item>dataStructureID_13</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_13</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_13</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_13</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3312</Item>
-         <Item>ModelID_13</Item>
-         <Item>ModelID_6</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-         <Item>methodID_62</Item>
-         <Item>methodID_59</Item>
-         <Item>programID_3312</Item>
-         <Item>programID_3312</Item>
-      </Transaction>
+      <Transaction>dataStructureID_13, dataStructureID_1, dataStructureID_13, dataStructureID_1, sequence, dataStructureID_13, dataStructureID_12, sequence, dataStructureID_12, sequence, sequence, sequence, dataStructureID_13, dataStructureID_12, dataStructureID_1, programID_3381, programID_3312, programID_3381, programID_3312, ModelID_13, ModelID_6, programID_3381, programID_3312, programID_3312, programID_3312, programID_3312, programID_3381, programID_3312, programID_3312, programID_3312, programID_3312, methodID_62, methodID_59, programID_3312, programID_3312</Transaction>
       <Triplet>0, has_InferredBy, 27</Triplet>
       <Triplet>27, has_PhylogeneticMethod, 32</Triplet>
       <Triplet>1, has_TreeAnalyzedBy, 35</Triplet>
@@ -49,63 +13,14 @@
       <Triplet>19, has_EvolutionaryModel, 21</Triplet>
    </Workflow>
    <Workflow file="seg133.xml_00064" pmcid="4020696">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>ModelID_7</Item>
-         <Item>programID_3393</Item>
-         <Item>programID_3393</Item>
-         <Item>programID_3470</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3393</Item>
-         <Item>programID_3393</Item>
-         <Item>programID_3470</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3572</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_64</Item>
-         <Item>programID_3392</Item>
-         <Item>programID_3392</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, sequence, ModelID_7, programID_3393, programID_3393, programID_3470, programID_3396, programID_3572, programID_3233, programID_3572, programID_3393, programID_3393, programID_3470, programID_3396, programID_3572, programID_3233, programID_3572, methodID_59, methodID_59, methodID_58, methodID_58, methodID_59, methodID_58, methodID_59, methodID_58, methodID_64, methodID_64, methodID_64, programID_3392, programID_3392</Transaction>
       <Triplet>3, has_InferredBy, 24</Triplet>
       <Triplet>25, has_PhylogeneticMethod, 33</Triplet>
       <Triplet>9, has_OrganismDivision, 10</Triplet>
       <Triplet>9, has_OrganismDivision, 11</Triplet>
    </Workflow>
    <Workflow file="seg14.xml_00066" pmcid="4329324">
-      <Transaction>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>databaseID_3</Item>
-         <Item>alignmentProgramID_96</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-      </Transaction>
+      <Transaction>dataStructureID_1, sequence, sequence, sequence, sequence, databaseID_3, alignmentProgramID_96, programID_3509, programID_3509</Transaction>
       <Triplet>0, has_OrganismDivision, 6</Triplet>
       <Triplet>0, has_OrganismDivision, 7</Triplet>
       <Triplet>2, has_OrganismDivision, 9</Triplet>
@@ -114,52 +29,13 @@
       <Triplet>4, has_OrganismDivision, 11</Triplet>
    </Workflow>
    <Workflow file="seg141.xml_00067" pmcid="3991801">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>programID_3237</Item>
-         <Item>alignmentProgramID_8</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>ModelID_13</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_12, dataStructureID_1, dataStructureID_1, programID_3237, alignmentProgramID_8, programID_3381, programID_3381, ModelID_13, programID_3381, programID_3381, programID_3381, programID_3381, Boots_50_1000</Transaction>
       <Triplet>0, has_CollectedBy, 5</Triplet>
       <Triplet>2, has_InferredBy, 13</Triplet>
       <Triplet>2, has_InferredBy, 12</Triplet>
    </Workflow>
    <Workflow file="seg146.xml_00068" pmcid="4028454">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>databaseID_3</Item>
-         <Item>databaseID_3</Item>
-         <Item>databaseID_3</Item>
-         <Item>programID_3237</Item>
-         <Item>alignmentProgramID_96</Item>
-         <Item>ModelID_13</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>methodID_62</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, sequence, sequence, dataStructureID_12, sequence, sequence, sequence, sequence, sequence, sequence, dataStructureID_1, databaseID_3, databaseID_3, databaseID_3, programID_3237, alignmentProgramID_96, ModelID_13, programID_3381, programID_3381, methodID_62, programID_3381, programID_3381, Boots_50_1000</Transaction>
       <Triplet>0, has_OrganismDivision, 14</Triplet>
       <Triplet>1, has_CollectedBy, 17</Triplet>
       <Triplet>6, has_CollectedBy, 18</Triplet>
@@ -169,52 +45,7 @@
       <Triplet>8, has_RetrievedInDataBase, 13</Triplet>
    </Workflow>
    <Workflow file="seg149.xml_0006A" pmcid="4043111">
-      <Transaction>
-         <Item>dataStructureID_4</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>alignmentProgramID_19</Item>
-         <Item>ModelID_19</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3233</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_63</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_59</Item>
-      </Transaction>
+      <Transaction>dataStructureID_4, sequence, dataStructureID_4, dataStructureID_12, sequence, dataStructureID_4, sequence, dataStructureID_12, sequence, sequence, dataStructureID_12, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, sequence, dataStructureID_12, dataStructureID_4, sequence, dataStructureID_12, alignmentProgramID_19, ModelID_19, programID_3381, programID_3233, programID_3233, programID_3572, programID_3233, programID_3381, programID_3233, programID_3233, programID_3572, programID_3233, methodID_59, methodID_63, methodID_64, methodID_64, methodID_64, methodID_59, methodID_59</Transaction>
       <Triplet>0, has_AlignedBy, 25</Triplet>
       <Triplet>10, has_InferredBy, 32</Triplet>
       <Triplet>12, has_InferredBy, 33</Triplet>
@@ -222,26 +53,7 @@
       <Triplet>34, has_PhylogeneticMethod, 40</Triplet>
    </Workflow>
    <Workflow file="seg155.xml_0006B" pmcid="3906940">
-      <Transaction>
-         <Item>dataStructureID_13</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_2</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>sequence</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3322</Item>
-         <Item>programID_3322</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_62</Item>
-         <Item>methodID_60</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_62</Item>
-         <Item>methodID_60</Item>
-      </Transaction>
+      <Transaction>dataStructureID_13, sequence, sequence, dataStructureID_2, dataStructureID_4, sequence, programID_3233, programID_3233, programID_3233, programID_3233, programID_3322, programID_3322, methodID_59, methodID_62, methodID_60, methodID_59, methodID_62, methodID_60</Transaction>
       <Triplet>2, has_OrganismDivision, 8</Triplet>
       <Triplet>2, has_InferredBy, 11</Triplet>
       <Triplet>2, has_InferredBy, 12</Triplet>
@@ -255,88 +67,20 @@
       <Triplet>12, has_PhylogeneticMethod, 18</Triplet>
    </Workflow>
    <Workflow file="seg16.xml_0006C" pmcid="4263531">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_8</Item>
-         <Item>databaseID_3</Item>
-         <Item>programID_3613</Item>
-         <Item>programID_3373</Item>
-      </Transaction>
+      <Transaction>sequence, sequence, sequence, sequence, sequence, dataStructureID_1, dataStructureID_8, databaseID_3, programID_3613, programID_3373</Transaction>
       <Triplet>0, has_InferredBy, 9</Triplet>
       <Triplet>3, has_AlignedBy, 8</Triplet>
       <Triplet>4, has_AlignedBy, 8</Triplet>
    </Workflow>
    <Workflow file="seg161.xml_0006D" pmcid="3967905">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>databaseID_3</Item>
-         <Item>alignmentProgramID_8</Item>
-         <Item>programID_3322</Item>
-         <Item>programID_3322</Item>
-         <Item>programID_3322</Item>
-         <Item>programID_3322</Item>
-         <Item>programID_3322</Item>
-         <Item>programID_3322</Item>
-         <Item>methodID_59</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_1, databaseID_3, alignmentProgramID_8, programID_3322, programID_3322, programID_3322, programID_3322, programID_3322, programID_3322, methodID_59</Transaction>
    </Workflow>
    <Workflow file="seg162.xml_0006E" pmcid="3967900">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_2</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3233</Item>
-         <Item>programID_3572</Item>
-         <Item>programID_3233</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_59</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, programID_3509, programID_3509, programID_3509, programID_3233, programID_3572, programID_3233, programID_3509, programID_3509, programID_3509, programID_3233, programID_3572, programID_3233, methodID_59, methodID_59, programID_3509, programID_3509, Boots_50_1000</Transaction>
       <Triplet>11, has_InferredBy, 24</Triplet>
    </Workflow>
    <Workflow file="seg169.xml_00071" pmcid="4004945">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>databaseID_3</Item>
-         <Item>alignmentProgramID_8</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_12, sequence, dataStructureID_1, databaseID_3, alignmentProgramID_8, programID_3381, programID_3381, programID_3381, programID_3381, programID_3381, programID_3381, Boots_50_1000</Transaction>
       <Triplet>0, has_RetrievedInDataBase, 4</Triplet>
       <Triplet>1, has_AlignedBy, 5</Triplet>
       <Triplet>1, has_InferredBy, 8</Triplet>
@@ -344,25 +88,7 @@
       <Triplet>2, has_InferredBy, 9</Triplet>
    </Workflow>
    <Workflow file="seg17.xml_00072" pmcid="4262358">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>databaseID_98</Item>
-         <Item>alignmentProgramID_96</Item>
-         <Item>alignmentProgramID_8</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>ModelID_13</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>methodID_62</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, sequence, sequence, dataStructureID_1, dataStructureID_1, databaseID_98, alignmentProgramID_96, alignmentProgramID_8, programID_3381, programID_3381, ModelID_13, programID_3381, programID_3381, programID_3381, programID_3381, methodID_62, Boots_50_1000</Transaction>
       <Triplet>0, has_OrganismDivision, 8</Triplet>
       <Triplet>2, has_AlignedBy, 10</Triplet>
       <Triplet>2, has_InferredBy, 16</Triplet>
@@ -371,94 +97,16 @@
       <Triplet>3, has_InferredBy, 17</Triplet>
    </Workflow>
    <Workflow file="seg170.xml_00073" pmcid="4004943">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>programID_3449</Item>
-         <Item>programID_3449</Item>
-         <Item>alignmentProgramID_8</Item>
-         <Item>ModelID_6</Item>
-         <Item>programID_3438</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3438</Item>
-         <Item>programID_3396</Item>
-         <Item>methodID_60</Item>
-         <Item>methodID_60</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_60</Item>
-         <Item>methodID_59</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_64</Item>
-         <Item>programID_3438</Item>
-         <Item>programID_3438</Item>
-         <Item>Boots_50_1000</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, programID_3449, programID_3449, alignmentProgramID_8, ModelID_6, programID_3438, programID_3396, programID_3438, programID_3396, methodID_60, methodID_60, methodID_59, methodID_59, methodID_60, methodID_59, methodID_58, methodID_58, methodID_64, programID_3438, programID_3438, Boots_50_1000, Boots_50_1000</Transaction>
       <Triplet>0, has_CollectedBy, 11</Triplet>
    </Workflow>
    <Workflow file="seg171.xml_00074" pmcid="4004941">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_2</Item>
-         <Item>databaseID_3</Item>
-         <Item>programID_3613</Item>
-         <Item>programID_3509</Item>
-         <Item>programID_3509</Item>
-         <Item>methodID_59</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, sequence, dataStructureID_2, databaseID_3, programID_3613, programID_3509, programID_3509, methodID_59, Boots_50_1000</Transaction>
       <Triplet>0, has_AlignedBy, 6</Triplet>
       <Triplet>1, has_InferredBy, 8</Triplet>
    </Workflow>
    <Workflow file="seg197.xml_00078" pmcid="3895441">
-      <Transaction>
-         <Item>sequence</Item>
-         <Item>dataStructureID_13</Item>
-         <Item>dataStructureID_13</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_4</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>databaseID_126</Item>
-         <Item>alignmentProgramID_96</Item>
-         <Item>alignmentProgramID_97</Item>
-         <Item>alignmentProgramID_107</Item>
-         <Item>alignmentProgramID_17</Item>
-         <Item>alignmentProgramID_8</Item>
-         <Item>alignmentProgramID_17</Item>
-         <Item>ModelID_24</Item>
-         <Item>programID_3328</Item>
-         <Item>programID_3328</Item>
-         <Item>programID_3470</Item>
-         <Item>programID_3328</Item>
-         <Item>programID_3328</Item>
-         <Item>programID_3470</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_62</Item>
-         <Item>programID_3470</Item>
-         <Item>programID_3470</Item>
-         <Item>Boots_50_1000</Item>
-      </Transaction>
+      <Transaction>sequence, dataStructureID_13, dataStructureID_13, dataStructureID_12, sequence, dataStructureID_4, dataStructureID_12, sequence, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_1, dataStructureID_12, sequence, databaseID_126, alignmentProgramID_96, alignmentProgramID_97, alignmentProgramID_107, alignmentProgramID_17, alignmentProgramID_8, alignmentProgramID_17, ModelID_24, programID_3328, programID_3328, programID_3470, programID_3328, programID_3328, programID_3470, methodID_58, methodID_62, programID_3470, programID_3470, Boots_50_1000</Transaction>
       <Triplet>0, has_RetrievedInDataBase, 17</Triplet>
       <Triplet>0, has_CollectedBy, 18</Triplet>
       <Triplet>0, has_CollectedBy, 19</Triplet>
@@ -475,68 +123,7 @@
       <Triplet>6, has_InferredBy, 29</Triplet>
    </Workflow>
    <Workflow file="seg20.xml_0007A" pmcid="4312939">
-      <Transaction>
-         <Item>dataStructureID_15</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>sequence</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_2</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>sequence</Item>
-         <Item>dataStructureID_12</Item>
-         <Item>dataStructureID_1</Item>
-         <Item>databaseID_3</Item>
-         <Item>databaseID_126</Item>
-         <Item>databaseID_3</Item>
-         <Item>databaseID_3</Item>
-         <Item>databaseID_3</Item>
-         <Item>databaseID_3</Item>
-         <Item>alignmentProgramID_98</Item>
-         <Item>alignmentProgramID_19</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>ModelID_13</Item>
-         <Item>ModelID_13</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3438</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3400</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3284</Item>
-         <Item>programID_3381</Item>
-         <Item>programID_3438</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3396</Item>
-         <Item>programID_3400</Item>
-         <Item>methodID_62</Item>
-         <Item>methodID_62</Item>
-         <Item>methodID_60</Item>
-         <Item>methodID_60</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_64</Item>
-         <Item>methodID_58</Item>
-         <Item>methodID_64</Item>
-         <Item>Boots_50_1000</Item>
-         <Item>Boots_50_1000</Item>
-         <Item>Boots_Inf_50</Item>
-      </Transaction>
+      <Transaction>dataStructureID_15, sequence, sequence, sequence, sequence, dataStructureID_12, sequence, sequence, dataStructureID_1, dataStructureID_12, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_12, dataStructureID_1, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_12, dataStructureID_1, databaseID_3, databaseID_126, databaseID_3, databaseID_3, databaseID_3, databaseID_3, alignmentProgramID_98, alignmentProgramID_19, programID_3381, programID_3381, ModelID_13, ModelID_13, programID_3381, programID_3381, programID_3381, programID_3438, programID_3396, programID_3396, programID_3400, programID_3381, programID_3381, programID_3284, programID_3381, programID_3438, programID_3396, programID_3396, programID_3400, methodID_62, methodID_62, methodID_60, methodID_60, methodID_64, methodID_64, methodID_58, methodID_64, Boots_50_1000, Boots_50_1000, Boots_Inf_50</Transaction>
       <Triplet>0, has_GeneOntologyAnnotation, 26</Triplet>
       <Triplet>0, has_GeneOntologyAnnotation, 27</Triplet>
       <Triplet>0, has_GeneOntologyAnnotation, 28</Triplet>

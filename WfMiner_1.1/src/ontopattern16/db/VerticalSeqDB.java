@@ -8,24 +8,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import ontologyrep2.Concept;
 import ontologyrep2.Instance;
 import ontologyrep2.OntoRepresentation;
 import ontologyrep2.RadixTree.RadixNode;
-import ontopatternmatching.Sequence;
+import ontopatternmatching.Workflow;
 
 
 public class VerticalSeqDB {
     
     //il faut un index/header des debuts dans le bitset... sinon on va pas s'en sortir...
     
-    public static void construire_vdb(int[] vertical_db, ArrayList<Sequence> all_sequences, int nbr_concepts, 
+    public static void construire_vdb(int[] vertical_db, ArrayList<Workflow> all_sequences, int nbr_concepts, 
             int nbr_seq, int range_of_one_item, int[] all_sequences_length, int[] all_sequences_sum,  
             final OntoRepresentation ontology, int BLOCK_SIZE, int BLOCK_SIZE_SHIFT, final RadixNode... localNameNodes){
         
         /*final RadixNode localNameNode;
-        //final ArrayList<Sequence> userSequences = new ArrayList<>();
+        //final ArrayList<Workflow> userWorkflows = new ArrayList<>();
         
         if(localNameNodes!=null && localNameNodes.length != 0 && localNameNodes[0] != null){
             localNameNode = localNameNodes[0];
@@ -33,8 +33,10 @@ public class VerticalSeqDB {
         else localNameNode = ontology.index_instances_by_name.root;*/   
         
         for(int i=0;i!=nbr_seq;i++){
-            //final Sequence currSeq = new Sequence();
-            final Sequence seq = all_sequences.get(i);
+            //final Workflow currSeq = new Workflow();
+            final Workflow seq = all_sequences.get(i);
+//            ArrayList<Integer> flat_workflow = new ArrayList<>();
+//            seq.objects.forEach(flat_workflow::addAll);
             //final ArrayList<String> uris = seq.getIndividualsLocalNames();
             final int l_seq = all_sequences_length[i];
                         
@@ -78,7 +80,7 @@ public class VerticalSeqDB {
         
         ///construit_vdb_generalisations(ontology, nbr_concepts, vertical_db, range_of_one_item, all_sequences_sum);
         
-        //return userSequences;
+        //return userWorkflows;
     }
     
     public static void construit_vdb_generalisations(final OntoRepresentation ontology, final int nbr_classes, final int[] vertical_db, 

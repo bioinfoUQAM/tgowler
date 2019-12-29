@@ -3,7 +3,7 @@ package ca.uqam.gdac.framework.matcher;
 import java.util.ArrayList;
 import ontologyrep2.OntoRepresentation;
 import ontopatternmatching.Motif;
-import ontopatternmatching.Sequence;
+import ontopatternmatching.Workflow;
 
 
 class BaseMatcher 
@@ -16,18 +16,18 @@ class BaseMatcher
 	// Pattern to match on the input sequence
 	protected Motif pattern;
 	
-	// Sequence to be matched against the pattern
-	protected Sequence input;
+	// Workflow to be matched against the pattern
+	protected Workflow input;
 	
 	//------------------------------------------------------------- Constructor
-	/*public BaseMatcher( final Pattern pattern, final UserSequence input, final HierarchyRepresentation<Integer> hierarchyRepresentation )
+	/*public BaseMatcher( final Pattern pattern, final UserWorkflow input, final HierarchyRepresentation<Integer> hierarchyRepresentation )
 	{
 		this.pattern = pattern;
 		this.input = input;
 		this.hierarchyRepresentation = hierarchyRepresentation;
 	}*/
         
-        public BaseMatcher( final Motif pattern, final Sequence input, final OntoRepresentation hierarchyRepresentation )
+        public BaseMatcher( final Motif pattern, final Workflow input, final OntoRepresentation hierarchyRepresentation )
 	{
 		this.pattern = pattern;
 		this.input = input;

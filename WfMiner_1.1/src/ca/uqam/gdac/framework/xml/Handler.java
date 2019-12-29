@@ -5,9 +5,10 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import java.util.ArrayList;
 import java.util.Arrays; 
+import java.util.List;
 
 
 // Handler used to extract sequences into an XML document
@@ -25,10 +26,10 @@ class Handler implements ContentHandler
 	private Tag currentTag;
 	
 	// The final set of sequences extracted during the parsing
-	private ArrayList<RawUserSequence> parseResult;
+	private ArrayList<RawUserWorkflow> parseResult;
 	
 	// Field used to store the instances of the current sequence
-	private RawUserSequence currentWorkflow;
+	private RawUserWorkflow currentWorkflow;
 	
 	// Filed used to prevent a parsing bug
 	// It is used to know if the last individual tag has been closed
@@ -40,12 +41,12 @@ class Handler implements ContentHandler
 	public Handler( )
 	{
 		super( );
-		parseResult = new ArrayList<RawUserSequence>( );
+		parseResult = new ArrayList<RawUserWorkflow>( );
                 
 	}
 	
 	//------------------------------------------------------- Getters / Setters
-	public ArrayList<RawUserSequence> getParseResult( )
+	public ArrayList<RawUserWorkflow> getParseResult( )
 	{
 		return parseResult;
 	}
@@ -72,15 +73,13 @@ class Handler implements ContentHandler
 		switch( currentTag )
 		{
                     case TRANSACTION:
+                        processIndividual( ch, start, length );
+                        firstTagProccessing = false;
                         break;
-                    case ITEM:
-                            processIndividual( ch, start, length );
-                            firstTagProccessing = false;
-                            break;
                     case TRIPLET:
-                            processLink( ch, start, length );
-                            firstTagProccessing = false;
-                            break;
+                        processLink( ch, start, length );
+                        firstTagProccessing = false;
+                        break;
                     case WORKFLOWS:
                     case WORKFLOW:
                     default:
@@ -100,19 +99,16 @@ class Handler implements ContentHandler
 				break;
                                 
                         case TRANSACTION:
-				// End of the XML file
+                                 // End of the instance tag
+				// Return to the parent tag
+				currentTag = Tag.WORKFLOW;
 				break;
 				
 			case WORKFLOW:
 				// End of the sequence tag
 				parseResult.add(currentWorkflow );
 				// Return to the parent tag
-				currentTag = Tag.WORKFLOW;
-				break;
-			case ITEM:
-				// End of the instance tag
-				// Return to the parent tag
-				currentTag = Tag.WORKFLOW;
+				currentTag = Tag.WORKFLOWS;
 				break;
                         case TRIPLET:
 				// End of the instance tag
@@ -138,20 +134,15 @@ class Handler implements ContentHandler
                 else if( equalsIgnoreCase( qName, Tag.TRANSACTION )  )
 		// If this is a 'transaction' tag
 		{
+                        firstTagProccessing = true;
 			currentTag = Tag.TRANSACTION;
 		}
 		else if( equalsIgnoreCase( qName, Tag.WORKFLOW ) )
 		// If this is a 'workflow' tag
 		{
 			// Addition of a new sequence to the set of sequences
-			currentWorkflow = new RawUserSequence( );
+			currentWorkflow = new RawUserWorkflow( );
 			currentTag = Tag.WORKFLOW;
-		}
-		else if( equalsIgnoreCase( qName, Tag.ITEM ) )
-		// If this is a 'instance' tag
-		{
-			firstTagProccessing = true;
-			currentTag = Tag.ITEM;
 		}
                 else if( equalsIgnoreCase( qName, Tag.TRIPLET ) )
 		// If this is a 'instance' tag
@@ -173,49 +164,79 @@ class Handler implements ContentHandler
 	private void processIndividual( final char[ ] ch, final int start, final int length  )
 	{
 		// Extract the instance
-                String individualStr = extractString( ch, start, length );
-//                System.out.println("individualStr " + individualStr);
-
-		// Following code prevents a parsing bug
-		if( firstTagProccessing )
-		// If it is a new individual local name
-		{
-			// Insert a new individual local name
-			lastLocalName = individualStr;
-			currentWorkflow.appendIndividualLocalName( lastLocalName );
-		}
-		else
-		// The string is the continuation of the last individual local name
-		{
-			// Complete the last local name added
-			lastLocalName += individualStr;
-			currentWorkflow.replaceIndividualLocalName( lastLocalName );
-		}
-
+                String individualStrings = extractString( ch, start, length );
+//                System.out.println("individualStrings " + individualStrings);
+                List<String> items = Arrays.asList(individualStrings.split("\\s*,\\s*"));
+//                System.out.println("items " + items);
+                
+                // Add a transaction with the first element
+                if( firstTagProccessing )
+                    // If it is a new individual local name
+                    {
+                        // Insert a new individual local name
+                        lastLocalName = items.get(0);
+                        currentWorkflow.addIndividualLocalName( lastLocalName );
+//                        System.out.println("currentTransaction: " + currentWorkflow.getIndividualslastLocalNames( ));
+                    }
+                    else
+                    // The string is the continuation of the last individual local name
+                    {
+                        // Complete the last local name added
+                        lastLocalName = items.get(0);
+                        currentWorkflow.replaceIndividualLocalName( lastLocalName );
+//                        System.out.println("currentTransaction: " + currentWorkflow.getIndividualslastLocalNames( ));
+                    }
+                
+                
+                // Append the transactions with the rest of the elements
+                int length_transaction = items.size();
+                if (length_transaction > 1){
+                    for (String individualStr : items.subList(1, items.size()-1)) {
+    			if( firstTagProccessing )
+                            // If it is a new individual local name
+                            {
+                                // Insert a new individual local name
+                                lastLocalName = individualStr;
+//                                System.out.println(lastLocalName);
+                                currentWorkflow.appendIndividualLocalName( lastLocalName );
+                            }
+                            else
+                            // The string is the continuation of the last individual local name
+                            {
+                                // Complete the last local name added
+                                lastLocalName += individualStr;
+                                currentWorkflow.replaceIndividualLocalName(lastLocalName );
+                            }
+                    }
+                }
 	}
         
         private void processLink( final char[ ] ch, final int start, final int length  )
 	{   
             // Get Subject, Libnk, Object
             String tripletStr = extractString( ch, start, length );
-            String[] triplet = tripletStr.split(", ");
-//            System.out.println("tripletStr: " + tripletStr);
+            List<String> triplet = Arrays.asList(tripletStr.split("\\s*,\\s*"));
+//            System.out.println("triplet: " + triplet);
+//            System.out.println("subjectPosition: " + Integer.parseInt(triplet.get(0)));
+//            System.out.println("objectPosition: " + Integer.parseInt(triplet.get(2)));
+//            System.out.println("propertyLocalName: " + triplet.get(1));
             
             // Following code prevents a parsing bug
             if( firstTagProccessing )
             // If it is a new individual local name
             {
-                if (triplet.length > 2){
+                if (triplet.size() > 2){
                     try {
-                        Integer subjectPosition = Integer.parseInt(triplet[0]);
-                        String propertyLocalName = triplet[1];
-                        Integer objectPosition = Integer.parseInt(triplet[2]);
+                        Integer subjectPosition = Integer.parseInt(triplet.get(0));
+                        String propertyLocalName = triplet.get(1);
+                        Integer objectPosition = Integer.parseInt(triplet.get(2));
                         
                         // Add a property to the workflow
                         currentWorkflow.addPropertyLocalName(subjectPosition, objectPosition, propertyLocalName );
+                        currentWorkflow.getPropertiesLocalNames();
 
                       } catch (NumberFormatException e) {
-                        System.out.println(e);;
+//                        System.out.println(e);
                       }
 
                 }
@@ -223,17 +244,17 @@ class Handler implements ContentHandler
             else
             // The string is the continuation of the last individual local name
             {
-                if (triplet.length > 2){
+                if (triplet.size() > 2){
                     try {
-                        Integer subjectPosition = Integer.parseInt(triplet[0]);
-                        String propertyLocalName = triplet[1];
-                        Integer objectPosition = Integer.parseInt(triplet[2]);
+                        Integer subjectPosition = Integer.parseInt(triplet.get(0));
+                        String propertyLocalName = triplet.get(1);
+                        Integer objectPosition = Integer.parseInt(triplet.get(2));
                         
                         // Complete the last local name added
                         currentWorkflow.replaceLastAddedLink(subjectPosition, objectPosition, propertyLocalName );
 
                       } catch (NumberFormatException e) {
-                        System.out.println(e);;
+//                        System.out.println(e);
                       }
 
                 }

@@ -6,7 +6,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import java.util.ArrayList;
 
 class Parser 
@@ -22,15 +22,21 @@ class Parser
 	public Parser( )
 	throws SAXException
 	{
+                final String property = "http://apache.org/xml/properties/input-buffer-size";
+
+                
 		// Get an XML reader able to parse an XML containing sequences
 		xmlReader = XMLReaderFactory.createXMLReader( "org.apache.xerces.parsers.SAXParser" );
 		sequencesHandler = new Handler( );
 		xmlReader.setContentHandler( sequencesHandler );
+                xmlReader.setProperty(property, new Integer(16000));
+                System.out.println("xmlReader input-buffer-size: " + xmlReader.getProperty(property));
+                
 	}
 	
 	//---------------------------------------------------------- Public methods
 	// Extract the sequences described in the XML file
-	public ArrayList<RawUserSequence> extractRawUserSequences( final String fileURI ) 
+	public ArrayList<RawUserWorkflow> extractRawUserWorkflows( final String fileURI ) 
 	throws SAXException, IOException
 	{
 		// NOTE : Test the document against a DTD/XML Schema in order to see
