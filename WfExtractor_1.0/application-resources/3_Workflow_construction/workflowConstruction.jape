@@ -194,8 +194,8 @@ Rule: pair
             i2++ ;
          if ( relType.contains("has_EvolutionaryModel") )
             i3++ ;
-         if ( relType.contains("has_GeneOntologyAnnotation") )
-            i4++ ;
+         // if ( relType.contains("has_GeneOntologyAnnotation") )
+//             i4++ ;
          if ( relType.contains("has_HypothesisValidatedBy") )
             i5++;
          if ( relType.contains("has_InferredBy") )
@@ -204,8 +204,8 @@ Rule: pair
             i7++ ;
          if ( relType.contains("has_NbBootstraps") )
             i8++ ;
-         if ( relType.contains("has_OrganismDivision") )
-            i9++ ;
+         // if ( relType.contains("has_OrganismDivision") )
+//             i9++ ;
          if ( relType.contains("has_PhylogeneticMethod") )
             i10++ ;
          if ( relType.contains("has_RetrievedInDataBase") )
@@ -251,23 +251,23 @@ Rule: pair
    }
 
 
-   for(Annotation o1 : dataList1) {
-         String newString = "";
-         Long o1Start = o1.getStartNode().getOffset();
-         Long o1End = o1.getEndNode().getOffset();
-         AnnotationSet toks = inputAS.get("Token", o1Start, o1End);
-         List<Annotation> orderedToks = gate.Utils.inDocumentOrder(toks);
-         for(Annotation a : orderedToks)
-            newString=newString+a.getFeatures().get("string");
-
-         String newInst = "GO_"+o1.getFeatures().get("majorType").toString();
-         String newId = new String (o1.getId().toString());
-
-         if ( ! GeneOntologyString.contains(newString.toLowerCase()) )
-            GeneOntologyString.add(newString) ;
-         if( ! GeneOntologyInst.contains(newInst) )
-            GeneOntologyInst.add(newInst+"|"+newId) ;
-      }
+   // for(Annotation o1 : dataList1) {
+//          String newString = "";
+//          Long o1Start = o1.getStartNode().getOffset();
+//          Long o1End = o1.getEndNode().getOffset();
+//          AnnotationSet toks = inputAS.get("Token", o1Start, o1End);
+//          List<Annotation> orderedToks = gate.Utils.inDocumentOrder(toks);
+//          for(Annotation a : orderedToks)
+//             newString=newString+a.getFeatures().get("string");
+// 
+//          String newInst = "GO_"+o1.getFeatures().get("majorType").toString();
+//          String newId = new String (o1.getId().toString());
+// 
+//          if ( ! GeneOntologyString.contains(newString.toLowerCase()) )
+//             GeneOntologyString.add(newString) ;
+//          if( ! GeneOntologyInst.contains(newInst) )
+//             GeneOntologyInst.add(newInst+"|"+newId) ;
+//       }
 
    for(Annotation o2 : dataList2) {
          String newString = new String (o2.getFeatures().get("lookupString").toString());
@@ -291,16 +291,16 @@ Rule: pair
             DataFormatInst.add(newInst.split("#")[1]+"|"+newId);
       }
 
-   for(Annotation o4 : dataList4) {
-         String newString = new String (o4.getFeatures().get("lookupString").toString());
-         String newInst = new String (o4.getFeatures().get("inst").toString());
-         String newId = new String (o4.getId().toString());
-
-         if ( ! SourceTaxonString.contains(newString.toLowerCase()) )
-            SourceTaxonString.add(newString) ;
-         if( ! SourceTaxonInst.contains(newInst.split("#")[1]) )
-            SourceTaxonInst.add(newInst.split("#")[1]+"|"+newId);
-      }
+   // for(Annotation o4 : dataList4) {
+//          String newString = new String (o4.getFeatures().get("lookupString").toString());
+//          String newInst = new String (o4.getFeatures().get("inst").toString());
+//          String newId = new String (o4.getId().toString());
+// 
+//          if ( ! SourceTaxonString.contains(newString.toLowerCase()) )
+//             SourceTaxonString.add(newString) ;
+//          if( ! SourceTaxonInst.contains(newInst.split("#")[1]) )
+//             SourceTaxonInst.add(newInst.split("#")[1]+"|"+newId);
+//       }
 
 
    // for each Person, consider each Organization
@@ -529,10 +529,10 @@ Rule: pair
 
    // workflowString11.add(spaces1);
    workflowString11.add(DataTypeString);
-   workflowString11.add(GeneOntologyString);
+//    workflowString11.add(GeneOntologyString);
    workflowString11.add(DataBaseString);
    workflowString11.add(DataFormatString);
-   workflowString11.add(SourceTaxonString);
+//    workflowString11.add(SourceTaxonString);
    // workflowString11.add(spaces2);
    // workflowString11.add(spaces3);
    // workflowString11.add(spaces4);
@@ -553,10 +553,10 @@ Rule: pair
 
    // workflowInst11.add(spaces1);
    workflowInst11.add(DataTypeInst);
-   workflowInst11.add(GeneOntologyInst);
+//    workflowInst11.add(GeneOntologyInst);
    workflowInst11.add(DataBaseInst);
    workflowInst11.add(DataFormatInst);
-   workflowInst11.add(SourceTaxonInst);
+//    workflowInst11.add(SourceTaxonInst);
    // workflowInst11.add(spaces2);
    // workflowInst11.add(spaces3);
    // workflowInst11.add(spaces4);
@@ -608,12 +608,12 @@ Rule: pair
             workflowString12.add(relation);
       }
          
-      if ( relType.contains("has_GeneOntologyAnnotation") ) {
-         // System.out.println(r.getFeatures().get("DataType-id").toString());
-         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
-         if (! workflowString12.contains(relation))
-            workflowString12.add(relation);
-      }
+      // if ( relType.contains("has_GeneOntologyAnnotation") ) {
+//          // System.out.println(r.getFeatures().get("DataType-id").toString());
+//          String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+//          if (! workflowString12.contains(relation))
+//             workflowString12.add(relation);
+//       }
 
       if ( relType.contains("has_HypothesisValidatedBy") ){
          // System.out.println(r.getFeatures().get("DataType-id").toString());
@@ -643,13 +643,13 @@ Rule: pair
             workflowString12.add(relation);
       }
          
-      if ( relType.contains("has_OrganismDivision") ){
-         // System.out.println(r.getFeatures().get("DataType-id").toString());
-         String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
-         if (! workflowString12.contains(relation))
-            workflowString12.add(relation);
-
-      }
+      // if ( relType.contains("has_OrganismDivision") ){
+//          // System.out.println(r.getFeatures().get("DataType-id").toString());
+//          String relation="( "+r.getFeatures().get("Domain-string").toString()+", "+relType+", "+r.getFeatures().get("Range-string").toString()+" )";
+//          if (! workflowString12.contains(relation))
+//             workflowString12.add(relation);
+// 
+//       }
          
       if ( relType.contains("has_PhylogeneticMethod") ){
          // System.out.println(r.getFeatures().get("PhylogeneticInferenceProgram-id").toString());
@@ -701,7 +701,7 @@ Rule: pair
       }
 
       String relation="( "+domainInst+"|"+domainId+", "+relType+", "+rangeInst+"|"+rangeId+" )";
-      if (! workflowInst12.contains(relation))
+      if (! workflowInst12.contains(relation) && (! relType.contains("has_GeneOntologyAnnotation")) && (! relType.contains("has_OrganismDivision")) )
             workflowInst12.add(relation);
 
    }

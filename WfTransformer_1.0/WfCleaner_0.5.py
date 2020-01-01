@@ -30,17 +30,17 @@ fw.write('</Sequences>\n')
 
 # 2. CLEAN WHITE SPACES EVERY WHERE
 
-# newff=open('/Users/ahmedhalioui/Documents/Oxygen Projects/extracted_gold-like_wf_clean.xml','a')
-# regex = re.compile(r"\n+", re.IGNORECASE)
-# regex1 = re.compile(r".*MathML\"..\n", re.IGNORECASE)
-# regex2 = re.compile(r"<Sequence>\n</Sequence>", re.IGNORECASE)
-# regex3 = re.compile(r" xmlns:xlink=.+MathML\"", re.IGNORECASE)
-# 
-# with open(newf, 'r') as myfile:
-#     data=myfile.read()
-#     lines1 = re.sub(regex,"\n", data)
-#     lines2 = re.sub(regex1,"", lines1)
-#     lines3 = re.sub(regex2,"", lines2)
-#     lines4 = re.sub(regex3,"", lines3)
-#     lines = re.sub(regex,"\n", lines4)
-# newff.write(lines)
+newff=open('/Users/ahmedhalioui/Documents/Oxygen Projects/extracted_gold-like_wf_clean.xml','a')
+regex = re.compile(r"\n+", re.IGNORECASE)
+regex1 = re.compile(r".*MathML\"..\n", re.IGNORECASE)
+regex2 = re.compile(r"<Sequence>\n</Sequence>", re.IGNORECASE)
+regex3 = re.compile(r" xmlns:xlink=.+MathML\"", re.IGNORECASE)
+
+with open(newf, 'r') as myfile:
+    data=myfile.read()
+    lines1 = re.sub(regex,"\n", data)
+    lines2 = re.sub(regex1,"", lines1)
+    lines3 = re.sub(regex2,"", lines2)
+    lines4 = re.sub(regex3,"", lines3)
+    lines = re.sub(regex,"\n", lines4)
+newff.write(lines)

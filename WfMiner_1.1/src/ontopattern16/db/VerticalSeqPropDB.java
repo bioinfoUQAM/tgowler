@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import legacy.RawUserWorkflow;
+import legacy.RawUserSequence;
 import ontologyrep2.Concept;
 import ontologyrep2.Instance;
 import ontologyrep2.OntoRepresentation;
 import ontologyrep2.RadixTree;
 import ontologyrep2.Relation;
-import ontopatternmatching.Workflow;
+import ontopatternmatching.Sequence;
 
 /**
  * de quelle facon representer les props ?
@@ -30,7 +30,7 @@ import ontopatternmatching.Workflow;
  * @author Enridestroy
  */
 public class VerticalSeqPropDB {
-    public static void construire_vpdb(int[] vertical_db, ArrayList<Workflow> all_sequences, int nbr_concepts, 
+    public static void construire_vpdb(int[] vertical_db, ArrayList<Sequence> all_sequences, int nbr_concepts, 
             int nbr_seq, int range_of_one_item, final OntoRepresentation ontology, int BLOCK_SIZE, int BLOCK_SIZE_SHIFT, 
             final RadixTree.RadixNode... localNameNodes){        
         
@@ -94,9 +94,7 @@ public class VerticalSeqPropDB {
         //int nbr_positions_with_prop = 0;
         //int newTotalProps = 0;
         for(int p=0;p!=nbr_seq;p++){
-            final Workflow currSeq = all_sequences.get(p);
-//            ArrayList<Integer> flat_workflow = new ArrayList<>();
-//            currSeq.objects.forEach(flat_workflow::addAll);
+            final Sequence currSeq = all_sequences.get(p);
             final int ssz = currSeq.objects.size();
             
             System.out.println("--------- changement de sequence -------------");
@@ -688,7 +686,7 @@ public class VerticalSeqPropDB {
     
     
     /*
-    public static void construire_vpdb(int[] vertical_db, ArrayList<Workflow> all_sequences, int nbr_concepts, 
+    public static void construire_vpdb(int[] vertical_db, ArrayList<Sequence> all_sequences, int nbr_concepts, 
             int nbr_seq, int range_of_one_item, final OntoRepresentation ontology, int BLOCK_SIZE, int BLOCK_SIZE_SHIFT, 
             final RadixTree.RadixNode... localNameNodes){  
     */

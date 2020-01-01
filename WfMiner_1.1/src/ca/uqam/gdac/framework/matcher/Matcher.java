@@ -3,7 +3,7 @@ package ca.uqam.gdac.framework.matcher;
 import java.util.ArrayList;
 import ontologyrep2.OntoRepresentation;
 import ontopatternmatching.Motif;
-import ontopatternmatching.Workflow;
+import ontopatternmatching.Sequence;
 
 
 /**
@@ -30,21 +30,21 @@ public class Matcher extends BaseMatcher
 	 * @param input User sequence to confront against the pattern.
 	 * @param hierarchyRepresentation Hierarchy representation of the ontology.
 	 */
-	/*public Matcher( final Pattern pattern, final UserWorkflow input, final HierarchyRepresentation<Integer> hierarchyRepresentation )
+	/*public Matcher( final Pattern pattern, final UserSequence input, final HierarchyRepresentation<Integer> hierarchyRepresentation )
 	{
 		super( pattern, input, hierarchyRepresentation );
 		this.conceptMatcher = pattern.conceptMatcher( input, hierarchyRepresentation );
 		this.match = new ArrayList<Integer>( );
 	}*/
         
-        public Matcher( final Motif pattern, final Workflow input, final OntoRepresentation hierarchyRepresentation )
+        public Matcher( final Motif pattern, final Sequence input, final OntoRepresentation hierarchyRepresentation )
 	{
 		super( pattern, input, hierarchyRepresentation );
 		this.conceptMatcher = pattern.conceptMatcher( input, hierarchyRepresentation );
 		this.match = new ArrayList<Integer>( );
 	}
         
-        public void reset(Workflow input){
+        public void reset(Sequence input){
             this.match.clear();//vide l'arraylist
             this.conceptMatcher.reset(input);
             this.input = input;

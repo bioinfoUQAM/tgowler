@@ -2,7 +2,7 @@ package ca.uqam.gdac.framework.library;
 
 import java.util.ArrayList;
 import ontopatternmatching.Motif;
-import ontopatternmatching.Workflow;
+import ontopatternmatching.Sequence;
 
 /**
  * Library contains the user sequences to mine and the frequent patterns extract from the mining.<br/>
@@ -14,8 +14,8 @@ import ontopatternmatching.Workflow;
 public class Library 
 {
 	//-------------------------------------------------------------- Attributes
-	//private static ArrayList<UserWorkflow> userWorkflows;
-        private static ArrayList<Workflow> userWorkflows2;
+	//private static ArrayList<UserSequence> userSequences;
+        private static ArrayList<Sequence> userSequences2;
 	//private static ArrayList<Pattern> frequentPatterns;
 	public static ArrayList<Motif> frequentPatterns2;
 	//------------------------------------------------------------- Constructor
@@ -42,9 +42,9 @@ public class Library
 	 * 
 	 * @return The number of user sequences.
 	 */
-	public static Integer getNbUserWorkflows( )
+	public static Integer getNbUserSequences( )
 	{
-		return userWorkflows2.size( );
+		return userSequences2.size( );
 	}
 		
 	/**
@@ -52,31 +52,30 @@ public class Library
 	 * 
 	 * @return User sequences used for the mining.
 	 */
-	/*public static ArrayList<UserWorkflow> getUserWorkflows( )
+	/*public static ArrayList<UserSequence> getUserSequences( )
 	{
-		return Library.userWorkflows;
+		return Library.userSequences;
 	}*/
 	
-        public static ArrayList<Workflow> getUserWorkflows2( )
+        public static ArrayList<Sequence> getUserSequences2( )
 	{
-		return Library.userWorkflows2;
+		return Library.userSequences2;
 	}
 	
         
 	/**
 	 * Sets the user sequences used by the Miner to realize the mining.
 	 * 
-	 * @param userWorkflows User sequences used by the Miner.
+	 * @param userSequences User sequences used by the Miner.
 	 */
-	/*public static void setUserWorkflows( final ArrayList<UserWorkflow> userWorkflows )
+	/*public static void setUserSequences( final ArrayList<UserSequence> userSequences )
 	{
-		Library.userWorkflows = userWorkflows;
+		Library.userSequences = userSequences;
 	}*/
         
-        public static void setUserWorkflows2( final ArrayList<Workflow> userWorkflows )
+        public static void setUserSequences2( final ArrayList<Sequence> userSequences )
 	{
-            ArrayList<ArrayList<Integer>> flat_workflows = new ArrayList<ArrayList<Integer>>();
-            Library.userWorkflows2 = userWorkflows;
+		Library.userSequences2 = userSequences;
 	}
 	
 	//---------------------------------------------------------- Public methods

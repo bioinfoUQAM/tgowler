@@ -10,7 +10,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -18,6 +21,7 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.TimeZone;
 import legacy.Operation;
 import legacy.Pair;
 import ontologyrep2.Concept;
@@ -27,10 +31,11 @@ import ontologyrep2.Triplet;
 import ontopatternmatching.AppariementSolution;
 import ontopatternmatching.JobBlock;
 import ontopatternmatching.Motif;
-import ontopatternmatching.Workflow;
-import ontopatternmatching.WorkflowMatcher;
+import ontopatternmatching.Sequence;
+import ontopatternmatching.SequenceMatcher;
 import legacy.PatternGenerator;
 import legacy.PropertiesAndSubject;
+import org.apache.commons.math3.analysis.function.Log;
 
 /**
  *Miner realizes the mining of user sequences regarding to a minimum support.<br/>
@@ -101,23 +106,23 @@ public class Miner
             return addPropertyC( pattern );
 	}
         
-        public static ArrayList<Motif> findFrequentPatternsDF( final ArrayList<Workflow> userWorkflows, final double minSup, final OntoRepresentation hierarchyRepresentation, int minLevel, double minConf ){
+        public static ArrayList<Motif> findFrequentPatternsDF( final ArrayList<Sequence> userSequences, final double minSup, final OntoRepresentation hierarchyRepresentation, int minLevel ){
+            System.out.println("Level\tTime\t\tSize");
+            
             // Initialize the miner
-            Miner.initialize(userWorkflows, minSup, hierarchyRepresentation);      
-            ArrayList<Workflow> sequences = Library.getUserWorkflows2();
+            Miner.initialize(userSequences, minSup, hierarchyRepresentation);      
+            ArrayList<Sequence> sequences = Library.getUserSequences2();
             //pour chaque sequence on va lui creer une structure d'appriement
             AppariementSolution[] appariements = new AppariementSolution[sequences.size()];
             for(int i=0;i<sequences.size();i++){
-//                System.out.println("init_sequenceUtilisateur: "+sequences.get(0));
                 appariements[i] = new AppariementSolution();
                 appariements[i].sequenceUtilisateur = sequences.get(i);
                 appariements[i].appariement = new int[0];
             }
                         
             // Update the frequent patterns
-            System.out.println("next level ...");
-            Miner.generateAndTestDF(new Motif(), appariements, minLevel, minConf);
-            System.out.println("On a "+Library.frequentPatterns2.size()+" patterns.");
+            Miner.generateAndTestDF(new Motif(), appariements, minLevel, 0);
+//            System.out.println("On a "+Library.frequentPatterns2.size()+" patterns.");
             
             /**
              * Si on a des elements dans l'index, alors on generer un fichier d'index
@@ -175,11 +180,7 @@ public class Miner
 	//-------------------------------------------------- Private static methods
         
         private static ArrayList<Motif> addConceptC(final Motif motif, int minLevel){
-            return PatternGenerator.generateWorkflowsByACC(motif, hierarchyRepresentation, minLevel);
-        }
-        
-        private static ArrayList<Motif> appendConceptC(final Motif motif, int minLevel){
-            return PatternGenerator.generateWorkflowsByACC(motif, hierarchyRepresentation, minLevel);
+            return PatternGenerator.generateSequencesByACC(motif, hierarchyRepresentation, minLevel);
         }
         
         private static ArrayList<Motif> addPropertyC( final Motif motif ){
@@ -192,8 +193,8 @@ public class Miner
                     PropertiesRuler.apcFilterPropertiesBySrcPosition(motif, possibleProperties);
                     PropertiesRuler.apcFilterPropertiesById(motif, possibleProperties);
                 }
-                ArrayList<Motif> generateWorkflowsByAPC = PatternGenerator.generateWorkflowsByAPC(motif, possibleProperties);
-                for(Motif m : generateWorkflowsByAPC){
+                ArrayList<Motif> generateSequencesByAPC = PatternGenerator.generateSequencesByAPC(motif, possibleProperties);
+                for(Motif m : generateSequencesByAPC){
                     if(!candidates.contains(m)) candidates.add(m);
                 }
             }
@@ -224,11 +225,6 @@ public class Miner
             
             // 1. addConceptC
             ArrayList<Motif> addConceptC = addConceptC(motif, minLevel);
-            //System.out.println(""+addConceptC.size()+" ajouts de concepts...");
-            motifs_candidats.addAll(addConceptC);
-            
-            // 1. addConceptC
-            ArrayList<Motif> appendConceptC = addConceptC(motif, minLevel);
             //System.out.println(""+addConceptC.size()+" ajouts de concepts...");
             motifs_candidats.addAll(addConceptC);
             
@@ -269,7 +265,7 @@ public class Miner
                 Integer step=0;
                 switch (uriStep) {
                     case "DataCollectionStep":  cs.add(1); break;
-                    case "WorkflowAlignmentStep":  cs.add(2); break;
+                    case "SequenceAlignmentStep":  cs.add(2); break;
                     case "ModelSelectionStep":  cs.add(3); break;
                     case "PhylogeneticInferenceStep": cs.add(4); break;
                     case "HypothesisValidationStep":  cs.add(5); break;
@@ -297,15 +293,14 @@ public class Miner
         
         /**
          * 
-         * @param userWorkflows
+         * @param userSequences
          * @param minSup
          * @param hierarchyRepresentation 
          */
-        private static void initialize( final ArrayList<Workflow> userWorkflows, final double minSup, final OntoRepresentation hierarchyRepresentation ) 
+        private static void initialize( final ArrayList<Sequence> userSequences, final double minSup, final OntoRepresentation hierarchyRepresentation ) 
 	{
-//            System.out.println("userWorkflows: " + userWorkflows.toString());
             Library.initialize( );
-            Library.setUserWorkflows2(userWorkflows);
+            Library.setUserSequences2(userSequences);
             Miner.setMinSup(  minSup );
             Miner.setHierarchyRepresentation(hierarchyRepresentation );
 	}
@@ -314,8 +309,8 @@ public class Miner
             // New candidates
             ArrayList<Motif> candidates = new ArrayList<>();
             if(splConceptCAllowed(sequence)){
-                ArrayList<Motif> generateWorkflowsBySCC = PatternGenerator.generateWorkflowsBySCC(sequence, hierarchyRepresentation );
-                for(Motif m : generateWorkflowsBySCC){
+                ArrayList<Motif> generateSequencesBySCC = PatternGenerator.generateSequencesBySCC(sequence, hierarchyRepresentation );
+                for(Motif m : generateSequencesBySCC){
                     if(!candidates.contains(m)) candidates.add(m);
                 }
             }
@@ -341,8 +336,8 @@ public class Miner
                     // Keep the properties that have an ID < property sup
                     possibleProperties = PropertiesRuler.filterPropertiesByPropertySup(possibleProperties, pattern.propertySup);
                 }
-                ArrayList<Motif> generateWorkflowsBySPC = PatternGenerator.generateWorkflowsBySPC( pattern, possibleProperties);
-                for(Motif m : generateWorkflowsBySPC){
+                ArrayList<Motif> generateSequencesBySPC = PatternGenerator.generateSequencesBySPC( pattern, possibleProperties);
+                for(Motif m : generateSequencesBySPC){
                     if(!candidates.contains(m)) candidates.add(m);
                 }
                 //System.out.println("sequencesSPC:"+possibleProperties.size());
@@ -399,14 +394,14 @@ public class Miner
         /**
          * Modification de la methode pour qu'elle 
          * @param pattern
-         * @param userWorkflows
+         * @param userSequences
          * @return 
          */
-        public static AppariementSolution[] findMatchingWorkflows(Motif motif, final AppariementSolution[] previous_solutions, int[] n){
+        public static AppariementSolution[] findMatchingSequences(Motif motif, final AppariementSolution[] previous_solutions, int[] n){
                 //mise a jour de la stucture
                 motif.updateAppariementStructureWithCurrentPattern();
 
-                WorkflowMatcher m = new WorkflowMatcher();
+                SequenceMatcher m = new SequenceMatcher();
 
                 AppariementSolution[] solutions = new AppariementSolution[previous_solutions.length];
                 int i=0;
@@ -494,7 +489,7 @@ public class Miner
                         html.append(", \"start\":\"").append(motif.empty_structure.last_touched_position).append("\"");
                         //on cree un nouveau stringbuilder vide qui va contenir les steps
                         StringBuilder steps = new StringBuilder();
-                        WorkflowMatcher.html_output = true;
+                        SequenceMatcher.html_output = true;
                         
                         int[] nbr_steps = new int[1];
                         
@@ -552,17 +547,16 @@ public class Miner
                         }*/    
                     }
                     else{
-                        WorkflowMatcher.html_output = false;
+                        SequenceMatcher.html_output = false;
                         
                         /*int[] new_sol = new int[solution.appariement.length];
                         System.arraycopy(previous_matching.appariement, 0, new_sol, 0, previous_matching.appariement.length);
                         boolean[] alt = new boolean[motif.empty_structure.pile_de_taches.size()];
                         */
-                        //WorkflowMatcher.debug = true;
-//                        System.out.println("solution.appariement" + solution.appariement);
+                        //SequenceMatcher.debug = true;
                         matched = m.tryToMatch(point_de_depart, solution.appariement, alterations_de_solutions, previous_matching.sequenceUtilisateur, hierarchyRepresentation, motif);
                         /*
-                        //WorkflowMatcher.debug = false;
+                        //SequenceMatcher.debug = false;
                         boolean matched_beta = m.tryToMatch_BETA(point_de_depart, new_sol, alt, previous_matching.sequenceUtilisateur, hierarchyRepresentation, motif);
                         if(matched != matched_beta){
                             System.out.println("Les deux ne matchent pas !:"+matched+"vs"+matched_beta);
@@ -589,46 +583,49 @@ public class Miner
                 AppariementSolution[] sol = new AppariementSolution[i];
                 System.arraycopy(solutions, 0, sol, 0, i);
                 solutions = null;
-//                System.out.println(found_A+" contre "+found_B+" elements trouves");
-//                System.out.println("solutions" + solutions.appariement);
+                //System.out.println(found_A+" contre "+found_B+" elements trouves");
 		return sol;
         }
  	
     
         // Return the user sequences which match the pattern
-	public static Pair<ArrayList<Integer>, Set<Workflow>> findMatchingGold( Motif pattern, Set<Workflow> userWorkflows )
+	public static Pair<ArrayList<Integer>, Set<Sequence>> findMatchingGold( Motif pattern, Set<Sequence> userSequences )
 	{
-		Set<Workflow> matchingWorkflows = new HashSet( );
-//                Pair<Integer, Set<Workflow>> resultM =new Pair<Integer, Set<Workflow>>();
+		Set<Sequence> matchingSequences = new HashSet( );
+//                Pair<Integer, Set<Sequence>> resultM =new Pair<Integer, Set<Sequence>>();
                 
-		Matcher matcher = pattern.matcher( new Workflow(), hierarchyRepresentation );
+		Matcher matcher = pattern.matcher( new Sequence(), hierarchyRepresentation );
                 
                 ArrayList<Integer> solutions = new ArrayList();
                                 
 		// Find the sequences that match the pattern
-		for ( Workflow userWorkflow : userWorkflows )
+		for ( Sequence userSequence : userSequences )
 		{
-//                    System.out.println("Useq:"+userWorkflow.getConcepts().size());
-                    //Matcher matcher = pattern.matcher( userWorkflow, hierarchyRepresentation );
-                    //matcher = pattern.matcher( userWorkflow, hierarchyRepresentation );
-                    matcher.reset(userWorkflow);//remet a zero le matcher plutot que de faire des "new"
+//                    System.out.println("Useq:"+userSequence.getConcepts().size());
+                    //Matcher matcher = pattern.matcher( userSequence, hierarchyRepresentation );
+                    //matcher = pattern.matcher( userSequence, hierarchyRepresentation );
+                    matcher.reset(userSequence);//remet a zero le matcher plutot que de faire des "new"
                     if( matcher.find( ) )
                     {
                         //System.out.println("found");    
                         // NOTE : Improve the processing by saving the match ?
                         solutions.add(matcher.lastMatch);
-                        matchingWorkflows.add( userWorkflow );
+                        matchingSequences.add( userSequence );
                     }
 		}
-		return new Pair(solutions, matchingWorkflows);
+		return new Pair(solutions, matchingSequences);
 	}
         
         //!!!!!!!!!!!
 	// Recursive method used to generate and test candidates in a depth first way
 	// Return the set of frequent patterns
         // faire une verification du support avant de lancer le matching
-	private static void generateAndTestDF(Motif pattern, final AppariementSolution[] solutions, int minLevel, double minConf){
+	private static void generateAndTestDF(Motif pattern, final AppariementSolution[] solutions, int minLevel, int level){
             //System.out.println("******************NEXT LEVEL***************************");
+            long start = System.currentTimeMillis();
+            
+            // for rules !
+            double minConf=0.8;
             
             // Candidates generated from the current pattern
             ArrayList<Motif> candidates = generateCandidates2(pattern, minLevel);//n => n+1
@@ -638,26 +635,16 @@ public class Miner
             AppariementSolution[][] sequences_qui_matchent = new AppariementSolution[motifs_qui_matchent.length][0];
             
             int i=0;
-            System.out.println(candidates.size());
 //            System.out.println("========================== generating and testing =============================");
             for (Motif candidate : candidates){
-//                System.out.println(i + "/" + candidates.size());
-//                System.out.println("candidate: " + candidate.toString());
                                 
                 int[] nseq = new int[1];
                 
-//                System.out.println("previous solutions: " + solutions);
-//                for (AppariementSolution appar_sol : solutions){
-//                    System.out.println("motif: "+appar_sol.motif);
-//                    System.out.println("sequenceUtilisateur: "+appar_sol.sequenceUtilisateur);
-//                }
+                AppariementSolution[] seq = findMatchingSequences(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
                 
-                // TROUVER L'APPARIEMENT
-                AppariementSolution[] seq = findMatchingWorkflows(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
-                
-                //int relativeSupport2 = getRelativeSupport2(nseq[0] , Library.getNbUserWorkflows());
+                //int relativeSupport2 = getRelativeSupport2(nseq[0] , Library.getNbUserSequences());
                 //System.out.println(">>"+relativeSupport2+" vs "+minSup2);
-                //System.out.println("Support:"+getRelativeSupport2( nseq[0] , Library.getNbUserWorkflows() )+" cause:"+seq.length);
+                //System.out.println("Support:"+getRelativeSupport2( nseq[0] , Library.getNbUserSequences() )+" cause:"+seq.length);
                 
                 // GENERATE RULE HERE FROM PARENT as SUBLIST and CHILD as LIST
                 ArrayList<Integer> stepsInteger = conceptsToSteps(candidate,hierarchyRepresentation);
@@ -666,8 +653,8 @@ public class Miner
                 String conclusion=candString.toString().split(", ")[candString.toString().split(", ").length-1].replace("[", "").replace("]", "");
                         
                 candidate.support = nseq[0] / 10;
-                float premissSupp = pattern.support/(float)Library.getNbUserWorkflows()*100;
-                float ruleSupp = candidate.support/(float)Library.getNbUserWorkflows()*100;
+                float premissSupp = pattern.support/(float)Library.getNbUserSequences()*100;
+                float ruleSupp = candidate.support/(float)Library.getNbUserSequences()*100;
                 float conf = (float)ruleSupp/(float)premissSupp;
                 
 //                System.out.println(stepsInteger.toString());
@@ -687,7 +674,7 @@ public class Miner
 //                    System.out.println("minsupexact: "+minsupexact);
                     if(nseq[0] >= minsupexact){
                     // If the candidate is frequent
-//                        System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
+                        //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
                         candidate.support = nseq[0] / 10;
                         Library.addFrequentPattern(candidate);                   
                         motifs_qui_matchent[i] = candidate;
@@ -710,7 +697,7 @@ public class Miner
                             rule.steps=(ArrayList<Integer>)stepsInteger.clone();
                             rule.conclusion=candidate.concepts.get(candidate.concepts.size()-1);
                             rule.confidence=conf*100;
-                            rule.support=seq.length/(float)Library.getNbUserWorkflows()*100;
+                            rule.support=seq.length/(float)Library.getNbUserSequences()*100;
                             rule.Msequences=seq;
                             rule.pattern=candidate;
                             rule.prefix=pattern;
@@ -734,14 +721,13 @@ public class Miner
                 }
                 else
                 {
-                    if(getRelativeSupport2(nseq[0] , Library.getNbUserWorkflows()) >= minSup2){
+                    if(getRelativeSupport2(nseq[0] , Library.getNbUserSequences()) >= minSup2){
                     // If the candidate is frequent
                         //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
                         candidate.support = nseq[0] / 10;
                         Library.addFrequentPattern(candidate);                   
                         motifs_qui_matchent[i] = candidate;
                         sequences_qui_matchent[i] = seq;
-//                        System.out.println("sequences_qui_matchent: " + seq);
 //                        sequences_qui_matchentApply[i] = seqApply;
                         i++;
                         
@@ -759,7 +745,7 @@ public class Miner
                             rule.steps=(ArrayList<Integer>)stepsInteger.clone();
                             rule.conclusion=candidate.concepts.get(candidate.concepts.size()-1);
                             rule.confidence=conf*100;
-                            rule.support=seq.length/(float)Library.getNbUserWorkflows()*100;
+                            rule.support=seq.length/(float)Library.getNbUserSequences()*100;
                             rule.Msequences=seq;
                             rule.pattern=candidate;
                             rule.prefix=pattern;
@@ -790,26 +776,32 @@ public class Miner
             
             i=0;
             //Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i]);
-               
-            // LES MOTIFS QUI MATCHENT LE CANDIDAT
-//            System.out.println("matchings: " + motifs_qui_matchent.length);
+            
+            long finish = System.currentTimeMillis();
+            long timeElapsed = finish - start;
+            Date date = new Date(timeElapsed);
+            DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+            String dateFormatted = formatter.format(date);
+            
+            System.out.println(level + "\t" + dateFormatted + "\t" + candidates.size());
+            
             while(i < motifs_qui_matchent.length && motifs_qui_matchent[i]!=null){
-//                System.out.println("motifs_qui_matchent[i]" + motifs_qui_matchent[i]);
-                Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, minConf);
-                sequences_qui_matchent[i] = null;
-                motifs_qui_matchent[i]=null;
+                
+                Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
+                sequences_qui_matchent[i] = null;motifs_qui_matchent[i]=null;
                 i++;
             }
 	}
 	
 	// Return the relative support of the set of sequences regarding to the total of user sequences
         //q;skdqlksdjlqsjdkq
-	private static double getRelativeSupport( final Set<Workflow> sequences )
+	private static double getRelativeSupport( final Set<Sequence> sequences )
 	{
-		double nbWorkflows =  ( double ) sequences.size( );
-		double totalWorkflows = ( double ) Library.getNbUserWorkflows( );
-                //System.out.println(nbWorkflows+"/"+totalWorkflows);
-		double relativeSupport = nbWorkflows / totalWorkflows;
+		double nbSequences =  ( double ) sequences.size( );
+		double totalSequences = ( double ) Library.getNbUserSequences( );
+                //System.out.println(nbSequences+"/"+totalSequences);
+		double relativeSupport = nbSequences / totalSequences;
 		return relativeSupport;
 	}
         

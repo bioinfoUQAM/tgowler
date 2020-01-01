@@ -24,7 +24,7 @@ public abstract class PatternGenerator{
          * @param hierarchyRepresentation
          * @return 
          */
-        public static ArrayList<Motif> generateWorkflowsByACC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel ){
+        public static ArrayList<Motif> generateSequencesByACC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel ){
 		ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
                 
                 /*System.out.println("voici les root concepts:"+hierarchyRepresentation.root_relations.size());
@@ -33,19 +33,19 @@ public abstract class PatternGenerator{
                 }
                 System.exit(1);
 		*/
-                ArrayList<Motif> newWorkflows = new ArrayList<>();
+                ArrayList<Motif> newSequences = new ArrayList<>();
                 /**
                  * Pour tous les concepts racines, on cree un nouveau pattern avec en plus le concept racine
                  */
                 if(rootConcepts != null){
                     for (Concept rootConcept : rootConcepts ){
-                        Motif newWorkflow = new Motif(motif);
-                        newWorkflow.addConceptC(rootConcept.index);//CRITIQUE !!!
-                        if(!newWorkflows.contains(newWorkflow)) newWorkflows.add(newWorkflow);
+                        Motif newSequence = new Motif(motif);
+                        newSequence.addConceptC(rootConcept.index);//CRITIQUE !!!
+                        if(!newSequences.contains(newSequence)) newSequences.add(newSequence);
                     }
                 }
 		
-		return newWorkflows;
+		return newSequences;
 	}        
         
         /**
@@ -63,7 +63,7 @@ public abstract class PatternGenerator{
          * @param hierarchyRepresentation
          * @return 
          */
-        public static ArrayList<Motif> generateWorkflowsBySCC( final Motif motif, final OntoRepresentation hierarchyRepresentation ){
+        public static ArrayList<Motif> generateSequencesBySCC( final Motif motif, final OntoRepresentation hierarchyRepresentation ){
             //ArrayList<Integer> concepts = motif.concepts;            
             // Get the concept to specialize and its children
             Integer lastConcept = motif.concepts.get(motif.concepts.size()-1);
@@ -88,14 +88,14 @@ public abstract class PatternGenerator{
             }
             System.exit(1);*/
             // Specialize this concept
-            ArrayList<Motif> newWorkflows = new ArrayList<>();
+            ArrayList<Motif> newSequences = new ArrayList<>();
             for(Concept conceptChild : conceptChildren){
                 //System.out.println("son is : "+conceptChild.index);
-                Motif newWorkflow = new Motif(motif);
-                newWorkflow.splConceptC(conceptChild.index);//est ce que ca marche
-                if(!newWorkflows.contains(newWorkflow)) newWorkflows.add(newWorkflow);
+                Motif newSequence = new Motif(motif);
+                newSequence.splConceptC(conceptChild.index);//est ce que ca marche
+                if(!newSequences.contains(newSequence)) newSequences.add(newSequence);
             }
-            return newWorkflows;
+            return newSequences;
 	}
                 
         /**
@@ -104,10 +104,10 @@ public abstract class PatternGenerator{
          * @param propertiesAndSubject
          * @return 
          */
-        public static ArrayList<Motif> generateWorkflowsByAPC( final Motif motif, final ArrayList<PropertiesAndSubject> propertiesAndSubject )
+        public static ArrayList<Motif> generateSequencesByAPC( final Motif motif, final ArrayList<PropertiesAndSubject> propertiesAndSubject )
 	{
             // Set of the generated sequences
-            ArrayList<Motif> newWorkflows = new ArrayList<>( );
+            ArrayList<Motif> newSequences = new ArrayList<>( );
             // Creation of a new sequence by adding the applicable properties
             for ( PropertiesAndSubject propertiesAndPosition : propertiesAndSubject ){
                 Integer positionSource = propertiesAndPosition.getSecond();	
@@ -115,27 +115,27 @@ public abstract class PatternGenerator{
 
                 for(Relation r : temp){
                     //System.out.println("Triplets:(r)"+t.relation.index+",(d)"+t.domaine.index+",(c)"+t.codomaine.index);
-                    Motif newWorkflow = new Motif( motif );
+                    Motif newSequence = new Motif( motif );
                     // Addition of the property in the new sequence
-                    newWorkflow.addPropertyC(positionSource, r.index);
-                    if(!newWorkflows.contains(newWorkflow)) newWorkflows.add( newWorkflow );
+                    newSequence.addPropertyC(positionSource, r.index);
+                    if(!newSequences.contains(newSequence)) newSequences.add( newSequence );
                 }
             }
-            return newWorkflows;
+            return newSequences;
 	}
                 
-        public static ArrayList<Motif> generateWorkflowsBySPC( final Motif motif, final ArrayList<Relation> applicableProperties )
+        public static ArrayList<Motif> generateSequencesBySPC( final Motif motif, final ArrayList<Relation> applicableProperties )
 	{
 		// Set of the generated new sequences
-		ArrayList<Motif> newWorkflows = new ArrayList<>( );
+		ArrayList<Motif> newSequences = new ArrayList<>( );
 		// Get the positions of the source and the target concept
 		Integer sourcePosition = motif.sourcePositionInf-1;
 		
 		for (Relation propertyChild : applicableProperties){
-			Motif newWorkflow = new Motif(motif);
-			newWorkflow.splPropertyC(sourcePosition, propertyChild.index);
-                        if(!newWorkflows.contains(newWorkflow)) newWorkflows.add( newWorkflow );
+			Motif newSequence = new Motif(motif);
+			newSequence.splPropertyC(sourcePosition, propertyChild.index);
+                        if(!newSequences.contains(newSequence)) newSequences.add( newSequence );
 		}
-		return newWorkflows;
+		return newSequences;
 	}
 }

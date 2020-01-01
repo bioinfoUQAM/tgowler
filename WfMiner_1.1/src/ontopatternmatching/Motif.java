@@ -20,7 +20,7 @@ import ontologyrep2.OntoRepresentation;
  * 
  * @author Enridestroy
  */
-//public class Motif  extends IntermediateWorkflow{
+//public class Motif  extends IntermediateSequence{
 public class Motif {
     public ArrayList<Integer> concepts = new ArrayList<>();
     public ArrayList<Integer[]> relations = new ArrayList<>();
@@ -84,7 +84,7 @@ public class Motif {
     //chaque fois que l'on modifie la represnetation, il s'agit d'une copie contenant l'appariement du niveau n-1
     
     
-    //public WorkflowMatcher sm = null;
+    //public SequenceMatcher sm = null;
     
     /**
 	 * Given a concept, returns the longest path through all it´s sub concepts.
@@ -94,12 +94,12 @@ public class Motif {
 	 * <br/>
 	 * NOTE: Assumes that the ontology is structure like a tree
 	 */
-    public ConceptMatcher conceptMatcher( final Workflow input, final OntoRepresentation hierarchyRepresentation )
+    public ConceptMatcher conceptMatcher( final Sequence input, final OntoRepresentation hierarchyRepresentation )
     {
 	return ( new ConceptMatcher( this, input, hierarchyRepresentation ) );
     }
     
-    public Matcher matcher( Workflow input, OntoRepresentation hierarchyRepresentation )
+    public Matcher matcher( Sequence input, OntoRepresentation hierarchyRepresentation )
     {
         return ( new Matcher( this, input, hierarchyRepresentation ) );
     }
@@ -129,7 +129,7 @@ public class Motif {
             if (hierarchyRepresentation.isConceptEqualOrDescendant(103, c))
                 suppProg++;
             
-            // WorkflowAlignmentProgram
+            // SequenceAlignmentProgram
             if (hierarchyRepresentation.isConceptEqualOrDescendant(110, c))
                 suppProg++;
             
@@ -234,19 +234,15 @@ public class Motif {
     @Override
     public String toString(){
         StringBuilder s = new StringBuilder();
-//        s.append("m_items:").append(this.concepts.size()).append(",").append(this.relations.size());
-        s.append("Concepts_ID : ");
+        s.append("m_items:").append(this.concepts.size()).append(",").append(this.relations.size());
+        s.append(" : ");
         for(Integer c : concepts){
             s.append("").append(c).append(", ");
         }
-        if (relations.size() > 0) {
-            s.append("Relations_ID : ");
         for(Integer[] r : relations){
             s.append("{").append(r[0]).append(" => ").append(r[1]).append(",").append(r[2]).append("}, ");
         }
-        }
-        
-        return s.toString().substring(0, s.length() - 2);
+        return s.toString();
     }
     
     /**
@@ -349,12 +345,12 @@ public class Motif {
 //    public AppariementStructure createAppariementStructure(AppariementStructure a){
 //        /*if(this.empty_structure!=null){
 //            System.out.println("Using already defined sequence matcher.");
-//            this.clearWorkflowMatcher();
+//            this.clearSequenceMatcher();
 //            return this.empty_structure;
 //        }
 //        else{*/
 //            //System.out.println("Building new sequence matcher.");
-//            //WorkflowMatcher sm = new WorkflowMatcher();
+//            //SequenceMatcher sm = new SequenceMatcher();
 //            /**
 //             * Permet de creer une nouvelle structure d'appariement vide a partir du motif courrant
 //             */
@@ -452,7 +448,7 @@ public class Motif {
 //            //System.out.println("adding relation");
 //        }
 //        //}
-//        //WorkflowMatcher.debug = true;
+//        //SequenceMatcher.debug = true;
 //                
 //        //System.out.println("Cap:"+a.concepts_to_blocks.size()+"vs"+"s:"+c_solutions.length);        
 //        //mise a jour des solutions de concepts
@@ -705,11 +701,11 @@ public class Motif {
 //        return a;
 //    }
     
-    public void clearWorkflowMatcher(AppariementStructure a){
+    public void clearSequenceMatcher(AppariementStructure a){
         for(JobBlock b : a.pile_de_taches){
             b.solution = 0;
         }
-        //this.empty_structure.userWorkflow = s;
+        //this.empty_structure.userSequence = s;
         //this.firstConceptBlock.solution = 0;
         
         

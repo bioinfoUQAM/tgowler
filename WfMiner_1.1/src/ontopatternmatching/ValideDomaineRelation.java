@@ -20,7 +20,7 @@ public final class ValideDomaineRelation implements Job{
      * @return 
      */
     @Override
-    public final int doJob(JobBlock block, final Workflow sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m) {
+    public final int doJob(JobBlock block, final Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m) {
         int size=sequence.relations.size();
         RelationJobBlock rjob = ((RelationJobBlock)block);
         int solution = appariement[block.position];
@@ -45,13 +45,13 @@ public final class ValideDomaineRelation implements Job{
         
         int j =0;
         Integer[] curr_rel = rjob.curr_rel;
-        if(WorkflowMatcher.debug) System.out.println("Searching domain..."+block.prev.position);
+        if(SequenceMatcher.debug) System.out.println("Searching domain..."+block.prev.position);
         
         //si notre concept est domaine d'une autre relation precedente
         if(rjob.domaine!=null){
             //on place notre curseur a droite
             j = solution_domaine;
-            if(WorkflowMatcher.debug) System.out.println("(D) Starting from "+j+".");
+            if(SequenceMatcher.debug) System.out.println("(D) Starting from "+j+".");
         }
          
         //si on a deja matche cette case au moins une fois avec une solution et que notre concept a une solution
@@ -62,20 +62,20 @@ public final class ValideDomaineRelation implements Job{
             if(block.prev.prev!=null && block.prev.prev.last_domain_added!=null){
                 //on place le curseur a droite de cette solution
                 j = prev_prev_domaine;
-                if(WorkflowMatcher.debug) System.out.println("(D) Setting j to "+j+".");
+                if(SequenceMatcher.debug) System.out.println("(D) Setting j to "+j+".");
             }
             else{
                 //sinon, on repart au debut
-                j = 0;if(WorkflowMatcher.debug) System.out.println("(D) Reseting j to "+j+".");
+                j = 0;if(SequenceMatcher.debug) System.out.println("(D) Reseting j to "+j+".");
             }
         }
         //on est dans le premier concept de la case, on n'a jamais matche correctement la case
         else{
             //que doit on faire ici ? normalement rien du tout...
-            if(WorkflowMatcher.debug) System.out.println("Cas inconnu!!!!");
+            if(SequenceMatcher.debug) System.out.println("Cas inconnu!!!!");
         }
         
-        if(WorkflowMatcher.debug) System.out.println("(D) Starting j at "+j+".");
+        if(SequenceMatcher.debug) System.out.println("(D) Starting j at "+j+".");
         
         //System.out.println("Searching for relation:("+block.item+","+block.prev.item+",?)");
         for(int i=j;i<size;i++){
@@ -86,7 +86,7 @@ public final class ValideDomaineRelation implements Job{
             if(curr_rel[1] == prev_solution){
                 //si le codomaine correspond aussi 
                 if(ontology.isPropertyEqualOrDescendant(block.item, curr_rel[0])){
-                    if(WorkflowMatcher.debug) System.out.println("(D)Found potential relation:"+i+" => "+block.item+" is "
+                    if(SequenceMatcher.debug) System.out.println("(D)Found potential relation:"+i+" => "+block.item+" is "
                             + "equal or D to "+curr_rel[0]);
                     rjob.curr_rel = curr_rel;
                     
@@ -95,12 +95,12 @@ public final class ValideDomaineRelation implements Job{
             }
             //si > alors on sort.
         }
-        if(WorkflowMatcher.debug) System.out.println("No more solutions for Domain....GOING BACK");
+        if(SequenceMatcher.debug) System.out.println("No more solutions for Domain....GOING BACK");
         return 0;
     }
 
     @Override
-    public int doJob_with_output(JobBlock block, final Workflow sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m, String[] info) {
+    public int doJob_with_output(JobBlock block, final Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m, String[] info) {
         int size=sequence.relations.size();
         RelationJobBlock rjob = ((RelationJobBlock)block);
         int solution = appariement[block.position];
@@ -128,13 +128,13 @@ public final class ValideDomaineRelation implements Job{
         
         int j =0;
         Integer[] curr_rel = rjob.curr_rel;
-        if(WorkflowMatcher.debug) System.out.println("Searching domain..."+block.prev.position);
+        if(SequenceMatcher.debug) System.out.println("Searching domain..."+block.prev.position);
         
         //si notre concept est domaine d'une autre relation precedente
         if(rjob.domaine!=null){
             //on place notre curseur a droite
             j = solution_domaine;
-            if(WorkflowMatcher.debug) System.out.println("(D) Starting from "+j+".");
+            if(SequenceMatcher.debug) System.out.println("(D) Starting from "+j+".");
             _info.append("On commence a chercher a partir de ").append(j).append(".");
         }
          
@@ -148,11 +148,11 @@ public final class ValideDomaineRelation implements Job{
                 //on place le curseur a droite de cette solution
                 j = prev_prev_domaine;
                 _info.append("On est pas dans le premier concept et il possede au moins un domaine. On commence a partir de ").append(j).append(".");
-                if(WorkflowMatcher.debug) System.out.println("(D) Setting j to "+j+".");
+                if(SequenceMatcher.debug) System.out.println("(D) Setting j to "+j+".");
             }
             else{
                 //sinon, on repart au debut
-                j = 0;if(WorkflowMatcher.debug) System.out.println("(D) Reseting j to "+j+".");
+                j = 0;if(SequenceMatcher.debug) System.out.println("(D) Reseting j to "+j+".");
                 _info.append("On repart de zero.");
             }
         }
@@ -160,10 +160,10 @@ public final class ValideDomaineRelation implements Job{
         else{
             _info.append("Cas inconnu. Quoi qu il arrive, on a rien a faire de special.");
             //que doit on faire ici ? normalement rien du tout...
-            if(WorkflowMatcher.debug) System.out.println("Cas inconnu!!!!");
+            if(SequenceMatcher.debug) System.out.println("Cas inconnu!!!!");
         }
         
-        if(WorkflowMatcher.debug) System.out.println("(D) Starting j at "+j+".");
+        if(SequenceMatcher.debug) System.out.println("(D) Starting j at "+j+".");
         _info.append("Debut de la recherche.");
         //System.out.println("Searching for relation:("+block.item+","+block.prev.item+",?)");
         for(int i=j;i<size;i++){
@@ -174,7 +174,7 @@ public final class ValideDomaineRelation implements Job{
             if(curr_rel[1] == prev_solution){
                 //si le codomaine correspond aussi 
                 if(ontology.isPropertyEqualOrDescendant(block.item, curr_rel[0])){
-                    if(WorkflowMatcher.debug) System.out.println("(D)Found potential relation:"+i+" => "+block.item+" is "
+                    if(SequenceMatcher.debug) System.out.println("(D)Found potential relation:"+i+" => "+block.item+" is "
                             + "equal or D to "+curr_rel[0]);
                     rjob.curr_rel = curr_rel;
                     _info.append("Une correspondance a ete trouvee.");
@@ -184,7 +184,7 @@ public final class ValideDomaineRelation implements Job{
             }
             //si > alors on sort.
         }
-        if(WorkflowMatcher.debug) System.out.println("No more solutions for Domain....GOING BACK");
+        if(SequenceMatcher.debug) System.out.println("No more solutions for Domain....GOING BACK");
         _info.append("Aucune correspondance n'a ete trouvee.");
         info[0] = _info.toString();
         return 0;

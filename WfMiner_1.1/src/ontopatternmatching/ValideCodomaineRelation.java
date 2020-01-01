@@ -19,7 +19,7 @@ public final class ValideCodomaineRelation implements Job{
      * @return 
      */
     @Override
-    public final int doJob(JobBlock block, final Workflow sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m) {
+    public final int doJob(JobBlock block, final Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m) {
         //chercher si il existe une relation de type dans block dans les relations
         RelationJobBlock rjob = ((RelationJobBlock)block);
         int size=sequence.relations.size();
@@ -47,7 +47,7 @@ public final class ValideCodomaineRelation implements Job{
         //on va recuperer la relation courrante comme etant la relation trouvee par la case domaine
         Integer[] curr_rel = sequence.relations.get(ii);//relation courrante
         
-        if(WorkflowMatcher.debug) System.out.println("Searching Range..."+block.prev.position+" from"+ii);
+        if(SequenceMatcher.debug) System.out.println("Searching Range..."+block.prev.position+" from"+ii);
         
         //si on a un codomaine precedent et que la solution de celui ci est plus a droite que la solution potentielle actuelle...
         if(rjob.codomaine!=null && solution_codomaine > rel_domaine){
@@ -60,7 +60,7 @@ public final class ValideCodomaineRelation implements Job{
             ii = solution_codomaine;
             //on actualise la relation courrante
             curr_rel = sequence.relations.get(ii);
-            if(WorkflowMatcher.debug) System.out.println("(R) Starting from "+ii+" because "+rel_domaine+" smaller than "+ii+".");
+            if(SequenceMatcher.debug) System.out.println("(R) Starting from "+ii+" because "+rel_domaine+" smaller than "+ii+".");
         }
         //si on a peut etre une case codomaine precedente mais la relations potentielle trouvee par le domaine est plus a droite que celle ci
         //la case precedente n'a donc aucun impact, on n'en tient donc pas compte
@@ -68,7 +68,7 @@ public final class ValideCodomaineRelation implements Job{
             //on demarre avec la meme relation que dans la partie domaine
             if(curr_rel[2] == position_codomaine_dans_sequence){
                 //si la position du codomaine correspond a la position trouvee pour le concept dans le bloc au dessus
-                if(WorkflowMatcher.debug) System.out.println("NICE MATCHING !!!");
+                if(SequenceMatcher.debug) System.out.println("NICE MATCHING !!!");
                 //on a trouve et on sort
                 return ii+1;
             }
@@ -82,10 +82,10 @@ public final class ValideCodomaineRelation implements Job{
         
         //tant qu'il reste des relationsp potentielles...
         while(ii<size){
-            if(WorkflowMatcher.debug) System.out.println("(R)"+(ii-1)+" does not match, trying to match relation "+ii+".");
+            if(SequenceMatcher.debug) System.out.println("(R)"+(ii-1)+" does not match, trying to match relation "+ii+".");
             //si le domaine ne correspond plus, 
             if(curr_rel[1] != position_domaine_dans_sequence){
-                if(WorkflowMatcher.debug) System.out.println("The domain as changed : ["+(position_domaine_dans_sequence)+"vs"+curr_rel[1]+"]=> exiting...");
+                if(SequenceMatcher.debug) System.out.println("The domain as changed : ["+(position_domaine_dans_sequence)+"vs"+curr_rel[1]+"]=> exiting...");
                 //il n'y a plus de relations potentielles (a cause de l'ordre)
                 break;
             }
@@ -96,7 +96,7 @@ public final class ValideCodomaineRelation implements Job{
                     //si la propriete matche aussi
                     if(ontology.isPropertyEqualOrDescendant(block.item, curr_rel[0])){
 
-                        if(WorkflowMatcher.debug) 
+                        if(SequenceMatcher.debug) 
                             System.out.println("(R)Found potential relation:"+ii+" => "+block.item+" is "+ "equal or D to "+curr_rel[0]);
                         //alors c'est bon et on renvoie la position de la relation qui matche
                         return ii+1;
@@ -127,12 +127,12 @@ public final class ValideCodomaineRelation implements Job{
                 }   
             }
         }
-        if(WorkflowMatcher.debug) System.out.println("No more solutions for Range....GOING BACK");
+        if(SequenceMatcher.debug) System.out.println("No more solutions for Range....GOING BACK");
         return 0;
     }
 
     @Override
-    public int doJob_with_output(JobBlock block, final Workflow sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m, String[] info) {
+    public int doJob_with_output(JobBlock block, final Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m, String[] info) {
         StringBuilder _info = new StringBuilder();
         
         //chercher si il existe une relation de type dans block dans les relations
@@ -169,7 +169,7 @@ public final class ValideCodomaineRelation implements Job{
         //on va recuperer la relation courrante comme etant la relation trouvee par la case domaine
         Integer[] curr_rel = sequence.relations.get(ii);//relation courrante
         
-        if(WorkflowMatcher.debug) System.out.println("Searching Range..."+block.prev.position+" from"+ii);
+        if(SequenceMatcher.debug) System.out.println("Searching Range..."+block.prev.position+" from"+ii);
         
         //si on a un codomaine precedent et que la solution de celui ci est plus a droite que la solution potentielle actuelle...
         if(rjob.codomaine!=null && solution_codomaine > rel_domaine){
@@ -186,7 +186,7 @@ public final class ValideCodomaineRelation implements Job{
             _info.append("Alors on se place a droite de cette solution.");
             //on actualise la relation courrante
             curr_rel = sequence.relations.get(ii);
-            if(WorkflowMatcher.debug) System.out.println("(R) Starting from "+ii+" because "+rel_domaine+" smaller than "+ii+".");
+            if(SequenceMatcher.debug) System.out.println("(R) Starting from "+ii+" because "+rel_domaine+" smaller than "+ii+".");
         }
         //si on a peut etre une case codomaine precedente mais la relations potentielle trouvee par le domaine est plus a droite que celle ci
         //la case precedente n'a donc aucun impact, on n'en tient donc pas compte
@@ -196,7 +196,7 @@ public final class ValideCodomaineRelation implements Job{
             if(curr_rel[2] == position_codomaine_dans_sequence){
                 _info.append("La solution actuelle est possible.");
                 //si la position du codomaine correspond a la position trouvee pour le concept dans le bloc au dessus
-                if(WorkflowMatcher.debug) System.out.println("NICE MATCHING !!!");
+                if(SequenceMatcher.debug) System.out.println("NICE MATCHING !!!");
                 //on a trouve et on sort
                 
                 info[0] = _info.toString();
@@ -220,10 +220,10 @@ public final class ValideCodomaineRelation implements Job{
         _info.append("On passe a la recherche sequentielle.");
         //tant qu'il reste des relationsp potentielles...
         while(ii<size){
-            if(WorkflowMatcher.debug) System.out.println("(R)"+(ii-1)+" does not match, trying to match relation "+ii+".");
+            if(SequenceMatcher.debug) System.out.println("(R)"+(ii-1)+" does not match, trying to match relation "+ii+".");
             //si le domaine ne correspond plus, 
             if(curr_rel[1] != position_domaine_dans_sequence){
-                if(WorkflowMatcher.debug) System.out.println("The domain as changed : ["+(position_domaine_dans_sequence)+"vs"+curr_rel[1]+"]=> exiting...");
+                if(SequenceMatcher.debug) System.out.println("The domain as changed : ["+(position_domaine_dans_sequence)+"vs"+curr_rel[1]+"]=> exiting...");
                 //il n'y a plus de relations potentielles (a cause de l'ordre)
                 _info.append("Il n y a plus de retations potentielle (a cause de l ordre de tri)");
                 break;
@@ -235,7 +235,7 @@ public final class ValideCodomaineRelation implements Job{
                     //si la propriete matche aussi
                     if(ontology.isPropertyEqualOrDescendant(block.item, curr_rel[0])){
 
-                        if(WorkflowMatcher.debug) 
+                        if(SequenceMatcher.debug) 
                             System.out.println("(R)Found potential relation:"+ii+" => "+block.item+" is "+ "equal or D to "+curr_rel[0]);
                         //alors c'est bon et on renvoie la position de la relation qui matche
                         _info.append("On a trouve une correspondance.");
@@ -268,7 +268,7 @@ public final class ValideCodomaineRelation implements Job{
                 }   
             }
         }
-        if(WorkflowMatcher.debug) System.out.println("No more solutions for Range....GOING BACK");
+        if(SequenceMatcher.debug) System.out.println("No more solutions for Range....GOING BACK");
         _info.append("Pas de correspondance trouvee.");
         info[0] = _info.toString();
         return 0;

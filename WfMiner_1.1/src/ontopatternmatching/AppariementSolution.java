@@ -14,10 +14,6 @@ package ontopatternmatching;
 public class AppariementSolution {
     public AppariementStructure parcours;
     public int[] appariement;
-    public Workflow sequenceUtilisateur;
+    public Sequence sequenceUtilisateur;
     public Motif motif;
-    
-    public String getSequenceUtilisateur(){
-        return this.sequenceUtilisateur.toString();
-    }
 }

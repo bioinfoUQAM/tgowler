@@ -6,7 +6,7 @@ import java.util.Set;
 import legacy.Pair;
 import ontologyrep2.OntoRepresentation;
 import ontopatternmatching.Motif;
-import ontopatternmatching.Workflow;
+import ontopatternmatching.Sequence;
 
 
 /**
@@ -31,13 +31,13 @@ public class PropertyMatcher extends BaseMatcher
 	 * @param conceptMatch Match between the concepts of the input and the pattern.
 	 * @param hierarchyRepresentation Hierarchy representation of the ontology.
 	 */
-	/*public PropertyMatcher( final Pattern pattern, final UserWorkflow input, final ArrayList<Integer> conceptMatch, final HierarchyRepresentation<Integer> hierarchyRepresentation )
+	/*public PropertyMatcher( final Pattern pattern, final UserSequence input, final ArrayList<Integer> conceptMatch, final HierarchyRepresentation<Integer> hierarchyRepresentation )
 	{
 		super( pattern, input, hierarchyRepresentation );
 		this.conceptMatch = conceptMatch;
 	}*/
         
-        public PropertyMatcher( final Motif pattern, final Workflow input, final ArrayList<Integer> conceptMatch, final OntoRepresentation hierarchyRepresentation )
+        public PropertyMatcher( final Motif pattern, final Sequence input, final ArrayList<Integer> conceptMatch, final OntoRepresentation hierarchyRepresentation )
 	{
             super( pattern, input, hierarchyRepresentation );
             this.conceptMatch = conceptMatch;

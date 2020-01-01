@@ -5,7 +5,7 @@
 
 package preprocessing;
 
-import legacy.RawUserWorkflow;
+import legacy.RawUserSequence;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -27,31 +27,26 @@ import ontologyrep2.RadixTree;
 import ontologyrep2.RadixTree.RadixNode;
 import ontologyrep2.Relation;
 import ontologyrep2.Triplet;
-import ontopatternmatching.Workflow;
+import ontopatternmatching.Sequence;
 
 
 public class bowlLoader {
     //charge et transforme les sequences brutes en sequences d'instances ou classes
-    public static void loadRawWorkflows(final ArrayList<RawUserWorkflow> rawUserWorkflows, final ArrayList<Workflow> userWorkflows, 
-            final OntoRepresentation ontology, final String rawWorkflows, final RadixNode localNameNode){
+    public static void loadRawSequences(final ArrayList<RawUserSequence> rawUserSequences, final ArrayList<Sequence> userSequences, 
+            final OntoRepresentation ontology, final String rawSequences, final RadixNode localNameNode){
         if(localNameNode != null){
-            for(RawUserWorkflow seq : rawUserWorkflows){
-//                System.out.println(""+seq.toString());
-                Workflow currSeq = new Workflow();
-//                ArrayList<Integer> flat_workflow = new ArrayList<>();
-//                currSeq.objects.forEach(flat_workflow::addAll);
-                //final ArrayList<Integer> classWorkflow = new ArrayList<>();
-                
-                // 1. Workflow Concepts
-//                System.out.println(seq.getIndividualsLocalNames());
+            for(RawUserSequence seq : rawUserSequences){
+                //System.out.println(""+seq.toString());
+                Sequence currSeq = new Sequence();
+                //final ArrayList<Integer> classSequence = new ArrayList<>();
                 for(String indv : seq.getIndividualsLocalNames()){
-//                    System.out.println("with "+indv);
+                    //System.out.println("with "+indv);
                     Object get = ontology.index_instances_by_name.get(indv, localNameNode);
                     if(get != null){
                         //System.out.println("which is "+((Instance)get).index);
                         //System.out.println("and is of type "+((Instance)get).concept.index);
                         
-                        //classWorkflow.add(((Instance)get).concept.index);
+                        //classSequence.add(((Instance)get).concept.index);
                         currSeq.objects.add(((Instance)get).index);
                     }
                     else{
@@ -67,38 +62,10 @@ public class bowlLoader {
 //                    System.out.println("au moins un element n'a pas ete trouve....");
                     System.exit(1);
                 }
-                
-                // 2. Workflow Triples
-//                System.out.println(seq.getLinksLocalNames());
-//                for(String indv : seq.getIndividualsLocalNames()){
-////                    System.out.println("with "+indv);
-//                    Object get = ontology.index_instances_by_name.get(indv, localNameNode);
-//                    if(get != null){
-//                        //System.out.println("which is "+((Instance)get).index);
-//                        //System.out.println("and is of type "+((Instance)get).concept.index);
-//                        
-//                        //classWorkflow.add(((Instance)get).concept.index);
-//                        currSeq.objects.add(((Instance)get).index);
-//                    }
-//                    else{
-//                        System.out.println(">>>"+indv);
-//                        System.out.println("is not in the ontology...");
-//                        /*Object get1 = ontology.index_instances_by_name.get("http://www.semanticweb.org/ahmedhalioui/ontologies/2015/7/untitled-ontology-8#DNA", 
-//                                ontology.index_concepts_by_name.root);
-////                        System.out.println(""+get1);*/
-//                        System.exit(1);
-//                    }
-//                }
-//                if(currSeq.objects.size() != seq.getIndividualsLocalNames().size()){
-////                    System.out.println("au moins un element n'a pas ete trouve....");
-//                    System.exit(1);
-//                }
-                
-
-                // Relations - OLD
+                //System.out.println("maintenant la sequence est : "+currSeq.toString());
                 int totalProps = 0;
                 int newTotalProps = 0;
-                //ArrayList<Integer> propWorkflow = new ArrayList<>();
+                //ArrayList<Integer> propSequence = new ArrayList<>();
                 for(int i=0;i < currSeq.objects.size();i++){
                     for( int j = i; j < currSeq.objects.size(); j++ ){
                         
@@ -125,7 +92,7 @@ public class bowlLoader {
                         /*ArrayList<Triplet> nonRootProperties = ontology.getNonRootProperties(ontology.getConcept(currSeq.objects.get(i)), ontology.getConcept(currSeq.objects.get(j)));
                         totalProps += nonRootProperties.size();
                         for(Triplet t : nonRootProperties){
-                            //propWorkflow.add(t.relation.index);
+                            //propSequence.add(t.relation.index);
                             
                             final Integer[] relation = new Integer[3];
                             relation[0] = t.relation.index;
@@ -137,7 +104,7 @@ public class bowlLoader {
                         ArrayList<Triplet> rootProperties = ontology.getRootProperties(ontology.getConcept(currSeq.objects.get(i)), ontology.getConcept(currSeq.objects.get(j)));
                         totalProps += rootProperties.size();
                         for(Triplet t : rootProperties){
-                            //propWorkflow.add(t.relation.index);
+                            //propSequence.add(t.relation.index);
                             
                             final Integer[] relation = new Integer[3];
                             relation[0] = t.relation.index;
@@ -149,13 +116,25 @@ public class bowlLoader {
                     }
                         
                 }
-
-                
                 //System.out.println("avant c=>"+currSeq.objects);
                 for(int k=0;k < currSeq.objects.size();k++){
                     currSeq.objects.set(k, ontology.getInstance(currSeq.objects.get(k)).concept.index);
                 }
-                userWorkflows.add(currSeq);
+                //System.out.println("apres c=>"+currSeq.objects);
+                //System.out.println("avec "+totalProps+" proprietes a ajouter.");
+                //System.out.println("avec en vrai "+newTotalProps+" proprietes a ajouter.");
+                //System.exit(1);
+                /*for(Integer c : currSeq.objects){
+                    System.out.println("c=("+c+")"+ontology.getConcept(c).getName());
+                }*/
+                //System.out.println("c=>"+currSeq.objects);
+                //for(Integer[] p : currSeq.relations){
+                    //System.out.println("p=>"+Arrays.toString(p));
+                    //System.out.println("p=("+p+")"+ontology.getRelation(p).getName());
+                //}
+                //System.out.println("p=>"+currSeq.relations);
+                
+                userSequences.add(currSeq);
             }
         }
         else{

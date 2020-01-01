@@ -7,24 +7,24 @@ import java.util.Iterator;
 import legacy.Pair;
 
 /**
- * BaseSequence represents a basic sequence of transactions :
- 		<ul>
+ * BaseSequence represents a basic sequence of elements :
+ * 		<ul>
  * 			<li>A list of concepts</li>
  * 			<li>The properties between the concepts</li>
  * 		</ul>
  * 
- * @param <A> The type of the transactions contained in the sequence.
+ * @param <A> The type of the elements contained in the sequence.
  * 
  * @author Frapin Kevin
  */
 public abstract class BaseSequence<A>
 {
 	//-------------------------------------------------------------- Attributes
-	// List of the transactions
-	protected ArrayList<ArrayList<A>> transactions;
+	// List of the elements
+	protected ArrayList<A> elements;
 	
 	//	Map used to retrieve link  via a pair of element positions <source, target>
-	// (The link are between transactions present in the list 'transactions')
+	// (The link are between elements present in the list 'elements')
 	protected HashMap< Pair<Integer,Integer>, ArrayList<A> > links;
 
 	
@@ -34,7 +34,7 @@ public abstract class BaseSequence<A>
 	 */
 	public BaseSequence( )
 	{
-		this.transactions = new ArrayList<ArrayList<A>>( );
+		this.elements = new ArrayList<A>( );
 		this.links = new HashMap< Pair<Integer,Integer>, ArrayList<A> >( );
 	}
 	
@@ -45,47 +45,19 @@ public abstract class BaseSequence<A>
 	 */
 	public BaseSequence( BaseSequence<A> baseSequence )
 	{
-		this.transactions = new ArrayList<ArrayList<A>>( baseSequence.transactions );
+		this.elements = new ArrayList<A>( baseSequence.elements );
 		copyLinks( baseSequence );
 	}
 	
 	//------------------------------------------------------- Getters / Setters
 	/**
-	 * Gets all transactions contained in the base sequence.
-	 * 
-	 * @return List of all the transactions.
-	 */
-	protected ArrayList<ArrayList<A>> getTransctions( ) 
-	{
-		return transactions;
-	}
-        
-        /**
 	 * Gets all elements contained in the base sequence.
 	 * 
-	 * @return List of all the transactions.
+	 * @return List of all the elements.
 	 */
 	protected ArrayList<A> getElements( ) 
-	{       
-                ArrayList<A> elements = new ArrayList<A>();
-                for (ArrayList<A> transaction : transactions) { 	
-                    for (A element : transaction) { 
-                        elements.add(element); 	
-                    }	
-                }
+	{
 		return elements;
-	}
-        
-        
-        /**
-	 * Gets all elements contained in the one transaction.
-	 * 
-	 * @return List of all the transactions.
-	 */
-	protected ArrayList<A> getLastElements( ) 
-	{       
-                ArrayList<A> last_transaction = transactions.get(transactions.size( ) - 1 );   
-		return last_transaction;
 	}
 	
 	/**
@@ -94,12 +66,12 @@ public abstract class BaseSequence<A>
 	 * @return Last element.
 	 */
 	protected A getLastElement( )
-	{       
-                ArrayList last_transaction = transactions.get(transactions.size( ) - 1 );
-		return (A) last_transaction.get( last_transaction.size( ) - 1 );
+	{
+		return elements.get( elements.size( ) - 1 );
 	}
 	
-        
+
+	
 	/**
 	 * Gets the existing links between the elements. <br/>
 	 * The links are indexed by the subject and object positions.
@@ -165,33 +137,18 @@ public abstract class BaseSequence<A>
 	 */
 	protected void appendElement( final A element )
 	{
-		// Addition of the concept in the list of concepts
-//                System.out.println(transactions);
-                ArrayList last_transaction = transactions.get(transactions.size( ) - 1 );
-		last_transaction.add( element );
-	}
-        
-        /**
-	 * Adds an element at the end of the sequence.
-	 * 
-	 * @param element Element to append.
-	 */
-	protected void addElement( final A element )
-	{
-		// Addition of the concept in the list of concepts
-                ArrayList<A> one_transaction = new ArrayList<A>();
-		one_transaction.add( element );
-                transactions.add(one_transaction);
+		// Addition of the concept in the list of concepts 
+		elements.add( element );
 	}
 	
 	/**
-	 * Gets the number of transactions present in the sequence.
+	 * Gets the number of elements present in the sequence.
 	 * 
 	 * @return Size of the sequence.
 	 */
 	public int nbElements( )
 	{
-		return transactions.size( );
+		return elements.size( );
 	}
 	
 	/**
@@ -215,9 +172,8 @@ public abstract class BaseSequence<A>
 	protected void replaceLastElement( final A newElement )
 	{
 		// Specialization of the concept in the list of concepts
-                ArrayList last_transaction = transactions.get(transactions.size( ) - 1 );
-		last_transaction.remove( last_transaction.size( ) - 1 );
-		last_transaction.add( newElement );
+		elements.remove( elements.size( ) - 1 );
+		elements.add( newElement );
 	}
 	
 	/**
@@ -256,7 +212,7 @@ public abstract class BaseSequence<A>
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((transactions == null) ? 0 : transactions.hashCode());
+				+ ((elements == null) ? 0 : elements.hashCode());
 		result = prime * result
 				+ ((links == null) ? 0 : links.hashCode());
 		return result;
@@ -272,10 +228,10 @@ public abstract class BaseSequence<A>
 		if (getClass() != obj.getClass())
 			return false;
 		BaseSequence<A> other = (BaseSequence) obj;
-		if (transactions == null) {
-			if (other.transactions != null)
+		if (elements == null) {
+			if (other.elements != null)
 				return false;
-		} else if (!transactions.equals(other.transactions))
+		} else if (!elements.equals(other.elements))
 			return false;
 		if (links == null) {
 			if (other.links != null)
@@ -287,7 +243,7 @@ public abstract class BaseSequence<A>
 	
 	@Override
 	public String toString() {
-		return "BaseSequence [concepts=" + transactions + ", properties="
+		return "BaseSequence [concepts=" + elements + ", properties="
 				+ links + "]";
 	}
 }

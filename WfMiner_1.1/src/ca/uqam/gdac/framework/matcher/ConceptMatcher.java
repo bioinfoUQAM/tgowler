@@ -3,7 +3,7 @@ package ca.uqam.gdac.framework.matcher;
 import java.util.ArrayList;
 import ontologyrep2.OntoRepresentation;
 import ontopatternmatching.Motif;
-import ontopatternmatching.Workflow;
+import ontopatternmatching.Sequence;
 
 
 
@@ -34,7 +34,7 @@ public class ConceptMatcher extends BaseMatcher
 	 * @param input User sequence to confront against the pattern.
 	 * @param hierarchyRepresentation Hierarchy representation of the ontology.
 	 */
-	/*public ConceptMatcher( final Pattern pattern, final UserWorkflow input, final HierarchyRepresentation<Integer> hierarchyRepresentation )
+	/*public ConceptMatcher( final Pattern pattern, final UserSequence input, final HierarchyRepresentation<Integer> hierarchyRepresentation )
 	{
 		super( pattern, input, hierarchyRepresentation );
 		this.match = new ArrayList<Integer>( );
@@ -42,7 +42,7 @@ public class ConceptMatcher extends BaseMatcher
 		this.hierarchyRepresentation = hierarchyRepresentation;
 	}*/
         
-        public ConceptMatcher( Motif pattern, final Workflow input, final OntoRepresentation hierarchyRepresentation )
+        public ConceptMatcher( Motif pattern, final Sequence input, final OntoRepresentation hierarchyRepresentation )
 	{
 		super( pattern, input, hierarchyRepresentation );
 		this.match = new ArrayList<>( );
@@ -50,7 +50,7 @@ public class ConceptMatcher extends BaseMatcher
 		this.hierarchyRepresentation = hierarchyRepresentation;
 	}
         
-        public void reset(Workflow input){
+        public void reset(Sequence input){
             this.launched = false;
             this.match.clear();
             this.input = input;
@@ -129,9 +129,7 @@ public class ConceptMatcher extends BaseMatcher
 	// Try to find a match starting at the beginning of the input sequence
 	private void findFirstMatch( )
 	{
-//                ArrayList<Integer> flat_workflow = new ArrayList<>();
-//                input.objects.forEach(flat_workflow::addAll);
-		match = ConceptMatcher.findMatch( pattern.getConcepts( ), input.objects, 0, match, hierarchyRepresentation );
+		match = ConceptMatcher.findMatch( pattern.getConcepts( ), input.getConcepts( ), 0, match, hierarchyRepresentation );
 	}
 	
 	// Try to find a match regarding to the current match
@@ -152,9 +150,7 @@ public class ConceptMatcher extends BaseMatcher
 
                     // Try to find a new match
                     match.remove( match.size( ) - 1 );
-//                    ArrayList<Integer> flat_workflow = new ArrayList<>();
-//                    input.objects.forEach(flat_workflow::addAll);
-                    ArrayList<Integer> newMatch = ConceptMatcher.findMatch( pattern.getConcepts(), input.objects, matchStart + 1, match, hierarchyRepresentation, i, matchStart+1);
+                    ArrayList<Integer> newMatch = ConceptMatcher.findMatch( pattern.getConcepts(), input.getConcepts(), matchStart + 1, match, hierarchyRepresentation, i, matchStart+1);
                     if( ! newMatch.isEmpty( ) )
                     {
                             match = newMatch;

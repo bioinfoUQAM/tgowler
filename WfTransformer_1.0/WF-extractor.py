@@ -94,16 +94,18 @@ if __name__ == "__main__":
         for transaction in workflow["transactions"]:
             if transaction[0] != '':
                 tr = ET.SubElement(wf, "Transaction")
-                for item in transaction:
-                    it = ET.SubElement(tr, "Item")
-                    it.text = item
+                tr.text = str(transaction).strip('[]').replace("'", "")
+                # for item in transaction:
+                #     it = ET.SubElement(tr, "Item")
+                #     it.text = item
 
         for triplet in workflow["triplets"]:
             if triplet[0] != '' and triplet[0] != '}':
                 li = ET.SubElement(wf, "Triplet")
-                subject = ET.SubElement(li, "Subject").text = triplet[0]
-                link = ET.SubElement(li, "Link").text = triplet[1]
-                object = ET.SubElement(li, "Object").text = triplet[2]
+                li.text = triplet[0] + ", " + triplet[1] + ", " + triplet[2]
+                # subject = ET.SubElement(li, "Subject").text = triplet[0]
+                # link = ET.SubElement(li, "Link").text = triplet[1]
+                # object = ET.SubElement(li, "Object").text = triplet[2]
 
     # Pretty Writer
     xmlstr = minidom.parseString(ET.tostring(wfs)).toprettyxml(indent="   ")

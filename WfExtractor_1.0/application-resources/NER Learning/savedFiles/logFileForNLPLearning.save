@@ -326,3 +326,113 @@ The execution time (pre-processing the first document): Sun Nov 03 13:37:33 EST 
 The execution time (pre-processing the first document): Sun Nov 03 13:41:56 EST 2019
 3 nov. 2019 13 h 42 min 05 s: The learning start at Sun Nov 03 13:42:05 EST 2019
 3 nov. 2019 13 h 42 min 05 s: The number of documents in dataset: 97
+29 déc. 2019 14 h 16 min 32 s: 
+
+*************************
+A new session for NLP learning is starting: 20191229_141632file:/Users/ahmedhalioui/Documents/tgowler-dev/WfExtractor_1.0/application-resources/NER%20Learning/ner-config.xml (saved 20191207_093000, 1917992secs ago)The initiliased time of NLP learning: Sun Dec 29 14:16:32 EST 2019
+Working directory: /Users/ahmedhalioui/Documents/tgowler-dev/WfExtractor_1.0/application-resources/NER Learning
+The feature files and models are saved at: /Users/ahmedhalioui/Documents/tgowler-dev/WfExtractor_1.0/application-resources/NER Learning/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+29 déc. 2019 14 h 20 min 14 s: 
+*** A new run starts.
+29 déc. 2019 14 h 20 min 14 s: 
+The execution time (pre-processing the first document): Sun Dec 29 14:20:14 EST 2019
+29 déc. 2019 14 h 21 min 45 s: 
+*** A new run starts.
+29 déc. 2019 14 h 21 min 45 s: 
+The execution time (pre-processing the first document): Sun Dec 29 14:21:45 EST 2019
+29 déc. 2019 14 h 22 min 09 s: The learning start at Sun Dec 29 14:22:09 EST 2019
+29 déc. 2019 14 h 22 min 09 s: The number of documents in dataset: 97
+29 déc. 2019 14 h 24 min 10 s: 
+*** A new run starts.
+29 déc. 2019 14 h 24 min 10 s: 
+The execution time (pre-processing the first document): Sun Dec 29 14:24:10 EST 2019
+29 déc. 2019 14 h 24 min 23 s: The learning start at Sun Dec 29 14:24:23 EST 2019
+29 déc. 2019 14 h 24 min 23 s: The number of documents in dataset: 97
+29 déc. 2019 14 h 26 min 20 s: 
+*** A new run starts.
+29 déc. 2019 14 h 26 min 20 s: 
+The execution time (pre-processing the first document): Sun Dec 29 14:26:20 EST 2019
+29 déc. 2019 14 h 28 min 37 s: The learning start at Sun Dec 29 14:28:37 EST 2019
+29 déc. 2019 14 h 28 min 37 s: The number of documents in dataset: 367
+29 déc. 2019 14 h 29 min 44 s: 
+*** A new run starts.
+29 déc. 2019 14 h 29 min 44 s: 
+The execution time (pre-processing the first document): Sun Dec 29 14:29:44 EST 2019
+29 déc. 2019 20 h 08 min 28 s: The learning start at Sun Dec 29 20:08:28 EST 2019
+29 déc. 2019 20 h 08 min 28 s: The number of documents in dataset: 5514
+29 déc. 2019 20 h 27 min 32 s: 
+*** A new run starts.
+29 déc. 2019 20 h 27 min 32 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:27:32 EST 2019
+29 déc. 2019 20 h 27 min 42 s: The learning start at Sun Dec 29 20:27:42 EST 2019
+29 déc. 2019 20 h 27 min 42 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 35 min 02 s: 
+*** A new run starts.
+29 déc. 2019 20 h 35 min 02 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:35:02 EST 2019
+29 déc. 2019 20 h 35 min 24 s: The learning start at Sun Dec 29 20:35:24 EST 2019
+29 déc. 2019 20 h 35 min 24 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 35 min 47 s: 
+*** A new run starts.
+29 déc. 2019 20 h 35 min 47 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:35:47 EST 2019
+29 déc. 2019 20 h 36 min 06 s: The learning start at Sun Dec 29 20:36:06 EST 2019
+29 déc. 2019 20 h 36 min 06 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 38 min 04 s: 
+*** A new run starts.
+29 déc. 2019 20 h 38 min 04 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:38:04 EST 2019
+29 déc. 2019 20 h 38 min 15 s: The learning start at Sun Dec 29 20:38:15 EST 2019
+29 déc. 2019 20 h 38 min 15 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 40 min 11 s: 
+*** A new run starts.
+29 déc. 2019 20 h 40 min 11 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:40:11 EST 2019
+29 déc. 2019 20 h 40 min 20 s: The learning start at Sun Dec 29 20:40:20 EST 2019
+29 déc. 2019 20 h 40 min 20 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 42 min 31 s: 
+*** A new run starts.
+29 déc. 2019 20 h 42 min 31 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:42:31 EST 2019
+29 déc. 2019 20 h 42 min 54 s: The learning start at Sun Dec 29 20:42:54 EST 2019
+29 déc. 2019 20 h 42 min 54 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 44 min 29 s: 
+*** A new run starts.
+29 déc. 2019 20 h 44 min 29 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:44:29 EST 2019
+29 déc. 2019 20 h 44 min 52 s: The learning start at Sun Dec 29 20:44:52 EST 2019
+29 déc. 2019 20 h 44 min 52 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 45 min 52 s: 
+*** A new run starts.
+29 déc. 2019 20 h 45 min 52 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:45:52 EST 2019
+29 déc. 2019 20 h 46 min 22 s: The learning start at Sun Dec 29 20:46:22 EST 2019
+29 déc. 2019 20 h 46 min 22 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 48 min 14 s: 
+*** A new run starts.
+29 déc. 2019 20 h 48 min 14 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:48:14 EST 2019
+29 déc. 2019 20 h 48 min 36 s: The learning start at Sun Dec 29 20:48:36 EST 2019
+29 déc. 2019 20 h 48 min 36 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 53 min 27 s: 
+*** A new run starts.
+29 déc. 2019 20 h 53 min 27 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:53:27 EST 2019
+29 déc. 2019 20 h 53 min 52 s: The learning start at Sun Dec 29 20:53:52 EST 2019
+29 déc. 2019 20 h 53 min 52 s: The number of documents in dataset: 97
+29 déc. 2019 20 h 55 min 01 s: 
+*** A new run starts.
+29 déc. 2019 20 h 55 min 01 s: 
+The execution time (pre-processing the first document): Sun Dec 29 20:55:01 EST 2019
+29 déc. 2019 20 h 59 min 11 s: The learning start at Sun Dec 29 20:59:11 EST 2019
+29 déc. 2019 20 h 59 min 11 s: The number of documents in dataset: 367
+29 déc. 2019 21 h 21 min 19 s: 
+*** A new run starts.
+29 déc. 2019 21 h 21 min 19 s: 
+The execution time (pre-processing the first document): Sun Dec 29 21:21:19 EST 2019
+30 déc. 2019 06 h 12 min 56 s: The learning start at Mon Dec 30 06:12:56 EST 2019
+30 déc. 2019 06 h 12 min 56 s: The number of documents in dataset: 5514

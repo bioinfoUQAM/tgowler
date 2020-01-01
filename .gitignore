@@ -1,3 +1,5 @@
+.DS_Store
+.idea/
 /WfMiner_1.1/build/
 /WfMiner_1.1/dist/
 /WfMiner_1.1/nbproject/private/
