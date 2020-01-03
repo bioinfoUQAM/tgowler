@@ -16,8 +16,8 @@ import ontopatternmatching.Motif;
  */
 public class IfThenRule {
     
-    public ArrayList<Integer> premise = new ArrayList<>();
-    public Integer conclusion;
+    public ArrayList<ArrayList<Integer>> premise = new ArrayList<>();
+    public ArrayList<Integer> conclusion;
     public ArrayList<Integer> steps = new ArrayList<>();
     public Motif pattern = new Motif();
     public Motif prefix = new Motif();
@@ -108,11 +108,11 @@ public class IfThenRule {
         return Msequences;
     }
 
-    public ArrayList<Integer> getPremise() {
+    public ArrayList<ArrayList<Integer>> getPremise() {
         return premise;
     }
 
-    public Integer getConclusion() {
+    public ArrayList<Integer> getConclusion() {
         return conclusion;
     }
 
@@ -132,11 +132,11 @@ public class IfThenRule {
         this.confidence = confidence;
     }
 
-    public void setPremise(ArrayList<Integer> premise) {
+    public void setPremise(ArrayList<ArrayList<Integer>> premise) {
         this.premise = premise;
     }
 
-    public void setConclusion(Integer conclusion) {
+    public void setConclusion(ArrayList<Integer> conclusion) {
         this.conclusion = conclusion;
     }
 
@@ -190,9 +190,9 @@ public class IfThenRule {
         OntoRepresentation ontology = Miner.hierarchyRepresentation;
         ArrayList<String> cs = new ArrayList<String> ();
         
-        for(Integer c : prefix.concepts){
-            cs.add(ontology.getConcept(c).getName().split("#")[1]);
-        }
+        for(ArrayList<Integer> t : prefix.transactions)
+            for(Integer c : t)
+                cs.add(ontology.getConcept(c).getName().split("#")[1]);
         s.append(cs.toString());
         
         s.append(", ");
@@ -214,14 +214,14 @@ public class IfThenRule {
         
         ArrayList<String> cs = new ArrayList<String> ();
         
-        for(Integer c : premise){
-            cs.add(ontology.getConcept(c).getName().split("#")[1]);
-//            System.out.println(ontology.getConcept(c).getName().split("#")[1]);
-        }
+        for (ArrayList<Integer> t : premise)
+            for(Integer c : t)
+                cs.add(ontology.getConcept(c).getName().split("#")[1]);
         s.append(cs.toString());
         s.append(" => ");
         
-        s.append(ontology.getConcept(conclusion).getName().split("#")[1]);
+        for (Integer c : conclusion)
+            s.append(ontology.getConcept(c).getName().split("#")[1]);
         
         s.append(", ");
         s.append("{");

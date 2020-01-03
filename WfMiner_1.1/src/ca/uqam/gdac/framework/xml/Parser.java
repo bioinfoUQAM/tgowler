@@ -6,7 +6,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import java.util.ArrayList;
 
 class Parser 
@@ -36,7 +36,7 @@ class Parser
 	
 	//---------------------------------------------------------- Public methods
 	// Extract the sequences described in the XML file
-	public ArrayList<RawUserSequence> extractRawUserSequences( final String fileURI ) 
+	public ArrayList<RawUserWorkflow> extractRawUserSequences( final String fileURI ) 
 	throws SAXException, IOException
 	{
 		// NOTE : Test the document against a DTD/XML Schema in order to see

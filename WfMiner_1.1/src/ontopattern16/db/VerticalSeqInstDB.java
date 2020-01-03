@@ -5,7 +5,7 @@
 package ontopattern16.db;
 
 import java.util.ArrayList;
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import ontologyrep2.Instance;
 import ontologyrep2.OntoRepresentation;
 import ontologyrep2.RadixTree;
@@ -13,7 +13,7 @@ import ontopatternmatching.Sequence;
 
 
 public class VerticalSeqInstDB {
-    public static ArrayList<Sequence> construire_vdbi(int[] vertical_db, ArrayList<RawUserSequence> all_sequences, 
+    public static ArrayList<Sequence> construire_vdbi(int[] vertical_db, ArrayList<RawUserWorkflow> all_sequences, 
             int nbr_concepts, int nbr_seq, int range_of_one_item, int[] all_sequences_length, int[] all_sequences_sum,  
             final OntoRepresentation ontology, final int BLOCK_SIZE, final int BLOCK_SIZE_SHIFT, final RadixTree.RadixNode... localNameNodes){
         
@@ -30,7 +30,7 @@ public class VerticalSeqInstDB {
         
         for(int i=0;i!=nbr_seq;i++){
             final Sequence currSeq = new Sequence();
-            final RawUserSequence seq = all_sequences.get(i);
+            final RawUserWorkflow seq = all_sequences.get(i);
             final ArrayList<String> uris = seq.getIndividualsLocalNames();
             final int l_seq = all_sequences_length[i];
                         

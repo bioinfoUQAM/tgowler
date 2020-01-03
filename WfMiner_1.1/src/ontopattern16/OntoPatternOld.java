@@ -16,7 +16,7 @@ import ca.uqam.gdac.framework.miner.Miner;
 import static ca.uqam.gdac.framework.miner.Miner.allRules;
 import static ca.uqam.gdac.framework.miner.Miner.conceptsToString;
 import static ca.uqam.gdac.framework.miner.Miner.hierarchyRepresentation;
-import ca.uqam.gdac.framework.xml.SequenceFactory;
+import ca.uqam.gdac.framework.xml.WorkflowFactory;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -48,7 +48,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import legacy.Pair;
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import ontologyrep2.OntoRepresentation;
 import ontologyrep2.RadixTree;
 import ontopatternmatching.AppariementSolution;
@@ -101,9 +101,9 @@ public class OntoPatternOld {
         
         // Init WF TRAINING set
         final ArrayList<Sequence> userSequences = new ArrayList<>();
-        ArrayList<RawUserSequence> rawUserSequences = null;
+        ArrayList<RawUserWorkflow> rawUserSequences = null;
         try{
-            rawUserSequences = SequenceFactory.createRawUserSequences(rawSequences);
+            rawUserSequences = WorkflowFactory.createRawUserSequences(rawSequences);
 //            System.out.println(rawUserSequences);
             if(rawSequences==null){
                 return;
@@ -117,9 +117,9 @@ public class OntoPatternOld {
         
         // Init WF TEST set
         final ArrayList<Sequence> userGoldSequences = new ArrayList<>();
-        ArrayList<RawUserSequence> rawUserGoldSequences = null;
+        ArrayList<RawUserWorkflow> rawUserGoldSequences = null;
         try{
-            rawUserGoldSequences = SequenceFactory.createRawUserSequences(rawGoldSequences);
+            rawUserGoldSequences = WorkflowFactory.createRawUserSequences(rawGoldSequences);
             if(rawGoldSequences==null){
                 return;
             }
@@ -156,7 +156,9 @@ public class OntoPatternOld {
         // ****************************
         System.out.println("Mining Generalized Workflows ...");
         ArrayList<Motif> patterns = Miner.findFrequentPatternsDF(userSequences, thresold_supp, ontology, Integer.parseInt(args[7]) );
-                
+//        for (Motif pattern : patterns)
+//            System.out.println(pattern.toString());
+        
         // **********************
         // PRUNING WORKFLOW RULES
         // **********************
@@ -277,13 +279,17 @@ public class OntoPatternOld {
             
             .append(" [concepts=[");
 //                b.append("[BaseSequence").append(" [concepts=[");
-            for(Integer c : m.concepts){
-                    String uri = ontology.getConcept(c).getName();
-//                    String uriStep = ontology.getConceptByLevel(ontology.getConcept(c), 0).getName().split("#")[1];
-                    b.append(uri.substring(uri.indexOf("#")+1));
-//                    b.append(":");
-//                    b.append(uriStep);
-                    b.append(", ");
+            for(ArrayList<Integer> t : m.transactions){
+                b.append("[");
+                for(Integer c : t){
+                        String uri = ontology.getConcept(c).getName();
+    //                    String uriStep = ontology.getConceptByLevel(ontology.getConcept(c), 0).getName().split("#")[1];
+                        b.append(uri.substring(uri.indexOf("#")+1));
+    //                    b.append(":");
+    //                    b.append(uriStep);
+                        b.append(", ");
+                }
+                b.append("]");
             }
             b.append("], properties=");
             for(Integer[] r : m.relations){
@@ -387,29 +393,6 @@ public class OntoPatternOld {
         if (ax.containsAll(ay))
             return true;
         else return false;
-        
-//        for (AppariementSolution seqx:x.Msequences){
-//            for (AppariementSolution seqy:y.Msequences){
-//                if (seqx.sequenceUtilisateur.equals(seqy.sequenceUtilisateur)) {
-////                    System.out.println(x.toString()+"has the same matched sequence as: "+y.toString());
-////                    System.out.println("======= X SEQUENCES =======");
-////                    System.out.println(seqx.sequenceUtilisateur.objects.toString());
-////                    System.out.println("======= Y SEQUENCES =======");
-////                    System.out.println(seqy.sequenceUtilisateur.objects.toString());
-//                    i++; break;
-//                    
-//                }
-//            }
-//            if (i == y.Msequences.length)
-//                break;
-//        }
-//        if (i == x.Msequences.length)
-//            return true;
-//        else return false;
-            
-//        if(x.Msequences.equals(y.Msequences) )
-//            return true;
-//        else return false;
     }
     
     public static boolean compareRule(IfThenRule x, IfThenRule y){
@@ -451,7 +434,7 @@ public class OntoPatternOld {
 //                System.out.println(rule);
 //                System.out.println(seq.toString());
                 int realBeforeObjectPos = resultMatching.getFirst().get(i);
-                int realNextObject = nexStepObject(realBeforeObjectPos, seq, rule.conclusion);
+                int realNextObject = nexStepObject(realBeforeObjectPos, seq, rule.conclusion.get(0));
 //                System.out.println("realBeforeObject: "+realBeforeObject);
 //                System.out.println("realNextObject: "+realNextObject);
                 
@@ -550,7 +533,7 @@ public class OntoPatternOld {
                         
                     }
                     // get the next object that matches with the rule's conclusion
-                    int realNextObject = nexStepObject(realBeforeObjectPos, seq, rule.conclusion);
+                    int realNextObject = nexStepObject(realBeforeObjectPos, seq, rule.conclusion.get(0));
                     if (realNextObject != 99999999)
                         realNextObjects.add(realNextObject);
                     

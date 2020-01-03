@@ -5,7 +5,7 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import java.util.ArrayList;
 import java.util.Arrays; 
 import java.util.List;
@@ -26,10 +26,10 @@ class Handler implements ContentHandler
 	private Tag currentTag;
 	
 	// The final set of sequences extracted during the parsing
-	private ArrayList<RawUserSequence> parseResult;
+	private ArrayList<RawUserWorkflow> parseResult;
 	
 	// Field used to store the instances of the current sequence
-	private RawUserSequence currentWorkflow;
+	private RawUserWorkflow currentWorkflow;
 	
 	// Filed used to prevent a parsing bug
 	// It is used to know if the last individual tag has been closed
@@ -41,12 +41,12 @@ class Handler implements ContentHandler
 	public Handler( )
 	{
 		super( );
-		parseResult = new ArrayList<RawUserSequence>( );
+		parseResult = new ArrayList<RawUserWorkflow>( );
                 
 	}
 	
 	//------------------------------------------------------- Getters / Setters
-	public ArrayList<RawUserSequence> getParseResult( )
+	public ArrayList<RawUserWorkflow> getParseResult( )
 	{
 		return parseResult;
 	}
@@ -141,7 +141,7 @@ class Handler implements ContentHandler
 		// If this is a 'workflow' tag
 		{
 			// Addition of a new sequence to the set of sequences
-			currentWorkflow = new RawUserSequence( );
+			currentWorkflow = new RawUserWorkflow( );
 			currentTag = Tag.WORKFLOW;
 		}
                 else if( equalsIgnoreCase( qName, Tag.TRIPLET ) )
@@ -198,7 +198,7 @@ class Handler implements ContentHandler
                                 // Insert a new individual local name
                                 lastLocalName = individualStr;
 //                                System.out.println(lastLocalName);
-                                currentWorkflow.appendIndividualLocalName( lastLocalName );
+                                currentWorkflow.addIndividualLocalName( lastLocalName );
                             }
                             else
                             // The string is the continuation of the last individual local name

@@ -14,26 +14,15 @@ import ontopatternmatching.Sequence;
 public class Library 
 {
 	//-------------------------------------------------------------- Attributes
-	//private static ArrayList<UserSequence> userSequences;
-        private static ArrayList<Sequence> userSequences2;
-	//private static ArrayList<Pattern> frequentPatterns;
-	public static ArrayList<Motif> frequentPatterns2;
+        private static ArrayList<Sequence> userWorkflows;
+	public static ArrayList<Motif> frequentPatterns;
 	//------------------------------------------------------------- Constructor
 	
 	//------------------------------------------------------- Setters / Getters
-	/**
-	 * Gets the frequent patterns extract from by the Miner.
-	 * 
-	 * @return All the extracted frequent patterns.
-	 */
-	/*public static ArrayList<Pattern> getFrequentPatterns( )
-	{
-		return frequentPatterns;
-	}*/
         
         public static ArrayList<Motif> getFrequentPatterns2( )
 	{
-		return frequentPatterns2;
+		return frequentPatterns;
 	}
         
 	
@@ -44,7 +33,7 @@ public class Library
 	 */
 	public static Integer getNbUserSequences( )
 	{
-		return userSequences2.size( );
+		return userWorkflows.size( );
 	}
 		
 	/**
@@ -52,14 +41,9 @@ public class Library
 	 * 
 	 * @return User sequences used for the mining.
 	 */
-	/*public static ArrayList<UserSequence> getUserSequences( )
-	{
-		return Library.userSequences;
-	}*/
-	
         public static ArrayList<Sequence> getUserSequences2( )
 	{
-		return Library.userSequences2;
+		return Library.userWorkflows;
 	}
 	
         
@@ -68,14 +52,9 @@ public class Library
 	 * 
 	 * @param userSequences User sequences used by the Miner.
 	 */
-	/*public static void setUserSequences( final ArrayList<UserSequence> userSequences )
+        public static void setUserWorkflows( final ArrayList<Sequence> userSequences )
 	{
-		Library.userSequences = userSequences;
-	}*/
-        
-        public static void setUserSequences2( final ArrayList<Sequence> userSequences )
-	{
-		Library.userSequences2 = userSequences;
+		Library.userWorkflows = userSequences;
 	}
 	
 	//---------------------------------------------------------- Public methods
@@ -85,20 +64,15 @@ public class Library
 	 * @param frequentPattern Frequent pattern found.
 	 */
 	public static void addFrequentPattern( final Motif frequentPattern ){
-            frequentPatterns2.add(frequentPattern);
-	}
-        
-        /*public static void addFrequentPattern( final Pattern frequentPattern ){
             frequentPatterns.add(frequentPattern);
-	}*/
+	}
 	
 	/**
 	 * Initializes the Library in order to use it for a mining phase.
 	 */
 	public static void initialize( )
 	{
-		//frequentPatterns = new ArrayList<>( );
-                frequentPatterns2 = new ArrayList<>();
+                frequentPatterns = new ArrayList<>();
 	}
 	
 }

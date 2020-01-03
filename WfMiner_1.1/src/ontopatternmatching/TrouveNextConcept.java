@@ -102,9 +102,13 @@ public final class TrouveNextConcept implements Job{
 
         if(SequenceMatcher.debug) System.out.println("Concept => Starting at:"+j+" ("+solution+")");
         
-        s=sequence.objects.size()-(m.concepts.size()-(block.sibling_position+1));//enlever le nombre de blocks restants
+        s=sequence.objects.size()-(m.concepts.size()-(block.sibling_position+1)) - 1;//enlever le nombre de blocks restants
         //tant qu'on n'est pas a la fin de la sequence
         while(j<s){
+//            System.out.println("\t\tconcepts: " + m.concepts);
+//            System.out.println("\t\tsequence: " + sequence.objects);
+//            System.out.println("\t\tj: " + j);
+//            System.out.println("\t\ts: " + s);
             o = sequence.objects.get(j);//on recupere l'item
             //if(SequenceMatcher.debug) System.out.println("["+j+"]trying to match concept "+o+" with "+block.item);
             if(ontology.isConceptEqualOrDescendant(block.item, o)){//si l'element correspond a notre classe

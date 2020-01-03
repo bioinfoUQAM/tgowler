@@ -5,7 +5,7 @@
 
 package preprocessing;
 
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -32,10 +32,10 @@ import ontopatternmatching.Sequence;
 
 public class bowlLoader {
     //charge et transforme les sequences brutes en sequences d'instances ou classes
-    public static void loadRawSequences(final ArrayList<RawUserSequence> rawUserSequences, final ArrayList<Sequence> userSequences, 
+    public static void loadRawSequences(final ArrayList<RawUserWorkflow> rawUserSequences, final ArrayList<Sequence> userSequences, 
             final OntoRepresentation ontology, final String rawSequences, final RadixNode localNameNode){
         if(localNameNode != null){
-            for(RawUserSequence seq : rawUserSequences){
+            for(RawUserWorkflow seq : rawUserSequences){
                 //System.out.println(""+seq.toString());
                 Sequence currSeq = new Sequence();
                 //final ArrayList<Integer> classSequence = new ArrayList<>();

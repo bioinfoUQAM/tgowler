@@ -21,7 +21,8 @@ public abstract class BaseSequence<A>
 {
 	//-------------------------------------------------------------- Attributes
 	// List of the elements
-	protected ArrayList<A> elements;
+        protected ArrayList<ArrayList<A>> transactions;
+//	protected ArrayList<A> elements;
 	
 	//	Map used to retrieve link  via a pair of element positions <source, target>
 	// (The link are between elements present in the list 'elements')
@@ -34,8 +35,9 @@ public abstract class BaseSequence<A>
 	 */
 	public BaseSequence( )
 	{
-		this.elements = new ArrayList<A>( );
-		this.links = new HashMap< Pair<Integer,Integer>, ArrayList<A> >( );
+            this.transactions = new ArrayList<ArrayList<A>>( );
+//                this.elements = new ArrayList<A>( );
+            this.links = new HashMap< Pair<Integer,Integer>, ArrayList<A> >( );
 	}
 	
 	/**
@@ -45,7 +47,7 @@ public abstract class BaseSequence<A>
 	 */
 	public BaseSequence( BaseSequence<A> baseSequence )
 	{
-		this.elements = new ArrayList<A>( baseSequence.elements );
+		this.transactions = new ArrayList<ArrayList<A>>( baseSequence.transactions );
 		copyLinks( baseSequence );
 	}
 	
@@ -57,7 +59,21 @@ public abstract class BaseSequence<A>
 	 */
 	protected ArrayList<A> getElements( ) 
 	{
-		return elements;
+            ArrayList<A> elements = new ArrayList<A>();
+            for (ArrayList<A> transaction : transactions){
+                elements.addAll(transaction);
+            }
+            return elements;
+	}
+        
+        /**
+	 * Gets all elements contained in the base sequence.
+	 * 
+	 * @return List of all the elements.
+	 */
+	protected ArrayList<A> getElements( int transaction  ) 
+	{
+            return transactions.get(transaction);
 	}
 	
 	/**
@@ -67,7 +83,8 @@ public abstract class BaseSequence<A>
 	 */
 	protected A getLastElement( )
 	{
-		return elements.get( elements.size( ) - 1 );
+            ArrayList<A> lastTransaction = transactions.get(transactions.size( ) - 1);
+            return lastTransaction.get( lastTransaction.size( ) - 1 );
 	}
 	
 
@@ -80,7 +97,7 @@ public abstract class BaseSequence<A>
 	 */
 	protected HashMap< Pair<Integer,Integer>, ArrayList<A> > getLinks( )
 	{
-		return links;
+            return links;
 	}
 	
 	/**
@@ -93,9 +110,9 @@ public abstract class BaseSequence<A>
 	 */
 	protected ArrayList<A> getLinksByElementPositions( final Integer subjectPosition, final Integer objectPosition ) 
 	{
-		Pair<Integer,Integer> conceptPositions = new Pair<Integer,Integer>( subjectPosition, objectPosition );
-		ArrayList<A> propertiesByPositions = links.get( conceptPositions );
-		return ( propertiesByPositions == null ? new ArrayList<A>( ) : propertiesByPositions ) ;
+            Pair<Integer,Integer> conceptPositions = new Pair<Integer,Integer>( subjectPosition, objectPosition );
+            ArrayList<A> propertiesByPositions = links.get( conceptPositions );
+            return ( propertiesByPositions == null ? new ArrayList<A>( ) : propertiesByPositions ) ;
 	}
 	
 	/**
@@ -105,7 +122,7 @@ public abstract class BaseSequence<A>
 	 */
 	protected void setLinks( final HashMap< Pair<Integer,Integer>, ArrayList<A> > links )
 	{
-		this.links = links;
+            this.links = links;
 	}
 	
 	//---------------------------------------------------------- Protected methods
@@ -118,39 +135,69 @@ public abstract class BaseSequence<A>
 	 */
 	protected void addLink( final Integer subjectPosition, final Integer objectPosition, final A link )
 	{
-		// Addition of the property in the hash map
-		Pair<Integer,Integer> conceptPositions = new Pair<Integer,Integer>( subjectPosition, objectPosition );
-		ArrayList<A> associatedProperties = links.get( conceptPositions );
-		if( associatedProperties == null )
-		// If no properties has been mapped with these concept positions before
-		{
-			associatedProperties = new ArrayList<A>( );
-			links.put( conceptPositions, associatedProperties );
-		}
-		associatedProperties.add( link );
+            // Addition of the property in the hash map
+            Pair<Integer,Integer> conceptPositions = new Pair<Integer,Integer>( subjectPosition, objectPosition );
+            ArrayList<A> associatedProperties = links.get( conceptPositions );
+            if( associatedProperties == null )
+            // If no properties has been mapped with these concept positions before
+            {
+                    associatedProperties = new ArrayList<A>( );
+                    links.put( conceptPositions, associatedProperties );
+            }
+            associatedProperties.add( link );
 	}
 	
 	/**
-	 * Adds an element at the end of the sequence.
+	 * Adds an element at the beggining of a new transaction.
 	 * 
 	 * @param element Element to append.
 	 */
 	protected void appendElement( final A element )
 	{
-		// Addition of the concept in the list of concepts 
-		elements.add( element );
+            // Addition of the concept in the list of concepts 
+            ArrayList<A> newTransaction = new ArrayList<A>(); 
+            newTransaction.add(element);
+            transactions.add(newTransaction); 
+	}
+        
+        
+        /**
+	 * Adds an element at the end of the last transaction.
+	 * 
+	 * @param element Element to add.
+	 */
+	protected void addElement( final A element )
+	{
+            if (transactions.size( ) > 0) {
+                ArrayList<A> lastTransaction = transactions.get(transactions.size( ) - 1);
+                lastTransaction.add( element );
+            }
+            else{
+                appendElement(element);
+            }
+            
 	}
 	
 	/**
-	 * Gets the number of elements present in the sequence.
+	 * Gets the number of elements present in the workflow.
 	 * 
 	 * @return Size of the sequence.
 	 */
 	public int nbElements( )
 	{
-		return elements.size( );
+            return transactions.size( );
 	}
 	
+        /**
+	 * Gets the number of elements present in the ith transaction.
+	 * 
+	 * @return Size of the sequence.
+	 */
+	public int nbElements( int transaction )
+	{
+            return transactions.get(transaction).size( );
+	}
+        
 	/**
 	 * Gets the number of links present between the subject position and the object position.
 	 * 
@@ -161,7 +208,7 @@ public abstract class BaseSequence<A>
 	 */
 	public int nbLinks( final Integer subjectPosition, final Integer objectPosition  )
 	{
-		return ( getLinksByElementPositions( subjectPosition, objectPosition ).size( ) );
+            return ( getLinksByElementPositions( subjectPosition, objectPosition ).size( ) );
 	}
 
 	/**
@@ -171,9 +218,10 @@ public abstract class BaseSequence<A>
 	 */
 	protected void replaceLastElement( final A newElement )
 	{
-		// Specialization of the concept in the list of concepts
-		elements.remove( elements.size( ) - 1 );
-		elements.add( newElement );
+            // Specialization of the concept in the list of concepts
+            ArrayList<A> lastTransaction = transactions.get(transactions.size( ) - 1);
+            lastTransaction.remove( lastTransaction.size( ) - 1 );
+            lastTransaction.add( newElement );
 	}
 	
 	/**
@@ -185,26 +233,26 @@ public abstract class BaseSequence<A>
 	 */
 	protected void replaceLastAddedLink( final Integer subjectPosition, final Integer objectPosition, final A newLink )
 	{
-		// Specialization of the property in the hash map
-		ArrayList<A> associatedProperties = getLinksByElementPositions( subjectPosition, objectPosition );
-		associatedProperties.remove( associatedProperties.size( ) - 1 );
-		associatedProperties.add( newLink );
+            // Specialization of the property in the hash map
+            ArrayList<A> associatedProperties = getLinksByElementPositions( subjectPosition, objectPosition );
+            associatedProperties.remove( associatedProperties.size( ) - 1 );
+            associatedProperties.add( newLink );
 	}
 	
 	//--------------------------------------------------------- Private methods
 	private void copyLinks( BaseSequence<A> baseSequence )
 	{
-		this.links = new HashMap<Pair<Integer,Integer>, ArrayList<A>>( );
-		Iterator< Pair<Integer,Integer> > it = baseSequence.links.keySet( ).iterator( );
-		while( it.hasNext( ) )
-		{
-			Pair<Integer,Integer> originalKey = it.next( );
-			Pair<Integer,Integer> copyKey = new Pair<Integer,Integer>( originalKey.getFirst( ), originalKey.getSecond( ) );
-			
-			ArrayList<A> originalValue = baseSequence.links.get( originalKey );
-			ArrayList<A> copyValue = new ArrayList<A>( originalValue );
-			this.links.put( copyKey , copyValue );
-		}
+            this.links = new HashMap<Pair<Integer,Integer>, ArrayList<A>>( );
+            Iterator< Pair<Integer,Integer> > it = baseSequence.links.keySet( ).iterator( );
+            while( it.hasNext( ) )
+            {
+                    Pair<Integer,Integer> originalKey = it.next( );
+                    Pair<Integer,Integer> copyKey = new Pair<Integer,Integer>( originalKey.getFirst( ), originalKey.getSecond( ) );
+
+                    ArrayList<A> originalValue = baseSequence.links.get( originalKey );
+                    ArrayList<A> copyValue = new ArrayList<A>( originalValue );
+                    this.links.put( copyKey , copyValue );
+            }
 	}
 	
 	@Override
@@ -212,7 +260,7 @@ public abstract class BaseSequence<A>
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((elements == null) ? 0 : elements.hashCode());
+				+ ((transactions == null) ? 0 : transactions.hashCode());
 		result = prime * result
 				+ ((links == null) ? 0 : links.hashCode());
 		return result;
@@ -228,10 +276,10 @@ public abstract class BaseSequence<A>
 		if (getClass() != obj.getClass())
 			return false;
 		BaseSequence<A> other = (BaseSequence) obj;
-		if (elements == null) {
-			if (other.elements != null)
+		if (transactions == null) {
+			if (other.transactions != null)
 				return false;
-		} else if (!elements.equals(other.elements))
+		} else if (!transactions.equals(other.transactions))
 			return false;
 		if (links == null) {
 			if (other.links != null)
@@ -243,7 +291,7 @@ public abstract class BaseSequence<A>
 	
 	@Override
 	public String toString() {
-		return "BaseSequence [concepts=" + elements + ", properties="
+		return "BaseSequence [concepts=" + transactions + ", properties="
 				+ links + "]";
 	}
 }

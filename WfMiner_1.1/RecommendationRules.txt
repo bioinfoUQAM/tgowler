@@ -1,20 +1,15 @@
 Ontology: phylOntology_v51_small.bowl
-Train set: WFMiner_WF_partial_2018_2019.xml
-Test set: WFMiner_WF_partial_gold_100.xml
+Train set: WFMiner_example.xml
+Test set: WFMiner_example_gold.xml
 Top items: 10
 Top rules: 50
-min_supp: 0.6
+min_supp: 0.8
 min_ontology_level: 2
 
 Rules: 
-[SequenceType, SequenceType, Tree] => GeneralPurposePackagesProgram, {} (confidence: 93.695404%) (support: 60.141396%) (MPR: 0.0)
-[Sequence, SequenceType] => GeneralPurposePackagesProgram, {} (confidence: 93.509445%) (support: 60.409557%) (MPR: 17.81609)
-[SequenceType, Sequence] => GeneralPurposePackagesProgram, {} (confidence: 93.41658%) (support: 60.190155%) (MPR: 45.833332)
-[SequenceType, SequenceType, SequenceType] => GeneralPurposePackagesProgram, {} (confidence: 92.49587%) (support: 68.21063%) (MPR: 63.661205)
-[GeneralPurposePackagesProgram] => GeneralPurposePackagesProgram, {} (confidence: 89.160835%) (support: 80.81424%) (MPR: 100.0)
 
-MAP: 96.20218%
-Recall1: 97.87234%
-Recall2: 95.74468%
-Recall: 96.80851%
-FMeasure: 95.818596%
+MAP: NaN%
+Recall1: 100.0%
+Recall2: 0.0%
+Recall: 50.0%
+FMeasure: 0.0%

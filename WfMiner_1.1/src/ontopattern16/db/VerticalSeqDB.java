@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import ontologyrep2.Concept;
 import ontologyrep2.Instance;
 import ontologyrep2.OntoRepresentation;

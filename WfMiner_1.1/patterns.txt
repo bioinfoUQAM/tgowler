@@ -1,40 +1,10 @@
 Ontology: phylOntology_v51_small.bowl
-Train set: WFMiner_WF_partial_2018_2019.xml
-min_supp: 0.6
+Train set: WFMiner_example.xml
+min_supp: 0.8
 min_ontology_level: 2
 
 Patterns: 
-[BaseSequence( support: 90.63872, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 62.457336, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[CharacterBasedMethod, ], properties=], 
-[BaseSequence( support: 94.51487, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, ], properties=], 
-[BaseSequence( support: 81.74061, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Tree, ], properties=], 
-[BaseSequence( support: 80.81424, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 74.597755, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 86.3725, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 83.64213, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, ], properties=], 
-[BaseSequence( support: 72.91565, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, Tree, ], properties=], 
-[BaseSequence( support: 73.96392, steps: 1, relations: 0, specilization: 0.3, data: 0, metadata: 0, program: 0, [concepts=[Sequence, ], properties=], 
-[BaseSequence( support: 77.37689, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 71.6236, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 77.32813, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 73.744514, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, SequenceType, ], properties=], 
-[BaseSequence( support: 64.1882, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, Tree, ], properties=], 
-[BaseSequence( support: 64.431984, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, Sequence, ], properties=], 
-[BaseSequence( support: 69.52706, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 64.55387, steps: 5, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 68.21063, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, SequenceType, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 63.993176, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, SequenceType, SequenceType, ], properties=], 
-[BaseSequence( support: 61.701607, steps: 5, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, SequenceType, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 60.141396, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, SequenceType, Tree, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 60.190155, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, Sequence, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 67.82057, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, Tree, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 61.604095, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[SequenceType, Tree, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 68.503174, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Sequence, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 64.60263, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Sequence, SequenceType, ], properties=], 
-[BaseSequence( support: 61.79912, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Sequence, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 60.409557, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Sequence, SequenceType, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 74.792786, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Tree, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 67.40614, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Tree, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-[BaseSequence( support: 62.847393, steps: 4, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[Tree, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, GeneralPurposePackagesProgram, ], properties=], 
-32
+[BaseSequence( support: 100.0, steps: 1, relations: 0, specilization: 6.1, data: 0, metadata: 2, program: 3, [concepts=[[SequenceType, GeneralPurposePackagesProgram, ModelGenerationProgram, GeneDuplicationAndGenomicAnalysisProgram, DNAModel, ProteinModel, ComparativeMethodAnalysisProgram, BiogeographicAnalysisProgram, ClocksDatingStratigraphyProgram, LookingForHybridizationOrRecombinationEventsProgram, MultipleSequenceAlignmentProgram, TreePlottingDarwingProgram, CharacterBasedMethod, DistanceBasedMethod, HeuristicSearchForBestTreeProgram, CharacterBasedProgram, QuartetsProgram, MakingDistancesProgram, DistanceBasedProgram, BootstrappingProgram, ConsensusTreesProgram, BranchAndBoundTreeSearchProgram, PairwiseAlignmentProgram, SequenceManagementProgram, TreeSimulationProgram, SequenceType, Tree, DistanceMatrix, DataBase, Bacteria, ]], properties=], 
+[BaseSequence( support: 100.0, steps: 1, relations: 0, specilization: 6.1, data: 0, metadata: 2, program: 3, [concepts=[[SequenceType, GeneralPurposePackagesProgram, ModelGenerationProgram, GeneDuplicationAndGenomicAnalysisProgram, DNAModel, ProteinModel, ComparativeMethodAnalysisProgram, BiogeographicAnalysisProgram, ClocksDatingStratigraphyProgram, LookingForHybridizationOrRecombinationEventsProgram, MultipleSequenceAlignmentProgram, TreePlottingDarwingProgram, CharacterBasedMethod, DistanceBasedMethod, HeuristicSearchForBestTreeProgram, CharacterBasedProgram, QuartetsProgram, MakingDistancesProgram, DistanceBasedProgram, BootstrappingProgram, ConsensusTreesProgram, BranchAndBoundTreeSearchProgram, PairwiseAlignmentProgram, SequenceManagementProgram, TreeSimulationProgram, SequenceType, Tree, DistanceMatrix, DataBase, Bacteria, ]], properties=], 
+2
  patterns

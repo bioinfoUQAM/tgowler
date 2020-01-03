@@ -1,0 +1,1278 @@
+<?xml version="1.0" ?>
+<Workflows>
+   <Workflow file="seg124.xml_00063" pmcid="4237157">
+      <Transaction>dataStructureID_13, dataStructureID_1, dataStructureID_13, dataStructureID_1, sequence, dataStructureID_13, dataStructureID_12, sequence, dataStructureID_12, sequence, sequence, sequence, dataStructureID_13, dataStructureID_12, dataStructureID_1</Transaction>
+      <Transaction>programID_3381, programID_3312, programID_3381, programID_3312</Transaction>
+      <Transaction>ModelID_13, ModelID_6</Transaction>
+      <Transaction>programID_3381, programID_3312, programID_3312, programID_3312, programID_3312, programID_3381, programID_3312, programID_3312, programID_3312, programID_3312</Transaction>
+      <Transaction>methodID_62, methodID_59</Transaction>
+      <Transaction>programID_3312, programID_3312</Transaction>
+      <Triplet>0, has_InferredBy, 26</Triplet>
+      <Triplet>26, has_PhylogeneticMethod, 31</Triplet>
+      <Triplet>1, has_TreeAnalyzedBy, 34</Triplet>
+      <Triplet>1, has_InferredBy, 28</Triplet>
+      <Triplet>1, has_InferredBy, 27</Triplet>
+      <Triplet>29, has_PhylogeneticMethod, 32</Triplet>
+      <Triplet>18, has_EvolutionaryModel, 20</Triplet>
+   </Workflow>
+   <Workflow file="seg133.xml_00064" pmcid="4020696">
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, sequence</Transaction>
+      <Transaction>ModelID_7</Transaction>
+      <Transaction>programID_3393, programID_3393, programID_3470, programID_3396, programID_3572, programID_3233, programID_3572, programID_3393, programID_3393, programID_3470, programID_3396, programID_3572, programID_3233, programID_3572</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_58, methodID_58, methodID_59, methodID_58, methodID_59, methodID_58, methodID_64, methodID_64, methodID_64</Transaction>
+      <Transaction>programID_3392, programID_3392</Transaction>
+      <Triplet>3, has_InferredBy, 22</Triplet>
+      <Triplet>23, has_PhylogeneticMethod, 31</Triplet>
+   </Workflow>
+   <Workflow file="seg14.xml_00066" pmcid="4329324">
+      <Transaction>dataStructureID_1, sequence, sequence, sequence, sequence</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_96</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+   </Workflow>
+   <Workflow file="seg141.xml_00067" pmcid="3991801">
+      <Transaction>sequence, dataStructureID_12, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3237</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_CollectedBy, 4</Triplet>
+      <Triplet>2, has_InferredBy, 12</Triplet>
+      <Triplet>2, has_InferredBy, 11</Triplet>
+   </Workflow>
+   <Workflow file="seg146.xml_00068" pmcid="4028454">
+      <Transaction>sequence, sequence, sequence, dataStructureID_12, sequence, sequence, sequence, sequence, sequence, sequence, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3, databaseID_3, databaseID_3</Transaction>
+      <Transaction>programID_3237, alignmentProgramID_96</Transaction>
+      <Transaction>ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>1, has_CollectedBy, 14</Triplet>
+      <Triplet>6, has_CollectedBy, 15</Triplet>
+      <Triplet>6, has_RetrievedInDataBase, 12</Triplet>
+      <Triplet>8, has_RetrievedInDataBase, 13</Triplet>
+   </Workflow>
+   <Workflow file="seg149.xml_0006A" pmcid="4043111">
+      <Transaction>dataStructureID_4, sequence, dataStructureID_4, dataStructureID_12, sequence, dataStructureID_4, sequence, dataStructureID_12, sequence, sequence, dataStructureID_12, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, sequence, dataStructureID_12, dataStructureID_4, sequence, dataStructureID_12</Transaction>
+      <Transaction>alignmentProgramID_19</Transaction>
+      <Transaction>ModelID_19</Transaction>
+      <Transaction>programID_3381, programID_3233, programID_3233, programID_3572, programID_3233, programID_3381, programID_3233, programID_3233, programID_3572, programID_3233</Transaction>
+      <Transaction>methodID_59, methodID_63, methodID_64, methodID_64, methodID_64, methodID_59, methodID_59</Transaction>
+      <Triplet>0, has_AlignedBy, 25</Triplet>
+      <Triplet>10, has_InferredBy, 32</Triplet>
+      <Triplet>12, has_InferredBy, 33</Triplet>
+      <Triplet>34, has_PhylogeneticMethod, 39</Triplet>
+      <Triplet>34, has_PhylogeneticMethod, 40</Triplet>
+   </Workflow>
+   <Workflow file="seg155.xml_0006B" pmcid="3906940">
+      <Transaction>dataStructureID_13, sequence, sequence, dataStructureID_2, dataStructureID_4, sequence</Transaction>
+      <Transaction>programID_3233, programID_3233, programID_3233, programID_3233, programID_3322, programID_3322</Transaction>
+      <Transaction>methodID_59, methodID_62, methodID_60, methodID_59, methodID_62, methodID_60</Transaction>
+      <Triplet>2, has_InferredBy, 8</Triplet>
+      <Triplet>2, has_InferredBy, 9</Triplet>
+      <Triplet>2, has_InferredBy, 10</Triplet>
+      <Triplet>2, has_InferredBy, 11</Triplet>
+      <Triplet>3, has_InferredBy, 8</Triplet>
+      <Triplet>3, has_InferredBy, 9</Triplet>
+      <Triplet>3, has_InferredBy, 10</Triplet>
+      <Triplet>3, has_InferredBy, 11</Triplet>
+      <Triplet>8, has_PhylogeneticMethod, 15</Triplet>
+      <Triplet>9, has_PhylogeneticMethod, 15</Triplet>
+   </Workflow>
+   <Workflow file="seg16.xml_0006C" pmcid="4263531">
+      <Transaction>sequence, sequence, sequence, sequence, sequence, dataStructureID_1, dataStructureID_8</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>programID_3613</Transaction>
+      <Transaction>programID_3373</Transaction>
+      <Triplet>0, has_InferredBy, 9</Triplet>
+      <Triplet>3, has_AlignedBy, 8</Triplet>
+      <Triplet>4, has_AlignedBy, 8</Triplet>
+   </Workflow>
+   <Workflow file="seg161.xml_0006D" pmcid="3967905">
+      <Transaction>sequence, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3322, programID_3322, programID_3322, programID_3322, programID_3322, programID_3322</Transaction>
+      <Transaction>methodID_59</Transaction>
+   </Workflow>
+   <Workflow file="seg162.xml_0006E" pmcid="3967900">
+      <Transaction>sequence, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3509, programID_3509, programID_3509, programID_3233, programID_3572, programID_3233, programID_3509, programID_3509, programID_3509, programID_3233, programID_3572, programID_3233</Transaction>
+      <Transaction>methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>11, has_InferredBy, 24</Triplet>
+   </Workflow>
+   <Workflow file="seg169.xml_00071" pmcid="4004945">
+      <Transaction>sequence, dataStructureID_12, sequence, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_RetrievedInDataBase, 4</Triplet>
+      <Triplet>1, has_AlignedBy, 5</Triplet>
+      <Triplet>1, has_InferredBy, 8</Triplet>
+      <Triplet>2, has_HypothesisValidatedBy, 11</Triplet>
+      <Triplet>2, has_InferredBy, 9</Triplet>
+   </Workflow>
+   <Workflow file="seg17.xml_00072" pmcid="4262358">
+      <Transaction>sequence, sequence, sequence, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_98</Transaction>
+      <Transaction>alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>2, has_AlignedBy, 7</Triplet>
+      <Triplet>2, has_InferredBy, 13</Triplet>
+      <Triplet>2, has_InferredBy, 14</Triplet>
+      <Triplet>3, has_InferredBy, 13</Triplet>
+      <Triplet>3, has_InferredBy, 14</Triplet>
+   </Workflow>
+   <Workflow file="seg170.xml_00073" pmcid="4004943">
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3449, programID_3449</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>ModelID_6</Transaction>
+      <Transaction>programID_3438, programID_3396, programID_3438, programID_3396</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_59, methodID_59, methodID_60, methodID_59, methodID_58, methodID_58, methodID_64</Transaction>
+      <Transaction>programID_3438, programID_3438</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+      <Triplet>0, has_CollectedBy, 9</Triplet>
+   </Workflow>
+   <Workflow file="seg171.xml_00074" pmcid="4004941">
+      <Transaction>sequence, sequence, dataStructureID_2</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>programID_3613</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>methodID_59</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_AlignedBy, 4</Triplet>
+      <Triplet>1, has_InferredBy, 6</Triplet>
+   </Workflow>
+   <Workflow file="seg197.xml_00078" pmcid="3895441">
+      <Transaction>sequence, dataStructureID_13, dataStructureID_13, dataStructureID_12, sequence, dataStructureID_4, dataStructureID_12, sequence, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_1, dataStructureID_12, sequence</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_96, alignmentProgramID_97, alignmentProgramID_107</Transaction>
+      <Transaction>alignmentProgramID_17, alignmentProgramID_8, alignmentProgramID_17</Transaction>
+      <Transaction>ModelID_24</Transaction>
+      <Transaction>programID_3328, programID_3328, programID_3470, programID_3328, programID_3328, programID_3470</Transaction>
+      <Transaction>methodID_58, methodID_62</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_RetrievedInDataBase, 17</Triplet>
+      <Triplet>0, has_CollectedBy, 18</Triplet>
+      <Triplet>0, has_CollectedBy, 19</Triplet>
+      <Triplet>0, has_CollectedBy, 20</Triplet>
+      <Triplet>3, has_AlignedBy, 21</Triplet>
+      <Triplet>3, has_InferredBy, 28</Triplet>
+      <Triplet>4, has_AlignedBy, 21</Triplet>
+      <Triplet>4, has_InferredBy, 28</Triplet>
+      <Triplet>5, has_AlignedBy, 22</Triplet>
+      <Triplet>5, has_AlignedBy, 23</Triplet>
+      <Triplet>5, has_InferredBy, 29</Triplet>
+      <Triplet>6, has_AlignedBy, 22</Triplet>
+      <Triplet>6, has_AlignedBy, 23</Triplet>
+      <Triplet>6, has_InferredBy, 29</Triplet>
+   </Workflow>
+   <Workflow file="seg20.xml_0007A" pmcid="4312939">
+      <Transaction>dataStructureID_15, sequence, sequence, sequence, sequence, dataStructureID_12, sequence, sequence, dataStructureID_1, dataStructureID_12, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_12, dataStructureID_1, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_12, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3, databaseID_126, databaseID_3, databaseID_3, databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_98</Transaction>
+      <Transaction>alignmentProgramID_19</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>ModelID_13, ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3438, programID_3396, programID_3396, programID_3400, programID_3381, programID_3381, programID_3284, programID_3381, programID_3438, programID_3396, programID_3396, programID_3400</Transaction>
+      <Transaction>methodID_62, methodID_62, methodID_60, methodID_60, methodID_64, methodID_64, methodID_58, methodID_64</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000, Boots_Inf_50</Transaction>
+      <Triplet>2, has_InferredBy, 41</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 22</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 23</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 24</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 25</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 22</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 23</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 24</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 25</Triplet>
+      <Triplet>5, has_CollectedBy, 28</Triplet>
+      <Triplet>5, has_RetrievedInDataBase, 26</Triplet>
+      <Triplet>6, has_CollectedBy, 28</Triplet>
+      <Triplet>6, has_RetrievedInDataBase, 26</Triplet>
+      <Triplet>43, has_PhylogeneticMethod, 49</Triplet>
+      <Triplet>43, has_PhylogeneticMethod, 50</Triplet>
+      <Triplet>7, has_InferredBy, 44</Triplet>
+      <Triplet>9, has_InferredBy, 45</Triplet>
+      <Triplet>13, has_InferredBy, 46</Triplet>
+      <Triplet>13, has_InferredBy, 47</Triplet>
+      <Triplet>15, has_InferredBy, 48</Triplet>
+      <Triplet>19, has_RetrievedInDataBase, 27</Triplet>
+   </Workflow>
+   <Workflow file="seg202.xml_0007B" pmcid="4073093">
+      <Transaction>dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_12</Transaction>
+      <Transaction>alignmentProgramID_97</Transaction>
+      <Transaction>ModelID_19, ModelID_19</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_59</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>1, has_InferredBy, 12</Triplet>
+      <Triplet>1, has_InferredBy, 11</Triplet>
+   </Workflow>
+   <Workflow file="seg207.xml_0007C" pmcid="3906606">
+      <Transaction>dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3396, programID_3400, programID_3396, programID_3400</Transaction>
+      <Transaction>ModelID_6</Transaction>
+      <Transaction>programID_3396, programID_3400, programID_3509, programID_3396, programID_3400, programID_3509</Transaction>
+      <Transaction>methodID_58, methodID_58, methodID_58, methodID_59, methodID_59</Transaction>
+      <Triplet>5, has_EvolutionaryModel, 7</Triplet>
+      <Triplet>2, has_InferredBy, 13</Triplet>
+   </Workflow>
+   <Workflow file="seg208.xml_0007D" pmcid="3842234">
+      <Transaction>dataStructureID_1, dataStructureID_8, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>ModelID_6</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3438, programID_3706, programID_3546, programID_3546, programID_3438</Transaction>
+      <Transaction>methodID_62, methodID_62, methodID_62, methodID_59, methodID_59, methodID_59, methodID_62</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3438, programID_3438</Transaction>
+      <Transaction>Boots_50_1000, Boots_1000_10000</Transaction>
+      <Triplet>10, has_PhylogeneticMethod, 15</Triplet>
+      <Triplet>10, has_PhylogeneticMethod, 16</Triplet>
+      <Triplet>1, has_InferredBy, 13</Triplet>
+      <Triplet>1, has_InferredBy, 12</Triplet>
+      <Triplet>14, has_PhylogeneticMethod, 20</Triplet>
+      <Triplet>14, has_PhylogeneticMethod, 21</Triplet>
+   </Workflow>
+   <Workflow file="seg213.xml_0007F" pmcid="4151281">
+      <Transaction>dataStructureID_12, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_19, alignmentProgramID_29</Transaction>
+      <Transaction>ModelID_19, ModelID_24</Transaction>
+      <Transaction>programID_3470, programID_3490, programID_3217, programID_3470, programID_3490</Transaction>
+      <Transaction>programID_3722, programID_3723</Transaction>
+      <Triplet>1, has_InferredBy, 15</Triplet>
+      <Triplet>1, has_HypothesisValidatedBy, 17</Triplet>
+      <Triplet>1, has_HypothesisValidatedBy, 18</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 7</Triplet>
+      <Triplet>5, has_RetrievedInDataBase, 7</Triplet>
+      <Triplet>6, has_AlignedBy, 9</Triplet>
+   </Workflow>
+   <Workflow file="seg220.xml_00082" pmcid="4230900">
+      <Transaction>sequence, sequence, dataStructureID_2, sequence, sequence, sequence</Transaction>
+      <Transaction>databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_98</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_60</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>1, has_RetrievedInDataBase, 6</Triplet>
+      <Triplet>1, has_CollectedBy, 8</Triplet>
+      <Triplet>2, has_CollectedBy, 8</Triplet>
+      <Triplet>3, has_AlignedBy, 9</Triplet>
+      <Triplet>5, has_RetrievedInDataBase, 7</Triplet>
+   </Workflow>
+   <Workflow file="seg222.xml_00084" pmcid="4259456">
+      <Transaction>sequence, dataStructureID_2, dataStructureID_13, dataStructureID_13, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_13, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_17, alignmentProgramID_17</Transaction>
+      <Transaction>programID_3509, programID_3328, programID_3328, programID_3509, programID_3328, programID_3328</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3328, programID_3328</Transaction>
+      <Triplet>0, has_InferredBy, 16</Triplet>
+      <Triplet>0, has_AlignedBy, 11</Triplet>
+      <Triplet>0, has_InferredBy, 17</Triplet>
+      <Triplet>10, has_InferredBy, 18</Triplet>
+      <Triplet>10, has_AlignedBy, 12</Triplet>
+      <Triplet>10, has_TreeVisualizedBy, 23</Triplet>
+   </Workflow>
+   <Workflow file="seg223.xml_00085" pmcid="4103437">
+      <Transaction>dataStructureID_12, dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_17</Transaction>
+      <Transaction>programID_3328, programID_3509, programID_3509, programID_3328, programID_3509, programID_3509</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_59, methodID_59, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>0, has_InferredBy, 11</Triplet>
+      <Triplet>0, has_AlignedBy, 7</Triplet>
+      <Triplet>2, has_HypothesisValidatedBy, 21</Triplet>
+      <Triplet>2, has_InferredBy, 13</Triplet>
+      <Triplet>3, has_TreeVisualizedBy, 23</Triplet>
+   </Workflow>
+   <Workflow file="seg224.xml_00086" pmcid="4103138">
+      <Transaction>dataStructureID_12</Transaction>
+      <Transaction>alignmentProgramID_22, alignmentProgramID_26, alignmentProgramID_22, alignmentProgramID_22</Transaction>
+      <Transaction>programID_3358</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3396, programID_3438, programID_3438, programID_3396</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_58, methodID_58, methodID_60, methodID_58, methodID_58</Transaction>
+      <Transaction>programID_3438, programID_3438</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_AlignedBy, 2</Triplet>
+   </Workflow>
+   <Workflow file="seg226.xml_00087" pmcid="4168125">
+      <Transaction>sequence, sequence, sequence, dataStructureID_12, sequence, sequence, sequence, dataStructureID_2, sequence, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_98</Transaction>
+      <Transaction>programID_3237, alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_8</Transaction>
+      <Transaction>ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_CollectedBy, 12</Triplet>
+      <Triplet>2, has_AlignedBy, 14</Triplet>
+      <Triplet>5, has_CollectedBy, 13</Triplet>
+      <Triplet>6, has_AlignedBy, 15</Triplet>
+      <Triplet>6, has_InferredBy, 20</Triplet>
+      <Triplet>6, has_InferredBy, 19</Triplet>
+      <Triplet>7, has_InferredBy, 19</Triplet>
+      <Triplet>7, has_InferredBy, 20</Triplet>
+      <Triplet>8, has_InferredBy, 20</Triplet>
+      <Triplet>8, has_InferredBy, 19</Triplet>
+      <Triplet>9, has_InferredBy, 19</Triplet>
+      <Triplet>9, has_InferredBy, 20</Triplet>
+   </Workflow>
+   <Workflow file="seg230.xml_00088" pmcid="4267105">
+      <Transaction>dataStructureID_1, sequence</Transaction>
+      <Transaction>ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3509, programID_3569, programID_3569, programID_3217, programID_3509</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_59, methodID_59</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+   </Workflow>
+   <Workflow file="seg236.xml_0008A" pmcid="4138389">
+      <Transaction>dataStructureID_8, dataStructureID_1</Transaction>
+      <Transaction>programID_3310, programID_3310, programID_3569, programID_3569</Transaction>
+      <Transaction>methodID_62, methodID_62, methodID_62, methodID_60</Transaction>
+      <Triplet>3, has_PhylogeneticMethod, 7</Triplet>
+   </Workflow>
+   <Workflow file="seg239.xml_0008B" pmcid="4002922">
+      <Transaction>dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, sequence, sequence, dataStructureID_1</Transaction>
+      <Transaction>programID_3312, programID_3312</Transaction>
+      <Triplet>3, has_InferredBy, 8</Triplet>
+   </Workflow>
+   <Workflow file="seg240.xml_0008C" pmcid="4242472">
+      <Transaction>sequence, dataStructureID_2, dataStructureID_12, dataStructureID_4, dataStructureID_4, dataStructureID_12, dataStructureID_4, dataStructureID_2, dataStructureID_12, dataStructureID_2</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3509, programID_3396, programID_3509, programID_3396</Transaction>
+      <Transaction>ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3509, programID_3396, programID_3509, programID_3396</Transaction>
+      <Transaction>methodID_59, methodID_58, methodID_64</Transaction>
+      <Triplet>1, has_AlignedBy, 10</Triplet>
+      <Triplet>7, has_InferredBy, 19</Triplet>
+      <Triplet>8, has_InferredBy, 19</Triplet>
+      <Triplet>13, has_EvolutionaryModel, 15</Triplet>
+      <Triplet>20, has_PhylogeneticMethod, 23</Triplet>
+   </Workflow>
+   <Workflow file="seg241.xml_0008D" pmcid="3939940">
+      <Transaction>sequence, sequence, dataStructureID_13, sequence, dataStructureID_4, dataStructureID_1, dataStructureID_4, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3490, programID_3490, programID_3381, programID_3470, programID_3490, programID_3490, programID_3490, programID_3381, programID_3470, programID_3490</Transaction>
+      <Transaction>methodID_62, methodID_59</Transaction>
+      <Triplet>4, has_AlignedBy, 8</Triplet>
+      <Triplet>5, has_InferredBy, 16</Triplet>
+      <Triplet>5, has_InferredBy, 17</Triplet>
+      <Triplet>5, has_InferredBy, 18</Triplet>
+      <Triplet>16, has_PhylogeneticMethod, 20</Triplet>
+      <Triplet>6, has_InferredBy, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg242.xml_0008E" pmcid="4295282">
+      <Transaction>dataStructureID_1, dataStructureID_1, sequence, sequence, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_59, methodID_59, methodID_62, methodID_60, methodID_59, methodID_62</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+   </Workflow>
+   <Workflow file="seg244.xml_00090" pmcid="4264316">
+      <Transaction>dataStructureID_4, dataStructureID_4, sequence, sequence, dataStructureID_13, sequence, sequence, sequence, dataStructureID_4, dataStructureID_4</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3490, programID_3490</Transaction>
+      <Transaction>ModelID_19, ModelID_21, WAG</Transaction>
+      <Transaction>programID_3509, programID_3509, programID_3490, programID_3490, programID_3509, programID_3509, programID_3490, programID_3490</Transaction>
+      <Transaction>methodID_58, methodID_58</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_InferredBy, 23</Triplet>
+      <Triplet>0, has_AlignedBy, 11</Triplet>
+      <Triplet>1, has_AlignedBy, 11</Triplet>
+      <Triplet>2, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>5, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>13, has_EvolutionaryModel, 14</Triplet>
+      <Triplet>24, has_PhylogeneticMethod, 25</Triplet>
+   </Workflow>
+   <Workflow file="seg245.xml_00091" pmcid="4256733">
+      <Transaction>dataStructureID_4, dataStructureID_4, sequence, dataStructureID_4, dataStructureID_4, sequence, dataStructureID_4, dataStructureID_12</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3490, programID_3490</Transaction>
+      <Transaction>ModelID_24</Transaction>
+      <Transaction>programID_3470, programID_3490, programID_3490, programID_3470, programID_3490, programID_3490</Transaction>
+      <Triplet>3, has_AlignedBy, 8</Triplet>
+      <Triplet>4, has_AlignedBy, 8</Triplet>
+      <Triplet>5, has_AlignedBy, 8</Triplet>
+      <Triplet>10, has_EvolutionaryModel, 11</Triplet>
+   </Workflow>
+   <Workflow file="seg248.xml_00093" pmcid="4236462">
+      <Transaction>dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence</Transaction>
+      <Transaction>programID_3509, programID_3509, programID_3396, programID_3572, programID_3233, programID_3572, programID_3233, programID_3509, programID_3396, programID_3509, programID_3509, programID_3396, programID_3572, programID_3233, programID_3572, programID_3233, programID_3509, programID_3396, programID_3292</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_58, methodID_58, methodID_59, methodID_58, methodID_58</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>3, has_InferredBy, 21</Triplet>
+      <Triplet>5, has_InferredBy, 23</Triplet>
+      <Triplet>5, has_InferredBy, 24</Triplet>
+      <Triplet>5, has_InferredBy, 25</Triplet>
+   </Workflow>
+   <Workflow file="seg250.xml_00095" pmcid="4189756">
+      <Transaction>dataStructureID_1, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3438, programID_3396, programID_3438, programID_3396</Transaction>
+      <Transaction>ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3393, programID_3396, programID_3438, programID_3438, programID_3438, programID_3393, programID_3396, programID_3438</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_59, methodID_59, methodID_58, methodID_60, methodID_59, methodID_59, methodID_58</Transaction>
+      <Transaction>programID_3392, programID_3722</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+      <Triplet>2, has_InferredBy, 19</Triplet>
+      <Triplet>2, has_HypothesisValidatedBy, 31</Triplet>
+      <Triplet>3, has_InferredBy, 19</Triplet>
+      <Triplet>3, has_HypothesisValidatedBy, 31</Triplet>
+      <Triplet>5, has_InferredBy, 21</Triplet>
+   </Workflow>
+   <Workflow file="seg251.xml_00096" pmcid="4172866">
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3358</Transaction>
+      <Transaction>programID_3509, programID_3396, programID_3509, programID_3396</Transaction>
+      <Transaction>methodID_58, methodID_58, methodID_59, methodID_59, methodID_58, methodID_58, methodID_58, methodID_58</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+   </Workflow>
+   <Workflow file="seg252.xml_00097" pmcid="4180321">
+      <Transaction>sequence, dataStructureID_15, dataStructureID_2, sequence, dataStructureID_15, sequence, sequence, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_19</Transaction>
+      <Transaction>programID_3233, programID_3233, programID_3509, programID_3233, programID_3233, programID_3233, programID_3509, programID_3233</Transaction>
+      <Transaction>ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3233, programID_3233, programID_3572, programID_3572, programID_3233, programID_3572, programID_3233, programID_3509, programID_3233, programID_3572, programID_3233, programID_3233, programID_3572, programID_3572, programID_3233, programID_3572, programID_3233, programID_3509, programID_3233, programID_3572</Transaction>
+      <Transaction>methodID_58, methodID_59, methodID_58</Transaction>
+      <Transaction>programID_3233, programID_3233</Transaction>
+      <Triplet>0, has_AlignedBy, 8</Triplet>
+      <Triplet>13, has_EvolutionaryModel, 17</Triplet>
+      <Triplet>33, has_PhylogeneticMethod, 40</Triplet>
+      <Triplet>34, has_PhylogeneticMethod, 40</Triplet>
+      <Triplet>6, has_HypothesisValidatedBy, 43</Triplet>
+      <Triplet>6, has_InferredBy, 37</Triplet>
+      <Triplet>14, has_EvolutionaryModel, 18</Triplet>
+      <Triplet>15, has_EvolutionaryModel, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg253.xml_00098" pmcid="4160548">
+      <Transaction>dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3358, programID_3358</Transaction>
+      <Transaction>ModelID_6, ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3438, programID_3509, programID_3509, programID_3572, programID_3438, programID_3509, programID_3509, programID_3572</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_59, methodID_59, methodID_58</Transaction>
+      <Transaction>programID_3438, programID_3438</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+   </Workflow>
+   <Workflow file="seg256.xml_0009A" pmcid="4236549">
+      <Transaction>dataStructureID_1, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3233, programID_3233</Transaction>
+      <Transaction>ModelID_6, ModelID_6, ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3470, programID_3470, programID_3396, programID_3396, programID_3396, programID_3233, programID_3233, programID_3233, programID_3383, programID_3470, programID_3470, programID_3396, programID_3396, programID_3396, programID_3233, programID_3233, programID_3233, programID_3383</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_58, methodID_64, methodID_64, methodID_64, methodID_59, methodID_58</Transaction>
+      <Triplet>0, has_InferredBy, 21</Triplet>
+      <Triplet>0, has_InferredBy, 22</Triplet>
+      <Triplet>2, has_InferredBy, 24</Triplet>
+      <Triplet>2, has_InferredBy, 23</Triplet>
+      <Triplet>25, has_PhylogeneticMethod, 33</Triplet>
+      <Triplet>25, has_PhylogeneticMethod, 34</Triplet>
+      <Triplet>4, has_InferredBy, 27</Triplet>
+      <Triplet>4, has_InferredBy, 26</Triplet>
+      <Triplet>7, has_EvolutionaryModel, 11</Triplet>
+      <Triplet>28, has_PhylogeneticMethod, 36</Triplet>
+      <Triplet>28, has_PhylogeneticMethod, 37</Triplet>
+      <Triplet>5, has_InferredBy, 29</Triplet>
+   </Workflow>
+   <Workflow file="seg260.xml_0009D" pmcid="4082323">
+      <Transaction>dataStructureID_12, sequence, dataStructureID_12, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_22</Transaction>
+      <Transaction>programID_3490, programID_3490</Transaction>
+      <Transaction>methodID_58, methodID_59</Transaction>
+   </Workflow>
+   <Workflow file="seg262.xml_0009F" pmcid="4082486">
+      <Transaction>sequence, dataStructureID_4, sequence, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_1</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_101, alignmentProgramID_96, alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_17</Transaction>
+      <Transaction>programID_3328, programID_3438, programID_3438, programID_3328, programID_3438, programID_3438</Transaction>
+      <Transaction>methodID_60</Transaction>
+      <Transaction>programID_3723</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_CollectedBy, 8</Triplet>
+      <Triplet>5, has_HypothesisValidatedBy, 20</Triplet>
+   </Workflow>
+   <Workflow file="seg263.xml_000A0" pmcid="4038058">
+      <Transaction>sequence, dataStructureID_1</Transaction>
+      <Transaction>programID_3358</Transaction>
+      <Transaction>programID_3583, programID_3583, programID_3396, programID_3572, programID_3564, programID_3583, programID_3583, programID_3396, programID_3572, programID_3564</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_58, methodID_59, methodID_59, methodID_58, methodID_64, methodID_58</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_InferredBy, 9</Triplet>
+      <Triplet>0, has_InferredBy, 8</Triplet>
+   </Workflow>
+   <Workflow file="seg264.xml_000A1" pmcid="4101842">
+      <Transaction>dataStructureID_4, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_26, programID_3613</Transaction>
+      <Transaction>programID_3393, programID_3393</Transaction>
+      <Transaction>ModelID_4</Transaction>
+      <Transaction>programID_3381, programID_3396, programID_3396, programID_3510, programID_3510, programID_3393, programID_3381, programID_3396, programID_3396, programID_3510, programID_3510, programID_3393</Transaction>
+      <Transaction>methodID_58, methodID_59, methodID_58, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_AlignedBy, 7</Triplet>
+      <Triplet>0, has_InferredBy, 18</Triplet>
+      <Triplet>20, has_PhylogeneticMethod, 24</Triplet>
+      <Triplet>19, has_PhylogeneticMethod, 24</Triplet>
+      <Triplet>19, has_PhylogeneticMethod, 25</Triplet>
+      <Triplet>20, has_PhylogeneticMethod, 25</Triplet>
+      <Triplet>22, has_PhylogeneticMethod, 25</Triplet>
+      <Triplet>21, has_PhylogeneticMethod, 25</Triplet>
+   </Workflow>
+   <Workflow file="seg268.xml_000A4" pmcid="3997829">
+      <Transaction>sequence, sequence, dataStructureID_2, dataStructureID_4, sequence, dataStructureID_1, dataStructureID_4, sequence, sequence, dataStructureID_1, dataStructureID_15, sequence, sequence, dataStructureID_2, dataStructureID_4, dataStructureID_15, sequence, dataStructureID_15, sequence, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_26</Transaction>
+      <Transaction>programID_3509, programID_3358, programID_3509</Transaction>
+      <Transaction>ModelID_6, WAG, ModelID_21, ModelID_24</Transaction>
+      <Transaction>programID_3490, programID_3509, programID_3509, programID_3396, programID_3490, programID_3509, programID_3509, programID_3396</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_59, methodID_58, methodID_58</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>0, has_RetrievedInDataBase, 23</Triplet>
+      <Triplet>9, has_RetrievedInDataBase, 24</Triplet>
+      <Triplet>10, has_RetrievedInDataBase, 24</Triplet>
+      <Triplet>11, has_RetrievedInDataBase, 24</Triplet>
+      <Triplet>13, has_AlignedBy, 25</Triplet>
+      <Triplet>13, has_AlignedBy, 26</Triplet>
+      <Triplet>14, has_AlignedBy, 25</Triplet>
+      <Triplet>14, has_AlignedBy, 26</Triplet>
+      <Triplet>19, has_InferredBy, 39</Triplet>
+      <Triplet>19, has_InferredBy, 40</Triplet>
+      <Triplet>21, has_TreeVisualizedBy, 48</Triplet>
+   </Workflow>
+   <Workflow file="seg269.xml_000A5" pmcid="4000048">
+      <Transaction>dataStructureID_1, dataStructureID_4, sequence, dataStructureID_2, dataStructureID_4, sequence, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>ModelID_24</Transaction>
+      <Transaction>programID_3509, programID_3509, programID_3509, programID_3509, programID_3509, programID_3509</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_59, methodID_59, methodID_59, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3586</Transaction>
+      <Triplet>8, has_InferredBy, 27</Triplet>
+      <Triplet>9, has_InferredBy, 28</Triplet>
+      <Triplet>22, has_TreeVisualizedBy, 37</Triplet>
+   </Workflow>
+   <Workflow file="seg270.xml_000A6" pmcid="4008257">
+      <Transaction>dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>ModelID_6, ModelID_6, ModelID_6, ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3509, programID_3455, programID_3509, programID_3509, programID_3455, programID_3509</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_59, methodID_58, methodID_58, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_new_itol</Transaction>
+      <Triplet>3, has_TreeVisualizedBy, 27</Triplet>
+   </Workflow>
+   <Workflow file="seg271.xml_000A7" pmcid="4015641">
+      <Transaction>dataStructureID_1</Transaction>
+      <Transaction>ModelID_7</Transaction>
+      <Transaction>programID_3233, programID_3233, programID_3572, programID_3233, programID_3233, programID_3572</Transaction>
+      <Transaction>methodID_58</Transaction>
+   </Workflow>
+   <Workflow file="seg272.xml_000A8" pmcid="4015827">
+      <Transaction>dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>ModelID_13, ModelID_13</Transaction>
+      <Transaction>programID_3470, programID_3470, programID_3396, programID_3396, programID_3295, programID_3572, programID_3438, programID_3470, programID_3470, programID_3396, programID_3396, programID_3295, programID_3572, programID_3438</Transaction>
+      <Transaction>methodID_59, methodID_58, methodID_59, methodID_58, methodID_64, methodID_58</Transaction>
+      <Transaction>programID_3572, programID_3438, programID_3572, programID_3438</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>2, has_InferredBy, 18</Triplet>
+      <Triplet>2, has_HypothesisValidatedBy, 28</Triplet>
+      <Triplet>3, has_InferredBy, 18</Triplet>
+      <Triplet>3, has_HypothesisValidatedBy, 28</Triplet>
+   </Workflow>
+   <Workflow file="seg273.xml_000A9" pmcid="4016497">
+      <Transaction>sequence, dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_19</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3509, programID_3396, programID_3509, programID_3396</Transaction>
+      <Transaction>methodID_59, methodID_58, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Triplet>0, has_AlignedBy, 8</Triplet>
+      <Triplet>1, has_HypothesisValidatedBy, 21</Triplet>
+      <Triplet>1, has_InferredBy, 15</Triplet>
+      <Triplet>15, has_PhylogeneticMethod, 17</Triplet>
+      <Triplet>3, has_InferredBy, 16</Triplet>
+   </Workflow>
+   <Workflow file="seg274.xml_000AA" pmcid="3933166">
+      <Transaction>dataStructureID_2, dataStructureID_1, sequence, sequence, dataStructureID_13, dataStructureID_2, dataStructureID_12, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_17</Transaction>
+      <Transaction>programID_3328, programID_3509, programID_3328, programID_3509</Transaction>
+      <Transaction>methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_1000_10000</Transaction>
+      <Triplet>5, has_HypothesisValidatedBy, 17</Triplet>
+      <Triplet>5, has_InferredBy, 13</Triplet>
+      <Triplet>6, has_HypothesisValidatedBy, 17</Triplet>
+      <Triplet>6, has_InferredBy, 13</Triplet>
+      <Triplet>7, has_HypothesisValidatedBy, 17</Triplet>
+      <Triplet>7, has_InferredBy, 13</Triplet>
+   </Workflow>
+   <Workflow file="seg276.xml_000AC" pmcid="3923989">
+      <Transaction>dataStructureID_4, sequence, dataStructureID_13, sequence, dataStructureID_4, sequence, sequence, dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, sequence, sequence, sequence, dataStructureID_4, dataStructureID_1, sequence, sequence, sequence, dataStructureID_1, dataStructureID_2, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3237</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_19, alignmentProgramID_19</Transaction>
+      <Transaction>programID_3396, programID_3396</Transaction>
+      <Transaction>ModelID_21, WAG</Transaction>
+      <Transaction>programID_3509, programID_3490, programID_3396, programID_3509, programID_3509, programID_3490, programID_3274, programID_3274, programID_3396, programID_3509</Transaction>
+      <Transaction>methodID_59, methodID_58, methodID_64, methodID_64, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3490, programID_3509, programID_3509, programID_3490, programID_3509</Transaction>
+      <Transaction>Boots_Inf_50, Boots_50_1000, Boots_Inf_50, Boots_50_1000</Transaction>
+      <Transaction>programID_3603</Transaction>
+      <Triplet>0, has_AlignedBy, 27</Triplet>
+      <Triplet>0, has_AlignedBy, 28</Triplet>
+      <Triplet>0, has_AlignedBy, 29</Triplet>
+      <Triplet>1, has_AlignedBy, 28</Triplet>
+      <Triplet>1, has_AlignedBy, 29</Triplet>
+      <Triplet>8, has_InferredBy, 38</Triplet>
+      <Triplet>8, has_HypothesisValidatedBy, 53</Triplet>
+      <Triplet>8, has_InferredBy, 39</Triplet>
+      <Triplet>8, has_HypothesisValidatedBy, 54</Triplet>
+      <Triplet>8, has_InferredBy, 41</Triplet>
+      <Triplet>8, has_InferredBy, 40</Triplet>
+      <Triplet>10, has_InferredBy, 42</Triplet>
+      <Triplet>31, has_EvolutionaryModel, 33</Triplet>
+      <Triplet>31, has_EvolutionaryModel, 32</Triplet>
+      <Triplet>22, has_HypothesisValidatedBy, 55</Triplet>
+      <Triplet>22, has_InferredBy, 43</Triplet>
+   </Workflow>
+   <Workflow file="seg277.xml_000AD" pmcid="3913319">
+      <Transaction>dataStructureID_1, dataStructureID_13, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_2, dataStructureID_13</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>ModelID_7</Transaction>
+      <Transaction>programID_3393, programID_3381, programID_3381, programID_3572, programID_3233, programID_3381, programID_3233, programID_3393, programID_3381, programID_3381, programID_3572, programID_3233, programID_3381, programID_3233</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_64, methodID_58, methodID_64</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Transaction>programID_3572, programID_3572</Transaction>
+      <Triplet>21, has_PhylogeneticMethod, 29</Triplet>
+   </Workflow>
+   <Workflow file="seg279.xml_000AE" pmcid="3901756">
+      <Transaction>dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3396, programID_3572, programID_3396, programID_3396, programID_3572, programID_3396</Transaction>
+      <Transaction>methodID_58, methodID_58, methodID_64, methodID_64, methodID_64, methodID_64</Transaction>
+      <Transaction>programID_3396, programID_3396</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>0, has_HypothesisValidatedBy, 16</Triplet>
+      <Triplet>0, has_InferredBy, 8</Triplet>
+      <Triplet>1, has_TreeVisualizedBy, 17</Triplet>
+   </Workflow>
+   <Workflow file="seg28.xml_000AF" pmcid="4214781">
+      <Transaction>dataStructureID_1, dataStructureID_12, dataStructureID_12, dataStructureID_1</Transaction>
+      <Transaction>databaseID_2</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Transaction>ModelID_23</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_new_itol</Transaction>
+      <Triplet>1, has_AlignedBy, 5</Triplet>
+      <Triplet>3, has_HypothesisValidatedBy, 12</Triplet>
+      <Triplet>3, has_InferredBy, 10</Triplet>
+      <Triplet>3, has_TreeVisualizedBy, 14</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 4</Triplet>
+   </Workflow>
+   <Workflow file="seg280.xml_000B0" pmcid="4076065">
+      <Transaction>sequence, dataStructureID_4, dataStructureID_12, dataStructureID_4, dataStructureID_2, sequence, dataStructureID_1</Transaction>
+      <Transaction>programID_3381, alignmentProgramID_8, programID_3381</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>1, has_AlignedBy, 8</Triplet>
+      <Triplet>1, has_InferredBy, 16</Triplet>
+      <Triplet>1, has_AlignedBy, 9</Triplet>
+      <Triplet>6, has_HypothesisValidatedBy, 21</Triplet>
+      <Triplet>6, has_InferredBy, 17</Triplet>
+      <Triplet>6, has_InferredBy, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg283.xml_000B1" pmcid="4367826">
+      <Transaction>dataStructureID_1, dataStructureID_4, dataStructureID_4, dataStructureID_2, dataStructureID_4, dataStructureID_12, dataStructureID_4, dataStructureID_15, dataStructureID_15, dataStructureID_15, dataStructureID_15, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_4</Transaction>
+      <Transaction>databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3396, programID_3509, programID_3509, programID_3455, programID_3455, programID_3455, programID_3396, programID_3509, programID_3509, programID_3455, programID_3455, programID_3455</Transaction>
+      <Transaction>methodID_58, methodID_58, methodID_58, methodID_59, methodID_59, methodID_58, methodID_59, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_50_1000, Boots_Inf_50</Transaction>
+      <Triplet>2, has_AlignedBy, 19</Triplet>
+      <Triplet>15, has_InferredBy, 29</Triplet>
+      <Triplet>15, has_InferredBy, 30</Triplet>
+   </Workflow>
+   <Workflow file="seg286.xml_000B4" pmcid="4300991">
+      <Transaction>dataStructureID_2, dataStructureID_13, dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_13</Transaction>
+      <Transaction>programID_3470, programID_3470, programID_3470, programID_3470</Transaction>
+      <Transaction>programID_new_itol</Transaction>
+      <Triplet>0, has_InferredBy, 10</Triplet>
+      <Triplet>0, has_InferredBy, 11</Triplet>
+      <Triplet>1, has_InferredBy, 10</Triplet>
+      <Triplet>1, has_InferredBy, 11</Triplet>
+      <Triplet>2, has_InferredBy, 10</Triplet>
+      <Triplet>2, has_InferredBy, 11</Triplet>
+      <Triplet>3, has_InferredBy, 10</Triplet>
+      <Triplet>3, has_InferredBy, 11</Triplet>
+      <Triplet>4, has_TreeVisualizedBy, 12</Triplet>
+   </Workflow>
+   <Workflow file="seg287.xml_000B5" pmcid="4289182">
+      <Transaction>sequence, dataStructureID_12, sequence, sequence, sequence, dataStructureID_1, dataStructureID_12, sequence, dataStructureID_4, sequence, sequence, sequence, dataStructureID_1</Transaction>
+      <Transaction>databaseID_126, databaseID_126</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>WAG, ModelID_21, ModelID_21, WAG</Transaction>
+      <Transaction>programID_3470, programID_3527, programID_3381, programID_3470, programID_3396, programID_3470, programID_3527, programID_3381, programID_3470, programID_3396</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_58</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Triplet>3, has_RetrievedInDataBase, 13</Triplet>
+      <Triplet>3, has_RetrievedInDataBase, 14</Triplet>
+      <Triplet>26, has_PhylogeneticMethod, 31</Triplet>
+      <Triplet>26, has_PhylogeneticMethod, 32</Triplet>
+      <Triplet>27, has_PhylogeneticMethod, 31</Triplet>
+      <Triplet>27, has_PhylogeneticMethod, 32</Triplet>
+      <Triplet>16, has_EvolutionaryModel, 17</Triplet>
+      <Triplet>16, has_EvolutionaryModel, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg288.xml_000B6" pmcid="4289303">
+      <Transaction>dataStructureID_2, sequence, dataStructureID_2, sequence, dataStructureID_2</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3284</Transaction>
+      <Transaction>methodID_62</Transaction>
+   </Workflow>
+   <Workflow file="seg289.xml_000B7" pmcid="4197233">
+      <Transaction>dataStructureID_13, dataStructureID_13, sequence, dataStructureID_2, dataStructureID_12, dataStructureID_4, dataStructureID_12, dataStructureID_2, dataStructureID_4, dataStructureID_2, dataStructureID_4, dataStructureID_2, sequence, dataStructureID_4, dataStructureID_2, dataStructureID_2, dataStructureID_1, dataStructureID_12, dataStructureID_2, dataStructureID_4, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_8</Transaction>
+      <Transaction>programID_3490, programID_3470, programID_3490, programID_3358, programID_3490, programID_3470, programID_3358, programID_3490</Transaction>
+      <Transaction>ModelID_6, ModelID_25, ModelID_6, ModelID_25</Transaction>
+      <Transaction>programID_3381, programID_3272, programID_3490, programID_3470, programID_3490, programID_3381, programID_3272, programID_3490, programID_3470, programID_3490</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3723, programID_3722</Transaction>
+      <Triplet>7, has_AlignedBy, 22</Triplet>
+      <Triplet>7, has_InferredBy, 41</Triplet>
+      <Triplet>8, has_AlignedBy, 22</Triplet>
+      <Triplet>8, has_InferredBy, 41</Triplet>
+      <Triplet>10, has_AlignedBy, 23</Triplet>
+      <Triplet>14, has_InferredBy, 42</Triplet>
+      <Triplet>17, has_InferredBy, 43</Triplet>
+      <Triplet>18, has_InferredBy, 43</Triplet>
+      <Triplet>19, has_InferredBy, 43</Triplet>
+      <Triplet>21, has_InferredBy, 45</Triplet>
+   </Workflow>
+   <Workflow file="seg290.xml_000B9" pmcid="4209062">
+      <Transaction>sequence, dataStructureID_2, sequence, sequence, dataStructureID_13, sequence, dataStructureID_1, dataStructureID_13, dataStructureID_13, dataStructureID_13</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>programID_3381, programID_3452, programID_3381, programID_3452</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>0, has_AlignedBy, 12</Triplet>
+      <Triplet>0, has_InferredBy, 15</Triplet>
+      <Triplet>1, has_AlignedBy, 12</Triplet>
+      <Triplet>1, has_InferredBy, 15</Triplet>
+      <Triplet>7, has_InferredBy, 16</Triplet>
+   </Workflow>
+   <Workflow file="seg291.xml_000BA" pmcid="4194401">
+      <Transaction>dataStructureID_2, dataStructureID_4, dataStructureID_4, dataStructureID_12, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>ModelID_22</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3217, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Triplet>3, has_AlignedBy, 5</Triplet>
+      <Triplet>4, has_InferredBy, 9</Triplet>
+      <Triplet>4, has_InferredBy, 10</Triplet>
+      <Triplet>4, has_InferredBy, 11</Triplet>
+   </Workflow>
+   <Workflow file="seg292.xml_000BB" pmcid="4161770">
+      <Transaction>dataStructureID_4, dataStructureID_4, dataStructureID_1, sequence, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_97</Transaction>
+      <Transaction>programID_3393, programID_3393</Transaction>
+      <Transaction>ModelID_21, WAG</Transaction>
+      <Transaction>programID_3396, programID_3396, programID_3393, programID_3396, programID_3396, programID_3393</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Triplet>0, has_CollectedBy, 5</Triplet>
+   </Workflow>
+   <Workflow file="seg294.xml_000BD" pmcid="4137089">
+      <Transaction>dataStructureID_13, dataStructureID_13, dataStructureID_13, dataStructureID_2, dataStructureID_13, dataStructureID_2, dataStructureID_13, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Transaction>ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3470, programID_3470, programID_3470, programID_3470</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>5, has_AlignedBy, 8</Triplet>
+      <Triplet>6, has_AlignedBy, 8</Triplet>
+      <Triplet>7, has_InferredBy, 16</Triplet>
+      <Triplet>7, has_InferredBy, 15</Triplet>
+   </Workflow>
+   <Workflow file="seg295.xml_000BE" pmcid="4227064">
+      <Transaction>dataStructureID_12, dataStructureID_13, dataStructureID_13, dataStructureID_12, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>ModelID_24</Transaction>
+      <Transaction>programID_3490, programID_3470, programID_3490, programID_3490, programID_3470, programID_3490</Transaction>
+      <Triplet>8, has_InferredBy, 16</Triplet>
+   </Workflow>
+   <Workflow file="seg296.xml_000BF" pmcid="4072886">
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_1</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62, methodID_62, methodID_59, methodID_62, methodID_59</Transaction>
+      <Triplet>0, has_InferredBy, 10</Triplet>
+      <Triplet>0, has_InferredBy, 9</Triplet>
+      <Triplet>1, has_InferredBy, 10</Triplet>
+      <Triplet>1, has_InferredBy, 9</Triplet>
+   </Workflow>
+   <Workflow file="seg298.xml_000C0" pmcid="4035089">
+      <Transaction>dataStructureID_1, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4</Transaction>
+      <Transaction>programID_3455, programID_3455</Transaction>
+      <Transaction>ModelID_6</Transaction>
+      <Transaction>programID_3455, programID_3455, programID_3509, programID_3455, programID_3455, programID_3509</Transaction>
+      <Transaction>methodID_58</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Triplet>0, has_InferredBy, 13</Triplet>
+      <Triplet>0, has_InferredBy, 12</Triplet>
+      <Triplet>1, has_InferredBy, 13</Triplet>
+      <Triplet>1, has_InferredBy, 12</Triplet>
+      <Triplet>2, has_InferredBy, 13</Triplet>
+      <Triplet>2, has_InferredBy, 12</Triplet>
+      <Triplet>3, has_InferredBy, 13</Triplet>
+      <Triplet>3, has_InferredBy, 12</Triplet>
+   </Workflow>
+   <Workflow file="seg300.xml_000C2" pmcid="4023601">
+      <Transaction>dataStructureID_13, dataStructureID_13, dataStructureID_13, dataStructureID_1, dataStructureID_1, dataStructureID_12, dataStructureID_4, dataStructureID_1, sequence</Transaction>
+      <Transaction>programID_3438, programID_3438</Transaction>
+      <Transaction>methodID_60, methodID_62, methodID_59, methodID_60, methodID_60</Transaction>
+      <Triplet>3, has_InferredBy, 10</Triplet>
+   </Workflow>
+   <Workflow file="seg303.xml_000C3" pmcid="3942780">
+      <Transaction>dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_4</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>programID_3381, alignmentProgramID_8, programID_3381</Transaction>
+      <Transaction>ModelID_24</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3490, programID_3381, programID_3381, programID_3490</Transaction>
+      <Transaction>methodID_59</Transaction>
+      <Triplet>3, has_RetrievedInDataBase, 12</Triplet>
+      <Triplet>4, has_RetrievedInDataBase, 12</Triplet>
+      <Triplet>5, has_AlignedBy, 14</Triplet>
+      <Triplet>5, has_AlignedBy, 15</Triplet>
+      <Triplet>5, has_InferredBy, 21</Triplet>
+      <Triplet>5, has_InferredBy, 20</Triplet>
+      <Triplet>6, has_InferredBy, 22</Triplet>
+   </Workflow>
+   <Workflow file="seg304.xml_000C4" pmcid="3932018">
+      <Transaction>sequence, dataStructureID_1, dataStructureID_15, dataStructureID_4, dataStructureID_12, dataStructureID_15, dataStructureID_4, dataStructureID_4, dataStructureID_15, dataStructureID_4, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3470, programID_3396, programID_3570, programID_3470, programID_3396, programID_3570</Transaction>
+      <Transaction>ModelID_19, ModelID_19, WAG, ModelID_21</Transaction>
+      <Transaction>programID_3470, programID_3470, programID_3396, programID_3396, programID_3570, programID_3570, programID_3396, programID_3470, programID_3470, programID_3470, programID_3396, programID_3396, programID_3570, programID_3570, programID_3396, programID_3470, programID_3546, programID_3546</Transaction>
+      <Transaction>methodID_64, methodID_64</Transaction>
+      <Transaction>programID_3470, programID_3470</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_RetrievedInDataBase, 14</Triplet>
+      <Triplet>0, has_AlignedBy, 15</Triplet>
+      <Triplet>19, has_EvolutionaryModel, 22</Triplet>
+      <Triplet>19, has_EvolutionaryModel, 23</Triplet>
+      <Triplet>5, has_InferredBy, 39</Triplet>
+      <Triplet>5, has_InferredBy, 38</Triplet>
+      <Triplet>6, has_InferredBy, 39</Triplet>
+      <Triplet>6, has_InferredBy, 38</Triplet>
+      <Triplet>7, has_InferredBy, 39</Triplet>
+      <Triplet>7, has_InferredBy, 38</Triplet>
+      <Triplet>20, has_EvolutionaryModel, 22</Triplet>
+      <Triplet>20, has_EvolutionaryModel, 23</Triplet>
+      <Triplet>21, has_EvolutionaryModel, 22</Triplet>
+      <Triplet>21, has_EvolutionaryModel, 23</Triplet>
+      <Triplet>40, has_PhylogeneticMethod, 44</Triplet>
+      <Triplet>40, has_PhylogeneticMethod, 45</Triplet>
+   </Workflow>
+   <Workflow file="seg306.xml_000C5" pmcid="4234859">
+      <Transaction>sequence, sequence, sequence, sequence, sequence, dataStructureID_12, dataStructureID_1, sequence</Transaction>
+      <Transaction>databaseID_3, databaseID_3, databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_19, alignmentProgramID_19</Transaction>
+      <Transaction>programID_3381, programID_3393, programID_3396, programID_3381, programID_3393, programID_3396</Transaction>
+      <Transaction>methodID_58, methodID_64, methodID_58</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Triplet>2, has_RetrievedInDataBase, 8</Triplet>
+      <Triplet>4, has_AlignedBy, 12</Triplet>
+      <Triplet>7, has_RetrievedInDataBase, 9</Triplet>
+   </Workflow>
+   <Workflow file="seg307.xml_000C6" pmcid="4152572">
+      <Transaction>sequence, sequence, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_96, programID_3237</Transaction>
+      <Transaction>alignmentProgramID_26, alignmentProgramID_22, alignmentProgramID_26</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>ModelID_13</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3537, programID_3381, programID_3381, programID_3537</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_CollectedBy, 3</Triplet>
+      <Triplet>0, has_CollectedBy, 4</Triplet>
+      <Triplet>0, has_AlignedBy, 5</Triplet>
+      <Triplet>1, has_CollectedBy, 4</Triplet>
+      <Triplet>1, has_AlignedBy, 5</Triplet>
+      <Triplet>2, has_HypothesisValidatedBy, 19</Triplet>
+      <Triplet>2, has_InferredBy, 14</Triplet>
+      <Triplet>2, has_InferredBy, 15</Triplet>
+   </Workflow>
+   <Workflow file="seg308.xml_000C7" pmcid="4223652">
+      <Transaction>sequence, sequence, dataStructureID_1, sequence, sequence, sequence, sequence, dataStructureID_1, dataStructureID_2, dataStructureID_1, sequence, dataStructureID_2</Transaction>
+      <Transaction>alignmentProgramID_96, programID_3237</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3393, programID_3381, programID_3381, programID_3381, programID_3393</Transaction>
+      <Transaction>methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>1, has_InferredBy, 20</Triplet>
+      <Triplet>1, has_InferredBy, 19</Triplet>
+      <Triplet>1, has_CollectedBy, 12</Triplet>
+      <Triplet>2, has_InferredBy, 19</Triplet>
+      <Triplet>2, has_InferredBy, 20</Triplet>
+      <Triplet>2, has_CollectedBy, 12</Triplet>
+      <Triplet>3, has_CollectedBy, 12</Triplet>
+      <Triplet>4, has_CollectedBy, 12</Triplet>
+      <Triplet>6, has_AlignedBy, 14</Triplet>
+      <Triplet>6, has_CollectedBy, 13</Triplet>
+      <Triplet>7, has_InferredBy, 21</Triplet>
+      <Triplet>7, has_HypothesisValidatedBy, 25</Triplet>
+      <Triplet>7, has_InferredBy, 22</Triplet>
+      <Triplet>8, has_HypothesisValidatedBy, 25</Triplet>
+      <Triplet>8, has_InferredBy, 22</Triplet>
+   </Workflow>
+   <Workflow file="seg309.xml_000C8" pmcid="3936777">
+      <Transaction>sequence, dataStructureID_15, sequence, sequence, sequence, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_98, databaseID_98</Transaction>
+      <Transaction>alignmentProgramID_96</Transaction>
+      <Transaction>programID_3381, alignmentProgramID_8, programID_3381</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_59, methodID_62</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Triplet>0, has_AlignedBy, 11</Triplet>
+      <Triplet>0, has_InferredBy, 16</Triplet>
+      <Triplet>0, has_AlignedBy, 12</Triplet>
+      <Triplet>5, has_TreeVisualizedBy, 23</Triplet>
+      <Triplet>5, has_InferredBy, 18</Triplet>
+      <Triplet>5, has_InferredBy, 17</Triplet>
+   </Workflow>
+   <Workflow file="seg311.xml_000C9" pmcid="4220414">
+      <Transaction>dataStructureID_4, dataStructureID_4, dataStructureID_4, sequence, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_4, dataStructureID_12</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_96, alignmentProgramID_97</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_17</Transaction>
+      <Transaction>programID_3328, programID_3328, programID_3328, programID_3328</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Triplet>1, has_CollectedBy, 10</Triplet>
+      <Triplet>1, has_CollectedBy, 11</Triplet>
+      <Triplet>1, has_RetrievedInDataBase, 9</Triplet>
+      <Triplet>4, has_AlignedBy, 12</Triplet>
+      <Triplet>5, has_InferredBy, 16</Triplet>
+      <Triplet>5, has_AlignedBy, 13</Triplet>
+      <Triplet>5, has_InferredBy, 17</Triplet>
+      <Triplet>16, has_PhylogeneticMethod, 18</Triplet>
+      <Triplet>17, has_PhylogeneticMethod, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg314.xml_000CB" pmcid="4180131">
+      <Transaction>dataStructureID_4, dataStructureID_4, dataStructureID_4, dataStructureID_13, dataStructureID_1, dataStructureID_4, dataStructureID_4, dataStructureID_1, dataStructureID_4</Transaction>
+      <Transaction>databaseID_44, databaseID_3, databaseID_126, databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62, methodID_60, methodID_60</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+      <Triplet>0, has_RetrievedInDataBase, 9</Triplet>
+      <Triplet>1, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>1, has_RetrievedInDataBase, 11</Triplet>
+      <Triplet>1, has_RetrievedInDataBase, 12</Triplet>
+      <Triplet>2, has_AlignedBy, 13</Triplet>
+      <Triplet>2, has_InferredBy, 17</Triplet>
+      <Triplet>2, has_InferredBy, 16</Triplet>
+      <Triplet>3, has_AlignedBy, 13</Triplet>
+      <Triplet>3, has_InferredBy, 17</Triplet>
+      <Triplet>3, has_InferredBy, 16</Triplet>
+      <Triplet>4, has_AlignedBy, 13</Triplet>
+      <Triplet>4, has_InferredBy, 17</Triplet>
+      <Triplet>4, has_InferredBy, 16</Triplet>
+      <Triplet>5, has_InferredBy, 17</Triplet>
+      <Triplet>5, has_InferredBy, 16</Triplet>
+   </Workflow>
+   <Workflow file="seg315.xml_000CC" pmcid="4070083">
+      <Transaction>dataStructureID_4, dataStructureID_4, dataStructureID_12</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>ModelID_23, ModelID_19</Transaction>
+      <Transaction>programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_62</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>2, has_AlignedBy, 3</Triplet>
+      <Triplet>2, has_InferredBy, 7</Triplet>
+   </Workflow>
+   <Workflow file="seg317.xml_000CD" pmcid="4108027">
+      <Transaction>sequence, dataStructureID_13, dataStructureID_1, dataStructureID_1, dataStructureID_2</Transaction>
+      <Transaction>databaseID_40</Transaction>
+      <Transaction>programID_3328, alignmentProgramID_17, programID_3328, alignmentProgramID_26</Transaction>
+      <Transaction>programID_3328, programID_3452, programID_3509, programID_3509, programID_3328, programID_3452, programID_3509, programID_3509, programID_3234, programID_3234</Transaction>
+      <Transaction>methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3509, programID_3509</Transaction>
+      <Transaction>Boots_1000000_Inf</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>0, has_AlignedBy, 7</Triplet>
+      <Triplet>0, has_InferredBy, 14</Triplet>
+      <Triplet>0, has_AlignedBy, 8</Triplet>
+      <Triplet>0, has_AlignedBy, 9</Triplet>
+      <Triplet>2, has_HypothesisValidatedBy, 23</Triplet>
+      <Triplet>2, has_InferredBy, 17</Triplet>
+      <Triplet>2, has_InferredBy, 16</Triplet>
+      <Triplet>2, has_InferredBy, 19</Triplet>
+      <Triplet>2, has_InferredBy, 18</Triplet>
+      <Triplet>2, has_RetrievedInDataBase, 5</Triplet>
+      <Triplet>17, has_PhylogeneticMethod, 21</Triplet>
+      <Triplet>16, has_PhylogeneticMethod, 21</Triplet>
+      <Triplet>19, has_PhylogeneticMethod, 21</Triplet>
+      <Triplet>18, has_PhylogeneticMethod, 21</Triplet>
+   </Workflow>
+   <Workflow file="seg319.xml_000CE" pmcid="3893544">
+      <Transaction>dataStructureID_4, dataStructureID_1, sequence, dataStructureID_15, dataStructureID_4, dataStructureID_12, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_96, alignmentProgramID_107</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_8</Transaction>
+      <Transaction>programID_3391, programID_3470, programID_3470, programID_3391, programID_3470, programID_3470</Transaction>
+      <Transaction>methodID_62, methodID_59</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_3417</Transaction>
+      <Triplet>0, has_CollectedBy, 8</Triplet>
+      <Triplet>1, has_AlignedBy, 10</Triplet>
+      <Triplet>4, has_AlignedBy, 11</Triplet>
+      <Triplet>6, has_InferredBy, 17</Triplet>
+      <Triplet>6, has_InferredBy, 16</Triplet>
+      <Triplet>7, has_TreeVisualizedBy, 21</Triplet>
+   </Workflow>
+   <Workflow file="seg322.xml_000D0" pmcid="4167140">
+      <Transaction>sequence, dataStructureID_12, dataStructureID_2, sequence, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_98, alignmentProgramID_98</Transaction>
+      <Transaction>alignmentProgramID_8, alignmentProgramID_8</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3381, programID_3381, programID_3393, programID_3381, programID_3438, programID_3438, programID_3381, programID_3381, programID_3393, programID_3381, programID_3706</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_62, methodID_62, methodID_59, methodID_62</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Triplet>5, has_AlignedBy, 11</Triplet>
+      <Triplet>6, has_InferredBy, 20</Triplet>
+      <Triplet>6, has_InferredBy, 19</Triplet>
+      <Triplet>6, has_InferredBy, 22</Triplet>
+      <Triplet>6, has_InferredBy, 21</Triplet>
+      <Triplet>6, has_AlignedBy, 12</Triplet>
+      <Triplet>20, has_PhylogeneticMethod, 28</Triplet>
+      <Triplet>19, has_PhylogeneticMethod, 28</Triplet>
+      <Triplet>22, has_PhylogeneticMethod, 28</Triplet>
+      <Triplet>21, has_PhylogeneticMethod, 28</Triplet>
+      <Triplet>7, has_InferredBy, 25</Triplet>
+   </Workflow>
+   <Workflow file="seg323.xml_000D1" pmcid="4105795">
+      <Transaction>dataStructureID_12, dataStructureID_1, dataStructureID_4, sequence, dataStructureID_1, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_2</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>ModelID_19</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_59, methodID_62, methodID_60, methodID_60, methodID_62, methodID_60, methodID_59, methodID_62, methodID_59, methodID_60</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_new_itol</Transaction>
+      <Triplet>1, has_AlignedBy, 10</Triplet>
+      <Triplet>2, has_AlignedBy, 10</Triplet>
+      <Triplet>3, has_AlignedBy, 10</Triplet>
+      <Triplet>4, has_InferredBy, 14</Triplet>
+      <Triplet>4, has_InferredBy, 15</Triplet>
+      <Triplet>7, has_TreeVisualizedBy, 27</Triplet>
+      <Triplet>7, has_RetrievedInDataBase, 9</Triplet>
+   </Workflow>
+   <Workflow file="seg324.xml_000D2" pmcid="4119055">
+      <Transaction>dataStructureID_15, dataStructureID_4, dataStructureID_13, dataStructureID_15, dataStructureID_15, dataStructureID_12, dataStructureID_4, sequence</Transaction>
+      <Transaction>alignmentProgramID_44</Transaction>
+      <Transaction>programID_3490, programID_3490</Transaction>
+      <Transaction>methodID_63, methodID_63</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>5, has_AlignedBy, 8</Triplet>
+      <Triplet>6, has_AlignedBy, 8</Triplet>
+   </Workflow>
+   <Workflow file="seg325.xml_000D3" pmcid="4083144">
+      <Transaction>sequence, dataStructureID_12, dataStructureID_4, dataStructureID_12, dataStructureID_4, dataStructureID_12, dataStructureID_2, dataStructureID_2, dataStructureID_4, dataStructureID_4, dataStructureID_2</Transaction>
+      <Transaction>alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_26, alignmentProgramID_38</Transaction>
+      <Transaction>programID_3393, programID_3391, programID_3393, programID_3391</Transaction>
+      <Transaction>ModelID_6, ModelID_19</Transaction>
+      <Transaction>programID_3302, programID_3393, programID_3391, programID_3470, programID_3438, programID_3438, programID_3302, programID_3393, programID_3391, programID_3470, programID_3438, programID_3438</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_59, methodID_59, methodID_59, methodID_59, methodID_60, methodID_60, methodID_60</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+      <Triplet>2, has_InferredBy, 26</Triplet>
+      <Triplet>2, has_AlignedBy, 12</Triplet>
+      <Triplet>3, has_AlignedBy, 13</Triplet>
+      <Triplet>7, has_HypothesisValidatedBy, 41</Triplet>
+      <Triplet>7, has_InferredBy, 27</Triplet>
+      <Triplet>8, has_InferredBy, 28</Triplet>
+      <Triplet>28, has_PhylogeneticMethod, 36</Triplet>
+   </Workflow>
+   <Workflow file="seg328.xml_000D6" pmcid="4172395">
+      <Transaction>sequence, dataStructureID_1, sequence, dataStructureID_4, sequence, sequence, dataStructureID_1, dataStructureID_4, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3237</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3470, programID_3396, programID_3470, programID_3396</Transaction>
+      <Transaction>ModelID_24, ModelID_21, WAG, ModelID_24</Transaction>
+      <Transaction>programID_3470, programID_3396, programID_3470, programID_3396</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_58, methodID_59, methodID_59, methodID_59, methodID_58, methodID_58, methodID_59</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>17, has_EvolutionaryModel, 20</Triplet>
+      <Triplet>17, has_EvolutionaryModel, 19</Triplet>
+      <Triplet>17, has_EvolutionaryModel, 21</Triplet>
+      <Triplet>10, has_TreeVisualizedBy, 36</Triplet>
+   </Workflow>
+   <Workflow file="seg102.xml_00059" pmcid="4066922">
+      <Transaction>dataStructureID_12, dataStructureID_12, dataStructureID_12, sequence, dataStructureID_1, sequence, sequence, dataStructureID_2, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_19, alignmentProgramID_19</Transaction>
+      <Transaction>ModelID_4, ModelID_13</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3400, programID_3400, programID_3396, programID_3396, programID_3438, programID_3438, programID_3400, programID_3400, programID_3396, programID_3396, programID_3546, programID_3546</Transaction>
+      <Transaction>methodID_60, methodID_58, methodID_58, methodID_58, methodID_64</Transaction>
+      <Triplet>5, has_CollectedBy, 11</Triplet>
+      <Triplet>5, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>7, has_InferredBy, 24</Triplet>
+      <Triplet>7, has_InferredBy, 25</Triplet>
+   </Workflow>
+   <Workflow file="seg103.xml_0005A" pmcid="4150071">
+      <Transaction>sequence, sequence, sequence, dataStructureID_2, dataStructureID_12, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_59, methodID_59</Transaction>
+      <Transaction>programID_3722</Transaction>
+      <Triplet>0, has_AlignedBy, 7</Triplet>
+      <Triplet>3, has_InferredBy, 13</Triplet>
+   </Workflow>
+   <Workflow file="seg1.xml_00056" pmcid="4356459">
+      <Transaction>dataStructureID_2, dataStructureID_12, sequence, sequence, sequence, sequence, sequence, dataStructureID_12, dataStructureID_1, sequence, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3</Transaction>
+      <Transaction>programID_3237, alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3381, programID_3381, programID_3381, programID_3381</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>0, has_CollectedBy, 12</Triplet>
+      <Triplet>2, has_RetrievedInDataBase, 11</Triplet>
+      <Triplet>2, has_CollectedBy, 13</Triplet>
+      <Triplet>3, has_CollectedBy, 13</Triplet>
+      <Triplet>4, has_AlignedBy, 14</Triplet>
+      <Triplet>5, has_AlignedBy, 14</Triplet>
+      <Triplet>6, has_AlignedBy, 14</Triplet>
+      <Triplet>8, has_InferredBy, 18</Triplet>
+      <Triplet>8, has_InferredBy, 17</Triplet>
+   </Workflow>
+   <Workflow file="seg100.xml_00057" pmcid="4103527">
+      <Transaction>dataStructureID_2, sequence, dataStructureID_12, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3400, programID_3510, programID_3396, programID_3400, programID_3510, programID_3396</Transaction>
+      <Transaction>ModelID_7, ModelID_7, ModelID_7, ModelID_6, ModelID_7</Transaction>
+      <Transaction>programID_3509, programID_3510, programID_3400, programID_3510, programID_3438, programID_3396, programID_3509, programID_3510, programID_3400, programID_3510, programID_3438, programID_3396</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_60, methodID_60, methodID_58, methodID_58, methodID_59, methodID_59, methodID_60, methodID_58, methodID_58, methodID_64, methodID_64, methodID_64</Transaction>
+      <Transaction>Boots_50_1000, Boots_50_1000</Transaction>
+      <Triplet>1, has_AlignedBy, 8</Triplet>
+      <Triplet>12, has_EvolutionaryModel, 15</Triplet>
+      <Triplet>28, has_PhylogeneticMethod, 39</Triplet>
+      <Triplet>13, has_EvolutionaryModel, 18</Triplet>
+      <Triplet>14, has_EvolutionaryModel, 19</Triplet>
+   </Workflow>
+   <Workflow file="seg106.xml_0005B" pmcid="4150070">
+      <Transaction>sequence, sequence, sequence, dataStructureID_12, dataStructureID_12, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, sequence, dataStructureID_12</Transaction>
+      <Transaction>databaseID_3, databaseID_3</Transaction>
+      <Transaction>programID_3237</Transaction>
+      <Transaction>alignmentProgramID_8</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3438, programID_3438</Transaction>
+      <Transaction>methodID_62, methodID_62, methodID_60, methodID_58, methodID_64, methodID_64, methodID_64</Transaction>
+      <Triplet>0, has_CollectedBy, 19</Triplet>
+      <Triplet>1, has_RetrievedInDataBase, 17</Triplet>
+      <Triplet>2, has_AlignedBy, 20</Triplet>
+      <Triplet>15, has_RetrievedInDataBase, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg11.xml_0005D" pmcid="4263301">
+      <Transaction>sequence, dataStructureID_4, dataStructureID_4, dataStructureID_1</Transaction>
+      <Transaction>alignmentProgramID_26</Transaction>
+      <Transaction>programID_3470, programID_3527, programID_3470, programID_3527</Transaction>
+      <Transaction>ModelID_21, WAG</Transaction>
+      <Transaction>programID_3470, programID_3527, programID_3381, programID_3381, programID_3470, programID_3527, programID_3381, programID_3381</Transaction>
+      <Transaction>methodID_59</Transaction>
+      <Triplet>1, has_AlignedBy, 4</Triplet>
+      <Triplet>7, has_EvolutionaryModel, 9</Triplet>
+      <Triplet>7, has_EvolutionaryModel, 10</Triplet>
+      <Triplet>3, has_InferredBy, 17</Triplet>
+      <Triplet>3, has_InferredBy, 18</Triplet>
+   </Workflow>
+   <Workflow file="seg115.xml_0005E" pmcid="4055179">
+      <Transaction>sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>programID_3438, programID_3438, programID_3438, programID_3438</Transaction>
+      <Transaction>methodID_60, methodID_60</Transaction>
+      <Triplet>0, has_InferredBy, 7</Triplet>
+   </Workflow>
+   <Workflow file="seg116.xml_0005F" pmcid="4055178">
+      <Transaction>dataStructureID_13, sequence, sequence, dataStructureID_12, sequence, dataStructureID_13, dataStructureID_13, dataStructureID_2, dataStructureID_2, dataStructureID_1, dataStructureID_1, dataStructureID_13, dataStructureID_1, dataStructureID_13, dataStructureID_1, dataStructureID_1, dataStructureID_13, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3, databaseID_3, databaseID_98</Transaction>
+      <Transaction>programID_3358</Transaction>
+      <Transaction>ModelID_6, ModelID_6, ModelID_6</Transaction>
+      <Transaction>programID_3233, programID_3572, programID_3233, programID_3572</Transaction>
+      <Transaction>methodID_58, methodID_64, methodID_64, methodID_64, methodID_64, methodID_64</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>0, has_InferredBy, 27</Triplet>
+      <Triplet>1, has_RetrievedInDataBase, 19</Triplet>
+      <Triplet>11, has_InferredBy, 28</Triplet>
+      <Triplet>14, has_TreeVisualizedBy, 35</Triplet>
+      <Triplet>15, has_TreeVisualizedBy, 35</Triplet>
+      <Triplet>16, has_TreeVisualizedBy, 35</Triplet>
+      <Triplet>17, has_TreeVisualizedBy, 35</Triplet>
+   </Workflow>
+   <Workflow file="seg118.xml_00060" pmcid="4258088">
+      <Transaction>sequence, dataStructureID_2, sequence, sequence, dataStructureID_12, dataStructureID_12, sequence, dataStructureID_1, dataStructureID_1, dataStructureID_1</Transaction>
+      <Transaction>databaseID_3, databaseID_3</Transaction>
+      <Transaction>alignmentProgramID_96</Transaction>
+      <Transaction>alignmentProgramID_9, alignmentProgramID_26</Transaction>
+      <Transaction>programID_3358</Transaction>
+      <Transaction>ModelID_6</Transaction>
+      <Transaction>programID_3527, programID_3370, programID_3509, programID_3527, programID_3527, programID_3370, programID_3234, programID_3234, programID_3509, programID_3527</Transaction>
+      <Transaction>methodID_59, methodID_59, methodID_62, methodID_62</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Transaction>programID_3313</Transaction>
+      <Triplet>0, has_AlignedBy, 13</Triplet>
+      <Triplet>2, has_CollectedBy, 12</Triplet>
+      <Triplet>2, has_RetrievedInDataBase, 10</Triplet>
+      <Triplet>3, has_AlignedBy, 14</Triplet>
+      <Triplet>3, has_InferredBy, 21</Triplet>
+      <Triplet>4, has_InferredBy, 22</Triplet>
+      <Triplet>8, has_InferredBy, 26</Triplet>
+      <Triplet>9, has_TreeVisualizedBy, 32</Triplet>
+   </Workflow>
+   <Workflow file="seg123.xml_00062" pmcid="4044308">
+      <Transaction>sequence, dataStructureID_13, dataStructureID_13, dataStructureID_13, sequence, dataStructureID_15, dataStructureID_15, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_1, dataStructureID_13, dataStructureID_1, dataStructureID_13, sequence, dataStructureID_13, dataStructureID_13, dataStructureID_13, sequence, sequence, sequence, dataStructureID_13</Transaction>
+      <Transaction>databaseID_126</Transaction>
+      <Transaction>alignmentProgramID_77</Transaction>
+      <Transaction>alignmentProgramID_26, alignmentProgramID_17</Transaction>
+      <Transaction>programID_3328, programID_3509, programID_3328, programID_3509</Transaction>
+      <Transaction>ModelID_7, ModelID_4</Transaction>
+      <Transaction>programID_3438, programID_3328, programID_3393, programID_3509, programID_3396, programID_3438, programID_3438, programID_3328, programID_3393, programID_3509, programID_3396, programID_3438</Transaction>
+      <Transaction>methodID_60, methodID_60, methodID_62, methodID_62, methodID_59, methodID_59, methodID_59, methodID_60, methodID_62, methodID_59, methodID_58, methodID_58, methodID_59, methodID_60</Transaction>
+      <Transaction>programID_3392</Transaction>
+      <Transaction>Boots_50_1000</Transaction>
+      <Triplet>5, has_AlignedBy, 27</Triplet>
+      <Triplet>6, has_AlignedBy, 27</Triplet>
+      <Triplet>9, has_InferredBy, 41</Triplet>
+      <Triplet>10, has_InferredBy, 42</Triplet>
+      <Triplet>10, has_AlignedBy, 28</Triplet>
+      <Triplet>31, has_EvolutionaryModel, 33</Triplet>
+      <Triplet>11, has_InferredBy, 43</Triplet>
+      <Triplet>11, has_HypothesisValidatedBy, 61</Triplet>
+      <Triplet>13, has_InferredBy, 45</Triplet>
+      <Triplet>19, has_RetrievedInDataBase, 25</Triplet>
+   </Workflow>
+</Workflows>

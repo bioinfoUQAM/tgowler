@@ -129,7 +129,7 @@ public class ConceptMatcher extends BaseMatcher
 	// Try to find a match starting at the beginning of the input sequence
 	private void findFirstMatch( )
 	{
-		match = ConceptMatcher.findMatch( pattern.getConcepts( ), input.getConcepts( ), 0, match, hierarchyRepresentation );
+		match = ConceptMatcher.findMatch( pattern.getConcepts( pattern.nbConcepts() - 1 ), input.getConcepts( ), 0, match, hierarchyRepresentation );
 	}
 	
 	// Try to find a match regarding to the current match
@@ -142,15 +142,15 @@ public class ConceptMatcher extends BaseMatcher
 		// Try to move the latest positions of the match
 		{
                     // Slice the pattern to match (keep only the last concepts)
-                    //ArrayList<Integer> subPattern = subArrayList( pattern.getConcepts( ), i, patternSize );
+                    //ArrayList<Integer> subPattern = subArrayList( pattern.getTransactions( ), i, patternSize );
 
                     // Slice the input sequence (keep only the concepts presents after the start position of the match)
                     int matchStart = match.get( i );
-                    //ArrayList<Integer> subInput = ConceptMatcher.subArrayList( input.getConcepts( ), matchStart + 1, input.nbConcepts( ) );
+                    //ArrayList<Integer> subInput = ConceptMatcher.subArrayList( input.getTransactions( ), matchStart + 1, input.nbConcepts( ) );
 
                     // Try to find a new match
                     match.remove( match.size( ) - 1 );
-                    ArrayList<Integer> newMatch = ConceptMatcher.findMatch( pattern.getConcepts(), input.getConcepts(), matchStart + 1, match, hierarchyRepresentation, i, matchStart+1);
+                    ArrayList<Integer> newMatch = ConceptMatcher.findMatch( pattern.getConcepts(pattern.nbConcepts() - 1), input.getConcepts(), matchStart + 1, match, hierarchyRepresentation, i, matchStart+1);
                     if( ! newMatch.isEmpty( ) )
                     {
                             match = newMatch;

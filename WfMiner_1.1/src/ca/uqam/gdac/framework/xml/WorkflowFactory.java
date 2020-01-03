@@ -4,15 +4,15 @@ import java.io.IOException;
 
 import org.xml.sax.SAXException;
 
-import legacy.RawUserSequence;
+import legacy.RawUserWorkflow;
 import java.util.ArrayList;
 
 /**
- * SequenceFactory represents a factory used to create raw user sequences from an XML file.
+ * WorkflowFactory represents a factory used to create raw user sequences from an XML file.
  * 
  * @author Frapin Kevin
  */
-public abstract class SequenceFactory
+public abstract class WorkflowFactory
 {
 	//--------------------------------------------------- Public static methods
 	/**
@@ -25,7 +25,7 @@ public abstract class SequenceFactory
 	 * @throws SAXException Any SAX exception, possibly wrapping another exception.
 	 * @throws IOException An IO exception from the parser, possibly from a byte stream or character stream supplied by the application.
 	 */
-	public static ArrayList<RawUserSequence> createRawUserSequences( final String fileURI ) 
+	public static ArrayList<RawUserWorkflow> createRawUserSequences( final String fileURI ) 
 	throws SAXException, IOException
 	{
 		// Get a parser to extract the sequences

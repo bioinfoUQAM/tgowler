@@ -11,7 +11,7 @@
 package ontopatternmatching;
 
 
-public final class AddConceptTask extends AppariementExtensionTask{
+public final class AppendConceptTask extends AppariementExtensionTask{
 
         @Override
         public AppariementStructure extend(AppariementStructure structure) {
@@ -64,6 +64,27 @@ public final class AddConceptTask extends AppariementExtensionTask{
             }
             
             structure.lastAddedConcept = structure.pile_de_taches.get(structure.pile_de_taches.size()-1);
+            
+            //structure.lastAddedConcept = b;
+            //on ajoute notre block a la fin de la pile
+            
+            //ajoute le nouveau concept a la liste des concepts disponibles 
+            //structure.lastTouchedBlock = structure.lastAddedConcept;
+            //System.out.println("a:"+structure.concepts_to_blocks.size());            
+            //ajoute le block a la suite
+            //System.out.println("b:"+structure.concepts_to_blocks.size());
+            
+            /*System.out.println("after:");
+        
+            JobBlock j = structure.pile_de_taches.get(0);
+            while(j!=null){
+                System.out.println(">:("+j.type+")"+j.item);
+                if(j.firstChild!=null){
+                    j = j.firstChild;
+                    continue;
+                }
+                j = j.next;
+            }*/
             structure.last_touched_position = structure.pile_de_taches.size()-1;
             return structure;
         }        

@@ -19,33 +19,44 @@ import ontopatternmatching.Motif;
  */
 public abstract class PatternGenerator{        
         /**
+         * By DCC ?
+         * @param motif
+         * @param hierarchyRepresentation
+         * @return 
+         */
+        // Append in the last transaction
+        public static ArrayList<Motif> generateSequencesByDCC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel ){
+                ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
+                ArrayList<Motif> newWorkflows = new ArrayList<>();
+                if(rootConcepts != null){
+                    for (Concept rootConcept : rootConcepts ){
+                        Motif newWorkflow = new Motif(motif);
+                        newWorkflow.appendConceptC(rootConcept.index);//CRITIQUE !!!
+                        if(!newWorkflows.contains(newWorkflow)) newWorkflows.add(newWorkflow);
+                    }
+                }
+		
+		return newWorkflows;
+	}
+        
+        /**
          * By ACC ?
          * @param motif
          * @param hierarchyRepresentation
          * @return 
          */
         public static ArrayList<Motif> generateSequencesByACC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel ){
-		ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
-                
-                /*System.out.println("voici les root concepts:"+hierarchyRepresentation.root_relations.size());
-                for(Relation rc : hierarchyRepresentation.root_relations){
-                    System.out.println(">>>"+rc.index+", "+rc.getName());
-                }
-                System.exit(1);
-		*/
-                ArrayList<Motif> newSequences = new ArrayList<>();
-                /**
-                 * Pour tous les concepts racines, on cree un nouveau pattern avec en plus le concept racine
-                 */
+                ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
+                ArrayList<Motif> newWorkflows = new ArrayList<>();
                 if(rootConcepts != null){
                     for (Concept rootConcept : rootConcepts ){
                         Motif newSequence = new Motif(motif);
                         newSequence.addConceptC(rootConcept.index);//CRITIQUE !!!
-                        if(!newSequences.contains(newSequence)) newSequences.add(newSequence);
+//                        System.out.println("newSequence : " + newSequence);
+                        if(!newWorkflows.contains(newSequence)) newWorkflows.add(newSequence);
                     }
                 }
-		
-		return newSequences;
+		return newWorkflows;
 	}        
         
         /**
@@ -66,32 +77,17 @@ public abstract class PatternGenerator{
         public static ArrayList<Motif> generateSequencesBySCC( final Motif motif, final OntoRepresentation hierarchyRepresentation ){
             //ArrayList<Integer> concepts = motif.concepts;            
             // Get the concept to specialize and its children
-            Integer lastConcept = motif.concepts.get(motif.concepts.size()-1);
+            ArrayList<Integer> lastTransaction = motif.transactions.get(motif.nbTransactions() - 1);
+            Integer lastConcept = lastTransaction.get(lastTransaction.size()-1);
             
             
             ArrayList<Concept> conceptChildren = hierarchyRepresentation.getConceptChildren(lastConcept);
-            /*System.out.println("on tente de specialiser "+35);
-            System.out.println(""+hierarchyRepresentation.getConcept(35).index+ ", " + hierarchyRepresentation.getConcept(35).getName());
-            System.out.println("on a "+conceptChildren.size()+" spec");
-            for(Concept c : conceptChildren){
-                System.out.println(""+c.index+" , " +c.getName());
-            }
-            System.exit(1);
-            */
-            
-            /*ArrayList<Concept> conceptChildren = hierarchyRepresentation.getConceptChildren(lastConcept);
-            System.out.println("on tente de specialiser "+lastConcept);
-            System.out.println(""+hierarchyRepresentation.getConcept(lastConcept).index+ ", " + hierarchyRepresentation.getConcept(lastConcept).getName());
-            System.out.println("on a "+conceptChildren.size()+" spec");
-            for(Concept c : conceptChildren){
-                System.out.println(""+c.index+" , " +c.getName());
-            }
-            System.exit(1);*/
             // Specialize this concept
             ArrayList<Motif> newSequences = new ArrayList<>();
             for(Concept conceptChild : conceptChildren){
-                //System.out.println("son is : "+conceptChild.index);
+//                System.out.println("son is : "+conceptChild.index);
                 Motif newSequence = new Motif(motif);
+//                System.out.println("motif: "+motif);
                 newSequence.splConceptC(conceptChild.index);//est ce que ca marche
                 if(!newSequences.contains(newSequence)) newSequences.add(newSequence);
             }

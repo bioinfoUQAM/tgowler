@@ -16,7 +16,7 @@ public final class AddRelationTask extends AppariementExtensionTask{
         @Override
         public final AppariementStructure extend(AppariementStructure structure){
             
-            //System.out.println("Adding relation:("+this.item[0]+","+this.item[1]+","+this.item[2]+")");
+//            System.out.println("Adding relation:("+this.item[0]+","+this.item[1]+","+this.item[2]+")");
             int dom_pos = this.item[1]-1;
             int rang_pos = this.item[2]-1;
             
@@ -55,8 +55,8 @@ public final class AddRelationTask extends AppariementExtensionTask{
             // BLOC 2 - RANGE VALIDATION
             //////////////////////////////////////
             //on recupere le bloc du concept codomaine
-            //JobBlock codomaine_block = this.concepts_to_blocks.get(relation[2]-1);
-            //JobBlock codomaine_block = structure.concepts_to_blocks.get(rang_pos);//les relations commencent a zero mtn
+//            System.out.println("structure.concepts_to_blocks: " + structure.concepts_to_blocks);
+//            System.out.println("dom_pos, rang_pos" + dom_pos + ", " + rang_pos);
             JobBlock codomaine_block = structure.pile_de_taches.get(structure.concepts_to_blocks.get(rang_pos).position);
             if(codomaine_block.type!=0){
                 System.out.println("not a concept");

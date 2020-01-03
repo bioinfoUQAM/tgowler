@@ -6,19 +6,19 @@ import java.util.HashMap;
 import legacy.Pair;
 
 /**
- * RawUserSequence represents a user sequence composed of local names.<br/>
+ * RawUserWorkflow represents a user sequence composed of local names.<br/>
  * The raw user sequence is composed of individuals local names, and properties local names.
  * 
  * @author Frapin Kevin
  */
-public class RawUserSequence extends BaseSequence<String>
+public class RawUserWorkflow extends BaseSequence<String>
 {
 
 	//------------------------------------------------------------- Constructor
 	/**
 	 * Creates an empty raw user sequence.
 	 */
-	public RawUserSequence( )
+	public RawUserWorkflow( )
 	{
 		super( );
 	}
@@ -26,11 +26,11 @@ public class RawUserSequence extends BaseSequence<String>
 	/**
 	 * Creates a raw user sequence from an existing one.
 	 * 
-	 * @param rawUserSequence Raw user sequence to copy.
+	 * @param rawUserWorkflow Raw user sequence to copy.
 	 */
-	public RawUserSequence( final RawUserSequence rawUserSequence )
+	public RawUserWorkflow( final RawUserWorkflow rawUserWorkflow )
 	{
-		super( rawUserSequence );
+		super(rawUserWorkflow );
 	}
 	
 	//------------------------------------------------------- Getters / Setters
@@ -63,6 +63,16 @@ public class RawUserSequence extends BaseSequence<String>
 	public void appendIndividualLocalName( final String individualLocalName  )
 	{
 		super.appendElement( individualLocalName );
+	}
+        
+        /**
+         * Add an individual local name at the end of this raw user sequence.
+	 * 
+	 * @param individualLocalName Individual local name to append.
+	 */
+	public void addIndividualLocalName( final String individualLocalName  )
+	{
+		super.addElement( individualLocalName );
 	}
 	
 	/**

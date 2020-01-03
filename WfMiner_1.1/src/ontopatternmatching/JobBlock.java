@@ -79,15 +79,6 @@ public class JobBlock {
     public int doJobs2(Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m){
         //int res = -1;
         return this.jobs[0].doJob(this, sequence, appariement, modifications, ontology, m);
-        /*
-        for (Job job : this.jobs) {
-            //on recupere et execute le job
-            appariement[this.position] = job.doJob(this, sequence, appariement, modifications, ontology);
-            if(appariement[this.position]<0) break;
-        }
-        return appariement[this.position];//le return est optionel, on pourrait ne rien renvoyer et verifier block.solution
-        */
-        //au niveau au dessus
     }
     
     /**

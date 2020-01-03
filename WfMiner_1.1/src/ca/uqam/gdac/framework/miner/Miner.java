@@ -183,9 +183,13 @@ public class Miner
             return PatternGenerator.generateSequencesByACC(motif, hierarchyRepresentation, minLevel);
         }
         
+        private static ArrayList<Motif> appendConceptC(final Motif motif, int minLevel){
+            return PatternGenerator.generateSequencesByDCC(motif, hierarchyRepresentation, minLevel);
+        }
+        
         private static ArrayList<Motif> addPropertyC( final Motif motif ){
             ArrayList<Motif> candidates = new ArrayList<>();
-            //System.out.println("Adding properties to the pattern.");
+//            System.out.println("Adding properties to the pattern.");
             if(addPropertyCAllowed(motif)){
                 // Get the properties which can be applied
                 ArrayList<PropertiesAndSubject> possibleProperties = findPossiblePropertiesToAdd( motif );
@@ -206,7 +210,7 @@ public class Miner
 	// Check if a property addition is allowed on the sequence
 	/*private static boolean addPropertyCAllowed( final Pattern sequence )
 	{
-		return ( sequence.getConcepts( ).size( ) >= 2 );
+		return ( sequence.getTransactions( ).size( ) >= 2 );
 	}*/
         
         private static boolean addPropertyCAllowed(final Motif sequence){
@@ -225,8 +229,12 @@ public class Miner
             
             // 1. addConceptC
             ArrayList<Motif> addConceptC = addConceptC(motif, minLevel);
-            //System.out.println(""+addConceptC.size()+" ajouts de concepts...");
+//            System.out.println(""+addConceptC.size()+" ajouts de concepts...");
             motifs_candidats.addAll(addConceptC);
+            
+            // 1. appendConceptC
+            ArrayList<Motif> appendConceptC = appendConceptC(motif, minLevel);
+            motifs_candidats.addAll(appendConceptC);
             
             
             // 2. splConceptC
@@ -252,26 +260,28 @@ public class Miner
         }
     
         public static ArrayList<String> conceptsToString (Motif p, OntoRepresentation ontology) {
-        ArrayList<String> cs = new ArrayList<String> ();
-        for (Integer c : p.concepts)
-            cs.add(ontology.getConcept(c).getName().split("#")[1]);
-        return cs;
+            ArrayList<String> cs = new ArrayList<String> ();
+            for(ArrayList<Integer> t : p.transactions)
+                for(Integer c : t)
+                    cs.add(ontology.getConcept(c).getName().split("#")[1]);
+             return cs;
         }
 
         public static ArrayList<Integer> conceptsToSteps (Motif p, OntoRepresentation ontology) {
             ArrayList<Integer> cs = new ArrayList ();
-            for (Integer c : p.concepts){
-                String uriStep = ontology.getConceptByLevel(ontology.getConcept(c), 0).getName().split("#")[1];
-                Integer step=0;
-                switch (uriStep) {
-                    case "DataCollectionStep":  cs.add(1); break;
-                    case "SequenceAlignmentStep":  cs.add(2); break;
-                    case "ModelSelectionStep":  cs.add(3); break;
-                    case "PhylogeneticInferenceStep": cs.add(4); break;
-                    case "HypothesisValidationStep":  cs.add(5); break;
-                    case "TreeAnalysisStep":  cs.add(6); break;
-                    case "TreeVisualizationStep":  cs.add(7); break;
-                }
+            for(ArrayList<Integer> t : p.transactions)
+                for (Integer c : t){
+                    String uriStep = ontology.getConceptByLevel(ontology.getConcept(c), 0).getName().split("#")[1];
+                    Integer step=0;
+                    switch (uriStep) {
+                        case "DataCollectionStep":  cs.add(1); break;
+                        case "SequenceAlignmentStep":  cs.add(2); break;
+                        case "ModelSelectionStep":  cs.add(3); break;
+                        case "PhylogeneticInferenceStep": cs.add(4); break;
+                        case "HypothesisValidationStep":  cs.add(5); break;
+                        case "TreeAnalysisStep":  cs.add(6); break;
+                        case "TreeVisualizationStep":  cs.add(7); break;
+                    }
 
             }
             return cs;
@@ -300,7 +310,7 @@ public class Miner
         private static void initialize( final ArrayList<Sequence> userSequences, final double minSup, final OntoRepresentation hierarchyRepresentation ) 
 	{
             Library.initialize( );
-            Library.setUserSequences2(userSequences);
+            Library.setUserWorkflows(userSequences);
             Miner.setMinSup(  minSup );
             Miner.setHierarchyRepresentation(hierarchyRepresentation );
 	}
@@ -355,11 +365,13 @@ public class Miner
 	//
 	// Return: 
 	//  A list composed of pairs containing <possible properties, position of source concept>
-	private static ArrayList<PropertiesAndSubject> findPossiblePropertiesToAdd(final Motif sequence){
-            Integer lastConcept = sequence.concepts.get(sequence.concepts.size()-1);
+	private static ArrayList<PropertiesAndSubject> findPossiblePropertiesToAdd(final Motif workflow){
+//            System.out.println("workflow.concepts " + workflow.concepts);
+//            ArrayList<Integer> lastTransaction = workflow.concepts.get(workflow.concepts.size( ) - 1);
+            Integer lastConcept = workflow.concepts.get(workflow.concepts.size()-1);
             Concept objet = hierarchyRepresentation.getConcept(lastConcept);
             // Concepts of the sequence MINUS the last concept
-            ArrayList<Integer> sourceConcepts = new ArrayList<>(sequence.concepts);
+            ArrayList<Integer> sourceConcepts = new ArrayList<>(workflow.concepts);
             sourceConcepts.remove(sourceConcepts.size()-1);
             // Recovery of the existing properties
             ArrayList<PropertiesAndSubject> possibleProperties = new ArrayList<>();
@@ -406,14 +418,18 @@ public class Miner
                 AppariementSolution[] solutions = new AppariementSolution[previous_solutions.length];
                 int i=0;
                 
-//                System.out.println("motif: "+motif.toString());
-//                System.out.println("previous_solutions: "+previous_solutions.length);
-//                for (AppariementSolution pre:previous_solutions )
-//                    System.out.println(pre.sequenceUtilisateur.objects.toString());
-//                System.out.println("n: ");
+                System.out.println("motif: "+motif.toString());
+                System.out.println("previous_solutions: "+previous_solutions.length);
+                for (AppariementSolution pre:previous_solutions )
+                    System.out.println(pre.sequenceUtilisateur.objects.toString());
+                System.out.println("n: ");
                 
                 for (AppariementSolution previous_matching : previous_solutions){
-                    
+//                    System.out.println("\tprevious_matching - appariement: " + previous_matching.appariement);
+//                    System.out.println("\tprevious_matching - motif: " + previous_matching.motif);
+//                    System.out.println("\tprevious_matching - sequenceUtilisateur: " + previous_matching.sequenceUtilisateur);
+//                    System.out.println("\tprevious_matching - parcours: " + previous_matching.parcours);
+//                    
                     //va nous permettre de savoir si des solutions de n-1 on ete modifiees.
                     //necessaire dans le cas d'ajout de relations changeant la position du domaine et 
                     //impliquant un chnagement de position de codomaine sinon echec du matching
@@ -441,134 +457,17 @@ public class Miner
                     ArrayList<StringBuilder> bbb = new ArrayList<>();
 
                     if(randomInt>min){
-                        /*
-                        String[] data = new String[5];
-                        data[0] = motif.hashCode()+"_"+previous_matching.hashCode();
-                        data[1] = motif.empty_structure.concepts_to_blocks.size()+"";
-                        data[2] = motif.empty_structure.relations_to_blocks.size()+"";
                         
-                        
-                        
-                        //creer les blocs                       
-                        for(JobBlock jb : motif.empty_structure.pile_de_taches){
-                            StringBuilder cbuild = new StringBuilder();
-                            if(jb.type==0){
-                                OntResource concept = MinerIntegrationTest.mapping.getClassById( jb.item );
-                                String conceptLocalName = JenaWrapper.getLocalName(concept);
-                                //pour tout concept
-                                cbuild.append("\"o\": { \"item\" : \"").append(conceptLocalName).append("\"");
-                                cbuild.append(", \"sol\" : \"").append(solution.appariement[jb.position]).append("\"");
-                                //parcourir les relations
-                                JobBlock r = jb.firstChild;
-                                StringBuilder rels = new StringBuilder(", \"const\": [");int z=0;
-                                while(r!=null&&r.type>0){
-                                    if(z>0){
-                                        rels.append(",");
-                                    }
-                                    OntResource property = MinerIntegrationTest.mapping.getPropertyById( r.item );
-                                    String propertyLN = JenaWrapper.getLocalName( property);
-                                    rels.append("{\"o\":\"").append(propertyLN).append("\", \"s\":\"").append(solution.appariement[r.position]).append("\" , \"t\":\"").append(r.type).append("\"}");
-                                    r = r.next;z++;
-                                }
-                                rels.append("]");
-                                if(z>0) cbuild.append(rels);
-
-                                cbuild.append("}");
-                                bbb.add(cbuild);
-                            }
-                        }
-
-                        StringBuilder blocs = new StringBuilder();
-                        for(StringBuilder bb : bbb){
-                            if(blocs.length()>0) blocs.append(",");
-                            blocs.append("{").append(bb).append("}");
-                        }
-
-                        StringBuilder html = new StringBuilder();
-                        html.append("{ \"data\" : { \"blocks\" : [").append(blocs.toString()).append("]  }");
-                        html.append(", \"start\":\"").append(motif.empty_structure.last_touched_position).append("\"");
-                        //on cree un nouveau stringbuilder vide qui va contenir les steps
-                        StringBuilder steps = new StringBuilder();
-                        SequenceMatcher.html_output = true;
-                        
-                        int[] nbr_steps = new int[1];
-                        
-                        matched = m.tryToMatch_with_Output(point_de_depart, solution.appariement, alterations_de_solutions, previous_matching.sequenceUtilisateur, hierarchyRepresentation, motif, steps, nbr_steps);
-                        
-                        data[3] = ""+nbr_steps[0];
-                        
-                        if(matched){
-                            data[4] = "MATCHED";
-                        }
-                        else{
-                            data[4] = "NOT FOUND";
-                        }
-
-                        Miner.index_items.add(data);
-                        
-                        html.append(",").append(steps.toString());
-
-                        StringBuilder seq = new StringBuilder(", \"sequence\" : { \"objects\" : [");
-                        for(int iii=0;iii<previous_matching.sequenceUtilisateur.objects.size();iii++){
-                            if(iii!=0) seq.append(",");
-                            
-                            OntResource concept = MinerIntegrationTest.mapping.getClassById(previous_matching.sequenceUtilisateur.objects.get(iii));
-                            String sequenceItemLocalName = JenaWrapper.getLocalName(concept);
-                            
-                            seq.append("\""+sequenceItemLocalName+"\"");
-                        }
-                        html.append(seq);
-                        
-                        StringBuilder seq2 = new StringBuilder("] , \"relations\" : [");
-                        
-                        for(int iii=0;iii<previous_matching.sequenceUtilisateur.relations.size();iii++){
-                            if(iii!=0) seq2.append(",");
-                            Integer[] rel = previous_matching.sequenceUtilisateur.relations.get(iii);
-                            
-                            OntResource property = MinerIntegrationTest.mapping.getPropertyById( rel[0] );
-                            String propertyLN = JenaWrapper.getLocalName( property);
-                            
-                            seq2.append("{ \"s\":\"").append(propertyLN).append("\", \"p\":\"").append(rel[1]).append("\", \"o\":\"").append(rel[2]).append("\" }");
-                        }
-                        html.append(seq2);
-                        
-                        html.append("] } }");
-                        Writer writer = null;
-                        try {
-                            writer = new BufferedWriter(new OutputStreamWriter(
-                                  new FileOutputStream("visualisations/data/"+motif.hashCode()+"_"+previous_matching.hashCode()+".txt"), "utf-8"));
-                            writer.write(html.toString());
-                        } 
-                        catch (IOException ex) {
-                          // report
-                        } 
-                        finally {
-                           try { if(writer!=null) writer.close();} catch (IOException ex) {}
-                        }*/    
                     }
                     else{
                         SequenceMatcher.html_output = false;
                         
-                        /*int[] new_sol = new int[solution.appariement.length];
-                        System.arraycopy(previous_matching.appariement, 0, new_sol, 0, previous_matching.appariement.length);
-                        boolean[] alt = new boolean[motif.empty_structure.pile_de_taches.size()];
-                        */
-                        //SequenceMatcher.debug = true;
-                        matched = m.tryToMatch(point_de_depart, solution.appariement, alterations_de_solutions, previous_matching.sequenceUtilisateur, hierarchyRepresentation, motif);
-                        /*
-                        //SequenceMatcher.debug = false;
-                        boolean matched_beta = m.tryToMatch_BETA(point_de_depart, new_sol, alt, previous_matching.sequenceUtilisateur, hierarchyRepresentation, motif);
-                        if(matched != matched_beta){
-                            System.out.println("Les deux ne matchent pas !:"+matched+"vs"+matched_beta);
-                            System.out.println("nbr_rel:"+motif.empty_structure.relations_to_blocks.size());
-                            System.out.println("p:"+point_de_depart.item+"/"+point_de_depart.type+"/"+point_de_depart.position);
-                            for(Integer o : solution.appariement){
-                                System.out.println("matching:"+o);
-                            }
-                            for(Integer o : previous_matching.appariement){
-                                System.out.println("ori:"+o);
-                            }
-                        }*/
+//                        System.out.println("motif: " + motif.concepts);
+//                        System.out.println("\tpoint_de_depart: " + point_de_depart);
+//                        System.out.println("\tsolution.appariement: " + solution.appariement);
+//                        System.out.println("\talterations_de_solutions: " + alterations_de_solutions);
+//                        System.out.println("\tprevious_matching.sequenceUtilisateur: " + previous_matching.sequenceUtilisateur);
+                        matched = m.tryToMatch(point_de_depart, solution.appariement, alterations_de_solutions, previous_matching.sequenceUtilisateur, hierarchyRepresentation, motif); 
                     }
                                        
                     if(matched){
@@ -601,7 +500,7 @@ public class Miner
 		// Find the sequences that match the pattern
 		for ( Sequence userSequence : userSequences )
 		{
-//                    System.out.println("Useq:"+userSequence.getConcepts().size());
+//                    System.out.println("Useq:"+userSequence.getTransactions().size());
                     //Matcher matcher = pattern.matcher( userSequence, hierarchyRepresentation );
                     //matcher = pattern.matcher( userSequence, hierarchyRepresentation );
                     matcher.reset(userSequence);//remet a zero le matcher plutot que de faire des "new"
@@ -628,6 +527,7 @@ public class Miner
             double minConf=0.8;
             
             // Candidates generated from the current pattern
+//            System.out.println("pattern: " + pattern.toString());
             ArrayList<Motif> candidates = generateCandidates2(pattern, minLevel);//n => n+1
             ArrayList<Motif> Freqcandidates = new ArrayList();//n => n+1
             //System.out.println("on a "+candidates.size()+" candidats...");
@@ -639,12 +539,9 @@ public class Miner
             for (Motif candidate : candidates){
                                 
                 int[] nseq = new int[1];
+//                System.out.println("Candidate: " + candidate.toString());
                 
                 AppariementSolution[] seq = findMatchingSequences(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
-                
-                //int relativeSupport2 = getRelativeSupport2(nseq[0] , Library.getNbUserSequences());
-                //System.out.println(">>"+relativeSupport2+" vs "+minSup2);
-                //System.out.println("Support:"+getRelativeSupport2( nseq[0] , Library.getNbUserSequences() )+" cause:"+seq.length);
                 
                 // GENERATE RULE HERE FROM PARENT as SUBLIST and CHILD as LIST
                 ArrayList<Integer> stepsInteger = conceptsToSteps(candidate,hierarchyRepresentation);
@@ -692,10 +589,10 @@ public class Miner
                         if (conf>minConf && premissSupp>minSup && ruleSupp>minSup){
                             System.out.println(candString.toString()+": "+ ruleSupp);
                             IfThenRule rule = new IfThenRule();
-                            rule.premise=pattern.concepts;
+                            rule.premise=pattern.transactions;
                             rule.properties=candidate.relations;
                             rule.steps=(ArrayList<Integer>)stepsInteger.clone();
-                            rule.conclusion=candidate.concepts.get(candidate.concepts.size()-1);
+                            rule.conclusion=candidate.transactions.get(candidate.concepts.size()-1);
                             rule.confidence=conf*100;
                             rule.support=seq.length/(float)Library.getNbUserSequences()*100;
                             rule.Msequences=seq;
@@ -740,10 +637,10 @@ public class Miner
                         
                         if (conf>minConf && premissSupp>minSup && ruleSupp>minSup){
                             IfThenRule rule = new IfThenRule();
-                            rule.premise=pattern.concepts;
+                            rule.premise=pattern.transactions;
                             rule.properties=candidate.relations;
                             rule.steps=(ArrayList<Integer>)stepsInteger.clone();
-                            rule.conclusion=candidate.concepts.get(candidate.concepts.size()-1);
+                            rule.conclusion=candidate.transactions.get(candidate.transactions.size()-1);
                             rule.confidence=conf*100;
                             rule.support=seq.length/(float)Library.getNbUserSequences()*100;
                             rule.Msequences=seq;
