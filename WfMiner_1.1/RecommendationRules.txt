@@ -3,7 +3,7 @@ Train set: WFMiner_example.xml
 Test set: WFMiner_example_gold.xml
 Top items: 10
 Top rules: 50
-min_supp: 0.8
+min_supp: 0.1
 min_ontology_level: 2
 
 Rules: 

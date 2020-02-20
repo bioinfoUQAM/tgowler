@@ -83,23 +83,10 @@ public class Miner
 	}
 	
 	//--------------------------------------------------- Public static methods
-	        
-        /*public static Set<Pattern> addConceptC( final Pattern pattern, final OntoRepresentation hierarchyRepresentation )
-	{
-		setHierarchyRepresentation( hierarchyRepresentation );
-		return addConceptC( pattern );
-	}*/
-        
-        public static ArrayList<Motif> addConceptC(final Motif pattern, final OntoRepresentation hierarchyRepresentation, int minLevel){
+        public static ArrayList<Motif> addConceptC(final Motif pattern, final OntoRepresentation hierarchyRepresentation, int minLevel, int level){
             setHierarchyRepresentation( hierarchyRepresentation );
-            return addConceptC(pattern, minLevel);
+            return addConceptC(pattern, minLevel, level);
 	}
-        
-        /*public static Set<Pattern> addPropertyC( final Pattern pattern, final OntoRepresentation hierarchyRepresentation )
-	{
-		setHierarchyRepresentation( hierarchyRepresentation );
-		return addPropertyC( pattern );
-	}*/
         
         public static ArrayList<Motif> addPropertyC(final Motif pattern, final OntoRepresentation hierarchyRepresentation){
             //setHierarchyRepresentation( hierarchyRepresentation );
@@ -154,11 +141,11 @@ public class Miner
             return Library.getFrequentPatterns2();
         }
         
-        public static ArrayList<Motif> generateCandidates2(final ArrayList<Motif> patterns, final OntoRepresentation hierarchyRepresentation, int minLevel){
+        public static ArrayList<Motif> generateCandidates2(final ArrayList<Motif> patterns, final OntoRepresentation hierarchyRepresentation, int minLevel, int level){
             setHierarchyRepresentation( hierarchyRepresentation );//a quoi sert cette ligne ?
             ArrayList<Motif> candidates = new ArrayList<>();
             for (Motif sequence : patterns ) {
-                ArrayList<Motif> generateCandidates2 = generateCandidates2(sequence, minLevel);
+                ArrayList<Motif> generateCandidates2 = generateCandidates2(sequence, minLevel, level);
                 for(Motif m : generateCandidates2){
                     if(!candidates.contains(m)) candidates.add(m);
                 }
@@ -179,12 +166,12 @@ public class Miner
 
 	//-------------------------------------------------- Private static methods
         
-        private static ArrayList<Motif> addConceptC(final Motif motif, int minLevel){
-            return PatternGenerator.generateSequencesByACC(motif, hierarchyRepresentation, minLevel);
+        private static ArrayList<Motif> addConceptC(final Motif motif, int minLevel, int level){
+            return PatternGenerator.generateSequencesByACC(motif, hierarchyRepresentation, minLevel, level);
         }
         
-        private static ArrayList<Motif> appendConceptC(final Motif motif, int minLevel){
-            return PatternGenerator.generateSequencesByDCC(motif, hierarchyRepresentation, minLevel);
+        private static ArrayList<Motif> appendConceptC(final Motif motif, int minLevel, int level){
+            return PatternGenerator.generateSequencesByDCC(motif, hierarchyRepresentation, minLevel, level);
         }
         
         private static ArrayList<Motif> addPropertyC( final Motif motif ){
@@ -220,40 +207,47 @@ public class Miner
     
     
     
-    private static ArrayList<Motif> generateCandidates2(final Motif motif, int minLevel){
+    private static ArrayList<Motif> generateCandidates2(final Motif motif, int minLevel, int level){
             
-            //System.out.println("le motif est "+motif.toString());
+//            System.out.println("le motif est "+motif.toString());
             //System.exit(1);
             
             ArrayList<Motif> motifs_candidats = new ArrayList<>();
             
             // 1. addConceptC
-            ArrayList<Motif> addConceptC = addConceptC(motif, minLevel);
+//            System.out.println("From: " + motif.toString());
+            ArrayList<Motif> addConceptC = addConceptC(motif, minLevel, level);
 //            System.out.println(""+addConceptC.size()+" ajouts de concepts...");
+//            System.out.println("addConceptC: " + addConceptC);
             motifs_candidats.addAll(addConceptC);
             
-            // 1. appendConceptC
-            ArrayList<Motif> appendConceptC = appendConceptC(motif, minLevel);
-            motifs_candidats.addAll(appendConceptC);
+            // 2. appendConceptC
+//            System.out.println("From: " + motif.toString());
+            ArrayList<Motif> appendConceptC = appendConceptC(motif, minLevel, level);
+//            System.out.println(""+appendConceptC.size()+" append de concepts...");
+//            System.out.println("appendConceptC: " + appendConceptC);
+//            motifs_candidats.addAll(appendConceptC);
+            for(Motif m : appendConceptC){
+                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
+            }
             
-            
-            // 2. splConceptC
+            // 3. splConceptC
             ArrayList<Motif> splConceptC = splConceptC(motif);   
             for(Motif m : splConceptC){
                 if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
             }
-            
-            // 3. addPropertyC
-            ArrayList<Motif> addPropertyC = addPropertyC(motif);     
-            for(Motif m : addPropertyC){
-                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-            }
-            // 4. splPropertyC
-            ArrayList<Motif> splPropertyC = splPropertyC(motif);
-            //System.out.println(""+splPropertyC.size()+" spe de props...");
-            for(Motif m : splPropertyC){
-                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-            }
+//            
+//            // 4. addPropertyC
+//            ArrayList<Motif> addPropertyC = addPropertyC(motif);     
+//            for(Motif m : addPropertyC){
+//                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
+//            }
+//            // 5. splPropertyC
+//            ArrayList<Motif> splPropertyC = splPropertyC(motif);
+//            //System.out.println(""+splPropertyC.size()+" spe de props...");
+//            for(Motif m : splPropertyC){
+//                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
+//            }
             
             //if(motif.relations!=null && motif.relations.size() > 1 ) System.exit(1);
             return motifs_candidats;
@@ -320,9 +314,11 @@ public class Miner
             ArrayList<Motif> candidates = new ArrayList<>();
             if(splConceptCAllowed(sequence)){
                 ArrayList<Motif> generateSequencesBySCC = PatternGenerator.generateSequencesBySCC(sequence, hierarchyRepresentation );
-                for(Motif m : generateSequencesBySCC){
-                    if(!candidates.contains(m)) candidates.add(m);
-                }
+                if (! generateSequencesBySCC.isEmpty())
+//                    System.out.println("Add to candidates: " + generateSequencesBySCC);
+                    for(Motif m : generateSequencesBySCC){
+                        if(!candidates.contains(m)) candidates.add(m);
+                    }
             }
             return candidates;
 	}
@@ -410,20 +406,22 @@ public class Miner
          * @return 
          */
         public static AppariementSolution[] findMatchingSequences(Motif motif, final AppariementSolution[] previous_solutions, int[] n){
+//                System.out.println("motif: " + motif.concepts);
                 //mise a jour de la stucture
                 motif.updateAppariementStructureWithCurrentPattern();
+//                System.out.println("motif: " + motif.concepts);
 
                 SequenceMatcher m = new SequenceMatcher();
 
                 AppariementSolution[] solutions = new AppariementSolution[previous_solutions.length];
                 int i=0;
                 
-                System.out.println("motif: "+motif.toString());
-                System.out.println("previous_solutions: "+previous_solutions.length);
-                for (AppariementSolution pre:previous_solutions )
-                    System.out.println(pre.sequenceUtilisateur.objects.toString());
-                System.out.println("n: ");
-                
+//                System.out.println("motif: "+motif.toString());
+//                System.out.println("previous_solutions: "+previous_solutions.length);
+//                for (AppariementSolution pre:previous_solutions )
+//                    System.out.println(pre.sequenceUtilisateur.objects.toString());
+//                System.out.println("n: ");
+//                
                 for (AppariementSolution previous_matching : previous_solutions){
 //                    System.out.println("\tprevious_matching - appariement: " + previous_matching.appariement);
 //                    System.out.println("\tprevious_matching - motif: " + previous_matching.motif);
@@ -461,7 +459,7 @@ public class Miner
                     }
                     else{
                         SequenceMatcher.html_output = false;
-                        
+//                        
 //                        System.out.println("motif: " + motif.concepts);
 //                        System.out.println("\tpoint_de_depart: " + point_de_depart);
 //                        System.out.println("\tsolution.appariement: " + solution.appariement);
@@ -527,8 +525,9 @@ public class Miner
             double minConf=0.8;
             
             // Candidates generated from the current pattern
-//            System.out.println("pattern: " + pattern.toString());
-            ArrayList<Motif> candidates = generateCandidates2(pattern, minLevel);//n => n+1
+            System.out.println("pattern: " + pattern.toString());
+            ArrayList<Motif> candidates = generateCandidates2(pattern, minLevel, level);//n => n+1
+//            System.out.println("To: " + candidates);
             ArrayList<Motif> Freqcandidates = new ArrayList();//n => n+1
             //System.out.println("on a "+candidates.size()+" candidats...");
             Motif[] motifs_qui_matchent = new Motif[candidates.size()];
@@ -536,142 +535,152 @@ public class Miner
             
             int i=0;
 //            System.out.println("========================== generating and testing =============================");
+            
             for (Motif candidate : candidates){
-                                
-                int[] nseq = new int[1];
-//                System.out.println("Candidate: " + candidate.toString());
                 
-                AppariementSolution[] seq = findMatchingSequences(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
-                
-                // GENERATE RULE HERE FROM PARENT as SUBLIST and CHILD as LIST
-                ArrayList<Integer> stepsInteger = conceptsToSteps(candidate,hierarchyRepresentation);
-                ArrayList<String> candString= conceptsToString(candidate,hierarchyRepresentation);
-                ArrayList<String> patternString= conceptsToString(pattern,hierarchyRepresentation);
-                String conclusion=candString.toString().split(", ")[candString.toString().split(", ").length-1].replace("[", "").replace("]", "");
-                        
-                candidate.support = nseq[0] / 10;
-                float premissSupp = pattern.support/(float)Library.getNbUserSequences()*100;
-                float ruleSupp = candidate.support/(float)Library.getNbUserSequences()*100;
-                float conf = (float)ruleSupp/(float)premissSupp;
-                
-//                System.out.println(stepsInteger.toString());
-//                System.out.println("LIST: ");                
-//                System.out.println(candString.toString()+": "+ ruleSupp);
-//                System.out.println(stepsInteger.toString());
-//                System.out.println("SUBLIST: ");
-//                System.out.println(patternString.toString()+": "+ premissSupp);
-//                System.out.println("CONF: ");
-//                System.out.println(conf);
-//                System.out.println(minSup2);
-                
-                if(minSup2 == 0){
-                    int minsupexact = (int)(((double)minSup*100));
-//                    minsupexact *= 10;
-//                    System.out.println("nseq[0]: "+nseq[0]);
-//                    System.out.println("minsupexact: "+minsupexact);
-                    if(nseq[0] >= minsupexact){
-                    // If the candidate is frequent
-                        //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
-                        candidate.support = nseq[0] / 10;
-                        Library.addFrequentPattern(candidate);                   
-                        motifs_qui_matchent[i] = candidate;
-                        sequences_qui_matchent[i] = seq;
-//                        sequences_qui_matchentApply[i] = seqApply;
-                        i++;
-                        
-//                        System.out.println(stepsInteger.toString());
-//                        System.out.println("LIST: ");                
-//                        System.out.println(candString.toString()+": "+ ruleSupp);
-//                        System.out.println(stepsInteger.toString());
-//                        System.out.println("SUBLIST: ");
-//                        System.out.println(patternString.toString()+": "+ premissSupp);
+                if (!candidate.concepts.isEmpty()) {            
+                    int[] nseq = new int[1];
+//                    System.out.println("Candidate: " + candidate.toString());
+    //                System.out.println("Candidate Concepts: " + candidate.concepts);
 
-                        if (conf>minConf && premissSupp>minSup && ruleSupp>minSup){
-                            System.out.println(candString.toString()+": "+ ruleSupp);
-                            IfThenRule rule = new IfThenRule();
-                            rule.premise=pattern.transactions;
-                            rule.properties=candidate.relations;
-                            rule.steps=(ArrayList<Integer>)stepsInteger.clone();
-                            rule.conclusion=candidate.transactions.get(candidate.concepts.size()-1);
-                            rule.confidence=conf*100;
-                            rule.support=seq.length/(float)Library.getNbUserSequences()*100;
-                            rule.Msequences=seq;
-                            rule.pattern=candidate;
-                            rule.prefix=pattern;
-                            allRules.putIfAbsent(allRules.hashCode(), rule);
-                            nRules++;
-                            
-                            if (pattern.support==candidate.support || rule.steps.size()<1){
-                                bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
-//                                candidates.remove(candidate);
-                            }
-                            else if ( rule.steps.size()>2 && (rule.steps.get(rule.steps.size()-1)==1 || rule.steps.get(rule.steps.size()-1)==rule.steps.get(rule.steps.size()-2)))
-                                    bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
-                            else {
-//                                System.out.println(rule.toString());
-                                rules.putIfAbsent(rule.hashCode(), rule);
-                            }
-                        }
-//                        else
-//                            continue;
-                    }
-                }
-                else
-                {
-                    if(getRelativeSupport2(nseq[0] , Library.getNbUserSequences()) >= minSup2){
-                    // If the candidate is frequent
-                        //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
-                        candidate.support = nseq[0] / 10;
-                        Library.addFrequentPattern(candidate);                   
-                        motifs_qui_matchent[i] = candidate;
-                        sequences_qui_matchent[i] = seq;
-//                        sequences_qui_matchentApply[i] = seqApply;
-                        i++;
-                        
-//                        System.out.println(stepsInteger.toString());
-//                        System.out.println("LIST: ");                
-//                        System.out.println(candString.toString()+": "+ ruleSupp);
-//                        System.out.println(stepsInteger.toString());
-//                        System.out.println("SUBLIST: ");
-//                        System.out.println(patternString.toString()+": "+ premissSupp);
-                        
-                        if (conf>minConf && premissSupp>minSup && ruleSupp>minSup){
-                            IfThenRule rule = new IfThenRule();
-                            rule.premise=pattern.transactions;
-                            rule.properties=candidate.relations;
-                            rule.steps=(ArrayList<Integer>)stepsInteger.clone();
-                            rule.conclusion=candidate.transactions.get(candidate.transactions.size()-1);
-                            rule.confidence=conf*100;
-                            rule.support=seq.length/(float)Library.getNbUserSequences()*100;
-                            rule.Msequences=seq;
-                            rule.pattern=candidate;
-                            rule.prefix=pattern;
-                            allRules.putIfAbsent(allRules.hashCode(), rule);
-                            nRules++;
-                            
-//                            System.out.println(rule.steps.toString());
-                            if (pattern.support==candidate.support || rule.steps.size()<1){
-                                bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
-//                                candidates.remove(candidate);
-                            }
-                            else if ( rule.steps.size()>2 && (rule.steps.get(rule.steps.size()-1)==1 || rule.steps.get(rule.steps.size()-1)==rule.steps.get(rule.steps.size()-2)))
-                                    bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
-                            else {
-                                rules.putIfAbsent(rule.hashCode(), rule);
-//                                System.out.println(rule.toString());
-                            }
-                            
-                        }
-//                        
+                    AppariementSolution[] seq = findMatchingSequences(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
 
+                    // GENERATE RULE HERE FROM PARENT as SUBLIST and CHILD as LIST
+                    ArrayList<Integer> stepsInteger = conceptsToSteps(candidate,hierarchyRepresentation);
+                    ArrayList<String> candString= conceptsToString(candidate,hierarchyRepresentation);
+                    ArrayList<String> patternString= conceptsToString(pattern,hierarchyRepresentation);
+                    String conclusion=candString.toString().split(", ")[candString.toString().split(", ").length-1].replace("[", "").replace("]", "");
+
+                    candidate.support = nseq[0] / 10;
+                    float premissSupp = pattern.support/(float)Library.getNbUserSequences()*100;
+                    float ruleSupp = candidate.support/(float)Library.getNbUserSequences()*100;
+                    float conf = (float)ruleSupp/(float)premissSupp;
+
+    //                System.out.println(stepsInteger.toString());
+    //                System.out.println("LIST: ");                
+    //                System.out.println(candString.toString()+": "+ ruleSupp);
+    //                System.out.println(stepsInteger.toString());
+    //                System.out.println("SUBLIST: ");
+    //                System.out.println(patternString.toString()+": "+ premissSupp);
+    //                System.out.println("CONF: ");
+    //                System.out.println(conf);
+    //                System.out.println(minSup2);
+
+                    if(minSup2 == 0){
+                        int minsupexact = (int)(((double)minSup*100));
+    //                    minsupexact *= 10;
+    //                    System.out.println("nseq[0]: "+nseq[0]);
+    //                    System.out.println("minsupexact: "+minsupexact);
+                        if(nseq[0] >= minsupexact){
+                        // If the candidate is frequent
+                            //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
+                            candidate.support = nseq[0] / 10;
+                            Library.addFrequentPattern(candidate);                   
+                            motifs_qui_matchent[i] = candidate;
+                            sequences_qui_matchent[i] = seq;
+    //                        sequences_qui_matchentApply[i] = seqApply;
+                            i++;
+
+    //                        System.out.println(stepsInteger.toString());
+    //                        System.out.println("LIST: ");                
+    //                        System.out.println(candString.toString()+": "+ ruleSupp);
+    //                        System.out.println(stepsInteger.toString());
+    //                        System.out.println("SUBLIST: ");
+    //                        System.out.println(patternString.toString()+": "+ premissSupp);
+
+                            if (conf>minConf && premissSupp>minSup && ruleSupp>minSup){
+                                System.out.println(candString.toString()+": "+ ruleSupp);
+                                IfThenRule rule = new IfThenRule();
+                                rule.premise=pattern.transactions;
+                                rule.properties=candidate.relations;
+                                rule.steps=(ArrayList<Integer>)stepsInteger.clone();
+                                rule.conclusion=candidate.transactions.get(candidate.concepts.size()-1);
+                                rule.confidence=conf*100;
+                                rule.support=seq.length/(float)Library.getNbUserSequences()*100;
+                                rule.Msequences=seq;
+                                rule.pattern=candidate;
+                                rule.prefix=pattern;
+                                allRules.putIfAbsent(allRules.hashCode(), rule);
+                                nRules++;
+
+                                if (pattern.support==candidate.support || rule.steps.size()<1){
+                                    bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
+    //                                candidates.remove(candidate);
+                                }
+                                else if ( rule.steps.size()>2 && (rule.steps.get(rule.steps.size()-1)==1 || rule.steps.get(rule.steps.size()-1)==rule.steps.get(rule.steps.size()-2)))
+                                        bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
+                                else {
+    //                                System.out.println(rule.toString());
+                                    rules.putIfAbsent(rule.hashCode(), rule);
+                                }
+                            }
+    //                        else
+    //                            continue;
+                        }
                     }
-                }
+                    else
+                    {
+                        if(getRelativeSupport2(nseq[0] , Library.getNbUserSequences()) >= minSup2){
+                        // If the candidate is frequent
+                            //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
+                            candidate.support = nseq[0] / 10;
+                            Library.addFrequentPattern(candidate);                   
+                            motifs_qui_matchent[i] = candidate;
+                            sequences_qui_matchent[i] = seq;
+    //                        sequences_qui_matchentApply[i] = seqApply;
+                            i++;
+
+    //                        System.out.println(stepsInteger.toString());
+    //                        System.out.println("LIST: ");                
+    //                        System.out.println(candString.toString()+": "+ ruleSupp);
+    //                        System.out.println(stepsInteger.toString());
+    //                        System.out.println("SUBLIST: ");
+    //                        System.out.println(patternString.toString()+": "+ premissSupp);
+
+                            if (conf>minConf && premissSupp>minSup && ruleSupp>minSup){
+                                IfThenRule rule = new IfThenRule();
+                                rule.premise=pattern.transactions;
+                                rule.properties=candidate.relations;
+                                rule.steps=(ArrayList<Integer>)stepsInteger.clone();
+                                rule.conclusion=candidate.transactions.get(candidate.transactions.size()-1);
+                                rule.confidence=conf*100;
+                                rule.support=seq.length/(float)Library.getNbUserSequences()*100;
+                                rule.Msequences=seq;
+                                rule.pattern=candidate;
+                                rule.prefix=pattern;
+                                allRules.putIfAbsent(allRules.hashCode(), rule);
+                                nRules++;
+
+    //                            System.out.println(rule.steps.toString());
+                                if (pattern.support==candidate.support || rule.steps.size()<1){
+                                    bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
+    //                                candidates.remove(candidate);
+                                }
+                                else if ( rule.steps.size()>2 && (rule.steps.get(rule.steps.size()-1)==1 || rule.steps.get(rule.steps.size()-1)==rule.steps.get(rule.steps.size()-2)))
+                                        bannedRules.putIfAbsent(bannedRules.hashCode(), rule);
+                                else {
+                                    rules.putIfAbsent(rule.hashCode(), rule);
+    //                                System.out.println(rule.toString());
+                                }
+
+                            }
+    //                        
+
+                        }
+                    }
+                } // canadidate not empty
                 
             }
             
 //            System.out.println("==============================================================================");
             
             i=0;
+            System.out.println("\tCandidate: " + motifs_qui_matchent[i]);
+            if (sequences_qui_matchent[i].length > 0){
+                for (int si=0; si<sequences_qui_matchent[i].length; si++){
+                    System.out.println("\t\tMatching: " + sequences_qui_matchent[i][si].sequenceUtilisateur);
+                }
+            }
             //Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i]);
             
             long finish = System.currentTimeMillis();

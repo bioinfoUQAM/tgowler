@@ -27,16 +27,14 @@ public final class AddConceptTask extends AppariementExtensionTask{
             //on cree notre nouveau bloc avec l'item, les jobs et le pointeur optionel
             JobBlock b = new JobBlock(this.item[0], jobs, last, null, structure.pile_de_taches.size(), structure.concepts_to_blocks.size());
             
+//            for (Integer it : this.item)
+//                System.out.println("AddConceptTask this.item: " + it.toString());
+
             structure.pile_de_taches.add(b);
             structure.concepts_to_blocks.add(structure.pile_de_taches.get(structure.pile_de_taches.size()-1));
             
             //le concept au dessus correspond au domaine du premier bloc
             if(last!=null) {
-                /*System.out.println("["+structure.lastAddedConcept.position+"]Updating current last block(next):"+
-                        structure.pile_de_taches.get(structure.lastAddedConcept.position));
-                */
-                //structure.pile_de_taches.get(structure.lastAddedConcept.position).next = 
-                
                 JobBlock j = structure.pile_de_taches.get(structure.lastAddedConcept.position);
                 
                 j.next = structure.pile_de_taches.get(structure.pile_de_taches.size()-1);//lastAddedConcept
@@ -48,16 +46,6 @@ public final class AddConceptTask extends AppariementExtensionTask{
                     //System.out.println("update last son");
                     j.lastChild.next = j.next;
                 }
-                
-                //on doit aussi mettre a jour le dernier fils de la relation !!!
-                
-                //mise a jour du dernier concept ajoute
-                
-                
-                //j.prev.next = j;
-                
-                /*System.out.println("["+structure.lastAddedConcept.position+"]AFTER Updating current last block(next):"+
-                        structure.pile_de_taches.get(structure.lastAddedConcept.position));*/
             }
             else{
                 structure.firstConceptBlock = structure.pile_de_taches.get(0);

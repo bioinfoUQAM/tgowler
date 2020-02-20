@@ -7,6 +7,7 @@ package ontopatternmatching;
 
 import ca.uqam.gdac.framework.matcher.ConceptMatcher;
 import ca.uqam.gdac.framework.matcher.Matcher;
+import ca.uqam.gdac.framework.miner.Miner;
 import static java.awt.PageAttributes.MediaType.A;
 import legacy.Operation;
 import java.util.ArrayList;
@@ -45,12 +46,14 @@ public class Motif {
     
     public AppariementStructure empty_structure = new AppariementStructure();
     public ArrayList<AppariementExtensionTask> appariement_extensions = new ArrayList<>();
+    
+    public OntoRepresentation ontology = Miner.hierarchyRepresentation;
 
     public ArrayList<ArrayList<Integer>> getTransactions() {
         return transactions;
     }
     
-    public ArrayList<Integer> getConcepts() {
+    public ArrayList<Integer> getAllConcepts() {
         ArrayList<Integer> flat_concepts = new ArrayList<Integer>();
         for (ArrayList<Integer> transaction : transactions)
             for (Integer concept : transaction)
@@ -259,7 +262,9 @@ public class Motif {
         for (ArrayList<Integer> transaction : transactions ){
             s.append("[");
             for(Integer c : transaction){
-                s.append("").append(c).append(", ");
+                OntoRepresentation ontology = Miner.hierarchyRepresentation;
+                String c_label = ontology.getConcept(c).getName().split("#")[1];
+                s.append("").append(c).append(" (").append(c_label).append("), ");
             }
             s.deleteCharAt(s.length() - 2);
             s.append("]");
@@ -333,9 +338,9 @@ public class Motif {
         ArrayList<Integer> transaction = new ArrayList<Integer>();
         for (int concept : concepts){
             transaction.add(concept);
-            this.concepts.add(concept);
         }
         this.transactions.add(transaction);
+        this.concepts.addAll(concepts);
 //        System.out.println("Motif from concepts: " + this.concepts);
     }
     
@@ -364,46 +369,52 @@ public class Motif {
        
     }
     
+    // The problem is here
     // append to last
-    public void appendConceptC(final Integer concept){
-        // Addition of the concept in the list of concepts 
-//        System.out.println("appendConceptC: " + concept);
-        if (transactions.size() > 0){
-            ArrayList<Integer> lastTransaction = this.transactions.get(this.transactions.size( ) - 1);
-            lastTransaction.add(concept);
-            this.transactions.add(lastTransaction);
-            
-//            for (ArrayList<Integer> transaction : this.transactions){
-//                for (Integer c : transaction)
-//                    this.concepts.add(c);
-//            }
-            this.concepts.add(concept);
-            
-            // Update the status of the last operation
-            this.lastOperation = Operation.DC;
-
-            AppariementExtensionTask task = new AppendConceptTask();
-            task.item = new Integer[]{concept};
-            this.appariement_extensions.add(task);
-        }
-        else{
-            addConceptC(concept);
-        }
+    public void appendConceptC(final Integer concept, int level){
         
+        if (this.nbTransactions() != 0){
+            
+            ArrayList<Integer> lastTransaction = this.getConcepts(this.nbTransactions() - 1);
+            Integer previous_size = lastTransaction.size();
+            
+//            System.out.println("lastTransaction: " + lastTransaction);
+//            System.out.println("previous_size: " + previous_size);
+            
+            if (!lastTransaction.isEmpty())
+                if (concept >= lastTransaction.get(previous_size - 1) ){
+                    String s_appendConceptC = ontology.getConcept(concept).getName().split("#")[1];
+                    System.out.println("appendConceptC: " + concept + " (" + s_appendConceptC + ")");
+                    
+                    ArrayList<Integer> lastNewTransaction = new ArrayList<Integer>(lastTransaction.subList(0, previous_size));
+                    lastNewTransaction.add(concept);
+//                    System.out.println("lastNewTransaction: " + lastNewTransaction);
+                    this.transactions.remove(this.nbTransactions() - 1);
+                    this.transactions.add(lastNewTransaction);
+//                    System.out.println("transactions: " + transactions);
+
+                    // add the concept to the list of all concepts
+                    this.concepts = getAllConcepts();
+
+                    // Update the status of the last operation
+                    this.lastOperation = Operation.DC;
+
+                    AppariementExtensionTask task = new AddConceptTask();
+                    task.item = new Integer[]{concept};
+                    this.appariement_extensions.add(task);
+                }
+        }
     }
     
     // add to new
-    public void addConceptC(final Integer concept){
-//        System.out.println("addConceptC: " + concept);
+    public void addConceptC(final Integer concept, int level){
+        String s_addConceptC = ontology.getConcept(concept).getName().split("#")[1];
+        System.out.println("addConceptC: " + concept + " (" + s_addConceptC + ")");
+        
         // Addition of the concept in the list of concepts 
         ArrayList<Integer> newTransaction = new ArrayList<Integer>();
         newTransaction.add(concept);
         this.transactions.add(newTransaction);
-//        for (ArrayList<Integer> transaction : this.transactions){
-//                for (Integer c : transaction)
-//                    this.concepts.add(c);
-//            }
-//        this.concepts.add(concept);
         this.concepts.add(concept);
         // Update the status of the last operation
         this.lastOperation = Operation.AC;
@@ -411,7 +422,51 @@ public class Motif {
         AppariementExtensionTask task = new AddConceptTask();
         task.item = new Integer[]{concept};
         this.appariement_extensions.add(task);
+            
     }
+    
+    /**
+    * Specializes the last concept of the pattern.
+    * 
+    * @param splConcept Concept used to specialize the last concept of the pattern.
+    */
+    public void splConceptC(final Integer splConcept){
+        String s_splConcept = ontology.getConcept(splConcept).getName().split("#")[1];
+        // Specialization of the concept in the last tranaction
+        ArrayList<Integer> lastTransaction = this.transactions.get(this.transactions.size( ) - 1);
+        lastTransaction.set(lastTransaction.size()-1, splConcept);
+        Integer previous_previous_size = lastTransaction.size() - 1;
+
+//            System.out.println("lastTransaction: " + lastTransaction);
+//            System.out.println("previous_size: " + previous_size);
+            
+            if (!lastTransaction.isEmpty())
+                System.out.println("splConceptC: " + splConcept + " (" + s_splConcept + ")");
+                // if there is a second last
+                if (previous_previous_size - 1 > 0){
+                    if (lastTransaction.get(previous_previous_size - 1) <= splConcept){
+                        this.concepts.set(this.concepts.size()-1, splConcept);
+                        // Update the status of the last operation
+                        this.lastOperation = Operation.SC;
+
+
+                        AppariementExtensionTask task = new SpeConceptTask();
+                        task.item = new Integer[]{splConcept};
+                        this.appariement_extensions.add(task);
+                    }
+                }
+                else{
+                    this.concepts.set(this.concepts.size()-1, splConcept);
+                    // Update the status of the last operation
+                    this.lastOperation = Operation.SC;
+
+
+                    AppariementExtensionTask task = new SpeConceptTask();
+                    task.item = new Integer[]{splConcept};
+                    this.appariement_extensions.add(task);
+                }
+    }
+    
     
     public boolean isFirstAPC(){
         return ( this.lastOperation != Operation.AP && this.lastOperation != Operation.SP );
@@ -446,6 +501,7 @@ public class Motif {
         // Addition of the property in the hash map
         Integer targetPosition = this.concepts.size();
         Integer[] rel = new Integer[]{property, subjectPosition+1, targetPosition};
+         
         this.relations.add(rel);
 
         // Update the property sup
@@ -477,24 +533,7 @@ public class Motif {
         task.item = rel;
         this.appariement_extensions.add(task);
     }
-    
-    /**
-    * Specializes the last concept of the pattern.
-    * 
-    * @param splConcept Concept used to specialize the last concept of the pattern.
-    */
-    public void splConceptC(final Integer splConcept){
-        // Specialization of the concept in the last tranaction
-        ArrayList<Integer> lastTransaction = this.transactions.get(this.transactions.size( ) - 1);
-        lastTransaction.set(lastTransaction.size()-1, splConcept);
-        // Update the status of the last operation
-        this.lastOperation = Operation.SC;
-        
-        
-        AppariementExtensionTask task = new SpeConceptTask();
-        task.item = new Integer[]{splConcept};
-        this.appariement_extensions.add(task);
-    }
+
     
     public void splPropertyC(final Integer subjectPosition, final Integer splProperty) {
         // Specialization of the property in the hash map

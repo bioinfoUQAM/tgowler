@@ -129,7 +129,7 @@ public class ConceptMatcher extends BaseMatcher
 	// Try to find a match starting at the beginning of the input sequence
 	private void findFirstMatch( )
 	{
-		match = ConceptMatcher.findMatch( pattern.getConcepts( pattern.nbConcepts() - 1 ), input.getConcepts( ), 0, match, hierarchyRepresentation );
+		match = ConceptMatcher.findMatch( pattern.getAllConcepts( ), input.getConcepts( ), 0, match, hierarchyRepresentation );
 	}
 	
 	// Try to find a match regarding to the current match
@@ -150,7 +150,7 @@ public class ConceptMatcher extends BaseMatcher
 
                     // Try to find a new match
                     match.remove( match.size( ) - 1 );
-                    ArrayList<Integer> newMatch = ConceptMatcher.findMatch( pattern.getConcepts(pattern.nbConcepts() - 1), input.getConcepts(), matchStart + 1, match, hierarchyRepresentation, i, matchStart+1);
+                    ArrayList<Integer> newMatch = ConceptMatcher.findMatch( pattern.getAllConcepts( ), input.getConcepts(), matchStart + 1, match, hierarchyRepresentation, i, matchStart+1);
                     if( ! newMatch.isEmpty( ) )
                     {
                             match = newMatch;

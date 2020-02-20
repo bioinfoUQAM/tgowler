@@ -22,7 +22,7 @@ public final class TrouveNextConcept implements Job{
     @Override
     public final int doJob(JobBlock block, final Sequence sequence, int[] appariement, boolean[] modifications, final OntoRepresentation ontology, final Motif m) {
         int j=0;int s;int o;
-        
+//        System.out.println("block: " + block.toString());
         int solution = appariement[block.position];
         int prev_solution = 0;
         if(block.prev!=null) {
@@ -102,7 +102,7 @@ public final class TrouveNextConcept implements Job{
 
         if(SequenceMatcher.debug) System.out.println("Concept => Starting at:"+j+" ("+solution+")");
         
-        s=sequence.objects.size()-(m.concepts.size()-(block.sibling_position+1)) - 1;//enlever le nombre de blocks restants
+        s=sequence.objects.size() - 1;//enlever le nombre de blocks restants
         //tant qu'on n'est pas a la fin de la sequence
         while(j<s){
 //            System.out.println("\t\tconcepts: " + m.concepts);
@@ -110,7 +110,8 @@ public final class TrouveNextConcept implements Job{
 //            System.out.println("\t\tj: " + j);
 //            System.out.println("\t\ts: " + s);
             o = sequence.objects.get(j);//on recupere l'item
-            //if(SequenceMatcher.debug) System.out.println("["+j+"]trying to match concept "+o+" with "+block.item);
+//            System.out.println("["+j+"]trying to match concept "+o+" with "+block.item);
+            if(SequenceMatcher.debug) System.out.println("["+j+"]trying to match concept "+o+" with "+block.item);
             if(ontology.isConceptEqualOrDescendant(block.item, o)){//si l'element correspond a notre classe
                 //if(block.firstChild!=null) 
                 if(SequenceMatcher.debug) System.out.println("The item "+block.item+" is matched by "+o+" at "+j);
@@ -253,7 +254,7 @@ public final class TrouveNextConcept implements Job{
         
         _info.append("On va parcourir la sequence et trouver une correspondance si possible.");
         
-        s=sequence.objects.size()-(m.concepts.size()-(block.sibling_position+1));//enlever le nombre de blocks restants
+        s=sequence.objects.size()-(m.concepts.size()-(block.sibling_position+1)) - 1;//enlever le nombre de blocks restants
         //tant qu'on n'est pas a la fin de la sequence
         while(j<s){
             o = sequence.objects.get(j);//on recupere l'item

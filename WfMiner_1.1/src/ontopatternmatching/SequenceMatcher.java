@@ -27,7 +27,7 @@ public final class SequenceMatcher {
      * @return 
      */
     public final boolean tryToMatch(JobBlock firstBlock, int[] appariement, boolean[] modifications, final Sequence sequence, final OntoRepresentation ontology, final Motif m){      
-        
+//        System.out.println("motif to match:" + m);
         appariement = this.__match2(firstBlock, appariement, modifications, sequence, ontology, m);        
         return (appariement[0]!=0);
     }
@@ -119,7 +119,7 @@ public final class SequenceMatcher {
         int res;//resultat des jobs
         JobBlock child;//contraintes liees aux relations
         System.out.println("#######################");
-        SequenceMatcher.mode = 0;
+        SequenceMatcher.mode = 1;
         
         while(block!=null){
             //on recupere le premier element

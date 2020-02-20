@@ -734,6 +734,7 @@ public class OntoRepresentation {
     
     public ArrayList<Concept> getConceptChildren(final Integer index){
         Concept c = this.getConcept(index);
+//        System.out.println("c: " + c.getName());
         return this.getConceptChildren(c);
     }
 

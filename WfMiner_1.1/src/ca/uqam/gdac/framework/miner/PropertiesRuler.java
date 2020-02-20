@@ -78,7 +78,7 @@ public class PropertiesRuler
      * @return 
 	 */        	
         public static ArrayList<Relation> spcFilterPropertiesByConcepts(final Motif pattern, ArrayList<Relation> properties, final OntoRepresentation hierarchyRepresentation){            
-            ArrayList<Integer> lastTransaction = pattern.getConcepts(pattern.nbConcepts() - 1);
+            ArrayList<Integer> lastTransaction = pattern.getConcepts(pattern.nbTransactions() - 1);
             // Get the source and target concepts
             // Get the non-root properties applicable between the source and the target concept
             // Remove the properties that are not applicable between the source and the target concept            

@@ -48,6 +48,7 @@ public class AppariementStructure {
         for(JobBlock j : a.pile_de_taches){
             if(j.type==0){
                 JobBlock jj = new JobBlock(j);
+//                System.out.println("jj: " + jj.item);
                 this.concepts_to_blocks.add(jj);
                 this.pile_de_taches.add(jj);
             }
@@ -137,105 +138,11 @@ public class AppariementStructure {
         }
         
         
-        /*for(int i=0;i<this.pile_de_taches.size();i++){
-            if(this.pile_de_taches.get(i).item != a.pile_de_taches.get(i).item){
-                System.out.println("badddd copy");
-                System.exit(1);
-            }
-        }
-        
-        JobBlock check = a.firstConceptBlock;
-        JobBlock check2 = this.firstConceptBlock;
-        while(check!=null){
-            System.out.println("1:"+check);
-            System.out.println("2:"+check2);
-            if(check.item!=check2.item){
-                System.out.println("Bad copy:("+check.type+")"+check.item+"!=("+check2.type+")"+check2.item);
-                System.out.println("a:"+a.pile_de_taches.size()+"-this:"+this.pile_de_taches.size());
-                System.exit(1);
-            }
-            else{
-                System.out.println("cc:("+check.type+")"+check.item+"==("+check2.type+")"+check2.item);
-            }
-            if(check.firstChild!=null){
-                System.out.println("check has sons");
-                if(check.firstChild.firstChild!=null){
-                    System.out.println("fils de fils !!!!");
-                    System.exit(1);
-                }
-                check = check.firstChild;
-                check2 = check2.firstChild;
-                continue;
-            }
-            check = check.next;
-            check2 = check2.next;
-        }
-        System.out.println("ok copy");
-        
-        
-        if(this.lastAddedConcept!=null && a.lastAddedConcept!=null && this.lastAddedConcept.item != a.lastAddedConcept.item){
-            System.out.println("not nice copy:"+this.lastAddedConcept.item +"=="+ a.lastAddedConcept.item);
-            System.exit(1);
-        }
-        else if(this.lastAddedConcept!=null && a.lastAddedConcept!=null){
-            System.out.println("copy:"+this.lastAddedConcept.item +"=="+ a.lastAddedConcept.item);
-        }
-        else{
-            
-        }*/
-        
     }
-    
-    /*
-    public AppariementStructure(final Sequence s){
-        //this.userSequence = s;
-    }*/
     
     
     public AppariementStructure extend(AppariementExtensionTask t){
-        /*System.out.println("before:");
-        for(JobBlock j : this.pile_de_taches){
-            System.out.println(">"+j.item+"("+j.type+")");
-        }
-        */
         AppariementStructure extend = t.extend(this);
-        //System.out.println("ltb:"+this.lastTouchedBlock);
-        /*System.out.println("after:");
-        
-        JobBlock j = this.firstConceptBlock;
-        while(j!=null){
-            System.out.println(">:("+j.type+")"+j.item);
-            if(j.firstChild!=null){
-                j = j.firstChild;
-                continue;
-            }
-            j = j.next;
-        }*/
-        
-        /*
-        for(JobBlock j : this.pile_de_taches){
-            System.out.println(">"+j.item+"("+j.type+")");
-        }*/
-        //System.out.println("done");
-        
-        /*
-        {
-            JobBlock one = this.concepts_to_blocks.get(0);
-            while(one!=null){
-                System.out.println("[22222]Solution pour ["+one.position+"]"+one.item+": "+(one.solution-1));
-                if(one.firstChild!=null){
-                    JobBlock two=one.firstChild;
-                    while(two!=null){
-                        System.out.println("with ["+two.position+"]"+two.item+": "+(two.solution-1));
-                        if(two.next != two.prev.next) {
-                            two = two.next;
-                        }else break;
-                    }
-                }                
-                one = one.next;
-            }
-        }
-        */
         return extend;
     }
     
@@ -256,12 +163,4 @@ public class AppariementStructure {
     public AppariementExtensionTask createSpeRelationExtension(){
         return new SpeRelationTask();
     }
-    
-    // </editor-fold>
-    
-
-    
-    // <editor-fold desc="extension tasks">
-    
-    // </editor-fold>
 }

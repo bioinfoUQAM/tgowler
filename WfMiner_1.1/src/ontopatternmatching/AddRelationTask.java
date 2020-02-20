@@ -55,8 +55,9 @@ public final class AddRelationTask extends AppariementExtensionTask{
             // BLOC 2 - RANGE VALIDATION
             //////////////////////////////////////
             //on recupere le bloc du concept codomaine
-//            System.out.println("structure.concepts_to_blocks: " + structure.concepts_to_blocks);
-//            System.out.println("dom_pos, rang_pos" + dom_pos + ", " + rang_pos);
+            for (JobBlock concepts_to_block : structure.concepts_to_blocks)
+                System.out.println("concepts_to_block.item: " + concepts_to_block.item);
+            System.out.println("dom_pos, rang_pos" + dom_pos + ", " + rang_pos);
             JobBlock codomaine_block = structure.pile_de_taches.get(structure.concepts_to_blocks.get(rang_pos).position);
             if(codomaine_block.type!=0){
                 System.out.println("not a concept");

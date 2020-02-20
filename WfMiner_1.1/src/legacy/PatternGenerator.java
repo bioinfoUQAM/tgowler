@@ -25,17 +25,20 @@ public abstract class PatternGenerator{
          * @return 
          */
         // Append in the last transaction
-        public static ArrayList<Motif> generateSequencesByDCC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel ){
+        public static ArrayList<Motif> generateSequencesByDCC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel, int level ){
                 ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
                 ArrayList<Motif> newWorkflows = new ArrayList<>();
                 if(rootConcepts != null){
                     for (Concept rootConcept : rootConcepts ){
                         Motif newWorkflow = new Motif(motif);
-                        newWorkflow.appendConceptC(rootConcept.index);//CRITIQUE !!!
-                        if(!newWorkflows.contains(newWorkflow)) newWorkflows.add(newWorkflow);
+                        newWorkflow.appendConceptC(rootConcept.index, level);//CRITIQUE !!!
+//                        System.out.println("rootConcept.index: " + rootConcept.index);
+//                        System.out.println("newWorkflow: "+newWorkflow);
+                        if(!newWorkflows.contains(newWorkflow)) 
+                            newWorkflows.add(newWorkflow);
                     }
                 }
-		
+                
 		return newWorkflows;
 	}
         
@@ -45,15 +48,16 @@ public abstract class PatternGenerator{
          * @param hierarchyRepresentation
          * @return 
          */
-        public static ArrayList<Motif> generateSequencesByACC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel ){
+        // Add to the last transaction
+        public static ArrayList<Motif> generateSequencesByACC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel, int level ){
                 ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
                 ArrayList<Motif> newWorkflows = new ArrayList<>();
                 if(rootConcepts != null){
                     for (Concept rootConcept : rootConcepts ){
-                        Motif newSequence = new Motif(motif);
-                        newSequence.addConceptC(rootConcept.index);//CRITIQUE !!!
+                        Motif newWorklow = new Motif(motif);
+                        newWorklow.addConceptC(rootConcept.index, level);//CRITIQUE !!!
 //                        System.out.println("newSequence : " + newSequence);
-                        if(!newWorkflows.contains(newSequence)) newWorkflows.add(newSequence);
+                        if(!newWorkflows.contains(newWorklow)) newWorkflows.add(newWorklow);
                     }
                 }
 		return newWorkflows;
@@ -77,21 +81,27 @@ public abstract class PatternGenerator{
         public static ArrayList<Motif> generateSequencesBySCC( final Motif motif, final OntoRepresentation hierarchyRepresentation ){
             //ArrayList<Integer> concepts = motif.concepts;            
             // Get the concept to specialize and its children
+//            System.out.println("motif: " + motif);
             ArrayList<Integer> lastTransaction = motif.transactions.get(motif.nbTransactions() - 1);
             Integer lastConcept = lastTransaction.get(lastTransaction.size()-1);
+//            System.out.println("generateSequencesBySCC lastConcept: " + lastConcept);
             
             
             ArrayList<Concept> conceptChildren = hierarchyRepresentation.getConceptChildren(lastConcept);
+            
+            
             // Specialize this concept
-            ArrayList<Motif> newSequences = new ArrayList<>();
-            for(Concept conceptChild : conceptChildren){
-//                System.out.println("son is : "+conceptChild.index);
-                Motif newSequence = new Motif(motif);
-//                System.out.println("motif: "+motif);
-                newSequence.splConceptC(conceptChild.index);//est ce que ca marche
-                if(!newSequences.contains(newSequence)) newSequences.add(newSequence);
+            ArrayList<Motif> newWorkflows = new ArrayList<Motif>();
+            if (!conceptChildren.isEmpty()) {
+//                System.out.println("conceptChildren: " + conceptChildren);
+                for(Concept conceptChild : conceptChildren){
+                    motif.splConceptC(conceptChild.index);
+                    if(!newWorkflows.contains(motif)) newWorkflows.add(motif);
+//                    System.out.println("next newWorkflows: " + newWorkflows);
+                }
+                
             }
-            return newSequences;
+            return newWorkflows;
 	}
                 
         /**
