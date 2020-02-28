@@ -156,8 +156,9 @@ public class OntoPatternOld {
         // ****************************
         System.out.println("Mining Generalized Workflows ...");
         ArrayList<Motif> patterns = Miner.findFrequentPatternsDF(userSequences, thresold_supp, ontology, Integer.parseInt(args[7]) );
-//        for (Motif pattern : patterns)
-//            System.out.println(pattern.toString());
+        System.out.println("On a "+patterns.size()+" patterns");
+        for (Motif pattern : patterns)
+            System.out.println(pattern.toString());
         
         // **********************
         // PRUNING WORKFLOW RULES

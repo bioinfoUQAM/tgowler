@@ -1,6 +1,6 @@
-Ontology: phylOntology_v51_small.bowl
-Train set: WFMiner_example.xml
-min_supp: 0.1
+Ontology: ./phylOntology_v51_small.bowl
+Train set: ./WFMiner_example.xml
+min_supp: 0.2
 min_ontology_level: 2
 
 Patterns: 
@@ -8,56 +8,6 @@ Patterns:
 [BaseSequence( support: 100.0, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
 [BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, SequenceType, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 3, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-55
+5
  patterns

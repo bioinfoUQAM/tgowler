@@ -231,22 +231,22 @@ public class Miner
             }
             
             // 3. splConceptC
-            ArrayList<Motif> splConceptC = splConceptC(motif);   
+            ArrayList<Motif> splConceptC = splConceptC(new Motif(motif));
             for(Motif m : splConceptC){
                 if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
             }
 //            
 //            // 4. addPropertyC
-//            ArrayList<Motif> addPropertyC = addPropertyC(motif);     
-//            for(Motif m : addPropertyC){
-//                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-//            }
+            ArrayList<Motif> addPropertyC = addPropertyC(motif);
+            for(Motif m : addPropertyC){
+                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
+            }
 //            // 5. splPropertyC
-//            ArrayList<Motif> splPropertyC = splPropertyC(motif);
-//            //System.out.println(""+splPropertyC.size()+" spe de props...");
-//            for(Motif m : splPropertyC){
-//                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-//            }
+            ArrayList<Motif> splPropertyC = splPropertyC(motif);
+            //System.out.println(""+splPropertyC.size()+" spe de props...");
+            for(Motif m : splPropertyC){
+                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
+            }
             
             //if(motif.relations!=null && motif.relations.size() > 1 ) System.exit(1);
             return motifs_candidats;
@@ -313,7 +313,7 @@ public class Miner
             ArrayList<Motif> candidates = new ArrayList<>();
             if(splConceptCAllowed(sequence)){
                 ArrayList<Motif> generateSequencesBySCC = PatternGenerator.generateSequencesBySCC(sequence, hierarchyRepresentation );
-                if (! generateSequencesBySCC.isEmpty())
+                if (!generateSequencesBySCC.isEmpty())
 //                    System.out.println("Add to candidates: " + generateSequencesBySCC);
                     for(Motif m : generateSequencesBySCC){
                         if(!candidates.contains(m)) candidates.add(m);

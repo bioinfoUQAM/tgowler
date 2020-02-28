@@ -11,6 +11,7 @@ import ca.uqam.gdac.framework.miner.Miner;
 import static java.awt.PageAttributes.MediaType.A;
 import legacy.Operation;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Objects;
 import legacy.Pair;
@@ -33,7 +34,37 @@ public class Motif {
     public Integer[] lastAddedLink = null;
     public int support = 0;
     public float generality = 0;
-    
+
+
+    public boolean equals(final Object _obj){
+        if(this == _obj) return true;
+        if(_obj == null || _obj.getClass()!= this.getClass())
+            return false;
+        Motif tmp = (Motif)_obj;
+        if(this.transactions.size() == tmp.transactions.size()){
+            for(int i=0;i!=this.transactions.size();++i){
+                if(this.transactions.get(i) != tmp.transactions.get(i)){
+                    return false;
+                }
+            }
+            for(int i=0;i!=this.relations.size();++i){
+                Integer[] rel_left = this.relations.get(i);
+                Integer[] rel_right = tmp.relations.get(i);
+                if(rel_left.length != rel_right.length){
+                    return false;
+                }
+                for(int j=0;j!=rel_right.length;++j){
+                    if(rel_left[j] != rel_right[j]){
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    //TODO: hashcode method, just to be ok if we use hash based structures in the future
+
     
     /*public ArrayList<JobBlock> pile_de_taches = new ArrayList<>();
     public JobBlock firstConceptBlock = null;//represente un pointeur vers le premier bloc ajoute
@@ -276,7 +307,7 @@ public class Motif {
         for(Integer[] r : relations){
             s.append("{").append(r[0]).append(" => ").append(r[1]).append(",").append(r[2]).append("}, ");
         }
-        return s.toString().replace(" ", "");
+        return "s="+this.support+" | "+s.toString().replace(" ", "");
     }
     
     /**
@@ -345,17 +376,22 @@ public class Motif {
     }
     
     public Motif(final Motif m){
+        //NOTE : This is a nested ArrayList -> deepCopy is required
         this.transactions = new ArrayList<ArrayList<Integer>>(m.transactions.size());
-        for (ArrayList<Integer> transaction : m.transactions){
-            this.transactions.add(transaction);
-            for (Integer concept : transaction)
+        for (final ArrayList<Integer> transaction : m.transactions){
+            final ArrayList<Integer> transactionCopy = new ArrayList<>();
+            for (final Integer concept : transaction) {
                 this.concepts.add(concept);
+                transactionCopy.add(concept);
+            }
+            this.transactions.add(transactionCopy);
 //            System.out.println("Motif from Motif: " + this.concepts);
         }
         //System.out.println("on a "+this.concepts.size()+" concepts.");
         this.relations = new ArrayList<>(m.relations.size());
-        for(Integer[] i : m.relations){
-            this.relations.add(i);
+        for(final Integer[] i : m.relations){
+            //Same as above, deep copy requiered
+            this.relations.add(Arrays.copyOf(i, i.length));
         }
         
         //System.out.println("on a "+this.concepts.size()+" relations.");
@@ -363,7 +399,7 @@ public class Motif {
         this.sourcePositionInf = m.sourcePositionInf;
         this.propertySup = m.propertySup;
         this.lastAppliedProperty = m.lastAppliedProperty;
-        
+
         this.appariement_extensions = new ArrayList(m.appariement_extensions); 
         this.empty_structure = new AppariementStructure(m.empty_structure);
        
@@ -372,9 +408,7 @@ public class Motif {
     // The problem is here
     // append to last
     public void appendConceptC(final Integer concept, int level){
-        
         if (this.nbTransactions() != 0){
-            
             ArrayList<Integer> lastTransaction = this.getConcepts(this.nbTransactions() - 1);
             Integer previous_size = lastTransaction.size();
             
