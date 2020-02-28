@@ -35,7 +35,6 @@ import ontopatternmatching.Sequence;
 import ontopatternmatching.SequenceMatcher;
 import legacy.PatternGenerator;
 import legacy.PropertiesAndSubject;
-import org.apache.commons.math3.analysis.function.Log;
 
 /**
  *Miner realizes the mining of user sequences regarding to a minimum support.<br/>

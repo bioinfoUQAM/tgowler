@@ -1,9 +1,9 @@
 #!/bin/bash
 
-jarF=/Users/ahmedhalioui/NetBeansProjects/OntoPattern16/dist/OntoPattern16.jar
+jarF=./dist/OntoPattern16.jar
 
-minSupp="0.5"
-bowl="phylOntology_v51_small_final.bowl"
+minSupp="0.2"
+bowl="phylOntology_v51_small_final1.bowl"
 FILES="./WD-Phy-extracted-3/*.xml"
 namespace="http://www.co-ode.org/ontologies/ont.owl#"
 gold="./WD-Phy-gold-1.xml"
