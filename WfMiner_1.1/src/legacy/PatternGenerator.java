@@ -99,8 +99,9 @@ public abstract class PatternGenerator{
             if (!conceptChildren.isEmpty()) {
 //                System.out.println("conceptChildren: " + conceptChildren);
                 for(Concept conceptChild : conceptChildren){
-                    motif.splConceptC(conceptChild.index);
-                    if(!newWorkflows.contains(motif)) newWorkflows.add(motif);
+                    Motif copySpe = new Motif(motif);
+                    copySpe.splConceptC(conceptChild.index);
+                    if(!newWorkflows.contains(copySpe)) newWorkflows.add(copySpe);
 //                    System.out.println("next newWorkflows: " + newWorkflows);
                 }
                 
