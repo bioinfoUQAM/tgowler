@@ -1,0 +1,1985 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/travel.owl#"
+     xml:base="http://www.owl-ontologies.com/travel.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/travel.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.0 by Holger Knublauch (holger@smi.stanford.edu)</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string">An example ontology for tutorial purposes.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasAccommodation -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasAccommodation">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasActivity">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasAdventure -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasAdventure">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Adventure"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_5"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasBedAndBreakfast -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasBedAndBreakfast">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#BedAndBreakfast"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasBunjeeJumping -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasBunjeeJumping">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#BunjeeJumping"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAdventure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasCampground -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasCampground">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isCampgroundOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasContact">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Contact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasHiking -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasHiking">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Hiking"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasSports"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasHotel -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasHotel">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasLuxuryHotel -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasLuxuryHotel">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasHotel"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isLuxuryHotelOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasMuseums -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasMuseums">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasSightseeing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasPart">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasRating">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#AccommodationRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasRelaxation -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasRelaxation">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Relaxation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_6"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasSafari -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasSafari">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Safari"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAdventure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasSightseeing -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasSightseeing">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_7"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasSkiing -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasSkiing">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasSports"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasSports -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasSports">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasSunbathing -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasSunbathing">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Sunbathing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasRelaxation"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasRelaxation_11"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasSurfing -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasSurfing">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Surfing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasSports"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_15"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasYoga -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasYoga">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Yoga"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasRelaxation"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasRelaxation_12"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_5 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_5">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Adventure"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_6 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_6">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Relaxation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_7 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_7">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_8 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_8">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasAdventure_10 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasAdventure_10">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Safari"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasSafari"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_5"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasAdventure_9 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasAdventure_9">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#BunjeeJumping"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasBunjeeJumping"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_5"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasRelaxation_11 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasRelaxation_11">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Sunbathing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_6"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasRelaxation_12 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasRelaxation_12">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Yoga"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_6"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasSightseeing_13 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasSightseeing_13">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasMuseums"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_7"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_14 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_14">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Hiking"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasHiking"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_15 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_15">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Surfing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_36 -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#inverse_of_hasSports_36">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasSkiing"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#inverse_of_hasActivity_8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isAccommodationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isAccommodationOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isBedAndBreakfastOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isBedAndBreakfastOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#BedAndBreakfast"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasBedAndBreakfast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isAccommodationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isCampgroundOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isCampgroundOf">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isAccommodationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isHotelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isHotelOf">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasHotel"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isAccommodationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isLuxuryHotelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isLuxuryHotelOf">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isAccommodationOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isHotelOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isOfferedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isOfferedAt">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isPartOf">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasCity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasCity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Contact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasEMail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasEMail">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Contact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasStreet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasStreet">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Contact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasZipCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasZipCode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/travel.owl#Contact"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Accommodation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Accommodation">
+        <rdfs:comment rdf:datatype="&xsd;string">A place to stay for tourists.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#AccommodationRating -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#AccommodationRating">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#OneStarRating"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#TwoStarRating"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#ThreeStarRating"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">Consists of exactly three individuals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Activity -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Activity"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Adventure -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Relaxation"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#AfricaAdventure -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#AfricaAdventure">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Adventure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BackpackersDestination -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#BackpackersDestination">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Destination"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/travel.owl#BudgetAccommodation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Adventure"/>
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Sports"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A destination that provides budget accommodation and offers sport or adventure activities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Beach -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Beach">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BedAndBreakfast -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#BedAndBreakfast">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BudgetAccommodation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#BudgetAccommodation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasRating"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#OneStarRating"/>
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#TwoStarRating"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Accommodation that has either one or two star rating.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BudgetHotelDestination -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#BudgetHotelDestination">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Destination"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#BudgetAccommodation"/>
+                                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A destination with a hotel that is also a budget accommodation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BunjeeJumping -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#BunjeeJumping">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Adventure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Campground -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Campground">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasRating"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/travel.owl#OneStarRating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Capital -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Capital">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#City -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#City">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#UrbanArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Contact -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Contact"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Country -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Country">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Destination -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#FamilyDestination -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#FamilyDestination">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Destination"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A destination with at least one accommodation and at least 2 activities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Farmland -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Farmland">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#RuralArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Hiking -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Hiking">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Hotel -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Accommodation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#LuxuryHotel -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#LuxuryHotel">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasRating"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/travel.owl#ThreeStarRating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Museums -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Museums">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#NationalPark -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#NationalPark">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#RuralArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/travel.owl#Hiking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#QuietDestination -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#QuietDestination">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Destination"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.owl-ontologies.com/travel.owl#FamilyDestination"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A destination that is not frequented by noisy families.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Relaxation -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Relaxation">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#RetireeDestination -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#RetireeDestination">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Destination"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasAccommodation"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasRating"/>
+                                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/travel.owl#ThreeStarRating"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#hasActivity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A destination with at least one three star accommodation and sightseeing opportunities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#RuralArea -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#RuralArea">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#UrbanArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Safari -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Safari">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#AfricaAdventure"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sightseeing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Sightseeing -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Sightseeing">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Skiing -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Skiing">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Sports -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Sports">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Sunbathing -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Sunbathing">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Relaxation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Surfing -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Surfing">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Town -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Town">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#UrbanArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#UrbanArea -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#UrbanArea">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Yoga -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/travel.owl#Yoga">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Relaxation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Alberta -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Alberta">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Wood_Buffalo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Algeria -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Algeria">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#GrandeKabylie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Algiers -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Algiers">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <hasActivity rdf:resource="http://www.owl-ontologies.com/travel.owl#Gazelle_Tanzania_Safari"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Sofitel_Diwan_Rabat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#American_Folk_Art -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#American_Folk_Art">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#American_Numismatic_Society -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#American_Numismatic_Society">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Arles -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Arles">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Australia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Cairns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Barcelona -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Barcelona">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#HostalMaritimo"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Spain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BlueMountains -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#BlueMountains">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#BondiBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#BondiBeach">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Beach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#British_Museum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#British_Museum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Bronx_Museum_of_the_Arts -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Bronx_Museum_of_the_Arts">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Bulgaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Bulgaria">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Cairns -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Cairns">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Australia"/>
+        <hasSafari rdf:resource="http://www.owl-ontologies.com/travel.owl#Cape_York_Safari"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#CliftonBeach"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Coonabarabran"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Canada">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#CapeYork -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#CapeYork">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#RuralArea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Cape_York_Safari -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Cape_York_Safari">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Safari"/>
+        <inverse_of_hasAdventure_10 rdf:resource="http://www.owl-ontologies.com/travel.owl#Cairns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Carcassone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Carcassone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Central_Florid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Central_Florid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Beach"/>
+        <hasActivity rdf:resource="http://www.owl-ontologies.com/travel.owl#Surfline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Clarion_St.James -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Clarion_St.James">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#CliftonBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#CliftonBeach">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Beach"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Cairns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Coonabarabran -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Coonabarabran">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Cairns"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Warrumbungles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#CopaCaébana -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#CopaCaébana">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Beach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#CurrawongBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#CurrawongBeach">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Beach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Djurjura -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Djurjura">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Figeac -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Figeac">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Florida -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Florida">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Central_Florid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Forillon -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Forillon">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+        <hasActivity rdf:resource="http://www.owl-ontologies.com/travel.owl#Marche_2Tiers"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#The_2_Campers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#FourSeasons -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#FourSeasons">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#France">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Grenoble"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#GUMIN_GUMIN_HOMESTEAD -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#GUMIN_GUMIN_HOMESTEAD">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+        <isCampgroundOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Warrumbungles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Gaspésie -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Gaspésie">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#RuralArea"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Forillon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Gazelle_Tanzania_Safari -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Gazelle_Tanzania_Safari">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Safari"/>
+        <isOfferedAt rdf:resource="http://www.owl-ontologies.com/travel.owl#Algiers"/>
+        <inverse_of_hasAdventure_10 rdf:resource="http://www.owl-ontologies.com/travel.owl#Tanzania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Grand_Hotel_Plaza -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Grand_Hotel_Plaza">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Roma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#GrandeKabylie -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#GrandeKabylie">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Algeria"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Tizi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#GreatBritain -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#GreatBritain">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#London"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Grenoble -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Grenoble">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#France"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#HostalMaritimo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#HostalMaritimo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#BedAndBreakfast"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Hotel_Anel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Hotel_Anel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sofia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Hotel_El_Arz -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Hotel_El_Arz">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Hotel_Ritz_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Hotel_Ritz_Paris">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#InterContinental_Montreal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#InterContinental_Montreal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+        <isHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Montreal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Italy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Kavatsite -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Kavatsite">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Beach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Le_Petit_Manoir -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Le_Petit_Manoir">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Le_Walt -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Le_Walt">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Les2Alpes -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Les2Alpes">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Skiing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Little_Buffalo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Little_Buffalo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+        <isCampgroundOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Wood_Buffalo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#London -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#London">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#GreatBritain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Lourdes -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Lourdes">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Louvre -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Louvre">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+        <inverse_of_hasSightseeing_13 rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Madrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Madrid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Marche_2Tiers -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Marche_2Tiers">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Hiking"/>
+        <isOfferedAt rdf:resource="http://www.owl-ontologies.com/travel.owl#Forillon"/>
+        <inverse_of_hasSports_14 rdf:resource="http://www.owl-ontologies.com/travel.owl#Wood_Buffalo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Mausoleum_of_Augustus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Mausoleum_of_Augustus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Mont_Tremblant -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Mont_Tremblant">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Skiing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Montra_Trilogy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Montra_Trilogy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+        <isHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Cairns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Montreal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Montreal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <hasHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#InterContinental_Montreal"/>
+        <hasMuseums rdf:resource="http://www.owl-ontologies.com/travel.owl#Pointe_à_Calière"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Québec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Morocco -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Morocco">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Nesebar -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Nesebar">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#PriKolio"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Rusalka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#New_York -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#New_York">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#USA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Nimes -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Nimes">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#OneStarRating -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#OneStarRating">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#AccommodationRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Ottawa -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Ottawa">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Paris">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Clarion_St.James"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Clarion_St.James"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel_Ritz_Paris"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Le_Petit_Manoir"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Le_Petit_Manoir"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Le_Walt"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Le_Walt"/>
+        <hasMuseums rdf:resource="http://www.owl-ontologies.com/travel.owl#Louvre"/>
+        <hasMuseums rdf:resource="http://www.owl-ontologies.com/travel.owl#Picasso"/>
+        <hasMuseums rdf:resource="http://www.owl-ontologies.com/travel.owl#Rodin"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Royal_Garden"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Picasso -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Picasso">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+        <inverse_of_hasSightseeing_13 rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Pointe_à_Calière -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Pointe_à_Calière">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+        <inverse_of_hasSightseeing_13 rdf:resource="http://www.owl-ontologies.com/travel.owl#Montreal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#PriKolio -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#PriKolio">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#BudgetAccommodation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Quebec_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Quebec_City">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Québec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Québec -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Québec">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Gaspésie"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Montreal"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Quebec_City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Rabat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Rabat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Sofitel_Diwan_Rabat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Rodin -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Rodin">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+        <inverse_of_hasSightseeing_13 rdf:resource="http://www.owl-ontologies.com/travel.owl#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Roma -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Roma">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Grand_Hotel_Plaza"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Grand_Hotel_Plaza"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Westin_Excelsior"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Westin_Excelsior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Royal_Garden -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Royal_Garden">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Rusalka -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Rusalka">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Sofia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Salzburg -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Salzburg">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Sofia -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Sofia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel_Anel"/>
+        <hasLuxuryHotel rdf:resource="http://www.owl-ontologies.com/travel.owl#Rusalka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Sofitel_Diwan_Rabat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Sofitel_Diwan_Rabat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Rabat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Spain">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Barcelona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Srebarna -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Srebarna">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Surfline -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Surfline">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Surfing"/>
+        <isOfferedAt rdf:resource="http://www.owl-ontologies.com/travel.owl#Central_Florid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Sydney -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Sydney">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#BondiBeach"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#CurrawongBeach"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#FourSeasons"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Tala_Guilef -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Tala_Guilef">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Skiing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Tanzania -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Tanzania">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasSafari rdf:resource="http://www.owl-ontologies.com/travel.owl#Gazelle_Tanzania_Safari"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Teritoires_Nord_Ouest -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Teritoires_Nord_Ouest">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Destination"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#Wood_Buffalo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#The_2_Campers -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#The_2_Campers">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Campground"/>
+        <isCampgroundOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Forillon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#The_Montreal_Museum_of_Fine_Arts -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#The_Montreal_Museum_of_Fine_Arts">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#The_National_Gallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#The_National_Gallery">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Museums"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#The_Westin_Diplomat_Resort_and_Spa -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#The_Westin_Diplomat_Resort_and_Spa">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Hotel"/>
+        <isHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Central_Florid"/>
+        <isHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Florida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#ThreeStarRating -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#ThreeStarRating">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#AccommodationRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Tizi -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Tizi">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Town"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#GrandeKabylie"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#GrandeKabylie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Tunis -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Tunis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#TwoStarRating -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#TwoStarRating">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#AccommodationRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#USA">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Country"/>
+        <hasPart rdf:resource="http://www.owl-ontologies.com/travel.owl#New_York"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Vienna -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Vienna">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Warrumbungles -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Warrumbungles">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+        <isPartOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Coonabarabran"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Westin_Excelsior -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Westin_Excelsior">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#LuxuryHotel"/>
+        <isLuxuryHotelOf rdf:resource="http://www.owl-ontologies.com/travel.owl#Roma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Wood_Buffalo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Wood_Buffalo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+        <hasAccommodation rdf:resource="http://www.owl-ontologies.com/travel.owl#Little_Buffalo"/>
+        <hasHiking rdf:resource="http://www.owl-ontologies.com/travel.owl#Marche_2Tiers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Woomera -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Woomera">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#RuralArea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Yellowstone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/travel.owl#Yellowstone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/travel.owl#NationalPark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#ThreeStarRating"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#TwoStarRating"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#OneStarRating"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#ThreeStarRating"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Québec"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Teritoires_Nord_Ouest"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Clarion_St.James"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#FourSeasons"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Le_Petit_Manoir"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Le_Walt"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Royal_Garden"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Sofitel_Diwan_Rabat"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Louvre"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Picasso"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Rodin"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#OneStarRating"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#TwoStarRating"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#CapeYork"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Gaspésie"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Woomera"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#BlueMountains"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Forillon"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Warrumbungles"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Wood_Buffalo"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Algeria"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Australia"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Bulgaria"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Canada"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#France"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Italy"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Morocco"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#USA"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Algiers"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Paris"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Sydney"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Tunis"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+
