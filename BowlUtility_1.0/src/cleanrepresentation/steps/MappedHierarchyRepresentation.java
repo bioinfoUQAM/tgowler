@@ -1,13 +1,11 @@
 package cleanrepresentation.steps;
 
 import cleanrepresentation.Mapping;
-import ontologyrep2.*;
+import ontologyrep20.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-
-import static cleanrepresentation.steps.CleanRepresentation.*;
 
 public class MappedHierarchyRepresentation {
 

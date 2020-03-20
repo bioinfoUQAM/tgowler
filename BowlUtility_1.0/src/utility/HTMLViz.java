@@ -1,7 +1,7 @@
 package utility;
 
 import cleanrepresentation.Mapping;
-import ontologyrep2.*;
+import ontologyrep20.*;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;

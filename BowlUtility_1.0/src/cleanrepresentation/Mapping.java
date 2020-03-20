@@ -1,8 +1,7 @@
 package cleanrepresentation;
 
-import ontologyrep2.*;
+import ontologyrep20.*;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Map;
 

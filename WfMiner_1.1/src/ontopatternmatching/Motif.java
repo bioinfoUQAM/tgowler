@@ -15,8 +15,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Objects;
 import legacy.Pair;
-import ontologyrep2.Concept;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.Concept;
+import ontologyrep20.OntoRepresentation;
 
 /**
  * 

@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import legacy.Pair;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 
 //public class Sequence  extends IntermediateSequence{
 public class Sequence  {

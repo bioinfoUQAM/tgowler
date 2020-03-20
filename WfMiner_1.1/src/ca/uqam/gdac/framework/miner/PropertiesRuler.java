@@ -2,8 +2,8 @@ package ca.uqam.gdac.framework.miner;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import ontologyrep2.OntoRepresentation;
-import ontologyrep2.Relation;
+import ontologyrep20.OntoRepresentation;
+import ontologyrep20.Relation;
 import ontopatternmatching.Motif;
 
 /**

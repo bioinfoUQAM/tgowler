@@ -49,12 +49,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import legacy.Pair;
 import legacy.RawUserWorkflow;
-import ontologyrep2.OntoRepresentation;
-import ontologyrep2.RadixTree;
+import ontologyrep20.OntoRepresentation;
+import ontologyrep20.RadixTree;
 import ontopatternmatching.AppariementSolution;
 import ontopatternmatching.Motif;
 import ontopatternmatching.Sequence;
 import org.xml.sax.SAXException;
+import utility.HTMLViz;
+
+import javax.rmi.CORBA.Util;
+
 import static preprocessing.bowlLoader.deserialize;
 import static preprocessing.bowlLoader.loadRawSequences;
 
@@ -89,8 +93,10 @@ public class OntoPatternOld {
         final String bowlFile = parametres.get(mode)[0];
         System.out.println("Loading bowl ontology and workflow sequences ...");
         // TODO: to implement a new version of bowl serializer and deserialize
-        OntoRepresentation ontology = deserialize(bowlFile, true);
-        
+
+        ontologyrep20.OntoRepresentation ontology = bowl.BowlLoader.deserialize(bowlFile, true, true);
+        //HTMLViz.dumpOriginalGraph("./example", ontology);
+
         // Get WF Training File
         final String rawSequences = parametres.get(mode)[1];
         System.out.println(rawSequences);

@@ -6,7 +6,7 @@
 package ontopatternmatching;
 
 import java.util.ArrayList;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 
 public final class TrouveNextConcept implements Job{
     /**

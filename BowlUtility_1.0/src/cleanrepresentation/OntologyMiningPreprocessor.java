@@ -1,20 +1,15 @@
 package cleanrepresentation;
 
 import cleanrepresentation.steps.CleanRepresentation;
-import cleanrepresentation.steps.MappedHierarchyRepresentation;
-import ontologyrep2.Concept;
-import ontologyrep2.LinkedList;
-import ontologyrep2.OntoRepresentation;
-import ontologyrep2.Relation;
-import utility.HTMLViz;
+import ontologyrep20.Concept;
+import ontologyrep20.LinkedList;
+import ontologyrep20.OntoRepresentation;
+import ontologyrep20.Relation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
-import static cleanrepresentation.steps.MappedHierarchyRepresentation.createMappedHierarchyRepresentation;
-import static cleanrepresentation.steps.MappedHierarchyRepresentation.linkHierarchies;
 import static cleanrepresentation.steps.OntologyMapping.createOntologyMapping;
 
 public class OntologyMiningPreprocessor {

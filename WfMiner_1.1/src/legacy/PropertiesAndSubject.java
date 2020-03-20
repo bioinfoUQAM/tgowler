@@ -1,7 +1,7 @@
 package legacy;
 
 import java.util.ArrayList;
-import ontologyrep2.Relation;
+import ontologyrep20.Relation;
 
 
 // Class used in a sequence in order to know the properties linked to the last concept.

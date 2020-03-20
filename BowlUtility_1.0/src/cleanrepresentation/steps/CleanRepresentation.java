@@ -1,12 +1,9 @@
 package cleanrepresentation.steps;
 
-import cleanrepresentation.Mapping;
-import ontologyrep2.*;
-import ontologyrep2.LinkedList;
+import ontologyrep20.*;
+import ontologyrep20.LinkedList;
 
 import java.util.*;
-
-import static cleanrepresentation.Mapping.*;
 
 public class CleanRepresentation {
 

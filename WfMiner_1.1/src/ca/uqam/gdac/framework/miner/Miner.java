@@ -24,10 +24,10 @@ import java.util.Set;
 import java.util.TimeZone;
 import legacy.Operation;
 import legacy.Pair;
-import ontologyrep2.Concept;
-import ontologyrep2.OntoRepresentation;
-import ontologyrep2.Relation;
-import ontologyrep2.Triplet;
+import ontologyrep20.Concept;
+import ontologyrep20.OntoRepresentation;
+import ontologyrep20.Relation;
+import ontologyrep20.Triplet;
 import ontopatternmatching.AppariementSolution;
 import ontopatternmatching.JobBlock;
 import ontopatternmatching.Motif;
@@ -674,10 +674,12 @@ public class Miner
 //            System.out.println("==============================================================================");
             
             i=0;
-            System.out.println("\tCandidate: " + motifs_qui_matchent[i]);
-            if (sequences_qui_matchent[i].length > 0){
-                for (int si=0; si<sequences_qui_matchent[i].length; si++){
-                    System.out.println("\t\tMatching: " + sequences_qui_matchent[i][si].sequenceUtilisateur);
+            if(motifs_qui_matchent.length > i) {
+                System.out.println("\tCandidate: " + motifs_qui_matchent[i]);
+                if (sequences_qui_matchent[i].length > 0) {
+                    for (int si = 0; si < sequences_qui_matchent[i].length; si++) {
+                        System.out.println("\t\tMatching: " + sequences_qui_matchent[i][si].sequenceUtilisateur);
+                    }
                 }
             }
             //Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i]);

@@ -1,10 +1,18 @@
+import bowl.BowlLoader;
+import bowl.BowlUtility;
+import bowl.Converter2Bowl;
 import cleanrepresentation.Mapping;
 import cleanrepresentation.OntologyMiningPreprocessor;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.Concept;
+import ontologyrep20.Instance;
+import ontologyrep20.LinkedList;
+import ontologyrep20.OntoRepresentation;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.Test;
-import utility.HTMLViz;
+import utility.SesameHelper;
+
+import java.util.ArrayList;
 
 public class SerializationTests {
 
@@ -37,8 +45,29 @@ public class SerializationTests {
         //HTMLViz.dumpOriginalGraph("../GraphLinearisation/test-viz6", serializedRepresentation);
 
         Converter2Bowl.serialize("./someontology.bowl", serializedRepresentation, model, null, false);
-        OntoRepresentation onto = BowlLoader.deserialize("./someontology.bowl", false);
+        OntoRepresentation onto = BowlLoader.deserialize("./someontology.bowl", false, false);
         //HTMLViz.dumpOriginalGraph("../GraphLinearisation/test-viz7", onto);
         //HTMLViz.dumpCleanedHierarchy("../GraphLinearisation/test-viz4.html", onto, onto);
+    }
+
+    @Test
+    public void B_Test(){
+        OntoRepresentation onto = BowlLoader.deserialize("../WfMiner_1.1/phylOntology_v51_small.bowl", true, true);
+        {
+            final LinkedList<Concept> concepts = onto.getAllConcepts();
+            concepts.reset();
+            do {
+                final Concept oldConcept = concepts.curr().value;
+                //final String label = oldConcept.getName();
+                System.out.println("concept: "+oldConcept.toString());
+            }
+            while (concepts.hasNext());
+        }
+
+        ArrayList<Instance> allInstances = onto.getAllInstances();
+        for(final Instance inst : allInstances){
+            System.out.println("inst: "+inst.getName()+" "+inst.concept.toString());
+        }
+
     }
 }

@@ -5,7 +5,7 @@
 
 package ontopatternmatching;
 
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 
 public final class ValideCodomaineRelation implements Job{
 

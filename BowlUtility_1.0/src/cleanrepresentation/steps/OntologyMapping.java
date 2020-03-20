@@ -1,10 +1,10 @@
 package cleanrepresentation.steps;
 
 import cleanrepresentation.Mapping;
-import ontologyrep2.Concept;
-import ontologyrep2.Instance;
-import ontologyrep2.OntoRepresentation;
-import ontologyrep2.Relation;
+import ontologyrep20.Concept;
+import ontologyrep20.Instance;
+import ontologyrep20.OntoRepresentation;
+import ontologyrep20.Relation;
 
 import java.util.ArrayList;
 import java.util.HashMap;

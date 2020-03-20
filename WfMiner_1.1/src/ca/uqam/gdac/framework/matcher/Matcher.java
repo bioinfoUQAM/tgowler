@@ -1,7 +1,7 @@
 package ca.uqam.gdac.framework.matcher;
 
 import java.util.ArrayList;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 import ontopatternmatching.Motif;
 import ontopatternmatching.Sequence;
 

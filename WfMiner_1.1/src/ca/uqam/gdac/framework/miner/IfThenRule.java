@@ -6,7 +6,7 @@
 package ca.uqam.gdac.framework.miner;
 
 import java.util.ArrayList;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 import ontopatternmatching.AppariementSolution;
 import ontopatternmatching.Motif;
 

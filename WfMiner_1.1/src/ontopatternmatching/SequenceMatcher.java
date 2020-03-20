@@ -5,7 +5,7 @@
 
 package ontopatternmatching;
 
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 
 
 public final class SequenceMatcher {
@@ -72,7 +72,6 @@ public final class SequenceMatcher {
         SequenceMatcher.mode = 0;
         
         while(block!=null){
-  
             //last_block = block;
             //on recupere le premier element
             res = block.doJobs2(sequence, appariement, modifications, ontology, m);//la case effectue les traitements associes

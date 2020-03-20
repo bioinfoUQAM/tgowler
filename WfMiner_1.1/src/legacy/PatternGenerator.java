@@ -1,9 +1,9 @@
 package legacy;
 
 import java.util.ArrayList;
-import ontologyrep2.Concept;
-import ontologyrep2.OntoRepresentation;
-import ontologyrep2.Relation;
+import ontologyrep20.Concept;
+import ontologyrep20.OntoRepresentation;
+import ontologyrep20.Relation;
 import ontopatternmatching.Motif;
 
 /**

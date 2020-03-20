@@ -4,7 +4,7 @@
  */
 package ontopatternmatching;
 
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 
 public interface Job {
     public int doJob(JobBlock j, Sequence sequence, int[] appariement, boolean[] modifications, OntoRepresentation ontology, Motif m);

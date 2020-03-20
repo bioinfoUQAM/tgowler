@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import legacy.Pair;
-import ontologyrep2.OntoRepresentation;
+import ontologyrep20.OntoRepresentation;
 import ontopatternmatching.Motif;
 import ontopatternmatching.Sequence;
 
