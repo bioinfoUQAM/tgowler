@@ -32,13 +32,13 @@ public abstract class PatternGenerator{
                     for (Concept rootConcept : rootConcepts ){
                         Motif newWorkflow = new Motif(motif);
                         newWorkflow.appendConceptC(rootConcept.index, level);//CRITIQUE !!!
-                        System.out.println("rootConcept.index: " + rootConcept.index);
+//                        System.out.println("rootConcept.index: " + rootConcept.index);
                         //NOTE 1 : Added an additional test: new pattern MUST be different than its parent
                         //  i.e. If no refinnement is possible, the method returns the SAME pattern
                         //NOTE 2 : For .contains to work, it requires a .equals to be implemented (cf. Motif class)
                         if(!motif.equals(newWorkflow) && !newWorkflows.contains(newWorkflow)) {
                             newWorkflows.add(newWorkflow);
-                            System.out.println("newWorkflow: "+newWorkflow + ", oldWorkflow: "+motif);
+//                            System.out.println("newWorkflow: "+newWorkflow + ", oldWorkflow: "+motif);
                         }
                     }
                 }

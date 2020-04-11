@@ -307,7 +307,7 @@ public class Motif {
         for(Integer[] r : relations){
             s.append("{").append(r[0]).append(" => ").append(r[1]).append(",").append(r[2]).append("}, ");
         }
-        return "s="+this.support+" | "+s.toString().replace(" ", "");
+        return s.toString().replace(" ", "") + ": "+this.support;
     }
     
     /**

@@ -15,7 +15,7 @@ public final class AppendConceptTask extends AppariementExtensionTask{
 
         @Override
         public AppariementStructure extend(AppariementStructure structure) {
-            //System.out.println("Adding concept:"+this.item[0]);
+            //System.out.println("Append concept:"+this.item[0]);
             Job[] jobs = new Job[1];
             //on ajoute un par un les jobs
             jobs[0] = new TrouveNextConcept();

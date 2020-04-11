@@ -208,24 +208,26 @@ public class Miner
     
     private static ArrayList<Motif> generateCandidates2(final Motif motif, int minLevel, int level){
             
-//            System.out.println("le motif est "+motif.toString());
+            System.out.println("le motif est "+motif.toString());
             //System.exit(1);
             
             ArrayList<Motif> motifs_candidats = new ArrayList<>();
             
             // 1. addConceptC
-//            System.out.println("From: " + motif.toString());
+            System.out.println("Add From: " + motif.toString());
             ArrayList<Motif> addConceptC = addConceptC(motif, minLevel, level);
 //            System.out.println(""+addConceptC.size()+" ajouts de concepts...");
 //            System.out.println("addConceptC: " + addConceptC);
+            
             motifs_candidats.addAll(addConceptC);
             
             // 2. appendConceptC
-//            System.out.println("From: " + motif.toString());
+            System.out.println("Append From: " + motif.toString());
             ArrayList<Motif> appendConceptC = appendConceptC(motif, minLevel, level);
 //            System.out.println(""+appendConceptC.size()+" append de concepts...");
 //            System.out.println("appendConceptC: " + appendConceptC);
-//            motifs_candidats.addAll(appendConceptC);
+            
+            motifs_candidats.addAll(appendConceptC);
             for(Motif m : appendConceptC){
                 if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
             }
@@ -521,12 +523,13 @@ public class Miner
             long start = System.currentTimeMillis();
             
             // for rules !
-            double minConf=0.8;
+            double minConf=0.1;
             
             // Candidates generated from the current pattern
             System.out.println("pattern: " + pattern.toString());
             ArrayList<Motif> candidates = generateCandidates2(pattern, minLevel, level);//n => n+1
-//            System.out.println("To: " + candidates);
+            System.out.println("To: " + candidates);
+//            System.out.println("minSup2: " + minSup2);
             ArrayList<Motif> Freqcandidates = new ArrayList();//n => n+1
             //System.out.println("on a "+candidates.size()+" candidats...");
             Motif[] motifs_qui_matchent = new Motif[candidates.size()];
@@ -539,11 +542,14 @@ public class Miner
                 
                 if (!candidate.concepts.isEmpty()) {            
                     int[] nseq = new int[1];
-//                    System.out.println("Candidate: " + candidate.toString());
-    //                System.out.println("Candidate Concepts: " + candidate.concepts);
+                    System.out.println("Candidate: " + candidate.toString());
+//                    System.out.println("Candidate Concepts: " + candidate.concepts);
 
+                    // Please verify the matchings here! append matchings are not working
                     AppariementSolution[] seq = findMatchingSequences(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
-
+                    for (AppariementSolution match: seq)
+                        System.out.println("\tMatching: " + match.sequenceUtilisateur);
+                    
                     // GENERATE RULE HERE FROM PARENT as SUBLIST and CHILD as LIST
                     ArrayList<Integer> stepsInteger = conceptsToSteps(candidate,hierarchyRepresentation);
                     ArrayList<String> candString= conceptsToString(candidate,hierarchyRepresentation);
@@ -555,24 +561,24 @@ public class Miner
                     float ruleSupp = candidate.support/(float)Library.getNbUserSequences()*100;
                     float conf = (float)ruleSupp/(float)premissSupp;
 
-    //                System.out.println(stepsInteger.toString());
-    //                System.out.println("LIST: ");                
-    //                System.out.println(candString.toString()+": "+ ruleSupp);
-    //                System.out.println(stepsInteger.toString());
-    //                System.out.println("SUBLIST: ");
-    //                System.out.println(patternString.toString()+": "+ premissSupp);
-    //                System.out.println("CONF: ");
-    //                System.out.println(conf);
-    //                System.out.println(minSup2);
+//                    System.out.println(stepsInteger.toString());
+//                    System.out.println("LIST: ");                
+//                    System.out.println(candString.toString()+": "+ ruleSupp);
+//                    System.out.println(stepsInteger.toString());
+//                    System.out.println("SUBLIST: ");
+//                    System.out.println(patternString.toString()+": "+ premissSupp);
+//                    System.out.println("CONF: ");
+//                    System.out.println(conf);
+//                    System.out.println(minSup2);
 
                     if(minSup2 == 0){
                         int minsupexact = (int)(((double)minSup*100));
-    //                    minsupexact *= 10;
-    //                    System.out.println("nseq[0]: "+nseq[0]);
-    //                    System.out.println("minsupexact: "+minsupexact);
+//                        minsupexact *= 10;
+//                        System.out.println("nseq[0]: "+nseq[0]);
+//                        System.out.println("minsupexact: "+minsupexact);
                         if(nseq[0] >= minsupexact){
                         // If the candidate is frequent
-                            //System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
+//                            System.out.println(""+candidate.toString()+" is frequent "+nseq[0]);
                             candidate.support = nseq[0] / 10;
                             Library.addFrequentPattern(candidate);                   
                             motifs_qui_matchent[i] = candidate;
@@ -675,30 +681,28 @@ public class Miner
             
             i=0;
             if(motifs_qui_matchent.length > i) {
-                System.out.println("\tCandidate: " + motifs_qui_matchent[i]);
                 if (sequences_qui_matchent[i].length > 0) {
-                    for (int si = 0; si < sequences_qui_matchent[i].length; si++) {
-                        System.out.println("\t\tMatching: " + sequences_qui_matchent[i][si].sequenceUtilisateur);
-                    }
+                    Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
                 }
             }
-            //Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i]);
             
-            long finish = System.currentTimeMillis();
-            long timeElapsed = finish - start;
-            Date date = new Date(timeElapsed);
-            DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
-            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
-            String dateFormatted = formatter.format(date);
-            
-            System.out.println(level + "\t" + dateFormatted + "\t" + candidates.size());
-            
-            while(i < motifs_qui_matchent.length && motifs_qui_matchent[i]!=null){
-                
-                Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
-                sequences_qui_matchent[i] = null;motifs_qui_matchent[i]=null;
-                i++;
-            }
+//            long finish = System.currentTimeMillis();
+//            long timeElapsed = finish - start;
+//            Date date = new Date(timeElapsed);
+//            DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+//            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+//            String dateFormatted = formatter.format(date);
+//            
+//            System.out.println(level + "\t" + dateFormatted + "\t" + candidates.size());
+//            System.out.println("i: " + i);
+//            System.out.println("motifs_qui_matchent.length: " + motifs_qui_matchent.length);
+//            System.out.println("motifs_qui_matchent[i]: " + motifs_qui_matchent[i]);
+//            
+//            while(i < motifs_qui_matchent.length && motifs_qui_matchent[i]!=null){                
+//                Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
+//                sequences_qui_matchent[i] = null;motifs_qui_matchent[i]=null;
+//                i++;
+//            }
 	}
 	
 	// Return the relative support of the set of sequences regarding to the total of user sequences

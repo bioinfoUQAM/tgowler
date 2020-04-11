@@ -59,8 +59,9 @@ import utility.HTMLViz;
 
 import javax.rmi.CORBA.Util;
 
-import static preprocessing.bowlLoader.deserialize;
-import static preprocessing.bowlLoader.loadRawSequences;
+//import static preprocessing.bowlLoader.deserialize;
+import static bowl.BowlLoader.deserialize;
+import static bowl.BowlLoader.loadRawSequences;
 
 
 public class OntoPatternOld {
@@ -147,12 +148,12 @@ public class OntoPatternOld {
             // Training set
 //            System.out.println("Reading the Training set " + parametres.get(mode)[1] + " ...");
             loadRawSequences(rawUserSequences, userSequences, ontology, rawSequences, localNameNode);
-            System.out.println("rawUserWorkflows: " + rawUserSequences.toString());
+//            System.out.println("rawUserWorkflows: " + rawUserSequences.toString());
             System.out.print("Mining " + rawUserSequences.size());
             // test set
 //            System.out.println("Reading the Test set " + parametres.get(mode)[3] + " ...");
             loadRawSequences(rawUserGoldSequences, userGoldSequences, ontology, rawGoldSequences, localNameNode);
-            System.out.println("/" + rawUserGoldSequences.size() + " workflows (Train/Test)");
+//            System.out.println("/" + rawUserGoldSequences.size() + " workflows (Train/Test)");
         }
         
         long startTime = System.nanoTime();
