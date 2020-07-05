@@ -6,9 +6,7 @@ SELECT distinct ?la ?entity ?cl
 WHERE {
         ?entity a ?cl ; rdfs:label ?la .
 
-		filter NOT EXISTS {
-        	filter ( 	
-      			str(?cl)="http://www.w3.org/2002/07/owl#NamedIndividual" ||  
-      			str(?cl)="http://www.w3.org/2002/07/owl#Class").
-  	  }
+		filter ( 	
+      			str(?cl)!="http://www.w3.org/2002/07/owl#NamedIndividual" ||  
+      			str(?cl)!="http://www.w3.org/2002/07/owl#Class").
 }

@@ -147,12 +147,11 @@ public class OntoPatternOld {
         else {  
             // Training set
 //            System.out.println("Reading the Training set " + parametres.get(mode)[1] + " ...");
-            loadRawSequences(rawUserSequences, userSequences, ontology, rawSequences, localNameNode);
+            loadRawSequences(rawUserSequences, userSequences, ontology, rawSequences, localNameNode, args[3]);
 //            System.out.println("rawUserWorkflows: " + rawUserSequences.toString());
-            System.out.print("Mining " + rawUserSequences.size());
             // test set
 //            System.out.println("Reading the Test set " + parametres.get(mode)[3] + " ...");
-            loadRawSequences(rawUserGoldSequences, userGoldSequences, ontology, rawGoldSequences, localNameNode);
+            loadRawSequences(rawUserGoldSequences, userGoldSequences, ontology, rawGoldSequences, localNameNode, args[3]);
 //            System.out.println("/" + rawUserGoldSequences.size() + " workflows (Train/Test)");
         }
         

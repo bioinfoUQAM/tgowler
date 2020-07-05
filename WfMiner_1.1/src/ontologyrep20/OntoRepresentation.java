@@ -220,6 +220,26 @@ public class OntoRepresentation implements Cloneable{
         }
     }
     
+    /**
+     * 
+     * @param index
+     * @return 
+     */
+    public Integer getRelationByName(final String name, final String namespace){
+        Integer its_index = 0;
+        Iterator hmIterator = this.index_relations_by_taxonomy.alphabet.entrySet().iterator();
+        while (hmIterator.hasNext()) {
+            String full_name = namespace + name;
+            Map.Entry mapElement = (Map.Entry)hmIterator.next(); 
+//            System.out.println(full_name + " VS " + this.getRelation((Integer)mapElement.getKey()).toString());
+            if (full_name.equals(this.getRelation((Integer)mapElement.getKey()).toString())){
+                its_index = (Integer)mapElement.getKey();
+                break;
+            }
+        }
+        return its_index;
+    }
+    
     
     /**
      * 

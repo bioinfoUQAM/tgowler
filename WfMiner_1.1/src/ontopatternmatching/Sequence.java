@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 import legacy.Pair;
 import ontologyrep20.OntoRepresentation;
+import ontopattern16.OntoPatternOld;
 
 //public class Sequence  extends IntermediateSequence{
 public class Sequence  {
@@ -55,8 +56,8 @@ public class Sequence  {
     
     @Override
     public String toString(){
-        StringBuilder s = new StringBuilder();
         OntoRepresentation ontology = Miner.hierarchyRepresentation;
+        StringBuilder s = new StringBuilder();
         
         ArrayList<String> cs = new ArrayList ();
         

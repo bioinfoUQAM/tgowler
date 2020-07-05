@@ -303,7 +303,10 @@ public class Miner
          * @param hierarchyRepresentation 
          */
         private static void initialize( final ArrayList<Sequence> userSequences, final double minSup, final OntoRepresentation hierarchyRepresentation ) 
-	{
+	{   
+//            System.out.println("initilaize userSequences: ");
+//            for (Sequence seq : userSequences)
+//                System.out.println(seq );
             Library.initialize( );
             Library.setUserWorkflows(userSequences);
             Miner.setMinSup(  minSup );
@@ -421,13 +424,13 @@ public class Miner
 //                System.out.println("previous_solutions: "+previous_solutions.length);
 //                for (AppariementSolution pre:previous_solutions )
 //                    System.out.println(pre.sequenceUtilisateur.objects.toString());
-//                System.out.println("n: ");
+
 //                
                 for (AppariementSolution previous_matching : previous_solutions){
-//                    System.out.println("\tprevious_matching - appariement: " + previous_matching.appariement);
-//                    System.out.println("\tprevious_matching - motif: " + previous_matching.motif);
-//                    System.out.println("\tprevious_matching - sequenceUtilisateur: " + previous_matching.sequenceUtilisateur);
-//                    System.out.println("\tprevious_matching - parcours: " + previous_matching.parcours);
+                    System.out.println("\tprevious_matching - appariement: " + previous_matching.appariement);
+                    System.out.println("\tprevious_matching - motif: " + previous_matching.motif);
+                    System.out.println("\tprevious_matching - sequenceUtilisateur: " + previous_matching.sequenceUtilisateur.toString());
+                    System.out.println("\tprevious_matching - parcours: " + previous_matching.parcours);
 //                    
                     //va nous permettre de savoir si des solutions de n-1 on ete modifiees.
                     //necessaire dans le cas d'ajout de relations changeant la position du domaine et 
@@ -536,15 +539,12 @@ public class Miner
             AppariementSolution[][] sequences_qui_matchent = new AppariementSolution[motifs_qui_matchent.length][0];
             
             int i=0;
-//            System.out.println("========================== generating and testing =============================");
-            
             for (Motif candidate : candidates){
-                
                 if (!candidate.concepts.isEmpty()) {            
                     int[] nseq = new int[1];
                     System.out.println("Candidate: " + candidate.toString());
 //                    System.out.println("Candidate Concepts: " + candidate.concepts);
-
+                    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     // Please verify the matchings here! append matchings are not working
                     AppariementSolution[] seq = findMatchingSequences(candidate, solutions, nseq);//on apparie des motifs n+1 avec des appariement n
                     for (AppariementSolution match: seq)

@@ -23,6 +23,10 @@ import ontologyrep20.RadixTree.RadixNode;
 import ontologyrep20.Relation;
 import ontologyrep20.Triplet;
 import legacy.RawUserWorkflow;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Map;
+import legacy.Pair;
 import ontopatternmatching.Sequence;
 
 
@@ -851,29 +855,20 @@ public class BowlLoader {
     
     //charge et transforme les sequences brutes en sequences d'instances ou classes
     public static void loadRawSequences(final ArrayList<RawUserWorkflow> rawUserSequences, final ArrayList<Sequence> userSequences, 
-            final OntoRepresentation ontology, final String rawSequences, final RadixNode localNameNode){
+            final OntoRepresentation ontology, final String rawSequences, final RadixNode localNameNode, String namespace){
         if(localNameNode != null){
+//            System.out.println("rawUserSequences: " + rawUserSequences);
             for(RawUserWorkflow seq : rawUserSequences){
-                //System.out.println(""+seq.toString());
+//                System.out.println(""+seq.toString());
                 Sequence currSeq = new Sequence();
-                //final ArrayList<Integer> classSequence = new ArrayList<>();
+                
+                // Get Concepts Indexes!
                 for(String indv : seq.getIndividualsLocalNames()){
-                    //System.out.println("with "+indv);
                     Object get = ontology.index_instances_by_name.get(indv, localNameNode);
                     if(get != null){
-                        //System.out.println("which is "+((Instance)get).index);
-                        //System.out.println("and is of type "+((Instance)get).concept.index);
-                        //classSequence.add(((Instance)get).concept.index);
                         currSeq.objects.add(((Instance)get).index);
                     }
                     else{
-//                        System.out.println(">>>"+indv);
-//                        System.out.println(""+Arrays.toString(indv.toCharArray()));
-//                        System.out.println(""+Arrays.toString("DNA".toCharArray()));
-//                        System.out.println("no trouve...");
-                        /*Object get1 = ontology.index_instances_by_name.get("http://www.semanticweb.org/ahmedhalioui/ontologies/2015/7/untitled-ontology-8#DNA", 
-                                ontology.index_concepts_by_name.root);
-//                        System.out.println(""+get1);*/
                         System.exit(1);
                     }
                 }
@@ -882,76 +877,28 @@ public class BowlLoader {
                     System.exit(1);
                 }
                 //System.out.println("maintenant la sequence est : "+currSeq.toString());
-                int totalProps = 0;
-                int newTotalProps = 0;
-                //ArrayList<Integer> propSequence = new ArrayList<>();
-                for(int i=0;i < currSeq.objects.size();i++){
-                    for( int j = i; j < currSeq.objects.size(); j++ ){
-                        
-                        Integer[][] list_of_compat = ontology.matrix_instances_props[currSeq.objects.get(j)];
-                        if(list_of_compat==null){
-                            continue;
-                        }
-                        Integer[] real_props =  list_of_compat[currSeq.objects.get(i)];
-                        if(real_props == null || /*real_props[0] == null ||*/ real_props[0] == 0){
-                            continue;
-                        }
-                        for(int z=1;z < real_props[0]+1;z++){
-                            //System.out.println("compatible props "+real_props[z]);
-                            //Relation relation = ontology.getRelation(real_props[z]);
-                            //System.out.println(""+relation.index+" and "+relation.getName());
-                            newTotalProps += 1;
-                            
-                            final Integer[] _relation = new Integer[3];
-                            _relation[0] = real_props[z];
-                            _relation[1] = i + 1;
-                            _relation[2] = j + 1;
-                            currSeq.relations.add(_relation);
-                        }
-                        /*ArrayList<Triplet> nonRootProperties = ontology.getNonRootProperties(ontology.getConcept(currSeq.objects.get(i)), ontology.getConcept(currSeq.objects.get(j)));
-                        totalProps += nonRootProperties.size();
-                        for(Triplet t : nonRootProperties){
-                            //propSequence.add(t.relation.index);
-                            
-                            final Integer[] relation = new Integer[3];
-                            relation[0] = t.relation.index;
-                            relation[1] = i + 1;//on commence a pos 1
-                            relation[2] = j + 1;
-                            //currSeq.relations.add(relation);
-                        }
-                        //System.out.println("NR on a "+nonRootProperties.size()+" props a ajouter...");
-                        ArrayList<Triplet> rootProperties = ontology.getRootProperties(ontology.getConcept(currSeq.objects.get(i)), ontology.getConcept(currSeq.objects.get(j)));
-                        totalProps += rootProperties.size();
-                        for(Triplet t : rootProperties){
-                            //propSequence.add(t.relation.index);
-                            
-                            final Integer[] relation = new Integer[3];
-                            relation[0] = t.relation.index;
-                            relation[1] = i + 1;
-                            relation[2] = j + 1;
-                            //currSeq.relations.add(relation);
-                        }
-                        //System.out.println("R on a "+rootProperties.size()+" props a ajouter...");*/
-                    }
-                        
-                }
-                //System.out.println("avant c=>"+currSeq.objects);
+                
+                // Get Relation Indexes!
+                Iterator iterator = seq.getPropertiesLocalNames().entrySet().iterator();
+                while (iterator.hasNext()) {
+                    // Get relation
+                    Map.Entry rel = (Map.Entry) iterator.next();
+                    Pair subj_obj = (Pair)rel.getKey();
+                    String link_string = rel.getValue().toString().replace("[", "").replace("]", "");
+                    Integer link_index = ontology.getRelationByName(link_string, namespace);
+
+                    // Add relation to the current sequence 
+                    final Integer[] _relation = new Integer[3];
+                    _relation[0] = (Integer)link_index;
+                    _relation[1] = (Integer)subj_obj.getFirst();
+                    _relation[2] = (Integer)subj_obj.getSecond();
+                    currSeq.relations.add(_relation);
+                }                 
+                
+                
                 for(int k=0;k < currSeq.objects.size();k++){
                     currSeq.objects.set(k, ontology.getInstance(currSeq.objects.get(k)).concept.index);
                 }
-                //System.out.println("apres c=>"+currSeq.objects);
-                //System.out.println("avec "+totalProps+" proprietes a ajouter.");
-                //System.out.println("avec en vrai "+newTotalProps+" proprietes a ajouter.");
-                //System.exit(1);
-                /*for(Integer c : currSeq.objects){
-                    System.out.println("c=("+c+")"+ontology.getConcept(c).getName());
-                }*/
-                //System.out.println("c=>"+currSeq.objects);
-                //for(Integer[] p : currSeq.relations){
-                    //System.out.println("p=>"+Arrays.toString(p));
-                    //System.out.println("p=("+p+")"+ontology.getRelation(p).getName());
-                //}
-                //System.out.println("p=>"+currSeq.relations);
                 
                 userSequences.add(currSeq);
             }
@@ -959,12 +906,5 @@ public class BowlLoader {
         else{
             System.out.println("no local node...");
         }
-        
-//        System.out.println("root concepts..."+ontology.conceptsByLevel.get(0).size());
-//        System.out.println("root props..."+ontology.root_relations.size());
-//        System.out.println("concepts "+ontology.concepts.size);
-//        System.out.println("relations "+ontology.relations.size);
-//        System.out.println("triplets "+ontology.triplets.size());
-//        System.out.println("instances triples:"+ontology.instance_triples.size());
     }
 }

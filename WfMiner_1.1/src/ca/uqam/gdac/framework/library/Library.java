@@ -73,6 +73,7 @@ public class Library
 	public static void initialize( )
 	{
                 frequentPatterns = new ArrayList<>();
+                userWorkflows = new ArrayList<>();
 	}
 	
 }

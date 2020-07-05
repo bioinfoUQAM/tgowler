@@ -436,3 +436,43 @@ The execution time (pre-processing the first document): Sun Dec 29 20:55:01 EST 
 The execution time (pre-processing the first document): Sun Dec 29 21:21:19 EST 2019
 30 déc. 2019 06 h 12 min 56 s: The learning start at Mon Dec 30 06:12:56 EST 2019
 30 déc. 2019 06 h 12 min 56 s: The number of documents in dataset: 5514
+22 avr. 2020 20 h 21 min 55 s: 
+
+*************************
+A new session for NLP learning is starting: 20200422_202155file:/Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER%20Learning/ner-config.xml (saved 20191207_093000, 11872315secs ago)The initiliased time of NLP learning: Wed Apr 22 20:21:55 EDT 2020
+Working directory: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning
+The feature files and models are saved at: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+24 avr. 2020 08 h 56 min 12 s: 
+
+*************************
+A new session for NLP learning is starting: 20200424_085612file:/Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER%20Learning/ner-config.xml (saved 20191207_093000, 12003972secs ago)The initiliased time of NLP learning: Fri Apr 24 08:56:12 EDT 2020
+Working directory: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning
+The feature files and models are saved at: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+29 avr. 2020 14 h 46 min 53 s: 
+
+*************************
+A new session for NLP learning is starting: 20200429_144653file:/Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER%20Learning/ner-config.xml (saved 20191207_093000, 12457013secs ago)The initiliased time of NLP learning: Wed Apr 29 14:46:53 EDT 2020
+Working directory: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning
+The feature files and models are saved at: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+30 avr. 2020 19 h 35 min 41 s: 
+
+*************************
+A new session for NLP learning is starting: 20200430_193541file:/Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER%20Learning/ner-config.xml (saved 20191207_093000, 12560741secs ago)The initiliased time of NLP learning: Thu Apr 30 19:35:41 EDT 2020
+Working directory: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning
+The feature files and models are saved at: /Users/ahmedhalioui/Documents/tgowler/WfExtractor_1.0/application-resources/NER Learning/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
