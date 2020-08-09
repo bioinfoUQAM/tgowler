@@ -241,6 +241,7 @@ public class OntoRepresentation implements Cloneable{
     }
     
     
+    
     /**
      * 
      * @param c

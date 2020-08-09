@@ -208,7 +208,7 @@ public class Miner
     
     private static ArrayList<Motif> generateCandidates2(final Motif motif, int minLevel, int level){
             
-            System.out.println("le motif est "+motif.toString());
+//            System.out.println("le motif est "+motif.toString());
             //System.exit(1);
             
             ArrayList<Motif> motifs_candidats = new ArrayList<>();
@@ -216,39 +216,37 @@ public class Miner
             // 1. addConceptC
             System.out.println("Add From: " + motif.toString());
             ArrayList<Motif> addConceptC = addConceptC(motif, minLevel, level);
-//            System.out.println(""+addConceptC.size()+" ajouts de concepts...");
-//            System.out.println("addConceptC: " + addConceptC);
-            
             motifs_candidats.addAll(addConceptC);
+            System.out.println("generated candiates: " + motifs_candidats);
+            System.out.println("");
             
             // 2. appendConceptC
             System.out.println("Append From: " + motif.toString());
             ArrayList<Motif> appendConceptC = appendConceptC(motif, minLevel, level);
-//            System.out.println(""+appendConceptC.size()+" append de concepts...");
-//            System.out.println("appendConceptC: " + appendConceptC);
-            
             motifs_candidats.addAll(appendConceptC);
-            for(Motif m : appendConceptC){
-                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-            }
+            System.out.println("generated candiates: " + motifs_candidats);
+            System.out.println("");
             
             // 3. splConceptC
+            System.out.println("splConceptC From: " + motif.toString());
             ArrayList<Motif> splConceptC = splConceptC(new Motif(motif));
-            for(Motif m : splConceptC){
-                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-            }
-//            
-//            // 4. addPropertyC
+            motifs_candidats.addAll(splConceptC);
+            System.out.println("generated candiates: " + motifs_candidats);
+            System.out.println("");
+            
+            // 4. addPropertyC
+            System.out.println("addPropertyC From: " + motif.toString());
             ArrayList<Motif> addPropertyC = addPropertyC(motif);
-            for(Motif m : addPropertyC){
-                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-            }
-//            // 5. splPropertyC
+            motifs_candidats.addAll(addPropertyC);
+            System.out.println("generated candiates: " + motifs_candidats);
+            System.out.println("");
+            
+            // 5. splPropertyC
+            System.out.println("splPropertyC From: " + motif.toString());
             ArrayList<Motif> splPropertyC = splPropertyC(motif);
-            //System.out.println(""+splPropertyC.size()+" spe de props...");
-            for(Motif m : splPropertyC){
-                if(!motifs_candidats.contains(m)) motifs_candidats.add(m);
-            }
+            motifs_candidats.addAll(splPropertyC);
+            System.out.println("generated candiates: " + motifs_candidats);
+            System.out.println("");
             
             //if(motif.relations!=null && motif.relations.size() > 1 ) System.exit(1);
             return motifs_candidats;
@@ -338,7 +336,7 @@ public class Miner
                 //System.out.println("Allowed to specialize property");
                 // Get the properties that could be used to specialize the last property
                 ArrayList<Relation> possibleProperties = findPossiblePropertiesToSpl( pattern );
-                //System.out.println("possible properties:"+possibleProperties.size());
+                System.out.println("possible properties:"+possibleProperties.size());
                 // Keep the properties that can really be applied between the two concepts
                 possibleProperties = PropertiesRuler.spcFilterPropertiesByConcepts( pattern, possibleProperties,  hierarchyRepresentation );
                 //System.out.println("possible properties2:"+possibleProperties.size());
@@ -380,6 +378,7 @@ public class Miner
                 // Find the existing properties between other concept and last concept
                 Integer sourceConcept = sourceConcepts.get(i);
                 Concept sujet = hierarchyRepresentation.getConcept(sourceConcept);
+                System.out.println("Getting root properties for " + sujet + " and " + objet);
                 ArrayList<Triplet> properties = hierarchyRepresentation.getRootProperties(sujet, objet);
                 if(properties!=null){
                     ArrayList<Relation> rels = new ArrayList<>();
@@ -390,7 +389,7 @@ public class Miner
                     possibleProperties.add(propertiesAndSubject);
                 }
             }
-            //System.out.println("There are "+possibleProperties.size()+" possible properties.");
+            System.out.println("There are "+possibleProperties.size()+" possible properties.");
             return possibleProperties;
 	}
 	        
@@ -427,10 +426,10 @@ public class Miner
 
 //                
                 for (AppariementSolution previous_matching : previous_solutions){
-                    System.out.println("\tprevious_matching - appariement: " + previous_matching.appariement);
-                    System.out.println("\tprevious_matching - motif: " + previous_matching.motif);
-                    System.out.println("\tprevious_matching - sequenceUtilisateur: " + previous_matching.sequenceUtilisateur.toString());
-                    System.out.println("\tprevious_matching - parcours: " + previous_matching.parcours);
+//                    System.out.println("\tprevious_matching - appariement: " + previous_matching.appariement);
+//                    System.out.println("\tprevious_matching - motif: " + previous_matching.motif);
+//                    System.out.println("\tprevious_matching - sequenceUtilisateur: " + previous_matching.sequenceUtilisateur.toString());
+//                    System.out.println("\tprevious_matching - parcours: " + previous_matching.parcours);
 //                    
                     //va nous permettre de savoir si des solutions de n-1 on ete modifiees.
                     //necessaire dans le cas d'ajout de relations changeant la position du domaine et 
@@ -529,9 +528,9 @@ public class Miner
             double minConf=0.1;
             
             // Candidates generated from the current pattern
-            System.out.println("pattern: " + pattern.toString());
+            System.out.println("\npattern: " + pattern.toString());
             ArrayList<Motif> candidates = generateCandidates2(pattern, minLevel, level);//n => n+1
-            System.out.println("To: " + candidates);
+            System.out.println("\t-> To: " + candidates);
 //            System.out.println("minSup2: " + minSup2);
             ArrayList<Motif> Freqcandidates = new ArrayList();//n => n+1
             //System.out.println("on a "+candidates.size()+" candidats...");
@@ -677,32 +676,37 @@ public class Miner
                 
             }
             
-//            System.out.println("==============================================================================");
+            System.out.println("\t<-");
             
             i=0;
-            if(motifs_qui_matchent.length > i) {
-                if (sequences_qui_matchent[i].length > 0) {
-                    Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
-                }
-            }
             
-//            long finish = System.currentTimeMillis();
-//            long timeElapsed = finish - start;
-//            Date date = new Date(timeElapsed);
-//            DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
-//            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
-//            String dateFormatted = formatter.format(date);
+//            System.out.println("motifs_qui_matchent: ");
+//            for (Motif mmatch : motifs_qui_matchent)
+//                    System.out.println(mmatch);
 //            
-//            System.out.println(level + "\t" + dateFormatted + "\t" + candidates.size());
-//            System.out.println("i: " + i);
-//            System.out.println("motifs_qui_matchent.length: " + motifs_qui_matchent.length);
-//            System.out.println("motifs_qui_matchent[i]: " + motifs_qui_matchent[i]);
-//            
-//            while(i < motifs_qui_matchent.length && motifs_qui_matchent[i]!=null){                
-//                Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
-//                sequences_qui_matchent[i] = null;motifs_qui_matchent[i]=null;
-//                i++;
+//            if(motifs_qui_matchent.length > i) {
+//                if (sequences_qui_matchent[i].length > 0) {
+//                    Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
+//                }
 //            }
+            
+            long finish = System.currentTimeMillis();
+            long timeElapsed = finish - start;
+            Date date = new Date(timeElapsed);
+            DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
+            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+            String dateFormatted = formatter.format(date);
+            
+            System.out.println(level + "\t" + dateFormatted + "\t" + candidates.size());
+            System.out.println("i: " + i);
+            System.out.println("motifs_qui_matchent.length: " + motifs_qui_matchent.length);
+            System.out.println("motifs_qui_matchent[i]: " + motifs_qui_matchent[i]);
+            
+            while(i < motifs_qui_matchent.length && motifs_qui_matchent[i]!=null){                
+                Miner.generateAndTestDF(motifs_qui_matchent[i], sequences_qui_matchent[i], minLevel, level + 1);
+//                sequences_qui_matchent[i] = null;motifs_qui_matchent[i]=null;
+                i++;
+            }
 	}
 	
 	// Return the relative support of the set of sequences regarding to the total of user sequences

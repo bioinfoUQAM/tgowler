@@ -26,24 +26,26 @@ public abstract class PatternGenerator{
          */
         // Append in the last transaction
         public static ArrayList<Motif> generateSequencesByDCC( final Motif motif, final OntoRepresentation hierarchyRepresentation, int minLevel, int level ){
-                ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
-                ArrayList<Motif> newWorkflows = new ArrayList<>();
-                if(rootConcepts != null){
-                    for (Concept rootConcept : rootConcepts ){
-                        Motif newWorkflow = new Motif(motif);
-                        newWorkflow.appendConceptC(rootConcept.index, level);//CRITIQUE !!!
-//                        System.out.println("rootConcept.index: " + rootConcept.index);
-                        //NOTE 1 : Added an additional test: new pattern MUST be different than its parent
-                        //  i.e. If no refinnement is possible, the method returns the SAME pattern
-                        //NOTE 2 : For .contains to work, it requires a .equals to be implemented (cf. Motif class)
-                        if(!motif.equals(newWorkflow) && !newWorkflows.contains(newWorkflow)) {
-                            newWorkflows.add(newWorkflow);
-//                            System.out.println("newWorkflow: "+newWorkflow + ", oldWorkflow: "+motif);
-                        }
+            ArrayList<Concept> rootConcepts = hierarchyRepresentation.getRootConcepts(minLevel);//3 avant
+            ArrayList<Motif> newWorkflows = new ArrayList<>();
+            if(rootConcepts != null){
+                for (Concept rootConcept : rootConcepts ){
+                    Motif newWorkflow = new Motif(motif);
+                    newWorkflow.appendConceptC(rootConcept.index, level);//CRITIQUE !!!
+//                        System.out.println("newWorkflow: " + newWorkflow);
+                    // Tomas notes:
+                    // NOTE 1 : Added an additional test: new pattern MUST be different than its parent
+                    //  i.e. If no refinnement is possible, the method returns the SAME pattern
+                    // NOTE 2 : For .contains to work, it requires a .equals to be implemented (cf. Motif class)
+                    // Ahmed notes:
+                    // I modified the equals operator
+                    if(!motif.equals(newWorkflow) && !newWorkflows.contains(newWorkflow)) {
+                        newWorkflows.add(newWorkflow);
                     }
                 }
-                
-		return newWorkflows;
+            }
+
+            return newWorkflows;
 	}
         
         /**

@@ -4,20 +4,19 @@
       <TRANSACTION>dataStructureID_1</TRANSACTION>
       <TRANSACTION>programID_3617</TRANSACTION>
       <TRANSACTION>programID_3398</TRANSACTION>
-      <TRIPLET>2, has_InputOutput, 4</TRIPLET>
-      <TRIPLET>3, has_InputOutput, 5</TRIPLET>
+      <TRIPLET>1, has_InputOutput, 2</TRIPLET>
+      <TRIPLET>2, has_InputOutput, 3</TRIPLET>
    </WORKFLOW>
    <WORKFLOW file="2">
       <TRANSACTION>dataStructureID_12</TRANSACTION>
       <TRANSACTION>programID_3233</TRANSACTION>
-      <TRIPLET>1, has_InputOutput, 4</TRIPLET>
-      <TRIPLET>2, has_InputOutput, 4</TRIPLET>
+      <TRIPLET>1, has_InputOutput, 2</TRIPLET>
    </WORKFLOW>
    <WORKFLOW file="3">
       <TRANSACTION>sequence</TRANSACTION>
-      <TRANSACTION>programID_3617</TRANSACTION>
+      <TRANSACTION>programID_3214</TRANSACTION>
       <TRANSACTION>programID_3398</TRANSACTION>
-      <TRIPLET>1, has_InputOutput, 3</TRIPLET>
-      <TRIPLET>2, has_InputOutput, 4</TRIPLET>
+      <TRIPLET>1, has_InputOutput, 2</TRIPLET>
+      <TRIPLET>2, has_InputOutput, 3</TRIPLET>
    </WORKFLOW>
 </WORKFLOWS>
