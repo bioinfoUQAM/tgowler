@@ -16,6 +16,8 @@ import ca.uqam.gdac.framework.miner.Miner;
 import static ca.uqam.gdac.framework.miner.Miner.allRules;
 import static ca.uqam.gdac.framework.miner.Miner.conceptsToString;
 import static ca.uqam.gdac.framework.miner.Miner.hierarchyRepresentation;
+import static preprocessing.bowlLoader.loadRawSequences;
+
 import ca.uqam.gdac.framework.xml.WorkflowFactory;
 import java.io.BufferedReader;
 import java.io.File;
@@ -58,10 +60,6 @@ import org.xml.sax.SAXException;
 import utility.HTMLViz;
 
 import javax.rmi.CORBA.Util;
-
-//import static preprocessing.bowlLoader.deserialize;
-import static bowl.BowlLoader.deserialize;
-import static bowl.BowlLoader.loadRawSequences;
 
 
 public class OntoPatternOld {
@@ -146,6 +144,7 @@ public class OntoPatternOld {
         }
         else {  
             // Training set
+
 //            System.out.println("Reading the Training set " + parametres.get(mode)[1] + " ...");
             loadRawSequences(rawUserSequences, userSequences, ontology, rawSequences, localNameNode, args[3]);
             System.out.println("rawUserWorkflows: " + rawUserSequences.toString());

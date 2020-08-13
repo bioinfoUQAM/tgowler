@@ -219,7 +219,11 @@ public class OntoRepresentation implements Cloneable{
             return null;
         }
     }
-    
+
+
+    public Relation getRelationByName(final String _a, final String _b){
+        return (Relation)this.index_relations_by_name.get(_a);
+    }
     
     /**
      * 
@@ -1017,7 +1021,7 @@ public class OntoRepresentation implements Cloneable{
      * 
      * @return Root properties between the subject and the object concepts.
      */
-    public ArrayList<Triplet> getRootProperties( final Concept sujet, final Concept objet ){
+    public ArrayList<Triplet> getRootProperties( final Concept sujet, final Concept objet){
         AnchoredLinkedList<Triplet> _triplets = (AnchoredLinkedList<Triplet>)this.by_d.get(sujet.char_index, this.by_d.root);
         //LinkedList<Triplet> res_triplets = null;
         ArrayList<Triplet> res_triplets = new ArrayList<>();
@@ -1031,10 +1035,14 @@ public class OntoRepresentation implements Cloneable{
              */
             _triplets.reset();
             do{
-                Triplet t = (Triplet)_triplets.curr().value;
-                
-                if(t.codomaine.index==objet.index&&this.isRootProperty(t.relation)){
-                    res_triplets.add(t);
+                if(_triplets.curr().value instanceof LinkedList){
+                    break;//This is a patch, it should be modified
+                }
+                else{
+                    Triplet t = (Triplet)_triplets.curr().value;
+                    if(t.codomaine.index==objet.index&&this.isRootProperty(t.relation)){
+                        res_triplets.add(t);
+                    }
                 }
             }
             while(_triplets.hasNext());
@@ -1056,10 +1064,14 @@ public class OntoRepresentation implements Cloneable{
              */
             _triplets.reset();
             do{
-                Triplet t = (Triplet)_triplets.curr().value;
-                
-                if(t.codomaine.index==objet.index&&this.isRootProperty(t.relation)){
-                    res_triplets.add(t.relation);
+                if(_triplets.curr().value instanceof LinkedList){
+                    break;//This is a patch, it should be modified
+                }
+                else{
+                    Triplet t = (Triplet)_triplets.curr().value;
+                    if(t.codomaine.index==objet.index&&this.isRootProperty(t.relation)){
+                        res_triplets.add(t.relation);
+                    }
                 }
             }
             while(_triplets.hasNext());
