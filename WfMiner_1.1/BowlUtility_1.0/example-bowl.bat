@@ -1,1 +1,0 @@
-java -jar ./out/artifacts/BowlUtility_jar/BowlUtility.jar "./resources/ontology-travel.owl" "http://www.owl-ontologies.com/" "testargskompress" "yes" "500000" "1000"
