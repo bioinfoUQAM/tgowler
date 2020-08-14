@@ -7,7 +7,7 @@ min_supp: 0.01
 min_ontology_level: 0
 
 Rules: 
-[SequenceType] => Sequence, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 0.0)
+[SequenceType] => SequenceAlignmentStep, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 0.0)
 [SequenceType] => SequenceAlignment, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 50.0)
 [DataType] => Tree, {} (confidence: 33.333336%) (support: 33.333336%) (MPR: 100.0)
 
