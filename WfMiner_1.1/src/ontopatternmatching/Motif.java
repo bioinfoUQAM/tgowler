@@ -40,21 +40,11 @@ public class Motif {
         if(_obj == null || _obj.getClass()!= this.getClass())
             return false;
         Motif tmp = (Motif)_obj;
-        
-        
-        if(tmp.transactions.size() == this.transactions.size()){
+        if(this.transactions.size() == tmp.transactions.size()){
             for(int i=0;i!=this.transactions.size();++i){
-                // Modified by Ahmed since we're dealing with multi transsactions
-                if(tmp.transactions.get(i).size() == this.transactions.get(i).size()){
-                    for(int j=0;j!=this.transactions.get(i).size();++j){
-                        if(this.transactions.get(i).get(j) != tmp.transactions.get(i).get(j)){
-                            return false;
-                        }
-                    }
-                    
-                }
-                else
+                if(this.transactions.get(i) != tmp.transactions.get(i)){
                     return false;
+                }
             }
             for(int i=0;i!=this.relations.size();++i){
                 Integer[] rel_left = this.relations.get(i);
@@ -69,8 +59,6 @@ public class Motif {
                 }
             }
         }
-        else
-            return false;
         return true;
     }
 
@@ -423,6 +411,9 @@ public class Motif {
             ArrayList<Integer> lastTransaction = this.getConcepts(this.nbTransactions() - 1);
             Integer previous_size = lastTransaction.size();
             
+//            System.out.println("lastTransaction: " + lastTransaction);
+//            System.out.println("previous_size: " + previous_size);
+            
             if (!lastTransaction.isEmpty())
                 if (concept >= lastTransaction.get(previous_size - 1) ){
                     String s_appendConceptC = ontology.getConcept(concept).getName().split("#")[1];
@@ -483,17 +474,14 @@ public class Motif {
 //            System.out.println("previous_size: " + previous_size);
             
             if (!lastTransaction.isEmpty())
-                
-                
+                System.out.println("splConceptC: " + splConcept + " (" + s_splConcept + ")");
                 // if there is a second last
                 if (previous_previous_size - 1 > 0){
                     if (lastTransaction.get(previous_previous_size - 1) <= splConcept){
                         this.concepts.set(this.concepts.size()-1, splConcept);
-                        String spld = ontology.getConcept(this.concepts.get(this.concepts.size()-1)).getName().split("#")[1];
-                        System.out.println("splConceptC: " + this.concepts.get(this.concepts.size()-1) + " (" + spld + ")");
-                    
                         // Update the status of the last operation
                         this.lastOperation = Operation.SC;
+
 
                         AppariementExtensionTask task = new SpeConceptTask();
                         task.item = new Integer[]{splConcept};
@@ -501,11 +489,7 @@ public class Motif {
                     }
                 }
                 else{
-//                    System.out.println("no previous previous");
                     this.concepts.set(this.concepts.size()-1, splConcept);
-                    String spld = ontology.getConcept(this.concepts.get(this.concepts.size()-1)).getName().split("#")[1];
-                    System.out.println("splConceptC: " + this.concepts.get(this.concepts.size()-1) + " (" + spld + ")");
-                    
                     // Update the status of the last operation
                     this.lastOperation = Operation.SC;
 
