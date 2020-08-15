@@ -1,18 +1,17 @@
-Ontology: phylOntology_v51_small.bowl
-Train set: WFMiner_example.xml
-Test set: WFMiner_example_gold.xml
+Ontology: ./phylOntology_v51_small.bowl
+Train set: ./WFMiner_example.xml
+Test set: ./WFMiner_example_gold.xml
 Top items: 10
-Top rules: 50
-min_supp: 0.01
-min_ontology_level: 0
+Top rules: 10
+min_supp: 0.2
+min_ontology_level: 2
 
 Rules: 
-[SequenceType] => SequenceAlignmentStep, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 0.0)
-[SequenceType] => SequenceAlignment, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 50.0)
-[DataType] => Tree, {} (confidence: 33.333336%) (support: 33.333336%) (MPR: 100.0)
+[SequenceType] => MultipleSequenceAlignmentProgram, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 0.0)
+[SequenceType] => SequenceAlignment, {} (confidence: 50.0%) (support: 33.333336%) (MPR: 100.0)
 
-MAP: 22.222223%
+MAP: 33.333336%
 Recall1: 100.0%
 Recall2: 66.66667%
 Recall: 83.333336%
-FMeasure: 80.32129%
+FMeasure: 81.30082%

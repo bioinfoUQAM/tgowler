@@ -1,38 +1,20 @@
-Ontology: phylOntology_v51_small.bowl
-Train set: WFMiner_example.xml
-min_supp: 0.01
-min_ontology_level: 0
+Ontology: ./phylOntology_v51_small.bowl
+Train set: ./WFMiner_example.xml
+min_supp: 0.2
+min_ontology_level: 2
 
 Patterns: 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.0, data: 0, metadata: 0, program: 0, [concepts=[[SequenceAlignmentStep, ]], properties=], 
-[BaseSequence( support: 100.0, steps: 1, relations: 0, specilization: 0.0, data: 0, metadata: 0, program: 0, [concepts=[[DataCollectionStep, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[SequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.3, data: 0, metadata: 0, program: 0, [concepts=[[GeneralMSAProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.0, data: 0, metadata: 0, program: 0, [concepts=[[DataCollectionStep, ][SequenceAlignmentStep, ]], properties=], 
-[BaseSequence( support: 100.0, steps: 1, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[DataType, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.0, data: 0, metadata: 0, program: 0, [concepts=[[DataCollectionStep, ][SequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[DataCollectionStep, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[DataCollectionStep, ][GeneralMSAProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.0, data: 0, metadata: 0, program: 0, [concepts=[[DataType, ][SequenceAlignmentStep, ]], properties=], 
 [BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 1, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[Tree, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[DataType, ][SequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[DataType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 66.66667, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[DataType, ][GeneralMSAProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][SequenceAlignmentStep, ]], properties=], 
+[BaseSequence( support: 66.66667, steps: 1, relations: 0, specilization: 0.3, data: 0, metadata: 0, program: 0, [concepts=[[GeneralMSAProgram, ]], properties=], 
+[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 1, relations: 0, specilization: 0.3, data: 0, metadata: 0, program: 0, [concepts=[[Sequence, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 1, relations: 0, specilization: 0.3, data: 0, metadata: 0, program: 0, [concepts=[[SequenceAlignment, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][SequenceAlignmentProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][MultipleSequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[SequenceType, ][GeneralMSAProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[Sequence, ][SequenceAlignmentStep, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[Sequence, ][SequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[Sequence, ][MultipleSequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.3, data: 0, metadata: 0, program: 0, [concepts=[[Sequence, ][GeneralMSAProgram, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[Tree, ][SequenceAlignmentStep, ]], properties=], 
-[BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.1, data: 0, metadata: 0, program: 0, [concepts=[[Tree, ][SequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[Tree, ][MultipleSequenceAlignmentProgram, ]], properties=], 
 [BaseSequence( support: 33.333336, steps: 2, relations: 0, specilization: 0.2, data: 0, metadata: 0, program: 0, [concepts=[[Tree, ][GeneralMSAProgram, ]], properties=], 
-30
+12
  patterns
